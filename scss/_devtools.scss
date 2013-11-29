@@ -1,0 +1,218 @@
+// -------------------------------------------------------------------------
+// ABOUT THE DEVTOOLS SHEET
+// -------------------------------------------------------------------------
+
+
+// This sheet contains two ideas we loved that we pulled from http://inuitcss.com/. 
+
+// The first one – Greybox – is a way to very quickly create wireframes/prototypes. 
+// The second – Debug – is a way to make potential problems in your code visual.
+
+// These are both turned off by default. More info below.
+
+
+// -------------------------------------------------------------------------
+// GREYBOX
+// -------------------------------------------------------------------------
+
+
+// Greybox is a dev tool that, when enabled, allows you to very quickly throw together wireframes/prototypes. Since we like to start prototyping right away in the browser at Mango, we found this tool very useful.
+
+// Simply add the .greybox class to the appropriate elements:
+
+//   <div class="greybox">Header</div>
+//      <ul class="nav  greybox">
+//          <li><a href=#>Home</a></li>
+//          <li><a href=#>About</a></li>
+//          <li><a href=#>Portfolio</a></li>
+//          <li><a href=#>Contact</a></li>
+//      </ul>
+
+// To change heights, use the greybox--size classes.
+
+// One of the beauties of this is that any prototyping can quickly be converted into/used as production code.
+
+// Here's a demo: jsfiddle.net/inuitcss/qCXfh/
+
+// For a more complete prototyping framework, consider Adam Whitcroft’s Proto: adamwhitcroft.com/proto
+
+
+// Greybox is turned off by default. To turn on, change "false" to "true"
+$use-greybox:       false!default;
+
+
+// -------------------------------------------------------------------------
+// GREYBOX CODE
+// -------------------------------------------------------------------------
+
+
+@if $use-greybox == true {
+
+    
+.greybox,
+.graybox {
+    font-size: 14px;
+    font-family: $font-family-sans-serif;
+    text-align: center;
+    background-color: rgba(0,0,0,0.2);
+    color: #fff;
+}
+    .greybox a,
+    .graybox a {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+
+// All greyboxes will occupy 100% of their parent’s width, but to alter their heights apply incrementally larger line-heights:
+.greybox--small,
+.graybox--small     { line-height: 2 * $base-line-height; }
+.greybox--medium,
+.graybox--medium    { line-height: 4 * $base-line-height; }
+.greybox--large,
+.graybox--large     { line-height: 8 * $base-line-height; }
+.greybox--huge,
+.graybox--huge      { line-height:16 * $base-line-height; }
+.greybox--gigantic,
+.graybox--gigantic  { line-height:32 * $base-line-height; }
+
+} //endif
+
+
+// -------------------------------------------------------------------------
+// DEBUG
+// -------------------------------------------------------------------------
+
+
+// Debug is a dev tool that, when enabled, will visually highlight potential problems with your code.
+
+// Red          =      definite error
+// Yellow       =      double-check
+// None         =      should be fine
+
+// Please note that this method of checking markup quality should not be relied upon entirely. Validate your markup!
+
+
+// Debug is turned off by default. To turn on, change "false" to "true"
+$debug-mode:        false!default;
+
+
+// -------------------------------------------------------------------------
+// DEBUG CODE
+// -------------------------------------------------------------------------
+
+
+@if $debug-mode == true {
+    
+    
+// Are there any empty elements in your page?
+:empty{
+    outline:5px solid yellow;
+}
+
+
+// Images should have "alt" attributes. Empty alt's are fine but should be double-checked. No "alt" is bad and is flagged red.
+img{
+    outline:5px solid red;
+}
+img[alt]{
+    outline:none;
+}
+img[alt=""]{
+    outline:5px solid yellow;
+}
+
+
+// Links sometimes, though not always, benefit from "title" attributes. Links without are never invalid but it’s a good idea to check.
+a{
+    outline:5px solid yellow;
+}
+a[title]{
+    outline:none;
+}
+
+
+// Double-check any links whose "href" is something questionable.
+a[href="#"],
+a[href*="javascript"]{
+    outline:5px solid yellow;
+}
+
+
+// The "target" attribute ain’t too nice...
+a[target]{
+    outline:5px solid yellow;
+}
+
+
+// Ensure any lists only contain "li's" as children.
+ul,
+ol{
+    > *:not(li){
+        outline:5px solid red;
+    }
+}
+
+
+// It’s always nice to give "th's" "scope" attributes.
+th{
+    outline:5px solid yellow;
+}
+th[scope]{
+    outline:none;
+}
+
+
+// "tr's" as children of "table's" ain’t great, did you need a "thead"/"tbody"?
+table > tr{
+    outline:5px solid yellow;
+}
+
+
+// "tfoot" needs to come *before* "tbody".
+tbody + tfoot{
+    outline:5px solid yellow;
+}
+
+
+// Forms require "action" attributes
+form{
+    outline:5px solid red;
+}
+form[action]{
+    outline:none;
+}
+
+
+// Various form-field types have required attributes. "input's" need "type" attributes, "textarea's" need "rows" and "cols" attributes and submit buttons need a "value" attribute.
+textarea,
+input{
+    outline:5px solid red;
+}
+input[type]{
+    outline:none;
+}
+textarea[rows][cols]{
+    outline:none;
+}
+input[type=submit]{
+    outline:5px solid red;
+}
+input[type=submit][value]{
+    outline:none;
+}
+
+
+// Avoid inline styles where possible.
+[style]{
+	outline:5px solid yellow;
+}
+
+
+// You should avoid using IDs for CSS, is this doing any styling?
+[id]{
+	outline:5px solid yellow;
+}
+
+
+} // endif
