@@ -1,5 +1,5 @@
 // -------------------------------------------------------------------------
-// ABOUT IMPORT
+// NOTES
 // -------------------------------------------------------------------------
 
 
@@ -11,25 +11,38 @@
 // -------------------------------------------------------------------------
 
 
-// Normalize
+// Reset
 @import "normalize";
+@import "print";
 
 
-// Colors & Typography (Variables) & Mixins
+// Variables (Colors and Typography) & Mixins
 // These are in this order because of variable dependencies
 @import "colors";
 @import "typography";
 @import "mixins";
 
 
+// Base
+@import "base";
+
+
 // Grid
 @import "grid";
 
 
-// Core CSS
-@import "interface";
-@import "sections";
-@import "utilities";
+// UI
+@import "ui/navs";
+@import "ui/media";
+@import "ui/buttons";
+@import "ui/forms";
+@import "ui/tables";
+@import "ui/code";
+@import "ui/other";
+
+
+// Project–specific
+@import "layout";
 
 
 // Devtools

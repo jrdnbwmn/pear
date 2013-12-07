@@ -1,12 +1,4 @@
 // -------------------------------------------------------------------------
-// TYPOGRAPHY
-// -------------------------------------------------------------------------
-
-
-// All typography styling goes in this sheet.
-
-
-// -------------------------------------------------------------------------
 // NOTES
 // -------------------------------------------------------------------------
 
@@ -52,39 +44,19 @@ $font-family-base:              $font-family-sans-serif;
 // Base Font Sizes
 $font-size-base:                112.5% !default; // percentage value (16 * 112.5% = 18px)
 $font-size-large:               ($font-size-base * 1.25);
-$font-size-small:               ($font-size-base * 0.65);
+$font-size-small:               ($font-size-base * 0.75);
 
 
 // Line Height
 $line-height-base:              1.65 !default;
 
-
-// Colors
-body, select, input, textarea {
-    color: $color-text;
-}
+// Bottom margin for paragraphs
+$p-margin-bottom:               1.5em;
 
 
-html {
-    font-family: $font-family-sans-serif;
-    font-size: $font-size-base;
-    line-height: $line-height-base;
-    font-weight: normal;
-}
-
-
-body {
-    -webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	-ms-hyphens: auto;
-	-o-hyphens: auto;
-	hyphens: auto;
-    word-wrap: break-word;
-}
-
-
+// The default is hyphenation: see _base.scss
+// http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation
 abbr, acronym, blockquote, code, dir, kbd, listing, plaintext, q, samp, tt, var, xmp {
-	// http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation
 	-webkit-hyphens: none; // Safari 5.1 thru 6, iOS 4.2 thru 6
 	-moz-hyphens: none; // Firefox 16 thru 20
 	-ms-hyphens: none; // IE10
@@ -163,8 +135,9 @@ h6  {
 // -------------------------------------------------------------------------
 
 
+// bottom margin for paragraphs
 p {
-	margin: auto auto 1.5em; // bottom margin for paragraphs
+	margin: auto auto $p-margin-bottom;
 }
 
 
@@ -175,19 +148,109 @@ p {
 
 a {
     color: $color-link;
+    text-decoration: none;
+    line-height: inherit;
+    outline: 0;
 }
 
 
 a:hover {
     color: $color-link-hover;
+    border-bottom: 1px solid;
+}
+
+
+p a, p a:visited { 
+    line-height: inherit; 
 }
 
 
 // -------------------------------------------------------------------------
-// FINE PRINT
+// LISTS
 // -------------------------------------------------------------------------
 
 
-.small {
+// Unordered and Ordered lists
+// Take off bottom margin from nested lists
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: $p-margin-bottom;
+    list-style-position: inside;
+    ul,
+    ol {
+        margin-bottom: 0;
+    }
+}
+
+
+dt {
+    font-weight: bold;
+}
+
+
+dd {
+    margin-left: 0; // Undo browser default
+}
+
+
+// -------------------------------------------------------------------------
+// MISC
+// -------------------------------------------------------------------------
+
+
+em,
+i {
+    font-style: italic;
+    line-height: inherit; 
+}
+
+
+strong,
+b {
+    line-height: inherit; 
+}
+
+
+small, .small {
     font-size: $font-size-small;
+    font-weight: normal;
+    line-height: 1;
+}
+
+
+// Remove underlines from potentially troublesome elements.
+u, ins {
+    text-decoration: none;
+}
+
+
+// Quotes
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+    content: none;
+}
+
+
+blockquote {
+    max-width: 100%; // Prevents it from breaking out of container
+    border-left: 5px solid $black-10;
+    margin: 1.5em 0;
+}
+
+
+blockquote, q {
+	quotes: none;
+    font-size: ($font-size-base * 1.25);
+}
+
+
+blockquote > p {
+	padding: 15px;
+}
+
+
+// Undo browser default styling
+cite { 
+    font-style: normal; 
 }

@@ -1,0 +1,101 @@
+// -------------------------------------------------------------------------
+// NOTES
+// -------------------------------------------------------------------------
+
+
+// This is where your main styling goes, including whatever isn't covered by the modular stylesheets. It's usually divided up by sections of the website (header, body, footer, etc) in order to remain organized.
+
+
+// -------------------------------------------------------------------------
+// PATTERN LIBRARY
+// -------------------------------------------------------------------------
+
+
+// This is the styling for the default pattern library that comes with Pear. Delete if you're not using.
+
+
+.pattern {
+    margin: 3em 0 3em 0;
+}
+
+
+#ptn-colors {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.ptn-container {
+    width: 150px;
+    display: inline-block;
+    margin: 30px 30px 0 0;
+    text-align: center;
+    font-style: italic;
+}
+
+
+.ptn-color {
+    height: 150px;
+}
+
+
+.ptn-container p {
+    margin: 0;
+}
+
+
+#primary {
+    background-color: $color-primary;
+}
+
+
+#secondary {
+    background-color: $color-secondary;
+}
+
+
+#tertiary {
+    background-color: $color-tertiary;
+}
+
+
+#accent {
+    background-color: $color-accent;
+}
+
+
+form {
+    width: 50%;
+    @media (max-width: 850px) {
+        width: 100%;
+    }
+}
+
+
+input, textarea {
+    margin-bottom: 2em;
+}
+
+
+// -------------------------------------------------------------------------
+// HEADER
+// -------------------------------------------------------------------------
+
+
+
+
+
+// -------------------------------------------------------------------------
+// BODY
+// -------------------------------------------------------------------------
+
+
+
+
+
+// -------------------------------------------------------------------------
+// FOOTER
+// -------------------------------------------------------------------------
+
+

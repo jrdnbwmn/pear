@@ -6,32 +6,33 @@
     
     <head>
         
+        <!-- Basics -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         
-        <title></title>
+        <title>Pear</title>
         
         <!-- Meta -->
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="">
         <meta name="keywords" content="awesome, definitely">
-        
-        <!-- Google Author link -->
-        <link rel="author" href="Google+URL"/>
 
+        <!-- CSS: Normalize sheet first, minify everything for production -->
+        <link rel="stylesheet" type='text/css' href="css/main.css"/>
+        
+        <!-- Import web fonts using the link tag instead of CSS @import: http://stackoverflow.com/questions/12316501/including-google-web-fonts-link-or-import -->
+        <link rel='stylesheet' type='text/css' href=""/>
+        
         <!-- Favicon.ico and apple-touch-icon.png (according to Apple docs). A good tool is http://iconifier.net/ -->
         <link rel="shortcut icon" href="assets/ico/favicon.ico">
         <link rel="apple-touch-icon" href="touch-icon-iphone.png" />
         <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png" />
         <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png" />
         <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png" />
-
-        <!-- CSS, Normalize sheet first, minify for production -->
-        <link rel="stylesheet" type='text/css' href=""/>
         
-        <!-- Import web fonts using the link tag instead of CSS @import -->
-        <link href='URL' rel='stylesheet' type='text/css'/>
+        <!-- Google Author link -->
+        <link rel="author" href="Google+URL"/>
         
     </head>
 
@@ -43,7 +44,7 @@
 
         
         <!-- 
-            A few demos of the patterns. Delete if you're not interested. 
+            Everything in this article tag is the beginnings of a pattern library for your styles. Delete if you're not interested. 
             These won't show your patterns until you link to your CSS or SCSS files. 
         -->
         <article>
@@ -79,7 +80,7 @@
                     <h4>Heading 4</h4>
                     <h5>Heading 5</h5>
                     <h6>Heading 6</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, <a href="#">this is a link</a> semper suscipit, posuere a, pede.</p>
                     <p>Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.</p>
                     <ul>
                         <li>Aliquam tincidunt mauris eu risus.</li>
@@ -95,6 +96,10 @@
                         <li>Donec quis dui at dolor tempor interdum.</li>
                     </ol>
                     <p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</p>
+                    <pre>&lt;p&gt;Here's some code...&lt;/p&gt;</pre>
+                    <blockquote>
+                        <p>This is a blockquote. Suspendisse commodo ullamcorper magna.</p>
+                    </blockquote>
                 </div>
                     
                 <hr>    
@@ -110,8 +115,60 @@
                     <a href="#" class="btn btn-secondary">More Info</a>
                 </div>
                 
+                <hr>    
+                
+                <!-- Tables -->
+                <div class="pattern">
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tournament</th>
+                                    <th>Place</th>
+                                    <th>Winnings</th>
+                                    <th>Points</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sony Open</td>
+                                    <td>2nd</td>
+                                    <td>$752,000</td>
+                                    <td>75</td>
+                                </tr>
+                                <tr>
+                                    <td>Arnold Palmer Invitational</td>
+                                    <td>6th</td>
+                                    <td>$320,000</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>Tavistock Cup</td>
+                                    <td>12th</td>
+                                    <td>$92,000</td>
+                                    <td>19</td>
+                                </tr>
+                                <tr>
+                                    <td>Zurich Classic</td>
+                                    <td>5th</td>
+                                    <td>$310,000</td>
+                                    <td>53</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2"><em>Totals</em></td>
+                                    <td class="winnings">$1,474,000</td>
+                                    <td class="points">197</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                
             </div>
-        </article>
+            
+        </article><!-- End pattern library -->
 
         
         <!-- Reference jQuery -->

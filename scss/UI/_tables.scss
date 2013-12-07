@@ -1,0 +1,113 @@
+// -------------------------------------------------------------------------
+// TABLES
+// -------------------------------------------------------------------------
+
+
+table {
+    width: 100%;
+    max-width: 100%;
+    display: table;
+    max-width: 100%; // Prevents it from breaking out of container
+    // Cells
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th,
+            > td {
+                padding: 8px;
+                line-height: $line-height-base;
+                vertical-align: top;
+                border-top: 1px solid $black-30;
+            }
+        }
+    }
+    > thead > tr {
+        > th,
+        > td {
+        border-top: none;
+            border-bottom-width: 2px;
+        }
+    }
+}
+
+
+th {
+    text-align: left;
+}
+
+
+// -------------------------------------------------------------------------
+// RESPONSIVE TABLES
+// -------------------------------------------------------------------------
+
+
+// Wrap your tables in ".table-responsive" and Pear will make them mobile friendly
+// by enabling horizontal scrolling. Only applies <800px. Everything above that
+// will display normally.
+// Pulled from Bootstrap
+
+
+@media (max-width: 800px) {
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 0px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 0;
+        -webkit-overflow-scrolling: touch;
+    
+        // Tighten up spacing
+        > .table {
+          margin-bottom: 0;
+    
+          // Ensure the content doesn't wrap
+          > thead,
+          > tbody,
+          > tfoot {
+            > tr {
+              > th,
+              > td {
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+    
+        // Special overrides for the bordered tables
+        > .table-bordered {
+          border: 0;
+    
+          // Nuke the appropriate borders so that the parent can handle them
+          > thead,
+          > tbody,
+          > tfoot {
+            > tr {
+              > th:first-child,
+              > td:first-child {
+                border-left: 0;
+              }
+              > th:last-child,
+              > td:last-child {
+                border-right: 0;
+              }
+            }
+          }
+    
+          // Only nuke the last row's bottom-border in `tbody` and `tfoot` since
+          // chances are there will be only one `tr` in a `thead` and that would
+          // remove the border altogether.
+          > tbody,
+          > tfoot {
+            > tr:last-child {
+              > th,
+              > td {
+                border-bottom: 0;
+              }
+            }
+          }
+    
+        }
+    }
+}

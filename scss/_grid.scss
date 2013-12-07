@@ -1,5 +1,5 @@
 // -------------------------------------------------------------------------
-// ABOUT THE GRID
+// NOTES
 // -------------------------------------------------------------------------
 
 
@@ -56,12 +56,6 @@ $total-width: 100%;
 // These two lines and the star-hack width/margin lines below enable sub-pixel fix for IE6 & 7. See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
 $min-width: 999999;
 $correction: 0.5 / $min-width * 100;
-
-
-body {
-	width: 100%;
-    @include clearfix();
-}
 
 
 // -------------------------------------------------------------------------
