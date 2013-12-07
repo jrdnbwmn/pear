@@ -45,6 +45,12 @@ input[type="button"] {
     -webkit-border-radius: 5px;
     // Size
     padding: 15px 20px;
+    // Transition
+    -webkit-transition: background-color 0.2s ease-out;
+	-moz-transition: background-color 0.2s ease-out;
+	-o-transition: background-color 0.2s ease-out;
+	-ms-transition: background-color 0.2s ease-out;
+	transition: background-color 0.2s ease-out;
 }
 
 
@@ -53,7 +59,7 @@ button:hover, button:focus,
 input[type="submit"]:hover, input[type="submit"]:focus,
 input[type="reset"]:hover, input[type="reset"]:focus,
 input[type="button"]:hover, input[type="button"]:focus {
-    background-color: darken($color-primary, 10%);
+    background-color: $black-20;
     border: 1px solid transparent; // Override inherited 'a' tag hover bottom border (_typography.scss)
     color: #fff;
     text-decoration: none;

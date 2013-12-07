@@ -37,8 +37,8 @@
 // Font Families
 $font-family-sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif:             Georgia, Garamond, serif;
-$font-family-monospace:         Monaco, Menlo, Consolas, "Courier New", monospace;
-$font-family-base:              $font-family-sans-serif;
+$font-family-monospace:         "Anonymous Pro", Monaco, Menlo, Consolas, "Courier New", monospace;
+$font-family-base:              $font-family-monospace;
 
 
 // Base Font Sizes
@@ -81,53 +81,10 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1; // this fixes huge spaces when a heading wraps onto two lines
     margin-top: 0;
 	text-rendering: optimizeLegibility; // voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering
+    font-size: $font-size-base;
+    color: $black-90;
+    margin-top: 5em;
 }
-
-
-h1  {
-    font-size: 60px;
-	font-size: 3.33333rem; // 60 / 18 = 3.3333
-	margin-bottom: 0.495em;
-}
-
-
-h2  {
-    font-size: 48px;
-	font-size: 2.6667rem; // 48 / 18 = 2.6667
-	margin-bottom: 0.61875em;
-}
-
-
-h3  {
-    font-size: 36px;
-	font-size: 2rem; // 36 / 18 = 2
-	margin-bottom: 0.825em;
-}
-
-
-h4  {
-    font-size: 24px;
-	font-size: 1.3333333333333333rem; // 24 / 18 = 1.3333
-	margin-bottom: 1.2375em;
-}
-
-
-h5  {
-    font-size: 21px;
-	font-size: 1.16667rem; // 21 / 18 = 1.1667
-	margin-bottom: 1.4142857142857141em; // measure( base font-size(18) * base line-height(1.65) ) / current font-size(21) = margin-bottom(1.4142857142857141)
-}
-
-
-h6  {
-    font-size: 18px;
-	font-size: 1rem; /* 18 = 18 × 1 */
-	margin-bottom: 1.65em; // measure( base font-size(18) * base line-height(1.65) ) / current font-size(18) = margin-bottom(1.65)
-}
-
-
-// Margin-bottom for headings explanation:
-// Makes sure that there's always one unit of measure's worth of space between stuff for headings. This is better than spacing using line-height because of the wrapping issue where we have wrapping onto 2 lines with a high line-height.
 
 
 // -------------------------------------------------------------------------
@@ -151,12 +108,16 @@ a {
     text-decoration: none;
     line-height: inherit;
     outline: 0;
+    -webkit-transition: color 0.2s ease-out;
+	-moz-transition: color 0.2s ease-out;
+	-o-transition: color 0.2s ease-out;
+	-ms-transition: color 0.2s ease-out;
+	transition: color 0.2s ease-out;
 }
 
 
 a:hover {
     color: $color-link-hover;
-    border-bottom: 1px solid;
 }
 
 

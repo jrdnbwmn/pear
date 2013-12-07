@@ -31,5 +31,5 @@
 // Mostly used to eliminate elements when scaling down in media queries
 @mixin hidden() {
     display: none !important;
-    visibility: hidden;
+    visibility: hidden !important;
 }
