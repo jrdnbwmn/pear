@@ -37,3 +37,5 @@ We drew inspiration from some excellent sources, including:
 - [Gridless](http://thatcoolguy.github.io/gridless-boilerplate/)
 
 If you've used Pear on your project, shoot us a link! We'd love to see your work.
+
+Licensed under [The Unlicense](http://unlicense.org/).
