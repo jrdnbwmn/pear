@@ -1,0 +1,22 @@
+{
+    "name": "Pear",
+    "version": "0.1.0",
+    "author": "Mango",
+    "description": "This is a Grunt boilerplate that is part of the Pear front-end kit",
+    "private": true,
+    "devDependencies": {
+    
+        "grunt":                        "~0.4.1",
+        "grunt-contrib-sass":           "*",
+        "grunt-autoprefixer":           "*",
+        "grunt-cssc":                   "*",
+        "grunt-contrib-cssmin":         "*",
+        "grunt-contrib-concat":         "*",
+        "grunt-contrib-uglify":         "*",
+        "grunt-contrib-imagemin":       "*",
+        "grunt-svgmin":                 "*",
+        "grunt-contrib-watch":          "*",
+        "matchdep":                     "*"
+        
+    }
+}

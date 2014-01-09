@@ -8,8 +8,8 @@ Pear represents a lot of research and inspiration from several excellent sources
 Branches and pull requests are welcomed!
 
 ## Goals
-1. Help developers utilize many “best practices” that have been established by the web community.
-2. Be simple and easy to use, with a small learning curve.
+1. Help front–end developers utilize many “best practices” that have been established by the web community.
+2. Be simple and easy to use, with as small of a learning curve as possible.
 3. Make it faster and easier to produce great work!
 
 ## How to Use
@@ -18,12 +18,11 @@ We encourage you to download or fork Pear, look through what the default version
 Where some base styling is provided, it is pretty basic and is meant to show the developer some good options and help provide a pattern for coding. Add and subtract whatever you want.
 
 ## Features
-- Choose Sass or vanilla CSS.
-- Comes with the beginnings of a pattern library in the HTML boilerplate. 
-- Well–commented. 
-- Simple organization. Just one HTML file and a SCSS (or CSS) folder. 
+- HTML boilerplate with the beginnings of a pattern library.
+- Sass files with a very solid foundation of CSS best practices.
+- Comes with a Grunt.js boilerplate installed that you can use or delete.
+- Well–commented.
 - Solid, totally flexible grid that’s extremely easy to customize.
-- Comes with two awesome devtools used for quick prototyping and code validation (from Intuit.css).
 
 ## Thanks
 We drew inspiration from some excellent sources, including:
