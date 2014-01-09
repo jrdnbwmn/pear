@@ -15,6 +15,7 @@
         "grunt-contrib-uglify":         "*",
         "grunt-contrib-imagemin":       "*",
         "grunt-svgmin":                 "*",
+        "grunt-browser-sync":           "*",
         "grunt-contrib-watch":          "*",
         "matchdep":                     "*"
         

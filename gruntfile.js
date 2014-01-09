@@ -105,6 +105,18 @@ module.exports = function(grunt){
                 }]
             }
         },
+
+// Browser Sync (live injecting of CSS changes into the browser)
+        browser_sync: {
+            files: {
+                src : 'build/css/main.css'
+            }, 
+            options: {
+                server: {
+                    baseDir: "build"
+            }
+          }
+        },
                      
 // Watch
         watch: {
@@ -127,22 +139,12 @@ module.exports = function(grunt){
                 files: ['images/*.svg'],
                 tasks: ['svgmin'],
             },
-            livereload: {
-                // Here we watch the files the tasks compile to
-                // These files are sent to the live reload server after sass compiles to them
-                // Livereload requires the script tag or browser extension:
-                // https://github.com/gruntjs/grunt-contrib-watch#enabling-live-reload-in-your-html
-                options: { 
-                    livereload: true,
-                },
-                files: ['build/**/*'],
-            }
         },
 
     });
 
 // Tasks
-    grunt.registerTask('default',   ['concat', 'uglify', 'imagemin', 'svgmin',]);
+    grunt.registerTask('default',   ['concat', 'uglify', 'imagemin', 'svgmin']);
     grunt.registerTask('buildcss',  ['sass', 'autoprefixer', 'cssc', 'cssmin']);
 
 };
