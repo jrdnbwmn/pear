@@ -36,7 +36,7 @@
 
 // Font Families
 $font-family-sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-serif:             Georgia, Garamond, serif;
+$font-family-serif:             Georgia, Times, serif;
 $font-family-monospace:         Monaco, Menlo, Consolas, "Courier New", monospace;
 $font-family-base:              $font-family-sans-serif;
 
@@ -176,7 +176,7 @@ ul,
 ol {
     margin-top: 0;
     margin-bottom: $p-margin-bottom;
-    list-style-position: inside;
+
     ul,
     ol {
         margin-bottom: 0;
@@ -234,19 +234,16 @@ blockquote:before, blockquote:after, q:before, q:after {
 
 blockquote {
     max-width: 100%; // Prevents it from breaking out of container
-    border-left: 5px solid $black-10;
-    margin: 1.5em 0;
+    border-left: 2px solid $color-primary;
+    margin: $p-margin-bottom 0 $p-margin-bottom (-$p-margin-bottom);
+    padding-left: $p-margin-bottom;
+    color: $color-light-text;
 }
 
 
 blockquote, q {
-	quotes: none;
+    quotes: none;
     font-size: ($font-size-base * 1.25);
-}
-
-
-blockquote > p {
-	padding: 15px;
 }
 
 

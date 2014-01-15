@@ -31,14 +31,14 @@ hr {
 // These selection rule sets have to be separate.
 // Color is set by default to your primary brand color.
 ::-moz-selection {
-    background: $color-primary;
+    background-color: $color-primary;
     color: white;
     text-shadow: none;
 }
 
 
 ::selection {
-    background: $color-primary;
+    background-color: $color-primary;
     color: white;
     text-shadow: none;
 }
