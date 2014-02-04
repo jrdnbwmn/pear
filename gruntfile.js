@@ -72,8 +72,8 @@ module.exports = function(grunt){
         // 2. Minify JS
         uglify: {
             build: {
-                src: '/build/js/production.js',
-                dest: '/build/js/production.min.js'
+                src: 'build/js/production.js',
+                dest: 'build/js/production.min.js'
             }
         },
                      
@@ -128,7 +128,7 @@ module.exports = function(grunt){
                 tasks: ['buildcss'],
             },
             scripts: {
-                files: ['js/*.js'],
+                files: ['js/*.js', 'js/vendor/*.js'],
                 tasks: ['concat', 'uglify'],
             },
             images: {

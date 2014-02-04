@@ -8,8 +8,8 @@ Pear represents a lot of research and inspiration from several excellent sources
 Branches and pull requests are welcomed!
 
 ## Goals
-1. Help front–end developers utilize many “best practices” that have been established by the web community.
-2. Be simple and easy to use, with as small of a learning curve as possible.
+1. Bring together best practices from many credible sources across the web.
+2. Utilize powerful front–end tools (like Grunt).
 3. Make it faster and easier to produce great work!
 
 ## How to Use
@@ -20,7 +20,7 @@ Where some base styling is provided, it is pretty basic and is meant to show the
 ## Features
 - HTML boilerplate with the beginnings of a pattern library.
 - Sass files with a very solid foundation of CSS best practices.
-- Comes with a Grunt.js boilerplate installed that you can use or delete.
+- Grunt.js boilerplate installed that you can use or delete.
 - Well–commented.
 - Solid, totally flexible grid that’s extremely easy to customize.
 
@@ -34,7 +34,5 @@ We drew inspiration from some excellent sources, including:
 - [Bootstrap](http://getbootstrap.com/)
 - [Foundation](http://foundation.zurb.com/index.html)
 - [Gridless](http://thatcoolguy.github.io/gridless-boilerplate/)
-
-If you've used Pear on your project, shoot us a link! We'd love to see your work.
 
 Licensed under [The Unlicense](http://unlicense.org/).

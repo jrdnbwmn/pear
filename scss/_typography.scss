@@ -50,6 +50,7 @@ $font-size-small:               ($font-size-base * 0.75);
 // Line Height
 $line-height-base:              1.65 !default;
 
+
 // Bottom margin for paragraphs
 $p-margin-bottom:               1.5em;
 
@@ -237,7 +238,6 @@ blockquote {
     border-left: 2px solid $color-primary;
     margin: $p-margin-bottom 0 $p-margin-bottom (-$p-margin-bottom);
     padding-left: $p-margin-bottom;
-    color: $color-light-text;
 }
 
 
