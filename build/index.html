@@ -23,6 +23,9 @@
         
         <!-- Import web fonts using the link tag instead of CSS @import: http://stackoverflow.com/questions/12316501/including-google-web-fonts-link-or-import -->
         <link rel="stylesheet" type="text/css" href=""/>
+
+        <!-- Font Awesome -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         
         <!-- Favicon.ico and apple-touch-icon.png (according to Apple docs). A good tool is http://iconifier.net/ -->
         <link rel="shortcut icon" href="assets/ico/favicon.ico">
@@ -107,12 +110,69 @@
                 <!-- Components -->
                 <div class="pattern">
                     <form>
-                        <input type="email" placeholder="Email Address"/>
-                        <input type="Subject" placeholder="Subject"/>
+
+                        <!-- Field Inputs -->
+                        <input type="email" placeholder="Email Address">
+                        <input type="subject" placeholder="Subject">
+
+                        <!-- Textarea -->
                         <textarea placeholder="Message"></textarea>
+
+                        <!-- Check Inputs -->
+                        <section class="input-checks-block">
+                            <div class="input-checks">
+                                <input type="radio" name="radios" value="radio1" id="radio1">
+                                <label for="radio1">Radio One</label>
+                            </div>
+                            <div class="input-checks">
+                            <input type="radio" name="radios" value="radio2" id="radio2">
+                            <label for="radio2">Radio Two</label>
+                            </div>
+                            <div class="input-checks">
+                            <input type="radio" name="radios" value="radio3" id="radio3">
+                            <label for="radio3">Radio Three</label>
+                            </div>
+                        </section>
+
+                        <section class="input-checks-block">
+                            <div class="input-checks">
+                                <input type="checkbox" id="checkbox1">
+                                <label for="checkbox1">Checkbox One</label>
+                            </div>
+                            <div class="input-checks">
+                                <input type="checkbox" id="checkbox2">
+                                <label for="checkbox2">Checkbox Two</label>
+                            </div>
+                            <div class="input-checks">
+                                <input type="checkbox" id="checkbox3">
+                                <label for="checkbox3">Checkbox Three</label>
+                            </div>
+                        </section>
+
+                        <!-- Search Input with Icon -->
+                        <div class="search-form">
+                            <input type="search" placeholder="Search">
+                            <i class="fa fa-search search-icon"></i>
+                        </div>
+
+                        <!-- Select -->
+                        <div class="select">
+                            <select>
+                                <option>Select Option 1</option>
+                                <option>Select Option 2</option>
+                                <option>Select Option 3</option>
+                                <option>Select Option 4</option>
+                                <option>Select Option 5</option>
+                            </select>
+                            <i class="fa fa-sort-asc select-icon"></i>
+                        </div>
+
+                        <!-- Buttons -->
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-secondary">Secondary</button>
+                        <button type="button" class="btn btn-primary btn-large">Large Button</button>
+
                     </form>
-                    <a href="#" class="btn btn-primary">Get Started</a>
-                    <a href="#" class="btn btn-secondary">More Info</a>
                 </div>
                 
                 <hr>    

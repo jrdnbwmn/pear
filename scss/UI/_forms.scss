@@ -29,8 +29,7 @@ legend {
 
 label {
     display: inline-block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    cursor: default;
 }
 
 
@@ -42,13 +41,65 @@ textarea {
 }
 
 
-// Normalize form controls:
-
-// Position radios and checkboxes better
 input[type="radio"],
 input[type="checkbox"] {
-    margin: 4px 0 0;
+    display: inline-block;
+    margin: 1px 7px 0 0;
     margin-top: 1px; // IE8-9
+    vertical-align: middle;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-style: solid;
+    border-width: 1px;
+    height: 22px;
+    width: 22px;
+    cursor: pointer;
+}
+
+
+input[type="radio"] {
+    border-radius: 100%;
+}
+
+
+input[type="checkbox"] {
+    border-radius: 4px;
+}
+
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+    border-color: darken($color-primary, 5%);
+    background: $color-primary !important;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+}
+
+
+input[type="radio"]:checked::after {
+    display: block;
+    position: relative;
+    content: '';
+    left: 5px;
+    top: 5px;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    background: #fff;
+}
+
+
+input[type="checkbox"]:checked::after {
+display: block;
+position: relative;
+content: '';
+left: 3px;
+top: 4px;
+height: 8px;
+width: 14px;
+border-bottom: 4px solid white;
+border-left: 4px solid white;
+-webkit-transform: rotate(-45deg);
 }
 
 
@@ -72,6 +123,19 @@ select optgroup {
     font-size: inherit;
     font-style: inherit;
     font-family: inherit;
+}
+
+
+select {
+    -webkit-appearance: none !important;
+    width: 100%;
+    background-color: #fafafa;
+    background-repeat: no-repeat;
+    background-position: center right 3%;
+    border: 1px solid #cccccc;
+    padding: 10px 0 10px 15px;
+    -webkit-border-radius: 0;
+    border-radius: 4px;
 }
 
 
@@ -111,7 +175,7 @@ textarea {
 }
 
 
-input:focus, textarea:focus {
+select:focus, input:focus, textarea:focus {
     outline: 0;
 }
 
@@ -125,24 +189,23 @@ input, textarea {
     display: block;
     width: 100%;
     max-width: 100%; // Prevents them from breaking out of container
-    border: 1px solid $black-30;
-    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f7f7f7;
     padding: 10px 0px;
     font-size: inherit;
     font-family: inherit;
     text-indent: 15px;
     vertical-align: middle;
     background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     // Border color transition
-    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    -webkit-transition-property: border-color, box-shadow;
+    -webkit-transition: background-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -webkit-transition-property: background-color, box-shadow;
     -webkit-transition-duration: 0.15s, 0.15s;
     -webkit-transition-timing-function: ease-in-out, ease-in-out;
     -webkit-transition-delay: initial, initial;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    transition-property: border-color, box-shadow;
+    transition: background-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition-property: background-color, box-shadow;
     transition-duration: 0.15s, 0.15s;
     transition-timing-function: ease-in-out, ease-in-out;
     transition-delay: initial, initial;
@@ -154,8 +217,16 @@ input, textarea {
 }
 
 
+::-webkit-input-placeholder { color: lighten($color-text, 7%); }
+:-moz-placeholder { color: lighten($color-text, 7%); }
+::-moz-placeholder { color: lighten($color-text, 7%); }
+:-ms-input-placeholder { color: lighten($color-text, 7%); }
+
+
 input:focus, textarea:focus {
-    border-color: $color-primary;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+    //border-color: $color-primary;
+    background-color: #fff;
+    border-color: $black-30;
+    //-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px rgba(102,175,233,0.6);
+    //box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px rgba(102,175,233,0.6);
 }

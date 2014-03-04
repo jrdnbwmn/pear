@@ -78,6 +78,58 @@ input, textarea {
 }
 
 
+.input-checks-block {
+    margin-bottom: 2em;
+}
+
+
+.input-checks {
+    display: block;
+    margin-bottom: .5em
+}
+
+
+.search-form {
+    position: relative;
+
+    input {
+        padding-right: 40px;
+    }
+}
+
+
+.search-icon {
+    position: absolute;
+    top: 17px;
+    right: 5px;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: lighten($color-text, 7%);
+}
+
+
+.select-icon {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: lighten($color-text, 7%);
+}
+
+
+.select {
+    margin-bottom: 2em;
+    position: relative;
+}
+
+
 // -------------------------------------------------------------------------
 // HEADER
 // -------------------------------------------------------------------------

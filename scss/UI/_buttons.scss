@@ -39,12 +39,22 @@ input[type="button"] {
     text-decoration: none;
     color: #fff;
     // Border
-    border: 1px solid transparent;
-    border-radius: 5px;
+    border-radius: 4px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     // Size
-    padding: 10px 12px;
+    padding: 8px 16px;
+    // Background Color Transition
+    -webkit-transition: background-color ease-in-out .15s,color ease-in-out .15s;
+    -webkit-transition-property: background-color, color;
+    -webkit-transition-duration: 0.15s, 0.15s;
+    -webkit-transition-timing-function: ease-in-out, ease-in-out;
+    -webkit-transition-delay: initial, initial;
+    transition: background-color ease-in-out .15s,color ease-in-out .15s;
+    transition-property: background-color, color;
+    transition-duration: 0.15s, 0.15s;
+    transition-timing-function: ease-in-out, ease-in-out;
+    transition-delay: initial, initial;
 }
 
 
@@ -53,11 +63,7 @@ button:hover, button:focus,
 input[type="submit"]:hover, input[type="submit"]:focus,
 input[type="reset"]:hover, input[type="reset"]:focus,
 input[type="button"]:hover, input[type="button"]:focus {
-    background-color: darken($color-primary, 10%);
-    border: 1px solid transparent; // Override inherited 'a' tag hover bottom border (_typography.scss)
-    color: #fff;
     text-decoration: none;
-    border-bottom: none;
 }
 
 
@@ -88,17 +94,28 @@ input[type="button"]:active {
 .btn-primary {
     background-color: $color-primary;
     border-bottom: darken($color-primary, 10%); // Override inherited 'a' tag hover bottom border (_typography.scss)
+    border: 1px solid darken($color-primary, 4%);
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: $black-60;
+    border: 1px solid $black-60;
+    color: #fff;
 }
 
 
 .btn-secondary {
     border: solid 1px $black-30;
+    background: transparent;
     color: $color-text;
+}
+.btn-secondary:hover, .btn-secondary:focus {
+    background-color: $color-secondary;
+    border: 1px solid $color-secondary;
+    color: #fff;
 }
 
 
-.btn-secondary:hover, .btn-secondary:focus {
-    background-color: $black-10;
-    color: $color-text;
-    border: solid 1px $black-30; // Override inherited 'a' tag hover bottom border (_typography.scss)
+.btn-large {
+    padding: 10px 20px;
+    font-size: 24px;
 }
