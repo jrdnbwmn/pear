@@ -2,12 +2,13 @@
 // TABLES
 // -------------------------------------------------------------------------
 
-
-table {
+table, 
+.table {
     width: 100%;
     max-width: 100%;
     display: table;
     max-width: 100%; // Prevents it from breaking out of container
+
     // Cells
     > thead,
     > tbody,
@@ -22,6 +23,7 @@ table {
             }
         }
     }
+
     > thead > tr {
         > th,
         > td {
@@ -31,22 +33,19 @@ table {
     }
 }
 
-
 th {
     text-align: left;
 }
-
 
 // -------------------------------------------------------------------------
 // RESPONSIVE TABLES
 // -------------------------------------------------------------------------
 
-
-// Wrap your tables in ".table-responsive" and Pear will make them mobile friendly
+// Wrap your tables in `.table-responsive` and Pear will make them mobile friendly
 // by enabling horizontal scrolling. Only applies <800px. Everything above that
 // will display normally.
+// There's an example of this in the pattern library
 // Pulled from Bootstrap
-
 
 @media (max-width: 800px) {
     .table-responsive {

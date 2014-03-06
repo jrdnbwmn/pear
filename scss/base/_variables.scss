@@ -1,0 +1,65 @@
+// -------------------------------------------------------------------------
+// NOTES
+// -------------------------------------------------------------------------
+
+// This stylesheet contains ALL variables, excluding ONLY the ones in the "Grid" stylesheet.
+
+// -------------------------------------------------------------------------
+// COLORS
+// -------------------------------------------------------------------------
+
+// Grayscale
+$black-10:                      darken(#fff, 10%);
+$black-20:                      darken(#fff, 20%);
+$black-30:                      darken(#fff, 30%);
+$black-40:                      darken(#fff, 40%);
+$black-50:                      darken(#fff, 50%);
+$black-60:                      darken(#fff, 60%);
+$black-70:                      darken(#fff, 70%);
+$black-80:                      darken(#fff, 80%);
+$black-90:                      darken(#fff, 90%);
+
+// Main Colors
+$color-blue:                 	#428bca;
+$color-green:               	#5cb85c;
+$color-orange:                	#f0ad4e;
+$color-red:                 	#d9534f;
+
+// Text
+$color-text:                    $black-70;
+
+// Links
+$color-link:                    $color-blue;
+$color-link-hover:              darken($color-link, 15%);
+
+// -------------------------------------------------------------------------
+// TYPOGRAPHY
+// -------------------------------------------------------------------------
+
+// Font Families
+$font-family-sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:             Georgia, Times, serif;
+$font-family-monospace:         Monaco, Menlo, Consolas, "Courier New", monospace;
+$font-family-base:              $font-family-sans-serif;
+
+// Base Font Sizes
+$font-size-base:             	112.5% !default; // percentage value (16 * 112.5% = 18px)
+$font-size-large:               ($font-size-base * 1.25);
+$font-size-small:               ($font-size-base * 0.75);
+
+// Line Height
+$line-height-base:              1.65 !default;
+
+// Bottom margin for paragraphs
+$p-margin-bottom:               1.5em;
+
+// Headings
+$headings-font-family:          inherit;
+$headings-font-weight:          500;
+
+// -------------------------------------------------------------------------
+// SCAFFOLDING
+// -------------------------------------------------------------------------
+
+// Baseline
+$baseline: 6px;

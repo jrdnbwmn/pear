@@ -1,6 +1,5 @@
 // Some good practices for base styles
 
-
 *,
 *:before,
 *:after {
@@ -9,24 +8,22 @@
     box-sizing: border-box !important; 
 }
 
-
 html {
     margin: 0;
     padding: 0;
-    font-family: $font-family-base;
-    font-size: $font-size-base;
-    line-height: $line-height-base;
-    font-weight: normal;
     overflow-y: scroll;
     min-height: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-
 body {
     // For now, this is !important because the ::selection (below) affects the background color in IE
     background-color: #fff !important;
     padding: 0;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    font-weight: normal;
+    line-height: $line-height-base;
     color: $color-text;
     min-height: 100%;
     width: 100%;
@@ -39,4 +36,32 @@ body {
 	-o-hyphens: auto;
 	hyphens: auto;
     word-wrap: break-word;
+}
+
+// For Browsehappy prompt
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: $color-text;
+    padding: 0.2em 0;
+}
+
+// Remove text-shadow in selection highlight: h5bp.com/i
+// These selection rule sets have to be separate.
+// Color is set by default to your primary brand color.
+::-moz-selection {
+    background-color: $color-blue;
+    color: white;
+    text-shadow: none;
+}
+::selection {
+    background-color: $color-blue;
+    color: white;
+    text-shadow: none;
+}
+img::selection { 
+    background: transparent; 
+}
+img::-moz-selection { 
+    background: transparent; 
 }

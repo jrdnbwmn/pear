@@ -1,0 +1,86 @@
+// -------------------------------------------------------------------------
+// PATTERN LIBRARY
+// -------------------------------------------------------------------------
+
+// This is the styling for the default pattern library that comes with Pear. Delete this entire sheet if you're not using it.
+
+.pattern {
+    margin: 3em 0 3em 0;
+}
+
+#ptn-colors {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ptn-container {
+    width: 150px;
+    display: inline-block;
+    margin: 30px 30px 0 0;
+    text-align: center;
+    font-style: italic;
+}
+
+.ptn-color {
+    height: 150px;
+}
+
+.ptn-container p {
+    margin: 0;
+}
+
+#primary {
+    background-color: $color-blue;
+}
+
+#secondary {
+    background-color: $color-green;
+}
+
+#tertiary {
+    background-color: $color-orange;
+}
+
+#accent {
+    background-color: $color-red;
+}
+
+form {
+    width: 50%;
+    @media (max-width: 850px) {
+        width: 100%;
+    }
+}
+
+input, 
+textarea {
+    margin-bottom: 2em;
+}
+
+.input-checks-block {
+    margin-bottom: 2em;
+}
+
+.input-checks {
+    display: block;
+    margin-bottom: .5em
+}
+
+.search-form {
+    position: relative;
+
+    input {
+        padding-left: 30px;
+    }
+}
+
+.search-icon {
+    position: absolute;
+    top: 17px;
+    left: 7px;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    color: lighten($color-text, 7%);
+}

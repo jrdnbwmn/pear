@@ -1,14 +1,12 @@
 // -------------------------------------------------------------------------
-// NORMALIZATION AND GOOD PRACTICES
+// NORMALIZATION AND BEST PRACTICES
 // -------------------------------------------------------------------------
 
-
-// Normalize non-control form elements:
-
-select, input, textarea {
+select, 
+input, 
+textarea {
     color: $color-text;
 }
-
 
 // Remove default fieldset styles.
 fieldset {
@@ -16,7 +14,6 @@ fieldset {
     margin: 0;
     padding: 0;
 }
-
 
 legend {
     display: block;
@@ -26,12 +23,10 @@ legend {
     white-space: normal;
 }
 
-
 label {
     display: inline-block;
     cursor: default;
 }
-
 
 // Reset height for textareas
 // Allow only vertical resizing of textareas.
@@ -40,68 +35,27 @@ textarea {
     resize: vertical;
 }
 
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+}
 
-input[type="radio"],
-input[type="checkbox"] {
-    display: inline-block;
-    margin: 1px 7px 0 0;
-    margin-top: 1px; // IE8-9
+select:focus, 
+input:focus, 
+textarea:focus {
+    outline: 0;
+}
+
+input,
+button, 
+select,
+label, {
     vertical-align: middle;
-    padding: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border-style: solid;
-    border-width: 1px;
-    height: 22px;
-    width: 22px;
-    cursor: pointer;
 }
-
-
-input[type="radio"] {
-    border-radius: 100%;
-}
-
-
-input[type="checkbox"] {
-    border-radius: 4px;
-}
-
-
-input[type="radio"]:checked,
-input[type="checkbox"]:checked {
-    border-color: darken($color-primary, 5%);
-    background: $color-primary !important;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
-}
-
-
-input[type="radio"]:checked::after {
-    display: block;
-    position: relative;
-    content: '';
-    left: 5px;
-    top: 5px;
-    height: 10px;
-    width: 10px;
-    border-radius: 100%;
-    background: #fff;
-}
-
-
-input[type="checkbox"]:checked::after {
-display: block;
-position: relative;
-content: '';
-left: 3px;
-top: 4px;
-height: 8px;
-width: 14px;
-border-bottom: 4px solid white;
-border-left: 4px solid white;
--webkit-transform: rotate(-45deg);
-}
-
 
 // Set the height of select and file controls to match text inputs
 // Normalize file input width
@@ -110,34 +64,11 @@ input[type="file"] {
     width: 100%;
 }
 
-
 // Make multiple select elements height not fixed
 select[multiple],
 select[size] {
     height: auto;
 }
-
-
-// Fix optgroup Firefox bug per https://github.com/twbs/bootstrap/issues/7611
-select optgroup {
-    font-size: inherit;
-    font-style: inherit;
-    font-family: inherit;
-}
-
-
-select {
-    -webkit-appearance: none !important;
-    width: 100%;
-    background-color: #fafafa;
-    background-repeat: no-repeat;
-    background-position: center right 3%;
-    border: 1px solid #cccccc;
-    padding: 10px 0 10px 15px;
-    -webkit-border-radius: 0;
-    border-radius: 4px;
-}
-
 
 // Fix for Chrome number input
 // Setting certain font-sizes causes the `I` bar to appear on hover of the bottom increment button.
@@ -149,43 +80,25 @@ input[type="number"] {
     }
 }
 
-
 // Adjust output element
 output {
     display: block;
     vertical-align: middle;
 }
 
-
-input,
-button, 
-select,
-label, {
-    vertical-align: middle;
+// Fix optgroup Firefox bug per https://github.com/twbs/bootstrap/issues/7611
+select optgroup {
+    font-size: inherit;
+    font-style: inherit;
+    font-family: inherit;
 }
 
+// -------------------------------------------------------------------------
+// INPUTS AND TEXTAREAS
+// -------------------------------------------------------------------------
 
-// Reset fonts for relevant elements
-input,
-button,
-select,
+input, 
 textarea {
-    line-height: inherit;
-    -webkit-font-smoothing: antialiased;
-}
-
-
-select:focus, input:focus, textarea:focus {
-    outline: 0;
-}
-
-
-// -------------------------------------------------------------------------
-// SOME DEFAULT STYLING
-// -------------------------------------------------------------------------
-
-
-input, textarea {
     display: block;
     width: 100%;
     max-width: 100%; // Prevents them from breaking out of container
@@ -209,24 +122,96 @@ input, textarea {
     transition-duration: 0.15s, 0.15s;
     transition-timing-function: ease-in-out, ease-in-out;
     transition-delay: initial, initial;
-    
-    // Reset height for `textarea`s
-    textarea {
-        height: auto;
-    }
 }
 
+::-webkit-input-placeholder { 
+    color: lighten($color-text, 7%); 
+}
+:-moz-placeholder { 
+    color: lighten($color-text, 7%); 
+}
+::-moz-placeholder { 
+    color: lighten($color-text, 7%); 
+}
+:-ms-input-placeholder { 
+    color: lighten($color-text, 7%); 
+}
 
-::-webkit-input-placeholder { color: lighten($color-text, 7%); }
-:-moz-placeholder { color: lighten($color-text, 7%); }
-::-moz-placeholder { color: lighten($color-text, 7%); }
-:-ms-input-placeholder { color: lighten($color-text, 7%); }
-
-
-input:focus, textarea:focus {
-    //border-color: $color-primary;
+input:focus, 
+textarea:focus {
     background-color: #fff;
     border-color: $black-30;
-    //-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px rgba(102,175,233,0.6);
-    //box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px rgba(102,175,233,0.6);
+}
+
+// -------------------------------------------------------------------------
+// RADIOS AND CHECKBOXES
+// -------------------------------------------------------------------------
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: inline-block;
+    margin: 1px 7px 0 0;
+    margin-top: 1px; // IE8-9
+    vertical-align: middle;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-style: solid;
+    border-width: 1px;
+    height: 22px;
+    width: 22px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    border-radius: 100%;
+}
+
+input[type="checkbox"] {
+    border-radius: 4px;
+}
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+    border-color: darken($color-blue, 5%);
+    background: $color-blue !important;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+}
+
+input[type="radio"]:checked::after {
+    display: block;
+    position: relative;
+    content: '';
+    left: 5px;
+    top: 5px;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    background: #fff;
+}
+
+input[type="checkbox"]:checked::after {
+    display: block;
+    position: relative;
+    content: '';
+    left: 3px;
+    top: 4px;
+    height: 8px;
+    width: 14px;
+    border-bottom: 4px solid white;
+    border-left: 4px solid white;
+    -webkit-transform: rotate(-45deg);
+}
+
+// -------------------------------------------------------------------------
+// SELECTS
+// -------------------------------------------------------------------------
+
+select {
+    width: 100%;
+    min-width: 25%;
+    border: 1px solid #cccccc;
+    cursor: pointer;
+    text-transform: none;
+    height: 35px;
 }

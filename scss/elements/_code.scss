@@ -1,3 +1,7 @@
+// -------------------------------------------------------------------------
+// ALL CODE
+// -------------------------------------------------------------------------
+
 code,
 kbd,
 pre,
@@ -5,8 +9,10 @@ samp {
     font-family: $font-family-monospace;
 }
 
+// -------------------------------------------------------------------------
+// INLINE CODE
+// -------------------------------------------------------------------------
 
-// Inline code
 code {
     padding: 2px 4px;
     max-width: 100%;
@@ -17,8 +23,10 @@ code {
     border-radius: 5px;
 }
 
+// -------------------------------------------------------------------------
+// BLOCKS OF CODE
+// -------------------------------------------------------------------------
 
-// Blocks of code
 pre {
     display: block;
     padding: 20px;
@@ -32,7 +40,8 @@ pre {
     background-color: $black-10;
     border: 1px solid $black-30;
     border-radius: 5px;
-    // Account for some code outputs that place code tags in pre tags
+    
+    // Account for some code outputs that place code tags in `pre` tags
     code {
         padding: 0;
         font-size: inherit;
@@ -44,7 +53,6 @@ pre {
         border-radius: 0;
     }
 }
-
 
 // For scrollable blocks of code use this class
 .pre-scrollable {
