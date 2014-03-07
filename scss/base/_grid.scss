@@ -29,11 +29,12 @@
 $totalnumbercolumns: 12; 
 
 // Change the padding you want on both sides of a column. This number * 2 = your gutter.
-$columnpadding: 10px;
+// I usually make this a multiple of the baseline to add more consistency and structure.
+$columnpadding: ($baseline * 2);
 
 .container {
     width: 90%;
-	max-width: 1000px;
+	@include rem(max-width, 1000px);
 	margin: 0 auto;
 }
 
@@ -52,9 +53,9 @@ $columnwidth: (100% / $totalnumbercolumns);
   	overflow: hidden;
 	*overflow: visible;
   	width: ($columnwidth * $numbercolumns);
-  	padding: 0 $columnpadding;
+  	@include rem(padding, 0 $columnpadding);
 }
 
 .row {
-  	margin: 0 (-$columnpadding); // Offset padding on the first and last column
+  	@include rem(margin, 0 (-$columnpadding)); // Offset padding on the first and last column
 }

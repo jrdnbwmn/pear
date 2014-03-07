@@ -2,7 +2,7 @@
 // NOTES
 // -------------------------------------------------------------------------
 
-// This stylesheet contains ALL variables, excluding ONLY the ones in the "Grid" stylesheet.
+// This stylesheet contains ALL variables, excluding ONLY the ones in the "Rem" and "Grid" stylesheets.
 
 // -------------------------------------------------------------------------
 // COLORS
@@ -42,24 +42,29 @@ $font-family-serif:             Georgia, Times, serif;
 $font-family-monospace:         Monaco, Menlo, Consolas, "Courier New", monospace;
 $font-family-base:              $font-family-sans-serif;
 
-// Base Font Sizes
-$font-size-base:             	112.5% !default; // percentage value (16 * 112.5% = 18px)
-$font-size-large:               ($font-size-base * 1.25);
-$font-size-small:               ($font-size-base * 0.75);
+// Font Sizes
+$font-size-base:             	112.5 !default; // percentage value (16 * 112.5% = 18px)
+$font-size-base-pixels:			16px * ($font-size-base/100) !default;
+$font-size-large:               ($font-size-base-pixels * 1.25);
+$font-size-small:               ($font-size-base-pixels * 0.75);
 
 // Line Height
-$line-height-base:              1.65 !default;
+// I usually use pixels for the base line height so I can create a whole number baseline (below)
+$line-height-base:              30px !default;
+
+// Baseline
+// I usually make my baseline a divisible number of the base line height. Then all my other vertical margins, paddings, and line heights are a multiple of this baseline to create a vertical rhythm.
+$baseline: 						6px;
 
 // Bottom margin for paragraphs
-$p-margin-bottom:               1.5em;
+$p-margin-bottom:               ($baseline * 4);
 
 // Headings
 $headings-font-family:          inherit;
 $headings-font-weight:          500;
 
 // -------------------------------------------------------------------------
-// SCAFFOLDING
+// MORE SKINS
 // -------------------------------------------------------------------------
 
-// Baseline
-$baseline: 6px;
+$border-radius:					4px;

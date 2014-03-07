@@ -2,30 +2,265 @@
 // NOTES
 // -------------------------------------------------------------------------
 
-// This stylesheet contains ALL mixins, excluding ONLY the ones in the "Grid" stylesheet.
+// This stylesheet contains ALL mixins, excluding ONLY the ones in the "Rem" and "Grid" stylesheets.
+
+// I generally like to use placeholders instead of mixins whenever possible because it leads to less code bloat in the final CSS. I use mixins when I need to pass in parameters.
 
 // -------------------------------------------------------------------------
-// UTILITIES
+// CONVERT PIXELS TO REMS (WITH PIXEL FALLBACKS)
 // -------------------------------------------------------------------------
 
-// Clearfix
-@mixin clearfix() {
-	*zoom:1;
+// This is a fantastic mixin from Ryan Frederick: https://github.com/ry5n/rem
 
-	&:before,
-	&:after {
-	    content: "";
-	    display: table;
-	}
+/*
 
-	&:after {
-	    clear: both;
-	}
+How to use
+
+This Sass:
+h1 {
+  @include rem(font-size, 2rem);
+  @include rem(margin-bottom, 1.5rem);
+}
+.box {
+  @include rem(border, 1px solid #bff);
 }
 
-// Use this to hide from both screenreaders and browsers: h5bp.com/u
-// Mostly used to eliminate elements when scaling down in media queries
-@mixin hidden() {
-    display: none !important;
-    visibility: hidden;
+Produces this CSS:
+h1 {
+  font-size: 36px;
+  font-size: 2rem;
+  margin-bottom: 27px;
+  margin-bottom: 1.5rem;
 }
+.box {
+  border: 1px solid #bbffff;
+  border: 0.063rem solid #bbffff;
+}
+
+There are no restrictions on the style property/ies you can pass in. Values that aren’t in px or rem pass through the mixin untouched. Therefore, you can mix units and still get correct results:
+.crazy-units {
+  @include rem(padding, .5rem 16pt 8px .5em);
+}
+
+*/
+
+// Default font-size for all browsers
+$browser-default-font-size: 16px;
+
+// Base font size in pixels, pulled in from the variables sheet.
+// Should be the same as the font-size of the html element.
+$base-font-size: $font-size-base-pixels;
+
+// Whether to output fallback values in px when outputting rems.
+$rem-with-px-fallback: true !default;
+
+// Convert any CSS <length> or <percentage> value to any other.
+@function convert-length($length, $to-unit, $from-context: $base-font-size, $to-context: $from-context) {
+	$from-unit: unit($length);
+
+	// Optimize for cases where from and to may accidentally be the same.
+	@if $from-unit == $to-unit { @return $length; }
+	@if unit($from-context) != 'px' { @warn "Paremeter $from-context must resolve to a value in pixel units."; }
+	@if unit($to-context) != 'px' { @warn "Parameter $to-context must resolve to a value in pixel units."; }
+
+	// Fixed ratios
+	// https://developer.mozilla.org/en/CSS/length
+	// http://dev.w3.org/csswg/css3-values/#absolute-lengths
+	$px-per-in: 96px / 1in;
+	$px-per-mm: 96px / 25.4mm;
+	$px-per-cm: 96px / 2.54cm;
+	$px-per-pt: 4px / 3pt;
+	$px-per-pc: 16px / 1pc;
+
+	// Variables to store actual convesion ratios
+	$px-per-from-unit: 1;
+	$px-per-to-unit: 1;
+
+	@if $from-unit != 'px' {
+		@if      $from-unit == 'em'  { $px-per-from-unit: $from-context / 1em }
+		@else if $from-unit == 'rem' { $px-per-from-unit: $base-font-size / 1rem }
+		@else if $from-unit == '%'   { $px-per-from-unit: $from-context / 100% }
+		@else if $from-unit == 'ex'  { $px-per-from-unit: $from-context / 2ex }
+		@else if $from-unit == 'in'  { $px-per-from-unit: $px-per-in }
+		@else if $from-unit == 'mm'  { $px-per-from-unit: $px-per-mm }
+		@else if $from-unit == 'cm'  { $px-per-from-unit: $px-per-cm }
+		@else if $from-unit == 'pt'  { $px-per-from-unit: $px-per-pt }
+		@else if $from-unit == 'pc'  { $px-per-from-unit: $px-per-pc }
+		@else if $to-unit == 'ch' or $to-unit == 'vw' or $to-unit == 'vh' or $to-unit == 'vmin' {
+			@warn "#{$from-unit} units can't be reliably converted; Returning original value.";
+			@return $length;
+		}
+		@else {
+			@warn "#{$from-unit} is an unknown length unit. Returning original value.";
+			@return $length;
+		}
+	}
+
+	@if $to-unit != 'px' {
+		@if      $to-unit == 'em'  { $px-per-to-unit: $to-context / 1em }
+		@else if $to-unit == 'rem' { $px-per-to-unit: $base-font-size / 1rem }
+		@else if $to-unit == '%'   { $px-per-to-unit: $to-context / 100% }
+		@else if $to-unit == 'ex'  { $px-per-to-unit: $to-context / 2ex }
+		@else if $to-unit == 'in'  { $px-per-to-unit: $px-per-in }
+		@else if $to-unit == 'mm'  { $px-per-to-unit: $px-per-mm }
+		@else if $to-unit == 'cm'  { $px-per-to-unit: $px-per-cm }
+		@else if $to-unit == 'pt'  { $px-per-to-unit: $px-per-pt }
+		@else if $to-unit == 'pc'  { $px-per-to-unit: $px-per-px }
+		@else if $to-unit == 'ch' or $to-unit == 'vw' or $to-unit == 'vh' or $to-unit == 'vmin' {
+			@warn "#{$to-unit} units can't be reliably converted; Returning original value.";
+			@return $length;
+		}
+		@else {
+			@warn "#{$to-unit} is an unknown length unit. Returning original value.";
+			@return $length;
+		}
+	}
+	@return $length * $px-per-from-unit / $px-per-to-unit;
+}
+
+// For the given property, use rem units with px as a fallback value for older
+// browsers.
+//
+// $property - The css property name.
+// $values - The value (or space-separated list of values) for the property.
+// $use-px-fallback - Boolean, default: true; whether to use pixel fallback values
+//
+@mixin rem($property, $values, $use-px-fallback: $rem-with-px-fallback) {
+	// Create a couple of empty lists as output buffers.
+	$px-values: ();
+	$rem-values: ();
+
+	// Ensure $values is a list.
+	@if type-of($values) != 'list' {
+		$values: join((), $values);
+	}
+
+	// Loop through the $values list
+	@each $value in $values {
+		// For each property value, if it's in rem or px, derive both rem and
+		// px values for it and add those to the end of the appropriate buffer.
+		// Ensure all pixel values are rounded to the nearest pixel.
+		@if type-of($value) == number and not unitless($value) and (unit($value) == px or unit($value) == rem) {
+			@if unit($value) == px {
+				$px-values: join($px-values, round($value));
+				$rem-values: join($rem-values, convert-length($value, rem));
+			}
+			@else {
+				$px-values: join($px-values, round(convert-length($value, px)));
+				$rem-values: join($rem-values, $value);
+			}
+		}
+		@else {
+			$px-values: join($px-values, $value);
+			$rem-values: join($rem-values, $value);
+		}
+	}
+
+	// Use pixel fallback for browsers that don't understand rem units.
+	@if $use-px-fallback {
+		#{$property}: $px-values;
+	}
+
+	// Use rem values for everyone else (overrides pixel values).
+	#{$property}: $rem-values;
+}
+
+// -------------------------------------------------------------------------
+// RETINA IMAGES
+// -------------------------------------------------------------------------
+
+/*
+
+From Bourbon: http://bourbon.io/docs/#retina-image
+
+This mixin is a helper to generate a retina background-image and non-retina background-image. The retina background-image will output to a hidpi media-query.
+
+The mixin uses a _2x.png retina filename by default.
+
+Argument defaults:
+- $extension: png
+- $retina-filename: null
+- $asset-pipeline: false
+
+Sass:
+span {
+  @include retina-image(home-icon, 32px 20px);
+}
+
+CSS Output:
+span {
+  background-image: url(home-icon.png); 
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+  span {
+    background-image: url(home-icon_2x.png);
+    background-size: 32px 20px;
+}
+
+*/
+
+@mixin retina-image($filename, $background-size, $extension: png, $retina-filename: null, $retina-suffix: _2x, $asset-pipeline: false) {
+  @if $asset-pipeline {
+    background-image: image-url("#{$filename}.#{$extension}");
+  }
+  @else {
+    background-image:       url("#{$filename}.#{$extension}");
+  }
+
+  @include hidpi {
+    @if $asset-pipeline {
+      @if $retina-filename {
+        background-image: image-url("#{$retina-filename}.#{$extension}");
+      }
+      @else {
+        background-image: image-url("#{$filename}#{$retina-suffix}.#{$extension}");
+      }
+    }
+
+    @else {
+      @if $retina-filename {
+        background-image: url("#{$retina-filename}.#{$extension}");
+      }
+      @else {
+        background-image: url("#{$filename}#{$retina-suffix}.#{$extension}");
+      }
+    }
+
+    background-size: $background-size;
+
+  }
+}
+
+// -------------------------------------------------------------------------
+// TRANSITION MIXIN
+// -------------------------------------------------------------------------
+
+/*
+
+Produces shorthand transition CSS with all browser prefixes.
+
+Include the mixin and put in it the shorthand transition CSS like you normally would:
+[transition-property] [transition-duration] [transition-timing-function] [transition-delay]
+
+All of the transition mixins I've seen are too complicated when it comes to adding multiple properties as arguments within the mixin. I built this mixin so that it not only compiles to all vendor-prefixed transitions, but the `...` allows you add in however many more properties you want as arguments with the exact same syntax as you would in normal shorthand CSS, like so:
+
+@include transition(background-color 0.15s ease-in-out, color 0.15s ease-in-out);
+
+Add however many properties you want, they'll all be added to the compilation.
+
+http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variable_arguments
+
+*/
+
+@mixin transition($transition-values...) {
+-webkit-transition: $transition-values;
+-moz-transition: $transition-values;
+-ms-transition: $transition-values;
+-o-transition: $transition-values;
+transition: $transition-values;
+}
+
+// -------------------------------------------------------------------------
+// BOX SHADOW MIXIN
+// -------------------------------------------------------------------------
+

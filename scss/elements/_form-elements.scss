@@ -1,99 +1,4 @@
 // -------------------------------------------------------------------------
-// NORMALIZATION AND BEST PRACTICES
-// -------------------------------------------------------------------------
-
-select, 
-input, 
-textarea {
-    color: $color-text;
-}
-
-// Remove default fieldset styles.
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-legend {
-    display: block;
-    width: 100%;
-    font-size: ($font-size-base * 1.5);
-    line-height: inherit;
-    white-space: normal;
-}
-
-label {
-    display: inline-block;
-    cursor: default;
-}
-
-// Reset height for textareas
-// Allow only vertical resizing of textareas.
-textarea {
-    height: auto;
-    resize: vertical;
-}
-
-// Reset fonts for relevant elements
-input,
-button,
-select,
-textarea {
-    line-height: inherit;
-    -webkit-font-smoothing: antialiased;
-}
-
-select:focus, 
-input:focus, 
-textarea:focus {
-    outline: 0;
-}
-
-input,
-button, 
-select,
-label, {
-    vertical-align: middle;
-}
-
-// Set the height of select and file controls to match text inputs
-// Normalize file input width
-input[type="file"] {
-    display: block;
-    width: 100%;
-}
-
-// Make multiple select elements height not fixed
-select[multiple],
-select[size] {
-    height: auto;
-}
-
-// Fix for Chrome number input
-// Setting certain font-sizes causes the `I` bar to appear on hover of the bottom increment button.
-// See https://github.com/twbs/bootstrap/issues/8350 for more.
-input[type="number"] {
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button {
-        height: auto;
-    }
-}
-
-// Adjust output element
-output {
-    display: block;
-    vertical-align: middle;
-}
-
-// Fix optgroup Firefox bug per https://github.com/twbs/bootstrap/issues/7611
-select optgroup {
-    font-size: inherit;
-    font-style: inherit;
-    font-family: inherit;
-}
-
-// -------------------------------------------------------------------------
 // INPUTS AND TEXTAREAS
 // -------------------------------------------------------------------------
 
@@ -103,25 +8,17 @@ textarea {
     width: 100%;
     max-width: 100%; // Prevents them from breaking out of container
     border: 1px solid #ccc;
-    border-radius: 4px;
+    @include rem(border-radius, $border-radius);
     background-color: #f7f7f7;
-    padding: 10px 0px;
+    @include rem(padding, 12px 0px);
     font-size: inherit;
     font-family: inherit;
-    text-indent: 15px;
+    @include rem(text-indent, 15px);
+    color: $color-text;
     vertical-align: middle;
     background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
     // Border color transition
-    -webkit-transition: background-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    -webkit-transition-property: background-color, box-shadow;
-    -webkit-transition-duration: 0.15s, 0.15s;
-    -webkit-transition-timing-function: ease-in-out, ease-in-out;
-    -webkit-transition-delay: initial, initial;
-    transition: background-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    transition-property: background-color, box-shadow;
-    transition-duration: 0.15s, 0.15s;
-    transition-timing-function: ease-in-out, ease-in-out;
-    transition-delay: initial, initial;
+    @include transition(background-color .15s ease-in-out, box-shadow .15s ease-in-out);
 }
 
 ::-webkit-input-placeholder { 
@@ -147,10 +44,12 @@ textarea:focus {
 // RADIOS AND CHECKBOXES
 // -------------------------------------------------------------------------
 
+// Note: I don't use the rem mixin here because it prevents the specific styling I use from being exact on these particular elements.
+
 input[type="radio"],
 input[type="checkbox"] {
     display: inline-block;
-    margin: 1px 7px 0 0;
+    @include rem(margin, 1px 7px 0 0);
     margin-top: 1px; // IE8-9
     vertical-align: middle;
     padding: 0;
@@ -168,7 +67,7 @@ input[type="radio"] {
 }
 
 input[type="checkbox"] {
-    border-radius: 4px;
+    @include rem(border-radius, $border-radius);
 }
 
 input[type="radio"]:checked,
@@ -210,8 +109,9 @@ input[type="checkbox"]:checked::after {
 select {
     width: 100%;
     min-width: 25%;
+    color: $color-text;
     border: 1px solid #cccccc;
     cursor: pointer;
     text-transform: none;
-    height: 35px;
+    @include rem(height, 35px);
 }

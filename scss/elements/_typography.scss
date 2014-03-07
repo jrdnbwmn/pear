@@ -2,9 +2,6 @@
 // NOTES
 // -------------------------------------------------------------------------
 
-// Pear uses REM's for font sizing, with pixel fallbacks for IE 6-8 as they do not understand REM units.
-// More about font sizing with REM's: http://css-tricks.com/font-sizing-with-rem/
-
 // Don't randomly pick font sizes; choose a type hierarchy in a meaningful way: 
 // http://alistapart.com/article/more-meaningful-typography
 // http://typecast.com/blog/contrast-through-scale
@@ -34,30 +31,6 @@
 // http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation
 
 // -------------------------------------------------------------------------
-// NORMALIZATION
-// -------------------------------------------------------------------------
-
-abbr, 
-acronym, 
-blockquote, 
-code, 
-dir, 
-kbd, 
-listing, 
-plaintext, 
-q, 
-samp, 
-tt, 
-var, 
-xmp {
-	-webkit-hyphens: none; // Safari 5.1 thru 6, iOS 4.2 thru 6
-	-moz-hyphens: none; // Firefox 16 thru 20
-	-ms-hyphens: none; // IE10
-	-o-hyphens: none;
-	hyphens: none;	 // W3C standard
-}
-
-// -------------------------------------------------------------------------
 // HEADINGS
 // -------------------------------------------------------------------------
 
@@ -75,38 +48,32 @@ h6 {
 }
 
 h1  {
-    font-size: 60px;
-	font-size: 3.33333rem; // 60 / 18 = 3.3333
+    @include rem(font-size, 60px);
 	margin-bottom: 0.495em;
 }
 
 h2  {
-    font-size: 48px;
-	font-size: 2.6667rem; // 48 / 18 = 2.6667
+    @include rem(font-size, 48px);
 	margin-bottom: 0.61875em;
 }
 
 h3  {
-    font-size: 36px;
-	font-size: 2rem; // 36 / 18 = 2
+    @include rem(font-size, 36px);
 	margin-bottom: 0.825em;
 }
 
 h4  {
-    font-size: 24px;
-	font-size: 1.3333333333333333rem; // 24 / 18 = 1.3333
+    @include rem(font-size, 24px);
 	margin-bottom: 1.2375em;
 }
 
 h5  {
-    font-size: 21px;
-	font-size: 1.16667rem; // 21 / 18 = 1.1667
+    @include rem(font-size, 21px);
 	margin-bottom: 1.4142857142857141em; // measure( base font-size(18) * base line-height(1.65) ) / current font-size(21) = margin-bottom(1.4142857142857141)
 }
 
 h6  {
-    font-size: 18px;
-	font-size: 1rem; /* 18 = 18 × 1 */
+    @include rem(font-size, 18px);
 	margin-bottom: 1.65em; // measure( base font-size(18) * base line-height(1.65) ) / current font-size(18) = margin-bottom(1.65)
 }
 
@@ -119,7 +86,7 @@ h6  {
 
 // bottom margin for paragraphs
 p {
-	margin: auto auto $p-margin-bottom;
+	@include rem(margin, auto auto $p-margin-bottom);
 }
 
 // -------------------------------------------------------------------------
@@ -131,6 +98,7 @@ a {
     text-decoration: none;
     line-height: inherit;
     outline: 0;
+    @include transition(color 0.15s ease-in-out);
 }
 
 a:hover {
@@ -152,7 +120,7 @@ p a:visited {
 ul,
 ol {
     margin-top: 0;
-    margin-bottom: $p-margin-bottom;
+    @include rem(margin-bottom, $p-margin-bottom);
 
     ul,
     ol {
@@ -182,9 +150,9 @@ q:after {
 
 blockquote {
     max-width: 100%; // Prevents it from breaking out of container
-    border-left: 2px solid $color-blue;
-    margin: $p-margin-bottom 0 $p-margin-bottom (-$p-margin-bottom);
-    padding-left: $p-margin-bottom;
+    @include rem(border-left, 2px solid $color-blue);
+    @include rem(margin, $p-margin-bottom 0 $p-margin-bottom (-$p-margin-bottom));
+    @include rem(padding-left, $p-margin-bottom);
 }
 
 blockquote, 
@@ -208,7 +176,7 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 2em 0;
+    @include rem(margin, $p-margin-bottom 0);
     padding: 0;
 }
 

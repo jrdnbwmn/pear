@@ -30,27 +30,16 @@ input[type="button"] {
     user-select: none;
     // Text
     font-family: inherit;
-    line-height: $line-height-base;
+    @include rem(line-height, $line-height-base);
     text-align: center;
     text-decoration: none;
     color: #fff;
     // Border
-    border-radius: 4px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
+    @include rem(border-radius, $border-radius);
     // Size
-    padding: 8px 16px;
+    @include rem(padding, 8px 16px);
     // Background Color Transition
-    -webkit-transition: background-color ease-in-out .15s,color ease-in-out .15s;
-    -webkit-transition-property: background-color, color;
-    -webkit-transition-duration: 0.15s, 0.15s;
-    -webkit-transition-timing-function: ease-in-out, ease-in-out;
-    -webkit-transition-delay: initial, initial;
-    transition: background-color ease-in-out .15s,color ease-in-out .15s;
-    transition-property: background-color, color;
-    transition-duration: 0.15s, 0.15s;
-    transition-timing-function: ease-in-out, ease-in-out;
-    transition-delay: initial, initial;
+    @include transition(background-color 0.15s ease-in-out, color 0.15s ease-in-out);
 }
 
 .btn:hover, 
@@ -112,6 +101,6 @@ input[type="button"]:active {
 }
 
 .btn-large {
-    padding: 10px 20px;
-    font-size: 24px;
+    @include rem(padding, 13px 26px);
+    @extend %h4;
 }

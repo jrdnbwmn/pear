@@ -5,7 +5,7 @@
 // This is the styling for the default pattern library that comes with Pear. Delete this entire sheet if you're not using it.
 
 .pattern {
-    margin: 3em 0 3em 0;
+    @include rem(margin, 3rem 0 3rem 0);
 }
 
 #ptn-colors {
@@ -15,15 +15,15 @@
 }
 
 .ptn-container {
-    width: 150px;
+    @include rem(width, 150px);
     display: inline-block;
-    margin: 30px 30px 0 0;
+    @include rem(margin, 30px 30px 0 0);
     text-align: center;
     font-style: italic;
 }
 
 .ptn-color {
-    height: 150px;
+    @include rem(height, 150px);
 }
 
 .ptn-container p {
@@ -55,32 +55,32 @@ form {
 
 input, 
 textarea {
-    margin-bottom: 2em;
+    @include rem(margin-bottom, 2rem);
 }
 
 .input-checks-block {
-    margin-bottom: 2em;
+    @include rem(margin-bottom, 2rem);
 }
 
 .input-checks {
     display: block;
-    margin-bottom: .5em
+    @include rem(margin-bottom, .5em);
 }
 
 .search-form {
     position: relative;
 
     input {
-        padding-left: 30px;
+        @include rem(padding-left, 30px);
     }
 }
 
 .search-icon {
     position: absolute;
-    top: 17px;
-    left: 7px;
-    width: 34px;
-    height: 34px;
+    @include rem(top, 15px);
+    @include rem(left, 7px);
+    @include rem(width, 34px);
+    @include rem(height, 34px);
     text-align: center;
     color: lighten($color-text, 7%);
 }

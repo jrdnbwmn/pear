@@ -1,0 +1,67 @@
+// -------------------------------------------------------------------------
+// NOTES
+// -------------------------------------------------------------------------
+
+// This stylesheet contains ALL Sass placeholders. Most of the time I use placeholders for the "skins" part of OOCSS.
+
+// Extending with placeholders is better than mixins or regular @extend because it doesn't cause any code bloat.
+
+// Learn more:
+// http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/
+// http://takazudo.github.io/presentation-oocss-sass/#/
+
+// -------------------------------------------------------------------------
+// UTILITIES
+// -------------------------------------------------------------------------
+
+// Clearfix
+%clearfix {
+	*zoom:1;
+
+	&:before,
+	&:after {
+	    content: "";
+	    display: table;
+	}
+
+	&:after {
+	    clear: both;
+	}
+}
+
+// Use this to hide from both screenreaders and browsers: h5bp.com/u
+// Mostly used to eliminate elements when scaling down in media queries
+%hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+// -------------------------------------------------------------------------
+// SKINS
+// -------------------------------------------------------------------------
+
+// For replicating heading sizes, copied from "Typography" sheet
+// Useful for keeping ALL typography within your modular scale
+%h1  {
+    @include rem(font-size, 60px);
+}
+
+%h2  {
+    @include rem(font-size, 48px);
+}
+
+%h3  {
+    @include rem(font-size, 36px);
+}
+
+%h4  {
+    @include rem(font-size, 24px);
+}
+
+%h5  {
+    @include rem(font-size, 21px);
+}
+
+%h6  {
+    @include rem(font-size, 18px);
+}
