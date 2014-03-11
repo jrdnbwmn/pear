@@ -8,6 +8,7 @@ table,
     max-width: 100%;
     display: table;
     max-width: 100%; // Prevents it from breaking out of container
+    font-family: $font-family-sans-serif;
 
     // Cells
     > thead,
@@ -16,8 +17,8 @@ table,
         > tr {
             > th,
             > td {
-                @include rem(padding, 8px);
-                @include rem(line-height, $line-height-base);
+                padding: 0.666rem;
+                line-height: $line-height-base;
                 vertical-align: top;
                 border-top: 1px solid $black-30;
             }
@@ -28,7 +29,7 @@ table,
         > th,
         > td {
         border-top: none;
-            @include rem(border-bottom-width, 2px);
+            border-bottom-width: 2px;
         }
     }
 }

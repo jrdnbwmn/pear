@@ -40,41 +40,41 @@ h3,
 h4, 
 h5, 
 h6 {
+    margin-top: 0;
     font-family: $headings-font-family;
     font-weight: $headings-font-weight;
     line-height: 1; // this fixes huge spaces when a heading wraps onto two lines
-    margin-top: 0;
 	text-rendering: optimizeLegibility; // voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering
 }
 
 h1  {
+    margin-bottom: 0.495em;
     @include rem(font-size, 60px);
-	margin-bottom: 0.495em;
 }
 
 h2  {
+    margin-bottom: 0.61875em;
     @include rem(font-size, 48px);
-	margin-bottom: 0.61875em;
 }
 
 h3  {
+    margin-bottom: 0.825em;
     @include rem(font-size, 36px);
-	margin-bottom: 0.825em;
 }
 
 h4  {
+    margin-bottom: 1.2375em;
     @include rem(font-size, 24px);
-	margin-bottom: 1.2375em;
 }
 
 h5  {
+    margin-bottom: 1.4142857142857141em; // measure( base font-size(18) * base line-height(1.65) ) / current font-size(21) = margin-bottom(1.4142857142857141)
     @include rem(font-size, 21px);
-	margin-bottom: 1.4142857142857141em; // measure( base font-size(18) * base line-height(1.65) ) / current font-size(21) = margin-bottom(1.4142857142857141)
 }
 
 h6  {
+    margin-bottom: 1.65em; // measure( base font-size(18) * base line-height(1.65) ) / current font-size(18) = margin-bottom(1.65)
     @include rem(font-size, 18px);
-	margin-bottom: 1.65em; // measure( base font-size(18) * base line-height(1.65) ) / current font-size(18) = margin-bottom(1.65)
 }
 
 // Margin-bottom for headings explanation:
@@ -86,7 +86,11 @@ h6  {
 
 // bottom margin for paragraphs
 p {
-	@include rem(margin, auto auto $p-margin-bottom);
+	margin: auto auto $p-margin-bottom;
+}
+
+p, ul, ol {
+    font-family: $font-family-serif;
 }
 
 // -------------------------------------------------------------------------
@@ -97,8 +101,8 @@ a {
     color: $color-link;
     text-decoration: none;
     line-height: inherit;
+    @include transition(color $fade);
     outline: 0;
-    @include transition(color 0.15s ease-in-out);
 }
 
 a:hover {
@@ -120,7 +124,7 @@ p a:visited {
 ul,
 ol {
     margin-top: 0;
-    @include rem(margin-bottom, $p-margin-bottom);
+    margin-bottom: $p-margin-bottom;
 
     ul,
     ol {
@@ -150,15 +154,15 @@ q:after {
 
 blockquote {
     max-width: 100%; // Prevents it from breaking out of container
-    @include rem(border-left, 2px solid $color-blue);
-    @include rem(margin, $p-margin-bottom 0 $p-margin-bottom (-$p-margin-bottom));
-    @include rem(padding-left, $p-margin-bottom);
+    margin: $p-margin-bottom 0;
+    padding-left: $p-margin-bottom;
+    border-left: 2px solid $color-blue;
 }
 
 blockquote, 
 q {
+    @include rem(font-size, $font-size-large);
     quotes: none;
-    font-size: $font-size-large;
 }
 
 // Undo browser default styling
@@ -174,10 +178,10 @@ cite {
 hr {
     display: block;
     height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    @include rem(margin, $p-margin-bottom 0);
+    margin: $p-margin-bottom 0;
     padding: 0;
+    border: 0;
+    border-top: 1px solid $black-20;
 }
 
 // -------------------------------------------------------------------------
@@ -197,7 +201,7 @@ b {
 
 small, 
 .small {
-    font-size: $font-size-small;
+    @include rem(font-size, $font-size-small);
     font-weight: normal;
     line-height: 1;
 }

@@ -14,13 +14,13 @@ samp {
 // -------------------------------------------------------------------------
 
 code {
-    @include rem(padding, 2px 4px);
+    padding: 0.166rem 0.333rem;
     max-width: 100%;
     font-size: 90%;
     color: inherit;
     background-color: $black-10;
+    border-radius: $border-radius;
     white-space: nowrap;
-    @include rem(border-radius, $border-radius);
 }
 
 // -------------------------------------------------------------------------
@@ -29,17 +29,17 @@ code {
 
 pre {
     display: block;
-    @include rem(padding, 10px 15px);
-    @include rem(margin, $p-margin-bottom 0);
+    padding: 0.666rem 1rem;
+    margin: $p-margin-bottom 0;
     max-width: 100%;
     @include rem(font-size, $font-size-small);
-    @include rem(line-height, $line-height-base);
+    line-height: $line-height-base;
     word-break: break-all;
     word-wrap: break-word;
     color: $color-text;
     background-color: $black-10;
     border: 1px solid $black-30;
-    @include rem(border-radius, $border-radius);
+    border-radius: $border-radius;
     
     // Account for some code outputs that place code tags in `pre` tags
     code {
@@ -56,6 +56,6 @@ pre {
 
 // For scrollable blocks of code use this class
 .pre-scrollable {
-    @include rem(max-height, 350px);
+    max-height: 350px;
     overflow-y: scroll;
 }

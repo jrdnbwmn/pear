@@ -5,49 +5,59 @@
 // This is the styling for the default pattern library that comes with Pear. Delete this entire sheet if you're not using it.
 
 .pattern {
-    @include rem(margin, 3rem 0 3rem 0);
+    margin: 3rem 0 3rem 0;
 }
 
-#ptn-colors {
+.colors {
     display: table;
     margin-left: auto;
     margin-right: auto;
 }
 
-.ptn-container {
-    @include rem(width, 150px);
+.color-container {
     display: inline-block;
-    @include rem(margin, 30px 30px 0 0);
+    width: 8.325rem;
+    margin: 1.666rem 1.666rem 0 0;
     text-align: center;
     font-style: italic;
 }
 
-.ptn-color {
-    @include rem(height, 150px);
+.pattern-color {
+    height: 8.325rem;
 }
 
-.ptn-container p {
+.color-container p {
     margin: 0;
 }
 
-#primary {
+// Colors
+.color-primary {
     background-color: $color-blue;
 }
 
-#secondary {
+.color-secondary {
     background-color: $color-green;
 }
 
-#tertiary {
+.color-tertiary {
     background-color: $color-orange;
 }
 
-#accent {
+.color-accent {
     background-color: $color-red;
 }
 
+// Icons
+.icons {
+    p {
+        text-align: center;
+    }
+}
+
+// Forms
 form {
     width: 50%;
+    margin: 0 auto;
     @media (max-width: 850px) {
         width: 100%;
     }
@@ -55,23 +65,23 @@ form {
 
 input, 
 textarea {
-    @include rem(margin-bottom, 2rem);
+    margin-bottom: 2rem;
 }
 
 .input-checks-block {
-    @include rem(margin-bottom, 2rem);
+    margin-bottom: 2rem;
 }
 
 .input-checks {
     display: block;
-    @include rem(margin-bottom, .5em);
+    margin-bottom: 0.666rem;
 }
 
 .search-form {
     position: relative;
 
     input {
-        @include rem(padding-left, 30px);
+        padding-left: 1.666rem;
     }
 }
 
@@ -83,4 +93,55 @@ textarea {
     @include rem(height, 34px);
     text-align: center;
     color: lighten($color-text, 7%);
+}
+
+.btn {
+    margin: 0 0.666rem 0.666rem 0;
+}
+
+// Grid
+.grid-filler {
+    padding: 1rem;
+    text-align: center;
+    font-family: $font-family-sans-serif;
+    color: #fff;
+    background-color: $color-green;
+    border-radius: $border-radius;
+}
+
+.col-three { 
+    @include column(3); 
+}
+
+.col-two { 
+    @include column(2); 
+}
+
+.col-nine { 
+    @include column(9); 
+}
+
+.col-four { 
+    @include column(4); 
+}
+
+.full {
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .grid-unit { 
+        width: 100%; 
+    }
+    
+    .row {
+        margin-bottom: 0;
+    }
+}
+
+// Media Query
+@media (max-width: 900px) {
+    html {
+        font-size: 16px;
+    }
 }

@@ -9,6 +9,7 @@
 // -------------------------------------------------------------------------
 
 // Grayscale
+$light-grey:					#f7f7f7;
 $black-10:                      darken(#fff, 10%);
 $black-20:                      darken(#fff, 20%);
 $black-30:                      darken(#fff, 30%);
@@ -37,7 +38,7 @@ $color-link-hover:              darken($color-link, 15%);
 // -------------------------------------------------------------------------
 
 // Font Families
-$font-family-sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif:        "Helvetica Neue", Trebuchet, Tahoma, Verdana, sans-serif;
 $font-family-serif:             Georgia, Times, serif;
 $font-family-monospace:         Monaco, Menlo, Consolas, "Courier New", monospace;
 $font-family-base:              $font-family-sans-serif;
@@ -50,21 +51,31 @@ $font-size-small:               ($font-size-base-pixels * 0.75);
 
 // Line Height
 // I usually use pixels for the base line height so I can create a whole number baseline (below)
-$line-height-base:              30px !default;
+$line-height-base:              1.666rem !default;
 
 // Baseline
 // I usually make my baseline a divisible number of the base line height. Then all my other vertical margins, paddings, and line heights are a multiple of this baseline to create a vertical rhythm.
-$baseline: 						6px;
+$baseline: 						0.333rem;
 
 // Bottom margin for paragraphs
-$p-margin-bottom:               ($baseline * 4);
+$p-margin-bottom:               1.333rem;
 
 // Headings
 $headings-font-family:          inherit;
-$headings-font-weight:          500;
+$headings-font-weight:          700;
+
+// Body Copy
+$body-font-family:				$font-family-serif;
 
 // -------------------------------------------------------------------------
-// MORE SKINS
+// BORDERS
 // -------------------------------------------------------------------------
 
 $border-radius:					4px;
+
+// -------------------------------------------------------------------------
+// ANIMATIONS
+// -------------------------------------------------------------------------
+
+$fade:							.15s ease-out;
+$movement:						.15s ease-in-out;

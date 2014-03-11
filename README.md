@@ -12,17 +12,21 @@ Branches and pull requests are welcomed!
 2. Utilize powerful front–end tools (like Grunt).
 3. Make it faster and easier to produce great work!
 
+## What's Inside?
+- HTML5 boilerplate, with the beginnings of a pattern library inside
+- Sass boilerplate, organized using OOCSS and design system principles
+	- Normalization and best practices pulled from multiple sources for a number of elements
+	- A custom grid utilizing inline-block instead of floats
+	- A few useful mixins
+	- A print styling boilerplate
+- Grunt.js setup and boilerplate
+- Humans and robots boilerplates
+- [Font Awesome](http://fortawesome.github.io/Font-Awesome/) installation
+
 ## How to Use
 We encourage you to download or fork Pear, look through what the default version has, and then add or subtract code according to your preferences. In other words, build your own Pear!
 
 Where some base styling is provided, it is pretty basic and is meant to show the developer some good options and help provide a pattern for coding. Add and subtract whatever you want.
-
-## Features
-- HTML boilerplate with the beginnings of a pattern library.
-- Sass files with a very solid foundation of CSS best practices.
-- Grunt.js boilerplate installed that you can use or delete.
-- Well–commented.
-- Solid, totally flexible grid that’s extremely easy to customize.
 
 ## Thanks
 We drew inspiration from some excellent sources, including:

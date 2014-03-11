@@ -9,6 +9,7 @@
 }
 
 html {
+    min-height: 100%;
     margin: 0;
     padding: 0;
     font-family: $font-family-base;
@@ -17,17 +18,14 @@ html {
     line-height: $line-height-base;
     color: $color-text;
     overflow-y: scroll;
-    min-height: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 body {
     // For now, this is !important because the ::selection (below) affects the background color in IE
-    background-color: #fff !important;
-    padding: 0;
     min-height: 100%;
     width: 100%;
-    @extend %clearfix;
+    padding: 0;
     -webkit-font-smoothing: antialiased; // Fix for webkit rendering
     // Ala Trent Walton (http://trentwalton.com/2011/09/07/css-hyphenation):
     -webkit-hyphens: auto;
@@ -36,27 +34,29 @@ body {
 	-o-hyphens: auto;
 	hyphens: auto;
     word-wrap: break-word;
+    background-color: #fff !important;
+    @extend %clearfix;
 }
 
 // For Browsehappy prompt
 .browsehappy {
-    @include rem(margin, 0.2em 0);
-    background: #ccc;
+    margin: 0.333rem 0;
+    padding: 0.333rem 0;
     color: $color-text;
-    @include rem(padding, 0.2em 0);
+    background: $black-20;
 }
 
 // Remove text-shadow in selection highlight: h5bp.com/i
 // These selection rule sets have to be separate.
 // Color is set by default to your primary brand color.
 ::-moz-selection {
-    background-color: $color-blue;
     color: white;
     text-shadow: none;
+    background-color: $color-blue;
 }
 ::selection {
-    background-color: $color-blue;
     color: white;
+    background-color: $color-blue;
     text-shadow: none;
 }
 img::selection { 

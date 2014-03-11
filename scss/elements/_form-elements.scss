@@ -4,34 +4,34 @@
 
 input, 
 textarea {
+    vertical-align: middle;
     display: block;
     width: 100%;
     max-width: 100%; // Prevents them from breaking out of container
-    border: 1px solid #ccc;
-    @include rem(border-radius, $border-radius);
-    background-color: #f7f7f7;
-    @include rem(padding, 12px 0px);
+    padding: 0.666rem 0;
     font-size: inherit;
     font-family: inherit;
-    @include rem(text-indent, 15px);
+    text-indent: 0.666rem;
     color: $color-text;
-    vertical-align: middle;
+    border: 1px solid $black-20;
+    border-radius: $border-radius;
+    background-color: $light-grey;
     background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
     // Border color transition
-    @include transition(background-color .15s ease-in-out, box-shadow .15s ease-in-out);
+    @include transition(background-color $fade, box-shadow $fade);
 }
 
 ::-webkit-input-placeholder { 
-    color: lighten($color-text, 7%); 
+    color: $black-40; 
 }
 :-moz-placeholder { 
-    color: lighten($color-text, 7%); 
+    color: $black-40; 
 }
 ::-moz-placeholder { 
-    color: lighten($color-text, 7%); 
+    color: $black-40; 
 }
 :-ms-input-placeholder { 
-    color: lighten($color-text, 7%); 
+    color: $black-40; 
 }
 
 input:focus, 
@@ -44,22 +44,22 @@ textarea:focus {
 // RADIOS AND CHECKBOXES
 // -------------------------------------------------------------------------
 
-// Note: I don't use the rem mixin here because it prevents the specific styling I use from being exact on these particular elements.
+// Note: I don't use the rems here because it messes with the styling I use on these custom-built radio and checkbox inputs.
 
 input[type="radio"],
 input[type="checkbox"] {
-    display: inline-block;
-    @include rem(margin, 1px 7px 0 0);
-    margin-top: 1px; // IE8-9
     vertical-align: middle;
-    padding: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border-style: solid;
-    border-width: 1px;
+    display: inline-block;
     height: 22px;
     width: 22px;
+    margin: 1px 7px 0 0;
+    margin-top: 1px; // IE8-9
+    padding: 0;
+    border-style: solid;
+    border-width: 1px;
     cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 input[type="radio"] {
@@ -67,7 +67,7 @@ input[type="radio"] {
 }
 
 input[type="checkbox"] {
-    @include rem(border-radius, $border-radius);
+    border-radius: $border-radius;
 }
 
 input[type="radio"]:checked,
@@ -78,28 +78,28 @@ input[type="checkbox"]:checked {
 }
 
 input[type="radio"]:checked::after {
-    display: block;
     position: relative;
-    content: '';
     left: 5px;
     top: 5px;
+    display: block;
     height: 10px;
     width: 10px;
     border-radius: 100%;
     background: #fff;
+    content: '';
 }
 
 input[type="checkbox"]:checked::after {
-    display: block;
     position: relative;
-    content: '';
     left: 3px;
     top: 4px;
+    display: block;
     height: 8px;
     width: 14px;
     border-bottom: 4px solid white;
     border-left: 4px solid white;
     -webkit-transform: rotate(-45deg);
+    content: '';
 }
 
 // -------------------------------------------------------------------------
@@ -107,11 +107,11 @@ input[type="checkbox"]:checked::after {
 // -------------------------------------------------------------------------
 
 select {
+    height: 2rem;
     width: 100%;
     min-width: 25%;
     color: $color-text;
-    border: 1px solid #cccccc;
-    cursor: pointer;
     text-transform: none;
-    @include rem(height, 35px);
+    border: 1px solid $black-20;
+    cursor: pointer;
 }

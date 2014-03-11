@@ -13,14 +13,13 @@
 //   </ul>
 
 .nav {
-    list-style: none;
     margin-left: 0;
     margin-bottom: 0;
     padding-left: 0; // Override default ul/ol
+    list-style: none;
     @extend %clearfix;
 
     > li {
-
         &,
         > a {
             display: inline-block;

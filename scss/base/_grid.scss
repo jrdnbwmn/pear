@@ -8,7 +8,7 @@
 
 // 1. Write the necessary HTML and...
 		// A. Utilize one of these methods for eliminating the space between inline-block elements: http://css-tricks.com/fighting-the-space-between-inline-block-elements/
-		// B. Create horizontal groups of columns by placing them inside a `div` with the classname `.row` (you don't need to do this for one element that takes up the full width). This is to offset the padding on the first and last column via negative margin.
+		// B. Create horizontal groups of columns by placing them inside a `div` with the classname `.row` (you don't need to do this for any elements that don't utilize the column mixin). This is to offset the padding on the first and last column via negative margin.
 
 // 2. Use the customization options below to specify the number of columns you want in your grid, the padding you want on both sides of your columns (gutter), and the .container styles.
 
@@ -30,11 +30,11 @@ $totalnumbercolumns: 12;
 
 // Change the padding you want on both sides of a column. This number * 2 = your gutter.
 // I usually make this a multiple of the baseline to add more consistency and structure.
-$columnpadding: ($baseline * 2);
+$columnpadding: 0.666rem;
 
 .container {
     width: 90%;
-	@include rem(max-width, 1000px);
+	max-width: 1000px;
 	margin: 0 auto;
 }
 
@@ -46,14 +46,14 @@ $columnwidth: (100% / $totalnumbercolumns);
 
 @mixin column($numbercolumns) {
   	// inline-block instead of floating :) This is happiness.
+  	vertical-align: top;
   	display: inline-block;
 	*display: inline;
 	*zoom: 1;
-	vertical-align: top;
+	width: ($columnwidth * $numbercolumns);
+	@include rem(padding, 0 $columnpadding);
   	overflow: hidden;
 	*overflow: visible;
-  	width: ($columnwidth * $numbercolumns);
-  	@include rem(padding, 0 $columnpadding);
 }
 
 .row {
