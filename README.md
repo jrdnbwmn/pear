@@ -41,4 +41,4 @@ We drew inspiration from some excellent sources, including:
 
 ## License
 
-Released under the [MIT License](LICENSE).
+Released under the [MIT License](LICENSE.txt).
