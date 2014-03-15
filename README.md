@@ -39,4 +39,6 @@ We drew inspiration from some excellent sources, including:
 - [Foundation](http://foundation.zurb.com/index.html)
 - [Gridless](http://thatcoolguy.github.io/gridless-boilerplate/)
 
-Licensed under [The Unlicense](http://unlicense.org/).
+## License
+
+Released under the [MIT License](LICENSE).

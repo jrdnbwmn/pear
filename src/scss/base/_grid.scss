@@ -51,11 +51,11 @@ $columnwidth: (100% / $totalnumbercolumns);
 	*display: inline;
 	*zoom: 1;
 	width: ($columnwidth * $numbercolumns);
-	@include rem(padding, 0 $columnpadding);
+	padding: 0 $columnpadding;
   	overflow: hidden;
 	*overflow: visible;
 }
 
 .row {
-  	@include rem(margin, 0 (-$columnpadding)); // Offset padding on the first and last column
+  	margin: 0 (-$columnpadding); // Offset padding on the first and last column
 }

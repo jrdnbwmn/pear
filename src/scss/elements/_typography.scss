@@ -48,32 +48,32 @@ h6 {
 }
 
 h1  {
-    margin-bottom: 0.495em;
+    margin-bottom: 1.666rem;
     @include rem(font-size, 60px);
 }
 
 h2  {
-    margin-bottom: 0.61875em;
+    margin-bottom: 1.666rem;
     @include rem(font-size, 48px);
 }
 
 h3  {
-    margin-bottom: 0.825em;
+    margin-bottom: 1.666rem;
     @include rem(font-size, 36px);
 }
 
 h4  {
-    margin-bottom: 1.2375em;
+    margin-bottom: 1.666rem;
     @include rem(font-size, 24px);
 }
 
 h5  {
-    margin-bottom: 1.4142857142857141em; // measure( base font-size(18) * base line-height(1.65) ) / current font-size(21) = margin-bottom(1.4142857142857141)
+    margin-bottom: 1.666rem;
     @include rem(font-size, 21px);
 }
 
 h6  {
-    margin-bottom: 1.65em; // measure( base font-size(18) * base line-height(1.65) ) / current font-size(18) = margin-bottom(1.65)
+    margin-bottom: 1.666rem;
     @include rem(font-size, 18px);
 }
 
