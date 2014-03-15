@@ -32,7 +32,6 @@ Where some base styling is provided, it is pretty basic and is meant to show the
 We drew inspiration from some excellent sources, including:
 - [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
 - [Skeleton](https://github.com/dhg/Skeleton)
-- [The Semantic Grid System](https://github.com/twigkit/semantic.gs)
 - [Intuit.css](http://inuitcss.com/) 
 - [Typeplate](http://typeplate.com/)
 - [Bootstrap](http://getbootstrap.com/)
