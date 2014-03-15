@@ -19,7 +19,7 @@ Branches and pull requests are welcomed!
 	- A custom grid utilizing inline-block instead of floats
 	- A few useful mixins
 	- A print styling boilerplate
-- Grunt.js setup and boilerplate
+- Gulp.js setup and boilerplate
 - Humans and robots boilerplates
 - [Font Awesome](http://fortawesome.github.io/Font-Awesome/) installation
 
