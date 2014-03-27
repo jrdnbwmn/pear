@@ -49,32 +49,32 @@ h6 {
 
 h1  {
     margin-bottom: 1.666rem;
-    @include rem(font-size, 60px);
+    @include rem(font-size, 60px); // 60 = 18 × 3.3333
 }
 
 h2  {
     margin-bottom: 1.666rem;
-    @include rem(font-size, 48px);
+    @include rem(font-size, 48px); // 48 = 18 × 2.6667
 }
 
 h3  {
     margin-bottom: 1.666rem;
-    @include rem(font-size, 36px);
+    @include rem(font-size, 36px); // 36 = 18 × 2
 }
 
 h4  {
     margin-bottom: 1.666rem;
-    @include rem(font-size, 24px);
+    @include rem(font-size, 24px); // 24 = 18 × 1.3333
 }
 
 h5  {
     margin-bottom: 1.666rem;
-    @include rem(font-size, 21px);
+    @include rem(font-size, 21px); // 21 = 18 × 1.1667
 }
 
 h6  {
     margin-bottom: 1.666rem;
-    @include rem(font-size, 18px);
+    @include rem(font-size, 18px); // 18 = 18 × 1
 }
 
 // Margin-bottom for headings explanation:
@@ -125,6 +125,7 @@ ul,
 ol {
     margin-top: 0;
     margin-bottom: $p-margin-bottom;
+    padding-left: 2rem;
 
     ul,
     ol {

@@ -41,68 +41,6 @@ textarea:focus {
 }
 
 // -------------------------------------------------------------------------
-// RADIOS AND CHECKBOXES
-// -------------------------------------------------------------------------
-
-// Note: I don't use the rems here because it messes with the styling I use on these custom-built radio and checkbox inputs.
-
-input[type="radio"],
-input[type="checkbox"] {
-    vertical-align: middle;
-    display: inline-block;
-    height: 22px;
-    width: 22px;
-    margin: 1px 7px 0 0;
-    margin-top: 1px; // IE8-9
-    padding: 0;
-    border-style: solid;
-    border-width: 1px;
-    cursor: pointer;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-
-input[type="radio"] {
-    border-radius: 100%;
-}
-
-input[type="checkbox"] {
-    border-radius: $border-radius;
-}
-
-input[type="radio"]:checked,
-input[type="checkbox"]:checked {
-    border-color: darken($color-blue, 5%);
-    background: $color-blue !important;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
-}
-
-input[type="radio"]:checked::after {
-    position: relative;
-    left: 5px;
-    top: 5px;
-    display: block;
-    height: 10px;
-    width: 10px;
-    border-radius: 100%;
-    background: #fff;
-    content: '';
-}
-
-input[type="checkbox"]:checked::after {
-    position: relative;
-    left: 3px;
-    top: 4px;
-    display: block;
-    height: 8px;
-    width: 14px;
-    border-bottom: 4px solid white;
-    border-left: 4px solid white;
-    -webkit-transform: rotate(-45deg);
-    content: '';
-}
-
-// -------------------------------------------------------------------------
 // SELECTS
 // -------------------------------------------------------------------------
 

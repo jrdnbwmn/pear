@@ -17,9 +17,9 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
     // Position
-    vertical-align: middle;
+    vertical-align: middle; // Line different size buttons up nicely
     // Box Model
-    display: inline-block;
+    display: inline-block; // Allow us to better style box model properties
     margin: 0;
     padding: 0.333rem 1rem;
     // Typography
@@ -39,7 +39,9 @@ input[type="button"] {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    white-space: nowrap; //Stop buttons wrapping and looking broken    
+    -webkit-appearance: none;
+    appearance: none;
+    white-space: nowrap; //Stop buttons wrapping and looking broken
 }
 
 .btn:hover, 
@@ -52,7 +54,7 @@ input[type="reset"]:hover,
 input[type="reset"]:focus,
 input[type="button"]:hover, 
 input[type="button"]:focus {
-    text-decoration: none;
+    text-decoration: none; // No underlines
 }
 
 .btn:active,
@@ -76,7 +78,7 @@ input[type="button"]:active {
 // TYPES OF BUTTONS
 // -------------------------------------------------------------------------
 
-// Normally I would try to make these into placeholders but for buttons specifically, I found creating an HTML class to be the option that makes more sense for me in this case.
+// Normally I would try to make these into placeholders but for buttons specifically, I found creating an HTML class to be the option that makes more sense.
 
 .btn-primary {
     background-color: $color-blue;

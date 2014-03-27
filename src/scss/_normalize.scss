@@ -72,7 +72,7 @@ label, {
 
 // Set the height of select and file controls to match text inputs
 // Normalize file input width
-input[type="file"] {
+input[type=file] {
     display: block;
     width: 100%;
 }
@@ -86,7 +86,7 @@ select[size] {
 // Fix for Chrome number input
 // Setting certain font-sizes causes the `I` bar to appear on hover of the bottom increment button.
 // See https://github.com/twbs/bootstrap/issues/8350 for more.
-input[type="number"] {
+input[type=number] {
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
         height: auto;

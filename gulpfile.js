@@ -7,7 +7,6 @@ var gulp 					= require('gulp');
 
 // CSS plugins
 var sass 					= require('gulp-sass');
-var uncss 					= require('gulp-uncss');
 var combineMediaQueries 	= require('gulp-combine-media-queries');
 var autoprefixer 			= require('gulp-autoprefixer');
 var cssmin 					= require('gulp-cssmin');
@@ -30,13 +29,9 @@ var notify					= require('gulp-notify');
 
 // CSS tasks
 gulp.task('css', function() {
-	return gulp.src('src/scss/main.scss')
+	return gulp.src('src/scss/**/*')
 		// Compile Sass
 		.pipe(sass({ style: 'compressed', noCache: true }))
-		// Remove unused CSS
-		.pipe(uncss({
-            html: ['build/index.html']
-        }))
 		// Combine media queries
 		.pipe(combineMediaQueries())
 		// parse CSS and add vendor-prefixed CSS properties
@@ -87,7 +82,7 @@ gulp.task('svgs', function() {
 // Watch files for changes
 gulp.task('watch', function() {
 	// Watch Sass files
-  	gulp.watch('src/scss/main.scss', ['css']);
+  	gulp.watch('src/scss/**/*', ['css']);
   	// Watch JS files
   	gulp.watch('src/js/**/*', ['js']);
   	// Watch image files

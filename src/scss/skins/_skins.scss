@@ -1,10 +1,4 @@
 // -------------------------------------------------------------------------
-// NOTES
-// -------------------------------------------------------------------------
-
-// This stylesheet contains ALL variables, excluding ONLY the ones in the "Rem" and "Grid" stylesheets.
-
-// -------------------------------------------------------------------------
 // COLORS
 // -------------------------------------------------------------------------
 
@@ -46,8 +40,8 @@ $font-family-base:              $font-family-sans-serif;
 // Font Sizes
 $font-size-base:             	112.5 !default; // percentage value (16 * 112.5% = 18px)
 $font-size-base-pixels:			16px * ($font-size-base/100) !default;
-$font-size-large:               ($font-size-base-pixels * 1.25);
-$font-size-small:               ($font-size-base-pixels * 0.75);
+$font-size-large:               ($font-size-base-pixels * 1.3333);
+$font-size-small:               ($font-size-base-pixels * 0.6666);
 
 // Line Height
 // I usually use pixels for the base line height so I can create a whole number baseline (below)
@@ -79,3 +73,33 @@ $border-radius:					4px;
 
 $fade:							.15s ease-out;
 $movement:						.15s ease-in-out;
+
+// -------------------------------------------------------------------------
+// HEADING REPLICATION
+// -------------------------------------------------------------------------
+
+// For replicating heading sizes, copied from "Typography" sheet
+// Useful for keeping ALL typography within your modular scale
+%h1  {
+    @include rem(font-size, 60px);
+}
+
+%h2  {
+    @include rem(font-size, 48px);
+}
+
+%h3  {
+    @include rem(font-size, 36px);
+}
+
+%h4  {
+    @include rem(font-size, 24px);
+}
+
+%h5  {
+    @include rem(font-size, 21px);
+}
+
+%h6  {
+    @include rem(font-size, 18px);
+}

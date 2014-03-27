@@ -104,9 +104,10 @@ textarea {
     padding: 1rem;
     text-align: center;
     font-family: $font-family-sans-serif;
-    color: #fff;
-    background-color: $color-green;
+    color: $color-text;
+    background-color: $black-10;
     border-radius: $border-radius;
+    border: 1px solid darken($black-10, 3%);
 }
 
 .col-three { 

@@ -1,21 +1,20 @@
 {
-  "name": "Pear",
-  "version": "0.1.0",
-  "author": "Jordan Bowman",
-  "description": "This is a Gulp boilerplate that is part of the Pear front-end kit",
-  "private": true,
-  "devDependencies": {
-    "gulp": "^3.5.6",
-    "gulp-sass": "^0.7.1",
-    "gulp-uncss": "^0.4.0",
-    "gulp-combine-media-queries": "^0.0.1",
-    "gulp-cssmin": "^0.1.3",
-    "gulp-autoprefixer": "^0.0.6",
-    "gulp-concat": "^2.1.7",
-    "gulp-uglify": "^0.2.1",
-    "gulp-svgmin": "^0.4.4",
-    "gulp-imagemin": "^0.1.5",
-    "gulp-notify": "^1.2.1",
-    "browser-sync": "^0.7.0",
-  }
+    "name": "Pear",
+    "version": "0.1.0",
+    "author": "Jordan Bowman",
+    "description": "This is a Gulp boilerplate that is part of the Pear front-end kit",
+    "private": true,
+    "devDependencies": {
+        "gulp": "^3.5.6",
+        "gulp-sass": "^0.7.1",
+        "gulp-combine-media-queries": "^0.0.1",
+        "gulp-cssmin": "^0.1.3",
+        "gulp-autoprefixer": "^0.0.6",
+        "gulp-concat": "^2.1.7",
+        "gulp-uglify": "^0.2.1",
+        "gulp-svgmin": "^0.4.4",
+        "gulp-imagemin": "^0.1.5",
+        "gulp-notify": "^1.2.1",
+        "browser-sync": "^0.7.0"
+    }
 }

@@ -2,9 +2,33 @@
 // NOTES
 // -------------------------------------------------------------------------
 
-// This stylesheet contains ALL mixins, excluding ONLY the ones in the "Rem" and "Grid" stylesheets.
+// Tools to use for improved coding or added functionality.
 
-// I generally like to use placeholders instead of mixins whenever possible because it leads to less code bloat in the final CSS. I use mixins when I need to pass in parameters.
+// -------------------------------------------------------------------------
+// A FEW PLACEHOLDERS
+// -------------------------------------------------------------------------
+
+// Clearfix
+%clearfix {
+	*zoom:1;
+
+	&:before,
+	&:after {
+	    content: "";
+	    display: table;
+	}
+
+	&:after {
+	    clear: both;
+	}
+}
+
+// Use this to hide from both screenreaders and browsers: h5bp.com/u
+// Mostly used to eliminate elements when scaling down in media queries
+%hidden {
+    display: none !important;
+    visibility: hidden;
+}
 
 // -------------------------------------------------------------------------
 // CONVERT PIXELS TO REMS (WITH PIXEL FALLBACKS)
@@ -259,8 +283,3 @@ http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variable_arguments
 -o-transition: $transition-values;
 transition: $transition-values;
 }
-
-// -------------------------------------------------------------------------
-// BOX SHADOW MIXIN
-// -------------------------------------------------------------------------
-

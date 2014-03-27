@@ -2,43 +2,31 @@
 // NOTES
 // -------------------------------------------------------------------------
 
-
-// This is where all the partial SCSS files are imported into one document. As a result you'll only need to compile this particular stylesheet when converting to standard CSS.
-
+// This is where all the partial SCSS files are imported into one document.
 
 // -------------------------------------------------------------------------
 // IMPORTING
 // -------------------------------------------------------------------------
 
+// Skins
+@import "skins/skins";
+@import "skins/grid";
 
-// BASE TOOlS AND STYLING
+// Utilities
+@import "normalize";
+@import "print";
+@import "utilities";
 
-// Variables & Mixins
-@import "base/variables";
-@import "base/mixins";
-@import "base/placeholders";
-
-// Reset
-@import "base/normalize";
-@import "base/print";
-
-// Base
-@import "base/base";
-@import "base/grid";
-
-
-// DESIGN SYSTEM
-
+// Objects
 // Elements
+@import "elements/base";
 @import "elements/typography";
 @import "elements/buttons";
 @import "elements/code";
 @import "elements/form-elements";
 @import "elements/media";
 @import "elements/tables";
-
 // Components
 @import "components/navs";
-
 // Blocks
 @import "blocks/pattern-library";
