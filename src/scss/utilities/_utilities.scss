@@ -73,7 +73,7 @@ $browser-default-font-size: 16px;
 
 // Base font size in pixels, pulled in from the variables sheet.
 // Should be the same as the font-size of the html element.
-$base-font-size: $font-size-base-pixels;
+$base-font-size: 18px;
 
 // Whether to output fallback values in px when outputting rems.
 $rem-with-px-fallback: true !default;

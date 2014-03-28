@@ -2,7 +2,7 @@
 // PATTERN LIBRARY
 // -------------------------------------------------------------------------
 
-// This is the styling for the default pattern library that comes with Pear. Delete this entire sheet if you're not using it.
+// This is some example styling for the default pattern library that comes with Pear. Delete this entire sheet if you're not using it.
 
 .pattern {
     margin: 3rem 0 3rem 0;
@@ -47,6 +47,20 @@
     background-color: $color-red;
 }
 
+// Code
+code {
+    padding: 0.166rem 0.333rem;
+    background-color: $black-10;
+    border-radius: $border-radius;
+}
+
+pre {
+    padding: 0.666rem 1rem;
+    background-color: $black-10;
+    border: 1px solid $black-30;
+    border-radius: $border-radius;
+}
+
 // Icons
 .icons {
     p {
@@ -65,7 +79,13 @@ form {
 
 input, 
 textarea {
+    width: 100%;
     margin-bottom: 2rem;
+    padding: 0.666rem 0;
+    background-color: $light-grey;
+    border: 1px solid $black-20;
+    border-radius: $border-radius;
+    @include transition(background-color $fade, box-shadow $fade);
 }
 
 .input-checks-block {
@@ -95,48 +115,96 @@ textarea {
     color: lighten($color-text, 7%);
 }
 
-.btn {
+::-webkit-input-placeholder { 
+    color: $black-40; 
+}
+:-moz-placeholder { 
+    color: $black-40; 
+}
+::-moz-placeholder { 
+    color: $black-40; 
+}
+:-ms-input-placeholder { 
+    color: $black-40; 
+}
+
+.btn,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
     margin: 0 0.666rem 0.666rem 0;
-}
-
-// Grid
-.grid-filler {
-    padding: 1rem;
-    text-align: center;
-    font-family: $font-family-sans-serif;
-    color: $color-text;
-    background-color: $black-10;
+    padding: 0.333rem 1rem;
+    color: #fff;
     border-radius: $border-radius;
-    border: 1px solid darken($black-10, 3%);
+    @include transition(background-color $fade, color $fade);
 }
 
-.col-three { 
-    @include column(3); 
+.btn:active,
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active {
+    -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.15);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.15);
 }
 
-.col-two { 
-    @include column(2); 
+.btn-primary {
+    background-color: $color-blue;
+    border-bottom: darken($color-blue, 10%); // Override inherited `a` tag hover bottom border (_typography.scss)
+    border: 1px solid darken($color-blue, 4%);
 }
 
-.col-nine { 
-    @include column(9); 
+.btn-primary:hover, 
+.btn-primary:focus {
+    color: #fff;
+    background-color: $black-60;
+    border: 1px solid $black-60;
 }
 
-.col-four { 
-    @include column(4); 
+.btn-secondary {
+    color: $color-text;
+    border: solid 1px $black-30;
+    background: transparent;
 }
 
-.full {
+.btn-secondary:hover, 
+.btn-secondary:focus {
+    color: #fff;
+    background-color: $color-green;
+    border: 1px solid $color-green;
+}
+
+.btn-large {
+    padding: 0.666rem 1.333rem;
+    @extend %h4;
+}
+
+// Tables
+table, 
+.table {
     width: 100%;
-}
+    font-family: $font-family-sans-serif;
 
-@media (max-width: 600px) {
-    .grid-unit { 
-        width: 100%; 
+    // Cells
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th,
+            > td {
+                padding: 0.666rem;
+                border-top: 1px solid $black-30;
+            }
+        }
     }
-    
-    .row {
-        margin-bottom: 0;
+
+    > thead > tr {
+        > th,
+        > td {
+        border-top: none;
+            border-bottom-width: 2px;
+        }
     }
 }
 

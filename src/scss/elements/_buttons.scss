@@ -16,23 +16,14 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-    // Position
     vertical-align: middle; // Line different size buttons up nicely
-    // Box Model
     display: inline-block; // Allow us to better style box model properties
     margin: 0;
-    padding: 0.333rem 1rem;
-    // Typography
     font-family: inherit;
     line-height: $line-height-base;
     text-align: center;
     text-decoration: none;
-    color: #fff;
-    // Visual
     background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-    border-radius: $border-radius;
-    @include transition(background-color $fade, color $fade);
-    // Misc
     cursor: pointer;
     -webkit-user-drag: none;
     -webkit-user-select: none;
@@ -64,49 +55,10 @@ input[type="reset"]:active,
 input[type="button"]:active {
     outline: none;
     background-image: none;
-    -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.15);
-    box-shadow: inset 0 3px 5px rgba(0,0,0,0.15);
 }
 
 // Fix for odd Mozilla border & padding issues
 .btn::-moz-focus-inner {
     padding: 0;
     border: 0;
-}
-
-// -------------------------------------------------------------------------
-// TYPES OF BUTTONS
-// -------------------------------------------------------------------------
-
-// Normally I would try to make these into placeholders but for buttons specifically, I found creating an HTML class to be the option that makes more sense.
-
-.btn-primary {
-    background-color: $color-blue;
-    border-bottom: darken($color-blue, 10%); // Override inherited `a` tag hover bottom border (_typography.scss)
-    border: 1px solid darken($color-blue, 4%);
-}
-
-.btn-primary:hover, 
-.btn-primary:focus {
-    color: #fff;
-    background-color: $black-60;
-    border: 1px solid $black-60;
-}
-
-.btn-secondary {
-    color: $color-text;
-    border: solid 1px $black-30;
-    background: transparent;
-}
-
-.btn-secondary:hover, 
-.btn-secondary:focus {
-    color: #fff;
-    background-color: $color-green;
-    border: 1px solid $color-green;
-}
-
-.btn-large {
-    padding: 0.666rem 1.333rem;
-    @extend %h4;
 }

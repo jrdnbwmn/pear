@@ -21,7 +21,7 @@ $color-orange:                	#f0ad4e;
 $color-red:                 	#d9534f;
 
 // Text
-$color-text:                    $black-70;
+$color-text:                    $black-80;
 
 // Links
 $color-link:                    $color-blue;
@@ -38,6 +38,7 @@ $font-family-monospace:         Monaco, Menlo, Consolas, "Courier New", monospac
 $font-family-base:              $font-family-sans-serif;
 
 // Font Sizes
+// Need to change $base-font-size in the rem mixin in _utilities if you want to you that mixin
 $font-size-base:             	112.5 !default; // percentage value (16 * 112.5% = 18px)
 $font-size-base-pixels:			16px * ($font-size-base/100) !default;
 $font-size-large:               ($font-size-base-pixels * 1.3333);
@@ -59,7 +60,7 @@ $headings-font-family:          inherit;
 $headings-font-weight:          700;
 
 // Body Copy
-$body-font-family:				$font-family-serif;
+$body-font-family:				$font-family-base;
 
 // -------------------------------------------------------------------------
 // BORDERS

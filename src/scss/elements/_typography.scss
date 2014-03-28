@@ -27,8 +27,32 @@
 //       font-weight: normal;
 //       font-style: normal; }
 
+// -------------------------------------------------------------------------
+// NORMALIZATION
+// -------------------------------------------------------------------------
+
 // The default is hyphenation: see _base.scss
 // http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation
+
+abbr, 
+acronym, 
+blockquote, 
+code, 
+dir, 
+kbd, 
+listing, 
+plaintext, 
+q, 
+samp, 
+tt, 
+var, 
+xmp {
+  -webkit-hyphens: none; // Safari 5.1 thru 6, iOS 4.2 thru 6
+  -moz-hyphens: none; // Firefox 16 thru 20
+  -ms-hyphens: none; // IE10
+  -o-hyphens: none;
+  hyphens: none;   // W3C standard
+}
 
 // -------------------------------------------------------------------------
 // HEADINGS
@@ -77,8 +101,7 @@ h6  {
     @include rem(font-size, 18px); // 18 = 18 × 1
 }
 
-// Margin-bottom for headings explanation:
-// Makes sure that there's always one unit of measure's worth of space between stuff for headings. This is better than spacing using line-height because of the wrapping issue where we have wrapping onto 2 lines with a high line-height.
+// The margin on the bottom makes sure that there's always one unit of measure's worth of space between stuff for headings. This is better than spacing using line-height because of the wrapping issue where we have wrapping onto 2 lines with a high line-height.
 
 // -------------------------------------------------------------------------
 // PARAGRAPHS
@@ -89,8 +112,10 @@ p {
 	margin: auto auto $p-margin-bottom;
 }
 
-p, ul, ol {
-    font-family: $font-family-serif;
+p, 
+ul, 
+ol {
+    font-family: $body-font-family;
 }
 
 // -------------------------------------------------------------------------
@@ -99,15 +124,12 @@ p, ul, ol {
 
 a {
     color: $color-link;
-    text-decoration: none;
     line-height: inherit;
-    @include transition(color $fade);
     outline: 0;
 }
 
 a:hover {
     color: $color-link-hover;
-    border-bottom: 1px solid;
 }
 
 p a, 
@@ -157,12 +179,12 @@ blockquote {
     max-width: 100%; // Prevents it from breaking out of container
     margin: $p-margin-bottom 0;
     padding-left: $p-margin-bottom;
-    border-left: 2px solid $color-blue;
+    border-left: 2px solid $black-20;
 }
 
 blockquote, 
 q {
-    @include rem(font-size, $font-size-large);
+    font-size: $font-size-large;
     quotes: none;
 }
 

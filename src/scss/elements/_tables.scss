@@ -4,11 +4,8 @@
 
 table, 
 .table {
-    width: 100%;
-    max-width: 100%;
     display: table;
     max-width: 100%; // Prevents it from breaking out of container
-    font-family: $font-family-sans-serif;
 
     // Cells
     > thead,
@@ -17,19 +14,9 @@ table,
         > tr {
             > th,
             > td {
-                padding: 0.666rem;
                 line-height: $line-height-base;
                 vertical-align: top;
-                border-top: 1px solid $black-30;
             }
-        }
-    }
-
-    > thead > tr {
-        > th,
-        > td {
-        border-top: none;
-            border-bottom-width: 2px;
         }
     }
 }
@@ -59,54 +46,55 @@ th {
         -webkit-overflow-scrolling: touch;
     
         // Tighten up spacing
-        > .table {
-          margin-bottom: 0;
+        > .table,
+        table {
+            margin-bottom: 0;
     
-          // Ensure the content doesn't wrap
-          > thead,
-          > tbody,
-          > tfoot {
-            > tr {
-              > th,
-              > td {
-                white-space: nowrap;
-              }
+            // Ensure the content doesn't wrap
+            > thead,
+            > tbody,
+            > tfoot {
+                > tr {
+                    > th,
+                    > td {
+                        white-space: nowrap;
+                    }
+                }
             }
-          }
         }
     
         // Special overrides for the bordered tables
         > .table-bordered {
-          border: 0;
+            border: 0;
     
-          // Nuke the appropriate borders so that the parent can handle them
-          > thead,
-          > tbody,
-          > tfoot {
-            > tr {
-              > th:first-child,
-              > td:first-child {
-                border-left: 0;
-              }
-              > th:last-child,
-              > td:last-child {
-                border-right: 0;
-              }
+            // Nuke the appropriate borders so that the parent can handle them
+            > thead,
+            > tbody,
+            > tfoot {
+                > tr {
+                    > th:first-child,
+                    > td:first-child {
+                        border-left: 0;
+                    }
+                    > th:last-child,
+                    > td:last-child {
+                        border-right: 0;
+                    }
+                }
             }
-          }
     
-          // Only nuke the last row's bottom-border in `tbody` and `tfoot` since
-          // chances are there will be only one `tr` in a `thead` and that would
-          // remove the border altogether.
-          > tbody,
-          > tfoot {
-            > tr:last-child {
-              > th,
-              > td {
-                border-bottom: 0;
-              }
+            // Only nuke the last row's bottom-border in `tbody` and `tfoot` since
+            // chances are there will be only one `tr` in a `thead` and that would
+            // remove the border altogether.
+            > tbody,
+            > tfoot {
+                > tr:last-child {
+                    > th,
+                    > td {
+                        border-bottom: 0;
+                    }
+                }
             }
-          }
     
         }
     }

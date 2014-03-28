@@ -14,12 +14,10 @@ samp {
 // -------------------------------------------------------------------------
 
 code {
-    padding: 0.166rem 0.333rem;
+    
     max-width: 100%;
     font-size: 90%;
     color: inherit;
-    background-color: $black-10;
-    border-radius: $border-radius;
     white-space: nowrap;
 }
 
@@ -29,17 +27,12 @@ code {
 
 pre {
     display: block;
-    padding: 0.666rem 1rem;
     margin: $p-margin-bottom 0;
     max-width: 100%;
-    @include rem(font-size, $font-size-small);
     line-height: $line-height-base;
     word-break: break-all;
     word-wrap: break-word;
     color: $color-text;
-    background-color: $black-10;
-    border: 1px solid $black-30;
-    border-radius: $border-radius;
     
     // Account for some code outputs that place code tags in `pre` tags
     code {

@@ -8,18 +8,17 @@ Pear represents a lot of research and inspiration from several excellent sources
 ## Goals
 1. Bring together some best practices from many credible sources across the web.
 2. Help the developer establish good coding patterns.
-3. Utilize powerful front–end tools like Gulp.
+3. Utilize powerful front–end tools like Gulp & Bourbon.
 4. Make it easier to produce great work!
 
 ## What's Inside?
 - HTML5 boilerplate, with the beginnings of a pattern library inside
 - Sass boilerplate, organized using OOCSS and design system principles
+- Bourbon and its grid system, Neat
 - Normalization and best practices pulled from multiple sources for a number of elements
-- A unique grid utilizing inline-block instead of floats
 - A few useful mixins
 - Gulp.js setup
-- Humans and robots templates
-- [Font Awesome](http://fortawesome.github.io/Font-Awesome/) installation
+- Humans.txt and robots.txt templates
 
 ## How to Use
 I encourage you to download or fork Pear, look through what the default version has, and then add or subtract code according to your preferences. In other words, build your own Pear!
@@ -38,6 +37,10 @@ Objects in Pear are divided into three types (our design system):
 Pear also has a pattern for including skins:
 
 **Skins:** In OOCSS, "skins" are defined as repeating visual features (like borders, backgrounds, margins, paddings, and so forth) or any extension to an object that you can define separately and then mix-and-match with your various objects to achieve visual variety, while remaining visually consistent and writing much less code. 
+
+There's a folder called "utilities" in the SCSS directory.
+
+**Utilities:** For Pear, I define utilities as tools we use to improve coding or add functionality, such as normalization and mixin tools. Utilities don't necessarily have anything to do with the design system or OOCSS, so they are kept separate. 
 
 ## Thanks
 We drew inspiration and code from some excellent sources, including:

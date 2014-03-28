@@ -88,7 +88,6 @@ gulp.task('watch', function() {
   	// Watch image files
   	gulp.watch('src/images/raster/*', ['images']);
   	// Watch SVG files
-  	// To do: Make sure this watching is working
   	gulp.watch('src/images/vector/*', ['svgs']);
 });
 

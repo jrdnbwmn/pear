@@ -8,14 +8,20 @@
 // IMPORTING
 // -------------------------------------------------------------------------
 
+// Utilities
+// Bourbon
+@import "utilities/bourbon/bourbon";
+@import "utilities/neat/neat";
+// Other tools
+@import "utilities/normalize";
+@import "utilities/print";
+@import "utilities/utilities";
+
+
+
+
 // Skins
 @import "skins/skins";
-@import "skins/grid";
-
-// Utilities
-@import "normalize";
-@import "print";
-@import "utilities";
 
 // Objects
 // Elements
