@@ -14,11 +14,17 @@ $black-70:                      darken(#fff, 70%);
 $black-80:                      darken(#fff, 80%);
 $black-90:                      darken(#fff, 90%);
 
-// Main Colors
+// Color by name
 $color-blue:                 	#428bca;
 $color-green:               	#5cb85c;
 $color-orange:                	#f0ad4e;
 $color-red:                 	#d9534f;
+
+// Color by purpose
+$color-primary:					$color-blue;
+$color-secondary:				$color-green;
+$color-tertiary:				$color-orange;
+$color-accent:					$color-red;
 
 // Text
 $color-text:                    $black-80;
@@ -39,6 +45,7 @@ $font-family-base:              $font-family-sans-serif;
 
 // Font Sizes
 // Need to change $base-font-size in the rem mixin in _utilities if you want to you that mixin
+// Great tool for choosing font sizes: http://type-scale.com/
 $font-size-base:             	112.5 !default; // percentage value (16 * 112.5% = 18px)
 $font-size-base-pixels:			16px * ($font-size-base/100) !default;
 $font-size-large:               ($font-size-base-pixels * 1.3333);
@@ -52,15 +59,31 @@ $line-height-base:              1.666rem !default;
 // I usually make my baseline a divisible number of the base line height. Then all my other vertical margins, paddings, and line heights are a multiple of this baseline to create a vertical rhythm.
 $baseline: 						0.333rem;
 
-// Bottom margin for paragraphs
-$p-margin-bottom:               1.333rem;
-
 // Headings
 $headings-font-family:          inherit;
 $headings-font-weight:          700;
 
 // Body Copy
 $body-font-family:				$font-family-base;
+
+// -------------------------------------------------------------------------
+// MARGINS
+// -------------------------------------------------------------------------
+
+$margin-small:					1rem;
+$margin-medium:					2rem;
+$margin-large:					3rem;
+
+// Bottom margin for paragraphs
+$p-margin-bottom:               1.333rem;
+
+// -------------------------------------------------------------------------
+// PADDING
+// -------------------------------------------------------------------------
+
+$padding-small:					1rem;
+$padding-medium:				2rem;
+$padding-large:					3rem;
 
 // -------------------------------------------------------------------------
 // BORDERS

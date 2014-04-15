@@ -6,6 +6,7 @@
 // http://alistapart.com/article/more-meaningful-typography
 // http://typecast.com/blog/contrast-through-scale
 // Here's an excellent calculator for doing this: http://modularscale.com/
+// Great tool for choosing font sizes: http://type-scale.com/
 
 // The default scale is 18, 21, 24, 36, 48, 60
 
@@ -234,3 +235,61 @@ u,
 ins {
     text-decoration: none;
 }
+
+// -------------------------------------------------------------------------
+// OPENTYPE
+// -------------------------------------------------------------------------
+
+// Enable OpenType features
+
+// Paragraphs. OpenType ligatures and oldstyle figures enabled if available. Commented out by default.
+
+/*
+p {
+    -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
+    -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+}
+
+// Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
+h1, h2, h3, h4, h5, h6 {
+    -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    -moz-font-feature-settings: 'dlig=1, liga=1, lnum=1, kern=1';
+    -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+}
+
+// Lists.
+ul, ol {
+    li {
+        -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
+        -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+        -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+        -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+        font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    }
+}
+
+// Real small caps.
+.small-caps {
+    font-variant: small-caps;
+    text-transform: lowercase;
+    -moz-font-feature-settings: 'smcp=1, kern=1';
+    -ms-font-feature-settings: 'smcp' 1, 'kern' 1;
+    -webkit-font-feature-settings: 'smcp' 1, 'kern' 1;
+    -o-font-feature-settings: 'smcp' 1, 'kern' 1;
+    font-feature-settings: 'smcp' 1, 'kern' 1;
+}
+
+// Ascending and descending numbers with OpenType.
+.oldstyle-numerals {
+    -moz-font-feature-settings: 'onum=1, kern=1';
+    -ms-font-feature-settings: 'onum' 1, 'kern' 1;
+    -webkit-font-feature-settings: 'onum' 1, 'kern' 1;
+    -o-font-feature-settings: 'onum' 1, 'kern' 1;
+    font-feature-settings: 'onum' 1, 'kern' 1;
+}
+*/

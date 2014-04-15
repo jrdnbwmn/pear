@@ -21,6 +21,11 @@ label {
     cursor: default;
 }
 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
 // Reset fonts for relevant elements
 input,
 button,
@@ -84,7 +89,6 @@ textarea {
     max-width: 100%; // Prevents them from breaking out of container
     font-size: inherit;
     font-family: inherit;
-    text-indent: 0.666rem;
     color: $color-text;
     background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
 }
