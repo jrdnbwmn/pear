@@ -56,7 +56,7 @@ $columnWidth: (100% / $totalNumberColumns);
 	width: ($columnWidth * $numberColumns);
 	padding: 0 $columnPadding;
     vertical-align: top;
-    font-size: 16px; // Part of getting rid of the inline-block ghost space
+    font-size: $fontBase; // Part of getting rid of the inline-block ghost space
   	overflow: hidden;
 	*overflow: visible;
 }
