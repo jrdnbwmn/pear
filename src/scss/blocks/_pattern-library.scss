@@ -5,8 +5,9 @@
 // This is some example styling for the default pattern library that comes with Pear. Delete this entire sheet if you're not using it.
 
 .container {
-    @include outer-container;
+    margin: 0 auto;
     width: 90%;
+    max-width: 1000px;
 }
 
 .pattern {

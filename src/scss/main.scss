@@ -11,8 +11,6 @@
 // Utilities
 // Bourbon
 @import "utilities/bourbon/bourbon";
-@import "utilities/grid-settings";
-@import "utilities/neat/neat";
 // Other tools
 @import "utilities/normalize";
 @import "utilities/print";
@@ -27,6 +25,7 @@
 // Objects
 // Elements
 @import "elements/base";
+@import "elements/sink";
 @import "elements/typography";
 @import "elements/buttons";
 @import "elements/code";

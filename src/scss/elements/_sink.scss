@@ -1,0 +1,62 @@
+// -------------------------------------------------------------------------
+// ABOUT
+// -------------------------------------------------------------------------
+
+// Sink is a floatless, responsive CSS grid. That's right, no floats here 
+// folks!
+
+// Tutorial/source on GitHub: https://github.com/jrdnbwmn/Sink
+
+// Sink utilizes inline-block, so no clearfix or other float issues. It's 
+// built with Sass and includes a mixin instead of unsemantic HTML classes.
+// It's very simple (only 4 kb) and easy to customize.
+
+// Compatible with all modern browsers (IE 8+).
+
+// -------------------------------------------------------------------------
+// HOW TO USE
+// -------------------------------------------------------------------------
+
+// Tutorial on the README: https://github.com/jrdnbwmn/Sink
+
+// See the demo on CodePen: http://codepen.io/jrdnbwmn/pen/fpjmk
+
+// -------------------------------------------------------------------------
+// CUSTOMIZATION
+// -------------------------------------------------------------------------
+
+// Change the number of columns you want in your grid.
+// Width %/size will automatically be calculated.
+$totalNumberColumns: 12;
+
+// Change the padding you want on both sides of a column.
+// This number * 2 = your gutter.
+$columnPadding: 0.666rem;
+
+// Set the base font size of your HTML document
+// This is part of getting rid of the inline-block ghost space
+$fontBase: $font-size-base-pixels;
+
+// -------------------------------------------------------------------------
+// THE MIXINS
+// -------------------------------------------------------------------------
+
+$columnWidth: (100% / $totalNumberColumns);
+
+// Offset padding (gutter) on the first and last column
+@mixin columnRow {
+  	margin: 0 (-$columnPadding);
+    font-size: 0; // Part of getting rid of the inline-block ghost space
+}
+
+@mixin spanColumns($numberColumns) {
+  	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: ($columnWidth * $numberColumns);
+	padding: 0 $columnPadding;
+    vertical-align: top;
+    font-size: 16px; // Part of getting rid of the inline-block ghost space
+  	overflow: hidden;
+	*overflow: visible;
+}

@@ -14,16 +14,17 @@ Pear represents a lot of research and inspiration from several excellent sources
 ## What's Inside?
 - HTML5 boilerplate, with the beginnings of a pattern library inside
 - Sass boilerplate, organized using OOCSS and design system principles
-- Bourbon and its grid system, Neat
+- [Bourbon](https://github.com/thoughtbot/bourbon)
+- A floatless, responsive CSS grid called [Sink](https://github.com/jrdnbwmn/Sink)
 - Normalization and best practices pulled from multiple sources for a number of elements
 - A few useful mixins
-- Gulp.js setup
+- Gulp.js setup with CSS, image, and Javascript processing and auto reloading.
 - Humans.txt and robots.txt templates
 
 ## Getting Started
 - Download or fork Pear.
 - `cd` to the root directory and run `npm install`. This will install everything you need to run Gulp. 
-- Bourbon and Neat are already installed, but make sure they're updated: `bourbon update` and `neat update` in the utilities directory.
+- Bourbon is already installed, but make sure it's updated: run `bourbon update` in the utilities directory.
 - When you start working, run `gulp` from the root directory. Now when you make any changes inside the `src` folder (to your Sass, Javascript, or images), the gulp tasks will automatically be run and your preview in your browser will automatically be updated.
 - Start coding and designing!
 
