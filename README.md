@@ -5,6 +5,9 @@ Pear is not a UI framework. Frameworks are great and are extremely useful in som
 
 Pear represents a lot of research and inspiration from several excellent sources, and is a continual work in progress. Feel free to use anything you like, and feedback is welcomed!
 
+## Requirements
+- Sass 3.0+
+
 ## Goals
 1. Bring together some best practices from many credible sources across the web.
 2. Help the developer establish good coding patterns.
@@ -15,11 +18,12 @@ Pear represents a lot of research and inspiration from several excellent sources
 - HTML5 boilerplate, with the beginnings of a pattern library inside
 - Sass boilerplate, organized using OOCSS and design system principles
 - [Bourbon](https://github.com/thoughtbot/bourbon)
-- A floatless, responsive CSS grid called [Sink](https://github.com/jrdnbwmn/Sink)
 - Normalization and best practices pulled from multiple sources for a number of elements
 - A few useful mixins
 - Gulp.js setup with CSS, image, and Javascript processing and auto reloading.
 - Humans.txt and robots.txt templates
+
+Pear automatically comes with the other members of the family, [Sink](https://github.com/jrdnbwmn/Sink) and [Cobbler](https://github.com/jrdnbwmn/Cobbler). Of course, these items can be easily removed by simply deleted the folders/files with those names.
 
 ## Getting Started
 - Download or fork Pear.
@@ -50,21 +54,18 @@ There's a folder called "utilities" in the SCSS directory.
 
 **Utilities:** For Pear, I define utilities as tools we use to improve coding or add functionality, such as normalization and mixin tools. Utilities don't necessarily have anything to do with the design system or OOCSS, so they are kept separate. 
 
-## Thanks
-We drew inspiration and code from some excellent sources, including:
-- [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
-- [Intuit.css](http://inuitcss.com/) 
-- [Typeplate](http://typeplate.com/)
-- [Bootstrap](http://getbootstrap.com/)
-- [Foundation](http://foundation.zurb.com/index.html)
-- [Gridless](http://thatcoolguy.github.io/gridless-boilerplate/)
-- [Skeleton](https://github.com/dhg/Skeleton)
-
 ## The Pear Family
 - [Pear](https://github.com/jrdnbwmn/Pear): Advanced, responsive, Sass-based front–end kit
 - [Sink](https://github.com/jrdnbwmn/Sink): A floatless, responsive CSS grid
 - [Cobbler](https://github.com/jrdnbwmn/Cobbler): Pattern library template & default styling, built on top of Pear
 
-## License
+## Credits
+Pear is managed by [Jordan Bowman](http://jrdnbwmn.com). Much inspiration and code was/is drawn from some excellent sources, including:
+- [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
+- [Intuit.css](http://inuitcss.com/) 
+- [Typeplate](http://typeplate.com/)
+- [Bootstrap](http://getbootstrap.com/)
+- [Foundation](http://foundation.zurb.com/index.html)
 
+## License
 Released under the [MIT License](LICENSE.txt).
