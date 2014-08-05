@@ -17,6 +17,7 @@
         "sass": ">= 3.0.0"
     },
     "ignore": [
+        "CONTRIBUTING.md",
         "CNAME"
     ]
 }

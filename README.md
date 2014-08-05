@@ -3,11 +3,11 @@
 
 Pear is an advanced, Sass–based front–end kit with the aim of being a launching point for any web design project. It takes advantage of the latest web development best practices and is purposefully lean and modularized so that it can be easily used on any project.
 
-Pear is not a UI framework. Frameworks are great and very useful in some situations, like when you’re building prototypes. But with a framework like Bootstrap, you are adhering your work to the styling that someone else built. Pear, on the other hand, simply lays a solid foundation for you to begin creating your own code, providing patterns instead of pre–made decisions.
+Pear is not a UI framework. Frameworks are great and very useful in some situations (like when you’re building prototypes). But with a framework like Bootstrap, you are adhering your work to the styling that someone else built. Pear, on the other hand, simply lays a solid foundation for you to begin creating your own code, providing patterns instead of pre–made decisions.
 
 You're encouraged to look through what the default Pear version has, and then add, subtract, and modify code according to the project and your preferences.
 
-Pear represents a lot of research and inspiration from several excellent sources, and is a continual work in progress. Feel free to use anything you like, and feedback is welcomed!
+Pear represents a lot of research and inspiration from several excellent sources, and is a continual work in progress. Feel free to use anything you like, and feedback and contributions are welcomed!
 
 ## Requirements
 - Sass 3.0+
@@ -50,6 +50,9 @@ Pear also has a pattern for including skins:
 There's a folder called "utilities" in the SCSS directory.
 
 **Utilities:** For Pear, utilities are defined as tools we use to improve coding or add functionality, such as normalization and mixin tools. Utilities don't necessarily have anything to do with the design system or OOCSS, so they are kept separate. 
+
+## Contributing
+Contributions are welcomed! Please read through the [contributing guidelines](https://github.com/jrdnbwmn/pear/blob/master/CONTRIBUTING.md) before getting started.
 
 ## The Pear Family
 - [Pear](https://github.com/jrdnbwmn/Pear): Advanced, Sass-based front–end kit
