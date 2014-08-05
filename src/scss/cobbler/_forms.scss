@@ -1,0 +1,224 @@
+form {
+    width: 50%;
+    margin: 0 auto;
+    @media (max-width: 850px) {
+        width: 100%;
+    }
+}
+
+input, 
+textarea {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 0.666rem 0;
+    text-indent: 0.666rem;
+    background-color: $light-grey;
+    border: 1px solid $black-20;
+    border-radius: $border-radius;
+    @include transition(background-color $fade, box-shadow $fade);
+}
+
+::-webkit-input-placeholder { 
+    color: $black-40; 
+}
+:-moz-placeholder { 
+    color: $black-40; 
+}
+::-moz-placeholder { 
+    color: $black-40; 
+}
+:-ms-input-placeholder { 
+    color: $black-40; 
+}
+
+// Note: A lot of styling from here down has been inspired by WTF Forms: http://wtfforms.com/
+
+// -------------------------------------------------------------------------
+// SELECT MENU
+// -------------------------------------------------------------------------
+
+.select {
+    position: relative;
+    display: inline-block;
+}
+
+.select select {
+    display: inline-block;
+    margin: 0 0.666rem 0.666rem 0;
+    padding: 0.333rem 2rem 0.333rem 1rem;
+    color: $color-text;
+    line-height: $line-height-base;
+    background-color: $light-grey;
+    border: 1px solid $black-20;
+    border-radius: $border-radius;
+    cursor: pointer;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+// Undo the Firefox inner focus ring
+.select select:focus:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+// Dropdown arrow
+.select:after {
+    position: absolute;
+    top: 42%;
+    right: 1rem;
+    display: inline-block;
+    content: "";
+    width: 0;
+    height: 0;
+    margin-top: -.15rem;
+    pointer-events: none;
+    border-top: .35rem solid;
+    border-right: .35rem solid transparent;
+    border-bottom: .35rem solid transparent;
+    border-left: .35rem solid transparent;
+}
+
+.select select:focus {
+    box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem $color-primary;
+}
+
+.select select:active {
+    color: #fff;
+    background-color: #0074d9;
+}
+
+// Hide the arrow in IE10 and up
+.select select::-ms-expand {
+    display: none;
+}
+
+// Media query to target Firefox only
+@-moz-document url-prefix() {
+    // Firefox hack to hide the arrow
+    .select select {
+        text-indent: 0.01px;
+        text-overflow: '';
+        padding-right: 1rem;
+    }
+
+    // <option> elements inherit styles from <select>, so reset them.
+    .select option {
+        background-color: white;
+    }
+}
+
+// IE9 hack to hide the arrow
+@media screen and (min-width:0\0) {
+    .select select {
+        z-index: 1;
+        padding: .5rem 1.5rem .5rem 1rem;
+    }
+    
+    .select:after {
+        z-index: 5;
+    }
+    
+    .select:before {
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        bottom: 0;
+        z-index: 2;
+        content: "";
+        display: block;
+        width: 1.5rem;
+        background-color: #eee;
+    }
+    
+    .select select:hover,
+    .select select:focus,
+    .select select:active {
+        color: #555;
+        background-color: #eee;
+    }
+}
+
+// -------------------------------------------------------------------------
+// CHECKBOXES AND RADIOS
+// -------------------------------------------------------------------------
+
+.control {
+    position: relative;
+    display: block;
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    color: $color-text;
+    cursor: pointer;
+}
+.control input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1; // Put the input behind the label so it doesn't overlay text
+}
+.control-indicator {
+    position: absolute;
+    top: .13rem;
+    left: 0;
+    display: block;
+    width:  1.2rem;
+    height: 1.2rem;
+    line-height: $line-height-base;
+    font-size: 65%;
+    color: $black-10;
+    text-align: center;
+    background-color: $light-grey;
+    border: 1px solid $black-20;
+    background-size: 50% 50%;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.control input:focus ~ .control-indicator {
+    box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem $color-primary;
+}
+
+.control input:checked ~ .control-indicator {
+    color: #fff;
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+}
+
+.control input:active ~ .control-indicator {
+    color: #fff;
+    background-color: lighten($color-primary, 15%);
+}
+
+// Checkbox modifiers
+.checkbox .control-indicator {
+    border-radius: $border-radius;
+}
+
+.checkbox input:checked ~ .control-indicator {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=);
+}
+
+// Radio modifiers
+.radio .control-indicator {
+    border-radius: 50%;
+}
+
+.radio input:checked ~ .control-indicator {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQsMUMyLjMsMSwxLDIuMywxLDRzMS4zLDMsMywzczMtMS4zLDMtM1M1LjcsMSw0LDF6Ii8+DQo8L3N2Zz4NCg==);
+}
+
+// Alternately, use another character
+.control-x input:checked ~ .control-indicator {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iOHB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDggOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgOCA4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xLjQsMEwwLDEuNGwwLjcsMC43bDEuOCwxLjhMMC43LDUuN0wwLDYuNGwxLjQsMS40bDAuNy0wLjdsMS44LTEuOGwxLjgsMS44bDAuNywwLjdsMS40LTEuNEw3LjEsNS43DQoJTDUuMywzLjlsMS44LTEuOGwwLjctMC43TDYuNCwwTDUuNywwLjdMMy45LDIuNUwyLjEsMC43QzIuMSwwLjcsMS40LDAsMS40LDB6Ii8+DQo8L3N2Zz4NCg==);
+}
+
+.control-dash input:checked ~ .control-indicator {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iOHB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDggOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgOCA4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0wLDN2Mmg4VjNIMHoiLz4NCjwvc3ZnPg0K)
+}

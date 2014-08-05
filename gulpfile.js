@@ -21,6 +21,7 @@ var svgmin 					= require('gulp-svgmin');
 
 // General plugins
 var browserSync 			= require('browser-sync');
+var reload                  = browserSync.reload;
 var notify					= require('gulp-notify');
 
 // -------------------------------------------------------------------------
@@ -80,7 +81,9 @@ gulp.task('svgs', function() {
 });
 
 // Watch files for changes
-gulp.task('watch', function() {
+gulp.task('watch', ['browser-sync'], function() {
+    // Watch HTML files
+    gulp.watch('build/*.html', reload);
 	// Watch Sass files
   	gulp.watch('src/scss/**/*', ['css']);
   	// Watch JS files
@@ -92,7 +95,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('browser-sync', function() {  
-    browserSync.init(['build/css/*', 'build/js/*'], {
+    browserSync.init(['build/css/*', 'build/js/*', 'build/*.html'], {
         server: {
             baseDir: "build"
         }

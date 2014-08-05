@@ -1,0 +1,91 @@
+// Styling used to create the elements and layout for the pattern library 
+// template.
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.pattern {
+    margin: 3rem 0 3rem 0;
+}
+
+.colors {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.color-container {
+    display: inline-block;
+    width: 8.325rem;
+    margin: 1.666rem 1.666rem 0 0;
+    text-align: center;
+    font-style: italic;
+}
+
+.pattern-color {
+    height: 8.325rem;
+}
+
+.color-container p {
+    margin: 0;
+}
+
+.color-primary {
+    background-color: $color-blue;
+}
+
+.color-secondary {
+    background-color: $color-green;
+}
+
+.color-tertiary {
+    background-color: $color-orange;
+}
+
+.color-accent {
+    background-color: $color-red;
+}
+
+.icons {
+    p {
+        text-align: center;
+    }
+}
+
+.input-checks-block {
+    margin-bottom: 2rem;
+}
+
+.input-checks {
+    display: block;
+    margin-bottom: 0.666rem;
+}
+
+.search-form {
+    position: relative;
+
+    input {
+        padding-left: 1.666rem;
+    }
+}
+
+.search-icon {
+    position: absolute;
+    top: .9rem;
+    left: .38889rem;
+    width: 1.88889rem;
+    height: 1.88889rem;
+    text-align: center;
+    color: lighten($color-text, 7%);
+}
+
+.selectWrapper {
+    margin-bottom: 1.666rem;
+}
+
+.controlWrapper {
+    margin-bottom: 2rem;
+}

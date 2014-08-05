@@ -60,6 +60,11 @@ We drew inspiration and code from some excellent sources, including:
 - [Gridless](http://thatcoolguy.github.io/gridless-boilerplate/)
 - [Skeleton](https://github.com/dhg/Skeleton)
 
+## The Pear Family
+- [Pear](https://github.com/jrdnbwmn/Pear): Advanced, responsive, Sass-based front–end kit
+- [Sink](https://github.com/jrdnbwmn/Sink): A floatless, responsive CSS grid
+- [Cobbler](https://github.com/jrdnbwmn/Cobbler): Pattern library template & default styling, built on top of Pear
+
 ## License
 
 Released under the [MIT License](LICENSE.txt).
