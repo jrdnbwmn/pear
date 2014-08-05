@@ -21,7 +21,12 @@ Pear represents a lot of research and inspiration from several excellent sources
 Pear automatically comes with the other members of the family, [Sink](https://github.com/jrdnbwmn/Sink) and [Cobbler](https://github.com/jrdnbwmn/Cobbler).
 
 ## Getting Started
-- Download or fork Pear.
+Three options are available to get started:
+- [Download the latest release](https://github.com/jrdnbwmn/pear/archive/v2.2.1.zip).
+- Clone the repo: `git clone https://github.com/jrdnbwmn/pear.git`.
+- Install with [Bower](http://bower.io): `bower install pear`.
+
+To get the packages ready:
 - `cd` to the root directory and run `npm install`. This will install everything you need to run Gulp. 
 - Bourbon is already installed, but make sure it's updated: run `bourbon update` in the utilities directory.
 - When you start working, run `gulp` from the root directory. Now when you make any changes inside the `src` folder (to your Sass, Javascript, or images), the gulp tasks will automatically be run and your preview in your browser will automatically be updated.
