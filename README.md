@@ -34,22 +34,8 @@ To get the packages ready:
 - Bourbon is already installed, but make sure it's updated: run `bourbon update` in the utilities directory.
 - When you start working, run `gulp` from the root directory. Now when you make any changes inside the `src` folder (to your Sass, Javascript, or images), the gulp tasks will automatically be run and your preview in your browser will automatically be updated.
 
-## Vocabulary
-*Objects* in Pear are divided into three types:
-
-**Elements:** Elements are basic building blocks; they have distinct properties and can’t be broken down further without losing their meaning.
-
-**Components:** Components are elements grouped together, which take on new properties as a result; they are groups of elements that function together as a unit like a form label, search input, and button combining to form a search form.
-
-**Blocks:** Blocks are distinct chunks of a webpage; they are groups of components and sometimes solitary elements.
-
-Pear also has a pattern for including skins:
-
-**Skins:** In OOCSS, "skins" are defined as repeating visual features (like borders, backgrounds, margins, paddings, and so forth) or any extension to an object that you can define separately and then mix-and-match with your various objects to achieve visual variety, while remaining visually consistent and writing much less code. 
-
-There's a folder called "utilities" in the SCSS directory.
-
-**Utilities:** For Pear, utilities are defined as tools we use to improve coding or add functionality, such as normalization and mixin tools. Utilities don't necessarily have anything to do with the design system or OOCSS, so they are kept separate. 
+## Documentation
+Pear's (currently meager) documentation is hosted on GitHub on the [wiki](https://github.com/jrdnbwmn/Pear/wiki) for the project.
 
 ## Contributing
 Contributions are welcomed! Please read through the [contributing guidelines](https://github.com/jrdnbwmn/pear/blob/master/CONTRIBUTING.md) before getting started.
