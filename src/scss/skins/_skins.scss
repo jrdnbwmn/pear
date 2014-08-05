@@ -4,15 +4,15 @@
 
 // Grayscale
 $light-grey:					#f7f7f7;
-$black-10:                      darken(#fff, 10%);
-$black-20:                      darken(#fff, 20%);
-$black-30:                      darken(#fff, 30%);
-$black-40:                      darken(#fff, 40%);
-$black-50:                      darken(#fff, 50%);
-$black-60:                      darken(#fff, 60%);
-$black-70:                      darken(#fff, 70%);
-$black-80:                      darken(#fff, 80%);
-$black-90:                      darken(#fff, 90%);
+$black-10:                      #e6e6e6;
+$black-20:                      #cdcdcd;
+$black-30:                      #b3b3b3;
+$black-40:                      #9a9a9a;
+$black-50:                      #808080;
+$black-60:                      #676767;
+$black-70:                      #4d4d4d;
+$black-80:                      #343434;
+$black-90:                      #1a1a1a;
 
 // Color by name
 $color-blue:                 	#428bca;
@@ -27,7 +27,7 @@ $color-tertiary:				$color-orange;
 $color-accent:					$color-red;
 
 // Text
-$color-text:                    $black-80;
+$color-text:                    $black-70;
 
 // Links
 $color-link:                    $color-blue;
@@ -48,8 +48,8 @@ $font-family-base:              $font-family-sans-serif;
 // Great tool for choosing font sizes: http://type-scale.com/
 $font-size-base:             	112.5 !default; // percentage value (16 * 112.5% = 18px)
 $font-size-base-pixels:			16px * ($font-size-base/100) !default;
-$font-size-large:               ($font-size-base-pixels * 1.3333);
-$font-size-small:               ($font-size-base-pixels * 0.6666);
+$font-size-large:               1.333rem;
+$font-size-small:               .666rem;
 
 // Line Height
 $line-height-base:              1.666rem !default;
@@ -102,27 +102,27 @@ $movement:						.15s ease-in-out;
 // -------------------------------------------------------------------------
 
 // For replicating heading sizes, copied from "Typography" sheet
-// Useful for keeping ALL typography within your modular scale
-%h1  {
-    @include rem(font-size, 60px);
+
+%h1 {
+    font-size: 3rem;
 }
 
-%h2  {
-    @include rem(font-size, 48px);
+%h2 {
+    font-size: 2.333rem;
 }
 
-%h3  {
-    @include rem(font-size, 36px);
+%h3 {
+    font-size: 1.666rem;
 }
 
-%h4  {
-    @include rem(font-size, 24px);
+%h4 {
+    font-size: 1.333rem;
 }
 
-%h5  {
-    @include rem(font-size, 21px);
+%h5 {
+    font-size: 1rem;
 }
 
-%h6  {
-    @include rem(font-size, 18px);
+%h6 {
+    font-size: .666rem;
 }

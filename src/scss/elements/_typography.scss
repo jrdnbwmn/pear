@@ -66,38 +66,38 @@ h4,
 h5,
 h6 {
     margin-top: 0;
-    margin-bottom: 1.666rem;
+    margin-bottom: $line-height-base; // The margin on the bottom makes sure that there's always one unit of measure's worth of space between stuff for headings. This is better than spacing using line-height because of the wrapping issue where we have wrapping onto 2 lines with a high line-height.
     font-family: $headings-font-family;
     font-weight: $headings-font-weight;
     line-height: 1; // this fixes huge spaces when a heading wraps onto two lines
 	text-rendering: optimizeLegibility; // voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering
 }
 
-h1  {
-    @include rem(font-size, 60px); // 60 = 18 × 3.3333
+
+
+h1 {
+    font-size: 3rem;
 }
 
-h2  {
-    @include rem(font-size, 48px); // 48 = 18 × 2.6667
+h2 {
+    font-size: 2.333rem;
 }
 
-h3  {
-    @include rem(font-size, 36px); // 36 = 18 × 2
+h3 {
+    font-size: 1.666rem;
 }
 
-h4  {
-    @include rem(font-size, 24px); // 24 = 18 × 1.3333
+h4 {
+    font-size: 1.333rem;
 }
 
-h5  {
-    @include rem(font-size, 21px); // 21 = 18 × 1.1667
+h5 {
+    font-size: 1rem;
 }
 
-h6  {
-    @include rem(font-size, 18px); // 18 = 18 × 1
+h6 {
+    font-size: .666rem;
 }
-
-// The margin on the bottom makes sure that there's always one unit of measure's worth of space between stuff for headings. This is better than spacing using line-height because of the wrapping issue where we have wrapping onto 2 lines with a high line-height.
 
 // -------------------------------------------------------------------------
 // PARAGRAPHS
@@ -119,7 +119,7 @@ ol {
 // -------------------------------------------------------------------------
 
 a {
-    color: $color-link;
+    color: $color-primary;
     line-height: inherit;
     outline: 0;
 }
@@ -220,7 +220,7 @@ b {
 
 small,
 .small {
-    @include rem(font-size, $font-size-small);
+    font-size: $font-size-small;
     font-weight: normal;
     line-height: 1;
 }

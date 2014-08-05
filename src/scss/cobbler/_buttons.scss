@@ -11,7 +11,7 @@ input[type="button"] {
     padding: 0.333rem 1rem;
     color: #fff;
     border-radius: $border-radius;
-    @include transition(background-color $fade, color $fade, border $fade);
+    transition: background-color $fade, color $fade, border $fade;
 }
 
 .btn:active,

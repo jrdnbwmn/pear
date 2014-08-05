@@ -15,7 +15,7 @@ textarea {
     background-color: $light-grey;
     border: 1px solid $black-20;
     border-radius: $border-radius;
-    @include transition(background-color $fade, box-shadow $fade);
+    transition: background-color $fade, box-shadow $fade;
 }
 
 ::-webkit-input-placeholder { 

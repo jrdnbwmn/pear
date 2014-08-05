@@ -40,9 +40,9 @@ gulp.task('css', function() {
 		// Minify CSS
 		.pipe(cssmin())
 		// Where to store the finalized CSS
-		.pipe(gulp.dest('build/css'))
-		// Notify us that the task was completed
-		.pipe(notify({ message: 'CSS task complete' }));
+		.pipe(gulp.dest('dist/css'))
+        // Notify when complete
+        .pipe(notify({ message: 'CSS task complete' }));
 });
 
 // JS tasks
@@ -53,9 +53,7 @@ gulp.task('js', function() {
 		// Minify JS
 		.pipe(uglify())
 		// Where to store the finalized JS
-		.pipe(gulp.dest('build/js'))
-		// Notify us that the task was completed
-		.pipe(notify({ message: 'Javascript task complete' }));
+		.pipe(gulp.dest('dist/js'));
 });
 
 // Image tasks
@@ -64,9 +62,7 @@ gulp.task('images', function() {
 		// Minify the images
 		.pipe(imagemin())
 		// Where to store the finalized images
-		.pipe(gulp.dest('build/images'))
-		// Notify us that the task was completed
-		.pipe(notify({ message: 'Image task complete' }));
+		.pipe(gulp.dest('dist/images'));
 });
 
 // SVG tasks
@@ -75,15 +71,13 @@ gulp.task('svgs', function() {
 		// Minify the SVG's
 		.pipe(svgmin())
 		// Where to store the finalized SVG's
-		.pipe(gulp.dest('build/images'))
-		// Notify us that the task was completed
-		.pipe(notify({ message: 'SVG task complete' }));
+		.pipe(gulp.dest('dist/images'))
 });
 
 // Watch files for changes
 gulp.task('watch', ['browser-sync'], function() {
     // Watch HTML files
-    gulp.watch('build/*.html', reload);
+    gulp.watch('dist/*.html', reload);
 	// Watch Sass files
   	gulp.watch('src/scss/**/*', ['css']);
   	// Watch JS files
@@ -95,9 +89,9 @@ gulp.task('watch', ['browser-sync'], function() {
 });
 
 gulp.task('browser-sync', function() {  
-    browserSync.init(['build/css/*', 'build/js/*', 'build/*.html'], {
+    browserSync.init(['dist/css/*', 'dist/js/*', 'dist/*.html'], {
         server: {
-            baseDir: "build"
+            baseDir: "dist"
         }
     });
 });
