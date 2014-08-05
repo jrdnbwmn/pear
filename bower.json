@@ -1,10 +1,17 @@
 {
     "name": "pear",
     "description": "Advanced, Sass-based front–end kit.",
-    "version": 2.2.1,
     "license": "MIT",
     "authors": [
-    { "name": "Jordan Bowman", " homepage": "http://jrdnbwmn.com" }
+    { "name": "Jordan Bowman", "homepage": "http://jrdnbwmn.com" }
+    ],
+    "keywords": [
+        "css",
+        "html",
+        "sass",
+        "front-end",
+        "web",
+        "responsive"
     ],
     "dependencies": {
         "sass": ">= 3.0.0"
