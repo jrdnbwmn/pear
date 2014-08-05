@@ -35,8 +35,8 @@
 // Blocks
 
 
-// PLUGINS
+// PEAR EXTENSIONS
 // Sink
-@import "sink/sink";
+@import "extensions/sink/sink";
 // Cobbler
-@import "cobbler/cobbler";
+@import "extensions/cobbler/cobbler";

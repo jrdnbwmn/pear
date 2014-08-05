@@ -41,9 +41,11 @@ Pear's (currently meager) documentation is hosted on GitHub on the [wiki](https:
 Contributions are welcomed! Please read through the [contributing guidelines](https://github.com/jrdnbwmn/pear/blob/master/CONTRIBUTING.md) before getting started.
 
 ## The Pear Family
-- [Pear](https://github.com/jrdnbwmn/Pear): Advanced, Sass-based front–end kit
-- [Sink](https://github.com/jrdnbwmn/Sink): A floatless, responsive CSS grid
-- [Cobbler](https://github.com/jrdnbwmn/Cobbler): Pattern library template & default styling, built on top of Pear
+[Pear](https://github.com/jrdnbwmn/Pear) is an advanced, Sass-based front–end kit, and the foundation and main dependency of the Pear family.
+
+Extensions for Pear (automatically included in the Pear download):
+- [Sink](https://github.com/jrdnbwmn/Sink): Floatless, responsive CSS grid
+- [Cobbler](https://github.com/jrdnbwmn/Cobbler): Pattern library template & default styling
 
 ## Credits
 Pear is managed by [Jordan Bowman](http://jrdnbwmn.com). Much inspiration and code was/is drawn from some excellent sources, including:
