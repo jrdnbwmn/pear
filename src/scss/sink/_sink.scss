@@ -22,20 +22,10 @@
 // See the demo on CodePen: http://codepen.io/jrdnbwmn/pen/fpjmk
 
 // -------------------------------------------------------------------------
-// CUSTOMIZATION
+// IMPORT CUSTOM SETTINGS
 // -------------------------------------------------------------------------
 
-// Change the number of columns you want in your grid.
-// Width %/size will automatically be calculated.
-$totalNumberColumns: 12;
-
-// Change the padding you want on both sides of a column.
-// This number * 2 = your gutter.
-$columnPadding: 0.666rem;
-
-// Set the base font size of your HTML document
-// This is part of getting rid of the inline-block ghost space
-$fontBase: $font-size-base-pixels;
+@import "sink-settings";
 
 // -------------------------------------------------------------------------
 // THE MIXINS
