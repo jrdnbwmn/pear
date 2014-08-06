@@ -20,7 +20,7 @@ Pear represents a lot of research and inspiration from several excellent sources
 - [Gulp](http://gulpjs.com/) template with CSS, image, and Javascript processing and auto reloading.
 - [Normalize](http://necolas.github.io/normalize.css/)
 
-Pear automatically comes with the other members of the Pear family, [Sink](https://github.com/jrdnbwmn/Sink) and [Cobbler](https://github.com/jrdnbwmn/Cobbler).
+Pear automatically comes its own extensions, [Sink](https://github.com/jrdnbwmn/Sink) and [Cobbler](https://github.com/jrdnbwmn/Cobbler).
 
 ## Getting Started
 Three options are available to start using Pear:

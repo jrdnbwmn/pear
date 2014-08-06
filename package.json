@@ -6,6 +6,7 @@
     "private": true,
     "devDependencies": {
         "gulp": "*",
+        "gulp-cleanhtml": "*",
         "gulp-sass": "*",
         "gulp-combine-media-queries": "*",
         "gulp-cssmin": "*",
@@ -14,7 +15,8 @@
         "gulp-uglify": "*",
         "gulp-svgmin": "*",
         "gulp-imagemin": "*",
-        "gulp-notify": "*",
+        "gulp-util": "*",
+        "gulp-plumber": "*",
         "browser-sync": "*"
     }
 }
