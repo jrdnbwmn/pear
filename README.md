@@ -25,7 +25,7 @@ Pear automatically comes with the other members of the Pear family, [Sink](https
 
 ## Getting Started
 Three options are available to start using Pear:
-- [Download the latest release](https://github.com/jrdnbwmn/pear/archive/v2.2.1.zip).
+- [Download the latest release](https://github.com/jrdnbwmn/pear/archive/v2.3.0.zip).
 - Clone the repo: `git clone https://github.com/jrdnbwmn/pear.git`.
 - Install with [Bower](http://bower.io): `bower install pear`.
 

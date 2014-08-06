@@ -2,6 +2,7 @@
     "name": "pear",
     "description": "Advanced, Sass-based front–end kit.",
     "license": "MIT",
+    "version": "2.3.0",
     "authors": [
     { "name": "Jordan Bowman", "homepage": "http://jrdnbwmn.com" }
     ],
