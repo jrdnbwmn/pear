@@ -29,9 +29,8 @@ Three options are available to start using Pear:
 - Clone the repo: `git clone https://github.com/jrdnbwmn/pear.git`.
 - Install with [Bower](http://bower.io): `bower install pear`.
 
-To get the packages ready:
+To get Gulp ready and working:
 - `cd` to the root directory and run `npm install`. This will install everything you need to run Gulp.
-- Bourbon is already installed, but make sure it's updated: run `bourbon update` in the utilities directory.
 - When you start working, run `gulp` from the root directory. Now when you make any changes inside the `src` folder (to your Sass, Javascript, or images), the gulp tasks will automatically be run and your preview in your browser will automatically be updated.
 
 ## Documentation
