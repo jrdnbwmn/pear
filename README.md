@@ -19,7 +19,6 @@ Pear represents a lot of research and inspiration from several excellent sources
 - Humans.txt and robots.txt templates
 - [Gulp](http://gulpjs.com/) template with CSS, image, and Javascript processing and auto reloading.
 - [Normalize](http://necolas.github.io/normalize.css/)
-- [Bourbon](https://github.com/thoughtbot/bourbon)
 
 Pear automatically comes with the other members of the Pear family, [Sink](https://github.com/jrdnbwmn/Sink) and [Cobbler](https://github.com/jrdnbwmn/Cobbler).
 
