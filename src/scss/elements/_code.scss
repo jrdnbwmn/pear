@@ -6,7 +6,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: $font-family-monospace;
+    font-family: $fontFamilyMonospace;
 }
 
 // -------------------------------------------------------------------------
@@ -26,12 +26,12 @@ code {
 
 pre {
     display: block;
-    margin: $p-margin-bottom 0;
+    margin: $pMarginBottom 0;
     max-width: 100%;
-    line-height: $line-height-base;
+    line-height: $lineHeightBase;
     word-break: break-all;
     word-wrap: break-word;
-    color: $color-text;
+    color: $colorText;
     
     // Account for some code outputs that place code tags in `pre` tags
     code {

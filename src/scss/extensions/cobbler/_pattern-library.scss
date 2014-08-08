@@ -17,7 +17,7 @@
     margin-right: auto;
 }
 
-.color-container {
+.colorContainer {
     display: inline-block;
     width: 8.325rem;
     margin: 1.666rem 1.666rem 0 0;
@@ -25,28 +25,28 @@
     font-style: italic;
 }
 
-.pattern-color {
+.patternColor {
     height: 8.325rem;
 }
 
-.color-container p {
+.colorContainer p {
     margin: 0;
 }
 
-.color-primary {
-    background-color: $color-blue;
+.colorPrimary {
+    background-color: $colorBlue;
 }
 
-.color-secondary {
-    background-color: $color-green;
+.colorSecondary {
+    background-color: $colorGreen;
 }
 
-.color-tertiary {
-    background-color: $color-orange;
+.colorTertiary {
+    background-color: $colorOrange;
 }
 
-.color-accent {
-    background-color: $color-red;
+.colorAccent {
+    background-color: $colorRed;
 }
 
 .icons {
@@ -55,16 +55,16 @@
     }
 }
 
-.input-checks-block {
+.inputChecksBlock {
     margin-bottom: 2rem;
 }
 
-.input-checks {
+.inputChecks {
     display: block;
     margin-bottom: 0.666rem;
 }
 
-.search-form {
+.searchForm {
     position: relative;
 
     input {
@@ -72,14 +72,14 @@
     }
 }
 
-.search-icon {
+.searchIcon {
     position: absolute;
     top: .9rem;
     left: .38889rem;
     width: 1.88889rem;
     height: 1.88889rem;
     text-align: center;
-    color: lighten($color-text, 7%);
+    color: lighten($colorText, 7%);
 }
 
 .selectWrapper {

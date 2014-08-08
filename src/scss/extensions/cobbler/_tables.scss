@@ -1,7 +1,7 @@
 table, 
 .table {
     width: 100%;
-    font-family: $font-family-sans-serif;
+    font-family: $fontFamilySans;
 
     // Cells
     > thead,
@@ -11,7 +11,7 @@ table,
             > th,
             > td {
                 padding: 0.666rem;
-                border-top: 1px solid $black-30;
+                border-top: 1px solid $black30;
             }
         }
     }

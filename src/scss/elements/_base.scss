@@ -12,11 +12,11 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: $font-family-base;
-    font-size: $font-size-base-pixels;
+    font-family: $fontFamilyBase;
+    font-size: $fontSizeBasePixels;
     font-weight: normal;
-    line-height: $line-height-base;
-    color: $color-text;
+    line-height: $lineHeightBase;
+    color: $colorText;
     overflow-y: scroll;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -43,8 +43,8 @@ body {
 .browsehappy {
     margin: 0.333rem 0;
     padding: 0.333rem 0;
-    color: $color-text;
-    background: $black-20;
+    color: $colorText;
+    background: $black30;
 }
 
 // Remove text-shadow in selection highlight: h5bp.com/i
@@ -53,11 +53,11 @@ body {
 ::-moz-selection {
     color: white;
     text-shadow: none;
-    background-color: $color-primary;
+    background-color: $colorPrimary;
 }
 ::selection {
     color: white;
-    background-color: $color-primary;
+    background-color: $colorPrimary;
     text-shadow: none;
 }
 img::selection { 

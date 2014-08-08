@@ -1,13 +1,4 @@
 // -------------------------------------------------------------------------
-// NOTES
-// -------------------------------------------------------------------------
-
-// Use the .btn class and then .btn type classes for further options, e.g.:
-//    <a href="#" class="btn btn-primary">Get Started</a>
-//    <a href="#" class="btn btn-secondary">More Info</a>
-//    <button type="button" class="btn btn-primary">Get Started</button>
-
-// -------------------------------------------------------------------------
 // BASE STYLING
 // -------------------------------------------------------------------------
 
@@ -22,7 +13,7 @@ input[type="button"] {
     display: inline-block; // Allow us to better style box model properties
     margin: 0;
     font-family: inherit;
-    line-height: $line-height-base;
+    line-height: $lineHeightBase;
     text-align: center;
     text-decoration: none;
     background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214

@@ -8,8 +8,6 @@
 // Here's an excellent calculator for doing this: http://modularscale.com/
 // Great tool for choosing font sizes: http://type-scale.com/
 
-// The default scale is 18, 21, 24, 36, 48, 60
-
 // -------------------------------------------------------------------------
 // FONT-FACE
 // -------------------------------------------------------------------------
@@ -66,9 +64,9 @@ h4,
 h5,
 h6 {
     margin-top: 0;
-    margin-bottom: $line-height-base; // The margin on the bottom makes sure that there's always one unit of measure's worth of space between stuff for headings. This is better than spacing using line-height because of the wrapping issue where we have wrapping onto 2 lines with a high line-height.
-    font-family: $headings-font-family;
-    font-weight: $headings-font-weight;
+    margin-bottom: $lineHeightBase; // The margin on the bottom makes sure that there's always one unit of measure's worth of space between stuff for headings. This is better than spacing using line-height because of the wrapping issue where we have wrapping onto 2 lines with a high line-height.
+    font-family: $headingsFontFamily;
+    font-weight: $headingsFontWeight;
     line-height: 1; // this fixes huge spaces when a heading wraps onto two lines
 	text-rendering: optimizeLegibility; // voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering
 }
@@ -105,13 +103,13 @@ h6 {
 
 // bottom margin for paragraphs
 p {
-	margin: auto auto $p-margin-bottom;
+	margin: auto auto $pMarginBottom;
 }
 
 p,
 ul,
 ol {
-    font-family: $body-font-family;
+    font-family: $bodyFontFamily;
 }
 
 // -------------------------------------------------------------------------
@@ -119,13 +117,13 @@ ol {
 // -------------------------------------------------------------------------
 
 a {
-    color: $color-secondary;
+    color: $colorPrimary;
     line-height: inherit;
     outline: 0;
 }
 
 a:hover {
-    color: $color-link-hover;
+    color: $colorLinkHover;
 }
 
 p a,
@@ -142,7 +140,7 @@ p a:visited {
 ul,
 ol {
     margin-top: 0;
-    margin-bottom: $p-margin-bottom;
+    margin-bottom: $pMarginBottom;
     padding-left: 2rem;
 
     ul,
@@ -173,14 +171,14 @@ q:after {
 
 blockquote {
     max-width: 100%; // Prevents it from breaking out of container
-    margin: $p-margin-bottom 0;
-    padding-left: $p-margin-bottom;
-    border-left: 2px solid $black-20;
+    margin: $pMarginBottom 0;
+    padding-left: $pMarginBottom;
+    border-left: 2px solid $black20;
 }
 
 blockquote,
 q {
-    font-size: $font-size-large;
+    font-size: $fontSizeLarge;
     quotes: none;
 }
 
@@ -197,10 +195,10 @@ cite {
 hr {
     display: block;
     height: 1px;
-    margin: $p-margin-bottom 0;
+    margin: $pMarginBottom 0;
     padding: 0;
     border: 0;
-    border-top: 1px solid $black-20;
+    border-top: 1px solid $black20;
 }
 
 // -------------------------------------------------------------------------
@@ -220,7 +218,7 @@ b {
 
 small,
 .small {
-    font-size: $font-size-small;
+    font-size: $fontSizeSmall;
     font-weight: normal;
     line-height: 1;
 }
@@ -269,7 +267,7 @@ ul, ol {
 }
 
 // Real small caps.
-.small-caps {
+.smallCaps {
     font-variant: small-caps;
     text-transform: lowercase;
     -moz-font-feature-settings: 'smcp=1, kern=1';
@@ -280,7 +278,7 @@ ul, ol {
 }
 
 // Ascending and descending numbers with OpenType.
-.oldstyle-numerals {
+.oldstyleNumerals {
     -moz-font-feature-settings: 'onum=1, kern=1';
     -ms-font-feature-settings: 'onum' 1, 'kern' 1;
     -webkit-font-feature-settings: 'onum' 1, 'kern' 1;

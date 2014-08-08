@@ -89,14 +89,14 @@ textarea {
     max-width: 100%; // Prevents them from breaking out of container
     font-size: inherit;
     font-family: inherit;
-    color: $color-text;
+    color: $colorText;
     background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
 }
 
 input:focus, 
 textarea:focus {
     background-color: #fff;
-    border-color: $black-30;
+    border-color: $black30;
 }
 
 // -------------------------------------------------------------------------
@@ -106,9 +106,9 @@ textarea:focus {
 select {
     width: 100%;
     min-width: 25%;
-    color: $color-text;
+    color: $colorText;
     text-transform: none;
-    border: 1px solid $black-20;
+    border: 1px solid $black20;
     cursor: pointer;
 }
 

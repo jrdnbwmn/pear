@@ -3,92 +3,93 @@
 // -------------------------------------------------------------------------
 
 // Grayscale
-$light-grey:					#f7f7f7;
-$black-10:                      #e6e6e6;
-$black-20:                      #cdcdcd;
-$black-30:                      #b3b3b3;
-$black-40:                      #9a9a9a;
-$black-50:                      #808080;
-$black-60:                      #676767;
-$black-70:                      #4d4d4d;
-$black-80:                      #343434;
-$black-90:                      #1a1a1a;
+$lightGrey:					    #f7f7f7;
+$black10:                       #e6e6e6;
+$black20:                       #cdcdcd;
+$black30:                       #b3b3b3;
+$black40:                       #9a9a9a;
+$black50:                       #808080;
+$black60:                       #676767;
+$black70:                       #4d4d4d;
+$black80:                       #343434;
+$black90:                       #1a1a1a;
 
 // Color by name
-$color-blue:                 	#428bca;
-$color-green:               	#5cb85c;
-$color-orange:                	#f0ad4e;
-$color-red:                 	#d9534f;
+$colorBlue:                 	#428bca;
+$colorGreen:               	    #5cb85c;
+$colorOrange:                	#f0ad4e;
+$colorRed:                 	    #d9534f;
 
 // Color by purpose
-$color-primary:					$color-blue;
-$color-secondary:				$color-green;
-$color-tertiary:				$color-orange;
-$color-accent:					$color-red;
+$colorPrimary:					$colorBlue;
+$colorSecondary:				$colorGreen;
+$colorTertiary:				    $colorOrange;
+$colorAccent:					$colorRed;
 
 // Text
-$color-text:                    $black-70;
+$colorText:                     $black70;
 
 // Links
-$color-link:                    $color-blue;
-$color-link-hover:              darken($color-link, 15%);
+$colorLink:                     $colorBlue;
+$colorLinkHover:                darken($colorLink, 15%);
 
 // -------------------------------------------------------------------------
 // TYPOGRAPHY
 // -------------------------------------------------------------------------
 
 // Font Families
-$font-family-sans-serif:        "Helvetica Neue", Trebuchet, Tahoma, Verdana, sans-serif;
-$font-family-serif:             Georgia, Times, serif;
-$font-family-monospace:         Monaco, Menlo, Consolas, "Courier New", monospace;
-$font-family-base:              $font-family-sans-serif;
+$fontFamilySans:                "Helvetica Neue", Trebuchet, Tahoma, Verdana, sans-serif;
+$fontFamilySerif:               Georgia, Times, serif;
+$fontFamilyMonospace:           Monaco, Menlo, Consolas, "Courier New", monospace;
+$fontFamilyBase:                $fontFamilySans;
 
 // Font Sizes
-// Need to change $base-font-size in the rem mixin in _utilities if you want to you that mixin
 // Great tool for choosing font sizes: http://type-scale.com/
-$font-size-base:             	112.5 !default; // percentage value (16 * 112.5% = 18px)
-$font-size-base-pixels:			16px * ($font-size-base/100) !default;
-$font-size-large:               1.333rem;
-$font-size-small:               .666rem;
+$fontSizeBase:             	    112.5 !default; // percentage value (16 * 112.5% = 18px)
+$fontSizeBasePixels:			16px * ($fontSizeBase/100) !default;
+$fontSizeLarge:                 1.333rem;
+$fontSizeSmall:                 .666rem;
 
 // Line Height
-$line-height-base:              1.666rem !default;
+$lineHeightBase:                1.666rem !default;
 
 // Baseline
-// I usually make my baseline a divisible number of the base line height. Then all my other vertical margins, paddings, and line heights are a multiple of this baseline to create a vertical rhythm.
+// Usually it's good practice to make the baseline a divisible number of 
+// the base line height. Then all the other vertical margins, paddings, and
+// line heights are a multiple of this baseline to create a vertical rhythm.
 $baseline: 						0.333rem;
 
 // Headings
-$headings-font-family:          inherit;
-$headings-font-weight:          700;
+$headingsFontFamily:            inherit;
+$headingsFontWeight:            700;
 
 // Body Copy
-$body-font-family:				$font-family-base;
+$bodyFontFamily:				$fontFamilyBase;
 
 // -------------------------------------------------------------------------
 // MARGINS
 // -------------------------------------------------------------------------
 
-$margin-small:					1rem;
-$margin-medium:					2rem;
-$margin-large:					3rem;
+$marginSmall:					1rem;
+$marginMedium:					2rem;
+$marginLarge:					3rem;
 
 // Bottom margin for paragraphs
-$p-margin-bottom:               1.333rem;
+$pMarginBottom:                 1.333rem;
 
 // -------------------------------------------------------------------------
 // PADDING
 // -------------------------------------------------------------------------
 
-$padding-small:					1rem;
-$padding-medium:				2rem;
-$padding-large:					3rem;
+$paddingSmall:					1rem;
+$paddingMedium:				    2rem;
+$paddingLarge:					3rem;
 
 // -------------------------------------------------------------------------
 // BORDERS
 // -------------------------------------------------------------------------
 
-$border-radius:					4px;
+$borderRadius:					4px;
 
 // -------------------------------------------------------------------------
 // ANIMATIONS

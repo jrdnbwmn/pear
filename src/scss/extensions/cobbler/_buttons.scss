@@ -10,7 +10,7 @@ input[type="button"] {
     margin: 0 0.666rem 0.666rem 0;
     padding: 0.333rem 1rem;
     color: #fff;
-    border-radius: $border-radius;
+    border-radius: $borderRadius;
     transition: background-color $fade, color $fade, border $fade;
 }
 
@@ -25,36 +25,36 @@ input[type="button"]:active {
 
 // Primary Button
 
-.btn-primary {
-    background-color: $color-blue;
-    border: 1px solid darken($color-blue, 5%);
+.btnPrimary {
+    background-color: $colorBlue;
+    border: 1px solid darken($colorBlue, 5%);
 }
 
-.btn-primary:hover, 
-.btn-primary:focus {
+.btnPrimary:hover, 
+.btnPrimary:focus {
     color: #fff;
-    background-color: darken($color-blue, 10%);
-    border: 1px solid darken($color-blue, 10%);
+    background-color: darken($colorBlue, 10%);
+    border: 1px solid darken($colorBlue, 10%);
 }
 
 // Secondary Button
 
-.btn-secondary {
-    color: $color-text;
-    border: solid 1px $black-30;
+.btnSecondary {
+    color: $colorText;
+    border: solid 1px $black30;
     background: transparent;
 }
 
-.btn-secondary:hover, 
-.btn-secondary:focus {
+.btnSecondary:hover, 
+.btnSecondary:focus {
     color: #fff;
-    background-color: $color-green;
-    border: 1px solid $color-green;
+    background-color: $colorGreen;
+    border: 1px solid $colorGreen;
 }
 
 // Large Button
 
-.btn-large {
+.btnLarge {
     padding: 0.666rem 1.333rem;
     @extend %h4;
 }
