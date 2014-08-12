@@ -8,36 +8,8 @@ Really good contributions are:
 
 - Simple (no hundred–line mixins or crazy Sass)
 - Focused, both in scope and aim (take one thing at a time)
-- Adherent to Pear's code guidelines (below)
-
-### Code Guidelines
-**HTML**
-
-- Use tags and elements appropriate for an HTML5 doctype (e.g., self-closing tags)
-- Double quotes
-
-**SCSS**
-
-- Multiple properties on their own lines
-- Camel case
-- Names should be descriptive and written in full-words: `$all-text-inputs-hover` *not* `$hover` or `$alltxthvr`
-- Real tabs (4 spaces)
-- Space between property and value: `width: 20px` not `width:20px`
-- Blank lines between rulesets
-- Always double quotes
-- Declaration order follows [Code Guide](http://codeguide.co/#css-declaration-order)
-
-**Javascript**
-
-- Real tabs (4 spaces)
-- No semicolons (in client-side JS)
-
-**Comments**
-- Things should be heavily commented. The more, the better.
-
-**Test**
-
-- Always test your code before submitting
+- Adherent to Pear's [code guidelines](https://github.com/jrdnbwmn/Pear/wiki/Code-Guidelines)
+- Fully tested
 
 ## How it Works
 The issue tracker is the preferred channel for bug reports, feature requests, and submitting pull requests, but remember the following:
