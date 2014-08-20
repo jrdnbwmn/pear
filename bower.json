@@ -14,6 +14,10 @@
         "web",
         "responsive"
     ],
+    "main": [
+        "dist/index.html",
+        "dist/css/main.css"
+    ],
     "dependencies": {
         "sass": ">= 3.0.0"
     },
