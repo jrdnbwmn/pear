@@ -1,0 +1,91 @@
+// ---------------------------------------------------
+// NORMALIZATION
+// ---------------------------------------------------
+
+// 1. Normalize display.
+// 2. Prevent from breaking out of container cells.
+table {
+    display: table; // [1]
+    max-width: 100%; // [2]
+}
+
+// Normalize elements of a table.
+td,
+th {
+    vertical-align: middle;
+    line-height: $lineHeight-base;
+}
+th { text-align: left; }
+
+
+// ---------------------------------------------------
+// PROJECT-SPECIFIC STYLES
+// ---------------------------------------------------
+
+.table {    
+    th,
+    td {
+        padding: $baseline*2 $baseline*3;
+    }
+}
+
+// Add borders to all table cells.
+// Add to `table` element.
+.table-cellBorder {
+    th,
+    td {
+        border: 1px solid $color-border;
+    }
+}
+
+// Add borders only to the table's rows.
+// Add to `table` element.
+.table-rowBorder {
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th,
+            > td {
+                border-top: 1px solid $color-border;
+            }
+        }
+    }
+
+    > thead > tr {
+        > th,
+        > td {
+            border-top: none;
+            border-bottom-width: 2px;
+        }
+    }
+}
+
+// Enables horizontal scrolling on mobile devices. 
+// Wrap your table in a div with this class.
+// Source: Bootstrap, http://getbootstrap.com/css/#tables-responsive
+.table-responsive {
+    @media screen and (max-width: $breakpoint-sm) {
+        width: 100%;
+        overflow-y: hidden;
+        overflow-x: auto;
+        border: 0;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        -webkit-overflow-scrolling: touch;
+
+        > .table {
+            // Ensure the content doesn't wrap
+            > thead,
+            > tbody,
+            > tfoot {
+                > tr {
+                    > th,
+                    > td {
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+}
+

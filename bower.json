@@ -1,22 +1,33 @@
 {
     "name": "pear",
-    "description": "Advanced, Sass-based front–end kit.",
+    "description": "An advanced, front–end launching kit.",
     "license": "MIT",
-    "version": "2.3.0",
-    "authors": [
-    { "name": "Jordan Bowman", "homepage": "http://jrdnbwmn.com" }
-    ],
+    "version": "4.0.0",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/jrdnbwmn/Pear.git"
+    },
+    "authors": [{
+        "name": "Jordan Bowman",
+        "homepage": "http://jrdnbwmn.com"
+    }],
+    "homepage": "https://github.com/jrdnbwmn/Pear.git",
     "keywords": [
         "css",
-        "html",
+        "scss",
         "sass",
+        "oocss",
+        "html",
+        "grid",
         "front-end",
         "web",
-        "responsive"
+        "responsive",
+        "boilerplate",
+        "framework"
     ],
     "ignore": [
-        "CONTRIBUTING.md",
         "CNAME",
-        ".gitignore"
+        ".gitignore",
+        "node_modules"
     ]
 }

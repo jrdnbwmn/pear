@@ -1,0 +1,24 @@
+// Improve readability when focused and also mouse hovered in all browsers.
+a:active, a:hover { outline: 0; }
+
+.link,
+.link:link,
+.link:visited {
+    color: $color-link;
+    text-decoration: none;
+    transition: color $fade;
+}
+
+.link:hover,
+.link:focus {
+    color: $color-linkHover;
+    text-decoration: underline;
+}
+
+.link:active {
+    color: $color-linkActive;
+    background-image: none;
+    transition: color $fade;
+    outline: 0;
+}
+

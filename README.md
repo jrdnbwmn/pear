@@ -1,3 +1,3 @@
-# PEAR HAS A [NEW HOME](https://github.com/eatapear)!
+# Pear
 
-Please head over to [https://github.com/eatapear](https://github.com/eatapear) to play with the new, improved version of Pear.
+This is the launching kit I use on just about every project.

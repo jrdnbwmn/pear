@@ -1,0 +1,34 @@
+.m0  { margin: 0 }
+.mt0 { margin-top: 0 }
+.mb0 { margin-bottom: 0 }
+
+.m1  { margin: $baseline*3 }
+.mt1 { margin-top: $baseline*3 }
+.mr1 { margin-right: $baseline*3 }
+.mb1 { margin-bottom: $baseline*3 }
+.ml1 { margin-left: $baseline*3 }
+
+.m2  { margin: $baseline*6 }
+.mt2 { margin-top: $baseline*6 }
+.mr2 { margin-right: $baseline*6 }
+.mb2 { margin-bottom: $baseline*6 }
+.ml2 { margin-left: $baseline*6 }
+
+.m3  { margin: $baseline*9 }
+.mt3 { margin-top: $baseline*9 }
+.mr3 { margin-right: $baseline*9 }
+.mb3 { margin-bottom: $baseline*9 }
+.ml3 { margin-left: $baseline*9 }
+
+.m4  { margin: $baseline*12 }
+.mt4 { margin-top: $baseline*12 }
+.mr4 { margin-right: $baseline*12 }
+.mb4 { margin-bottom: $baseline*12 }
+.ml4 { margin-left: $baseline*12 }
+
+// Same bottom margin as body text
+.mb-bt  { margin-bottom: $bodyText-marginBottom; }
+
+// Center something
+.center { margin-right: auto; margin-left: auto; }
+

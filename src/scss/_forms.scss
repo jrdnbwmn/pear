@@ -1,0 +1,156 @@
+// Correct font properties not being inherited.
+button, input, optgroup, select, textarea { line-height: inherit; }
+
+// Reset vertical align for relevant elements.
+input, button, select, label, { vertical-align: middle; }
+
+// Set the height file controls to match text inputs
+// Normalize file input width
+input[type=file] {
+    display: block;
+    width: 100%;
+}
+
+// 1. Reset height for textareas.
+// 2. Allow only vertical resizing of textareas.
+textarea { 
+    height: auto; // [1]
+    resize: vertical; // [2]
+}
+
+// Remove outline on certain elements.
+select:focus, input:focus, textarea:focus { outline: 0; }
+
+// Make multiple select elements height not fixed
+select[multiple], select[size] { height: auto; }
+
+// Normalize output element
+output {
+    display: block;
+    font-size: 1rem;
+    line-height: $lineHeight-base;
+}
+
+// 1. Remove default fieldset styles.
+// 2. Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+//    so we reset that to ensure it behaves more like a standard block element.
+//    See https://github.com/twbs/bootstrap/issues/12359.
+fieldset {
+    border: 0; // [1]
+    min-width: 0; // [2]
+}
+
+// 1. Reset margins.
+// 2. Normalize line height.
+legend {
+    margin: 0; // [2]
+    line-height: inherit; // [4]
+}
+
+// Normalize every kind of disabled input.
+// 1. Future-proof disabling of clicks.
+// 2. iOS fix for unreadable disabled content.
+input[disabled],
+input[readonly],
+fieldset[disabled] input {
+    cursor: not-allowed;
+    pointer-events: none; // [1]
+    opacity: 1; // [2]
+}
+
+.form { font-size: 1rem; }
+
+// Apply `.form-control` to any of the following form controls:
+//
+// select
+// textarea
+// input[type="text"]
+// input[type="password"]
+// input[type="datetime"]
+// input[type="datetime-local"]
+// input[type="date"]
+// input[type="month"]
+// input[type="time"]
+// input[type="week"]
+// input[type="number"]
+// input[type="email"]
+// input[type="url"]
+// input[type="search"]
+// input[type="tel"]
+// input[type="color"]
+.formControl {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: $padding-ui-md;
+    font-size: 1rem;
+    font-family: $fontFamily-ui;
+    color: $color-text;
+    line-height: $lineHeight-base;
+    background-image: none; // Reset unusual Firefox-on-Android default style
+    border: 1px solid $color-border;
+    border-radius: $borderRadius;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.select {
+    min-width: 25%;
+    max-width: 100%;
+    color: $color-text;
+    background-color: $gray-lighter;
+    border: 1px solid $color-border;
+    border-radius: $borderRadius;
+    cursor: pointer;
+}
+
+.label {
+    display: inline-block;
+    max-width: 100%; // Force IE8 to wrap long content
+    cursor: default;
+}
+
+.legend {
+    display: block;
+    width: 100%;
+    white-space: normal;
+}
+
+.form-stacked {
+    .input,
+    .select,
+    .radio,
+    .checkbox,
+    .textarea,
+    .label {
+        display: block;
+        width: 100%;
+    }
+}
+
+.form-inline {
+    .formControl {
+        display: inline-block;
+        width: auto; // Prevent labels from stacking above inputs in `.form-group`
+        vertical-align: middle;
+    }
+    
+    .radio,
+    .checkbox {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+::-webkit-input-placeholder { 
+    color: $gray-light; 
+    -webkit-font-smoothing: antialiased;
+}
+::-moz-placeholder { 
+    color: $gray-light; 
+    -moz-osx-font-smoothing: grayscale;
+}
+:-ms-input-placeholder { 
+    color: $gray-light; 
+}
+

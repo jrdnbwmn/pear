@@ -45,5 +45,10 @@ nbproject
 *.sublime-workspace
 .idea
 
+# Sass #
+########
 .sass-cache
+
+# Gulp/Node #
+#############
 node_modules

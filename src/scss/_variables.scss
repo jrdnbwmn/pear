@@ -1,0 +1,117 @@
+// ---------------------------------------------------
+// GENERAL
+// ---------------------------------------------------
+
+// Baseline
+$baseline: .4rem;
+
+// Breakpoints
+// Mobile Safari has problems with rems being used in media queries
+$breakpoint-sm: 40em;
+$breakpoint-md: 50em;
+$breakpoint-lg: 60em;
+
+
+// ---------------------------------------------------
+// TYPOGRAPHY
+// ---------------------------------------------------
+
+// Font Families
+$sans-serif: "Helvetica Neue", Trebuchet, Tahoma, Verdana, sans-serif;
+$serif: Georgia, Times, serif;
+$monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
+
+$fontFamily-base: $sans-serif !default;
+$fontFamily-headings: $fontFamily-base !default;
+$fontFamily-ui: $sans-serif;
+
+// Type Scale
+// Good tool: http://type-scale.com/
+$h1: 3.375rem !default;
+$h2: 2.25rem !default;
+$h3: 1.5rem !default;
+$h4: 1rem !default;
+$h5: .666rem !default;
+$h6: .666rem !default;
+
+// Finer control over responsive type scale, turned off by default
+$responsiveType: false !default;
+$h1-desktop: 3.375rem !default;
+$h2-desktop: 2.25rem !default;
+$h3-desktop: 1.5rem !default;
+$h4-desktop: 1rem !default;
+$h5-desktop: .666rem !default;
+$h6-desktop: .666rem !default;
+
+// Sizes
+$fontSize-mobileBase: 14px;
+$fontSize-desktopBase: 18px;
+$fontSize-large: $h3;
+$fontSize-small: $h5;
+
+// Weights
+$fontWeight-base: 400 !default;
+$fontWeight-headings: 700 !default;
+
+// Line Heights
+$lineHeight-base: $baseline*4 !default;
+$lineHeight-headings: 1 !default;
+
+
+// ---------------------------------------------------
+// COLORS
+// ---------------------------------------------------
+
+// Color by name
+$white: #fff;
+$gray-lighter: #eee;
+$gray-light: #aaa;
+$gray: #777;
+$gray-dark: #4d4d4d;
+$gray-darker: #222;
+$blue: #428bca;
+$green: #5cb85c;
+$orange: #f0ad4e;
+
+// Brand colors
+$color-brandPrimary: $blue;
+$color-brandSecondary: $green;
+$color-brandAccent: $orange;
+
+// Text colors
+$color-text: $gray-dark;
+$color-text-light: $gray;
+
+// Link colors
+$color-link: $color-brandPrimary;
+$color-linkHover: darken($color-brandPrimary, 10%);
+$color-linkActive: darken($color-brandPrimary, 25%);
+
+// Border colors
+$color-border: $gray-light;
+
+// Code colors
+$color-code: $gray-dark;
+$backgroundColor-code: $gray-lighter;
+
+
+// ---------------------------------------------------
+// DESIGN ELEMENTS
+// ---------------------------------------------------
+
+// Margins
+$bodyText-marginBottom: $baseline*3;
+$headingText-marginBottom: $bodyText-marginBottom;
+
+// UI Padding
+$padding-ui-lg: $baseline*2 $baseline*3;
+$padding-ui-md: $baseline $baseline*2;
+$padding-ui-sm: 0 $baseline*1.5;
+
+// Borders
+$borderRadius: 4px !default;
+$borderColor:  $gray !default;
+    
+// Animations
+$fade: .2s ease-out;
+

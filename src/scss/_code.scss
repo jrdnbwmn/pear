@@ -1,0 +1,22 @@
+// Make font family consistent
+code, kbd, pre, samp { font-family: $monospace; }
+
+.inlineCode {
+    max-width: 100%;
+    padding: $baseline/2 $baseline;
+    color: $color-code;
+    background-color: $backgroundColor-code;
+}
+
+.codeBlock {
+    display: block;
+    max-width: 100%;
+    margin-bottom: $bodyText-marginBottom;
+    padding: $baseline*4 $baseline*5;
+    color: $color-code;
+    line-height: $lineHeight-base;
+    background-color: $backgroundColor-code;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+

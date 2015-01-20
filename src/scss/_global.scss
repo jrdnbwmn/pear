@@ -1,0 +1,81 @@
+// 1. Ensure the page always fills at least the entire height of the viewport.
+// 2. Set the default font stylings for the entire project.
+// 3. https://github.com/twbs/bootstrap/issues/3772#issuecomment-7566868
+// 4. paulirish.com/2012/box-sizing-border-box-ftw/
+//    css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+html {
+    min-height: 100%; // [1]
+    font-family: $fontFamily-base; // [2]
+    font-size: $fontSize-mobileBase; // [2]
+    font-weight: $fontWeight-base; // [2]
+    font-style: normal; // [2]
+    -webkit-tap-highlight-color: rgba(0,0,0,0); // [3]
+    box-sizing: border-box; // [4]
+    
+    @media screen and (min-width: $breakpoint-sm) {
+        font-size: $fontSize-desktopBase;
+    }
+}
+
+*, *:before, *:after { box-sizing: inherit; } // [4]
+
+// 1. Fix for webkit rendering. Fonts on OSX will look more consistent with 
+//    other systems that do not render text using sub-pixel anti-aliasing.
+// 2. For now, this is `!important` because the `::selection` (below) affects 
+//    the background color in IE.
+body {
+    padding: 0;
+    color: $color-text;
+    line-height: $lineHeight-base;
+    -webkit-font-smoothing: antialiased; // [1]
+    -moz-osx-font-smoothing: grayscale; // [1]
+    background-color: $white !important; // [2]
+}
+
+// It's often advantageous to remove all margins/paddings from certain elements.
+blockquote,
+pre,
+ul,
+ol,
+dl,
+dd,
+form,
+fieldset,
+figure,
+table,
+th,
+td,
+caption,
+hr {
+    margin: 0;
+    padding: 0;
+}
+
+
+// Remove text-shadow in selection highlight: h5bp.com/i
+// These selection rule sets have to be separate.
+::-moz-selection {
+    color: #fff;
+    text-shadow: none;
+    background-color: $color-brandPrimary;
+}
+::selection {
+    color: #fff;
+    text-shadow: none;
+    background-color: $color-brandPrimary;
+}
+img::selection { 
+    background: transparent; 
+}
+img::-moz-selection { 
+    background: transparent; 
+}
+
+// Browsehappy prompt
+.browsehappy {
+    margin: 0.333rem 0;
+    padding: 0.333rem 0;
+    color: $color-text;
+    background: $gray-light;
+}
+
