@@ -8,7 +8,7 @@ Includes:
 - OOCSS style kit using Sass
 - Gulp setup
 
-The minified CSS file comes in at 13kb.
+The minified, uncompressed CSS file comes in at 13kb.
 
 This is meant to be a starting point – to help me kick things off and then get out of my way. It helps me utilize best practices, set up a good architecture/workflow, play better golf, and be more fulfilled in life (yes, all those things).
 
