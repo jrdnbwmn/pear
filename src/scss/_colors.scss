@@ -1,23 +1,25 @@
 // Text colors
 // -----------------------------------------------------------------------------
 .white-text                   { color: $white; }
-.lighter-gray-text            { color: $lighter-gray; }
+.lightest-gray-text           { color: $lightest-gray; }
 .light-gray-text              { color: $light-gray; }
 .gray-text                    { color: $gray; }
 .dark-gray-text               { color: $dark-gray; }
-.darker-gray-text             { color: $darker-gray; }
+.darkest-gray-text            { color: $darkest-gray; }
 .primary-brand-color-text     { color: $primary-brand-color; }
 .secondary-brand-color-text   { color: $secondary-brand-color; }
 .brand-accent-color-text      { color: $brand-accent-color; }
 
+.light-text-color             { color: $light-text-color }
+
 // Background colors
 // -----------------------------------------------------------------------------
 .white-background                 { background-color: $white; }
-.lighter-gray-background          { background-color: $lighter-gray; }
+.lightest-gray-background         { background-color: $lightest-gray; }
 .light-gray-background            { background-color: $light-gray; }
 .gray-background                  { background-color: $gray; }
 .dark-gray-background             { background-color: $dark-gray; }
-.darker-gray-background           { background-color: $darker-gray; }
+.darkest-gray-background          { background-color: $darkest-gray; }
 .primary-brand-color-background   { background-color: $primary-brand-color; }
 .secondarybrand-color-background  { background-color: $secondary-brand-color; }
 .brand-accent-color-background    { background-color: $brand-accent-color; }

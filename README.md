@@ -8,11 +8,22 @@ Includes:
 - OOCSS style kit using Sass
 - Gulp setup
 
+The minified CSS file comes in at 13kb.
+
 This is meant to be a starting point – to help me kick things off and then get out of my way. It helps me utilize best practices, set up a good architecture/workflow, play better golf, and be more fulfilled in life (yes, all those things).
 
 ## Bower
 
 Install with bower: `bower install pear`
+
+## Principles
+
+1. Always err on the side of simplicity. Faster; cheaper; easier to understand, inherit, maintain, and debug; less likely to fail or break; less cognitive overhead.
+2. Reduce the amount of moving parts. The best code is no code at all. Get rid of as much as you can – both features and code. Every moving part is a potential point of failure.
+3. Along the same lines, don't build something until you've been asked for it. Solve each problem as you encounter it. Do each activity once and as simply as possible, with nothing outside of that. A website is not the place to show off.
+4. Pragmatism trumps perfectionism. Perfection will never be attainable, so don't let it hold you back. Hacking something together today is better than launching something "perfect" in three weeks.
+5. Don't design systems around edge cases. Don't let the minority lead the majority. Build for the most common scenario first and then solve edge cases separately. We talk about reponsiveness and coding for every use case and every device in one, but often that leads to clunky, bloated, unoptimized code.
+6. Expect and accodomate change. Always stay adaptable, flexible, and nimble. Everything is subject to change, nothing is set in stone. Make sure you can reverse any decision. Never tie yourself down. Don't try to predict the future.
 
 ## Reasoning
 

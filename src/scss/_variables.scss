@@ -62,11 +62,11 @@ $heading-line-height: 1 !default;
 // Color by name
 // Change these colors to something other than "darker"
 $white: #fff;
-$lighter-gray: #eee;
+$lightest-gray: #eee;
 $light-gray: #aaa;
 $gray: #777;
 $dark-gray: #4d4d4d;
-$darker-gray: #222;
+$darkest-gray: #222;
 $blue: #428bca;
 $green: #5cb85c;
 $orange: #f0ad4e;
@@ -78,7 +78,7 @@ $brand-accent-color: $orange;
 
 // Text colors
 $text-color: $dark-gray;
-$light-text-color: $gray;
+$light-text-color: $light-gray;
 
 // Link colors
 $link-color: $primary-brand-color;
@@ -90,7 +90,7 @@ $border-color: $light-gray;
 
 // Code colors
 $code-color: $dark-gray;
-$code-background-color: $lighter-gray;
+$code-background-color: $lightest-gray;
 
 // Spaces
 // -----------------------------------------------------------------------------
