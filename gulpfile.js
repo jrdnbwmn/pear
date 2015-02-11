@@ -6,6 +6,7 @@
 var gulp 					= require("gulp"),
 
     // HTML plugins
+    fileinclude             = require("gulp-file-include"),
     htmlmin                 = require("gulp-htmlmin"),
 
     // CSS plugins
@@ -59,20 +60,22 @@ var onError = function(error) {
 
 // HTML task
 gulp.task("html", function() {
-	return gulp.src("src/html/**/*")
+    return gulp.src("src/html/*.html")
         // Prevent gulp.watch from crashing
         .pipe(plumber(onError))
-        // Minify and improve HTML
+        // Set up HTML templating
+        .pipe(fileinclude({
+            prefix: "@@",
+            basepath: "src/html"
+        }))
+        // Clean up HTML a little
         .pipe(htmlmin({
-            removeComments: true,
             removeCommentsFromCDATA: true,
-            collapseWhitespace: true,
             removeRedundantAttributes: true,
             removeEmptyAttributes: true,
             removeScriptTypeAttributes: true,
             removeStyleLinkTypeAttributes: true,
             caseSensitive: true,
-            minifyJS: true,
             minifyCSS: true
         }))
         // Where to store the finalized HTML
@@ -89,7 +92,10 @@ gulp.task("css", function() {
 		// Combine media queries
 		.pipe(combineMediaQueries())
 		// parse CSS and add vendor-prefixed CSS properties
-		.pipe(autoprefixer())
+		.pipe(autoprefixer({
+            browsers: ["> 5%", "last 2 versions", "Firefox ESR"],
+            cascade: false
+        }))
 		// Minify CSS
 		.pipe(cssmin())
         // Rename the file

@@ -1,20 +1,24 @@
-.txt-white           { color: $white; }
-.txt-gray-lighter    { color: $gray-lighter; }
-.txt-gray-light      { color: $gray-light; }
-.txt-gray            { color: $gray; }
-.txt-gray-dark       { color: $gray-dark; }
-.txt-gray-darker     { color: $gray-darker; }
-.txt-brandPrimary    { color: $color-brandPrimary; }
-.txt-brandSecondary  { color: $color-brandSecondary; }
-.txt-brandAccent     { color: $color-brandAccent; }
+// Text colors
+// -----------------------------------------------------------------------------
+.white-text                   { color: $white; }
+.lighter-gray-text            { color: $lighter-gray; }
+.light-gray-text              { color: $light-gray; }
+.gray-text                    { color: $gray; }
+.dark-gray-text               { color: $dark-gray; }
+.darker-gray-text             { color: $darker-gray; }
+.primary-brand-color-text     { color: $primary-brand-color; }
+.secondary-brand-color-text   { color: $secondary-brand-color; }
+.brand-accent-color-text      { color: $brand-accent-color; }
 
-.bg-white            { background-color: $white; }
-.bg-gray-lighter     { background-color: $gray-lighter; }
-.bg-gray-light       { background-color: $gray-light; }
-.bg-gray             { background-color: $gray; }
-.bg-gray-dark        { background-color: $gray-dark; }
-.bg-gray-darker      { background-color: $gray-darker; }
-.bg-brandPrimary     { background-color: $color-brandPrimary; }
-.bg-brandSecondary   { background-color: $color-brandSecondary; }
-.bg-brandAccent      { background-color: $color-brandAccent; }
+// Background colors
+// -----------------------------------------------------------------------------
+.white-background                 { background-color: $white; }
+.lighter-gray-background          { background-color: $lighter-gray; }
+.light-gray-background            { background-color: $light-gray; }
+.gray-background                  { background-color: $gray; }
+.dark-gray-background             { background-color: $dark-gray; }
+.darker-gray-background           { background-color: $darker-gray; }
+.primary-brand-color-background   { background-color: $primary-brand-color; }
+.secondarybrand-color-background  { background-color: $secondary-brand-color; }
+.brand-accent-color-background    { background-color: $brand-accent-color; }
 

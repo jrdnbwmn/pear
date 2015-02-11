@@ -1,11 +1,14 @@
+// Layout utilities
+// -----------------------------------------------------------------------------
 .float-left  { float: left; }
 .float-right { float: right; }
 .float-none  { float: none; }
 
-.fullWidth { width: 100%; }
-.halfWidth { width: 50%; }
+.full-width { width: 100%; }
+.half-width { width: 50%; }
+.fit-within { max-width: 100%; }
 
-.cf {
+.clearfix {
 	*zoom:1;
 
 	&:before,

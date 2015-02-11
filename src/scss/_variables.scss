@@ -1,116 +1,119 @@
-// ---------------------------------------------------
-// GENERAL
-// ---------------------------------------------------
-
+// Global
+// -----------------------------------------------------------------------------
 // Baseline
 $baseline: .4rem;
 
 // Breakpoints
 // Mobile Safari has problems with rems being used in media queries
-$breakpoint-sm: 40em;
-$breakpoint-md: 50em;
-$breakpoint-lg: 60em;
+$small-breakpoint: 40em;
+$medium-breakpoint: 50em;
+$large-breakpoint: 60em;
 
+// Max container width
+$max-container-width: $medium-breakpoint;
 
-// ---------------------------------------------------
-// TYPOGRAPHY
-// ---------------------------------------------------
-
-// Font Families
-$sans-serif: "Helvetica Neue", Trebuchet, Tahoma, Verdana, sans-serif;
+// Typography
+// -----------------------------------------------------------------------------
+// Font families
+$sans-serif: "Avenir Next", Avenir, Trebuchet, Verdana, sans-serif;
 $serif: Georgia, Times, serif;
 $monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
 
-$fontFamily-base: $sans-serif !default;
-$fontFamily-headings: $fontFamily-base !default;
-$fontFamily-ui: $sans-serif;
+$base-font-family: $sans-serif;
+$heading-font-family: $sans-serif;
+$reading-font-family: $serif;
+$ui-font-family: $sans-serif;
+$code-font-family: $monospace;
 
-// Type Scale
+// Type scale
 // Good tool: http://type-scale.com/
-$h1: 3.375rem !default;
-$h2: 2.25rem !default;
-$h3: 1.5rem !default;
+$h1: 2.369rem !default;
+$h2: 1.777rem !default;
+$h3: 1.333rem !default;
 $h4: 1rem !default;
-$h5: .666rem !default;
-$h6: .666rem !default;
+$h5: .75rem !default;
+$h6: .75rem !default;
 
-// Finer control over responsive type scale, turned off by default
-$responsiveType: false !default;
-$h1-desktop: 3.375rem !default;
-$h2-desktop: 2.25rem !default;
-$h3-desktop: 1.5rem !default;
-$h4-desktop: 1rem !default;
-$h5-desktop: .666rem !default;
-$h6-desktop: .666rem !default;
+// Finer control over type scale after certain breakpoint (off by default)
+$responsive-type: false !default;
+$desktop-h1: 2.369rem !default;
+$desktop-h2: 1.777rem !default;
+$desktop-h3: 1.333rem !default;
+$desktop-h4: 1rem !default;
+$desktop-h5: .75rem !default;
+$desktop-h6: .75rem !default;
 
-// Sizes
-$fontSize-mobileBase: 14px;
-$fontSize-desktopBase: 18px;
-$fontSize-large: $h3;
-$fontSize-small: $h5;
+// Text sizes
+$base-mobile-font-size: 14px;
+$base-desktop-font-size: 18px;
+$large-font-size: $h3;
+$small-font-size: $h5;
 
 // Weights
-$fontWeight-base: 400 !default;
-$fontWeight-headings: 700 !default;
+$base-font-weight: 400 !default;
+$heading-font-weight: 700 !default;
 
-// Line Heights
-$lineHeight-base: $baseline*4 !default;
-$lineHeight-headings: 1 !default;
+// Line heights
+$base-line-height: $baseline*4 !default;
+$heading-line-height: 1 !default;
 
-
-// ---------------------------------------------------
-// COLORS
-// ---------------------------------------------------
-
+// Colors
+// -----------------------------------------------------------------------------
 // Color by name
+// Change these colors to something other than "darker"
 $white: #fff;
-$gray-lighter: #eee;
-$gray-light: #aaa;
+$lighter-gray: #eee;
+$light-gray: #aaa;
 $gray: #777;
-$gray-dark: #4d4d4d;
-$gray-darker: #222;
+$dark-gray: #4d4d4d;
+$darker-gray: #222;
 $blue: #428bca;
 $green: #5cb85c;
 $orange: #f0ad4e;
 
 // Brand colors
-$color-brandPrimary: $blue;
-$color-brandSecondary: $green;
-$color-brandAccent: $orange;
+$primary-brand-color: $blue;
+$secondary-brand-color: $green;
+$brand-accent-color: $orange;
 
 // Text colors
-$color-text: $gray-dark;
-$color-text-light: $gray;
+$text-color: $dark-gray;
+$light-text-color: $gray;
 
 // Link colors
-$color-link: $color-brandPrimary;
-$color-linkHover: darken($color-brandPrimary, 10%);
-$color-linkActive: darken($color-brandPrimary, 25%);
+$link-color: $primary-brand-color;
+$link-hover-color: darken($primary-brand-color, 10%);
+$active-link-color: darken($primary-brand-color, 25%);
 
 // Border colors
-$color-border: $gray-light;
+$border-color: $light-gray;
 
 // Code colors
-$color-code: $gray-dark;
-$backgroundColor-code: $gray-lighter;
+$code-color: $dark-gray;
+$code-background-color: $lighter-gray;
 
+// Spaces
+// -----------------------------------------------------------------------------
+$space-1: $baseline*2;
+$space-2: $baseline*5;
+$space-3: $baseline*8;
+$space-4: $baseline*11;
 
-// ---------------------------------------------------
-// DESIGN ELEMENTS
-// ---------------------------------------------------
+// Specific margins
+$body-text-bottom-margin: $space-2;
+$heading-text-bottom-margin: $body-text-bottom-margin;
 
-// Margins
-$bodyText-marginBottom: $baseline*3;
-$headingText-marginBottom: $bodyText-marginBottom;
-
-// UI Padding
-$padding-ui-lg: $baseline*2 $baseline*3;
-$padding-ui-md: $baseline $baseline*2;
-$padding-ui-sm: 0 $baseline*1.5;
+// Design elements
+// -----------------------------------------------------------------------------
+// UI padding
+$large-ui-padding: $baseline*3 $baseline*4;
+$medium-ui-padding: $baseline $baseline*3;
+$small-ui-padding: 0 $baseline*2;
 
 // Borders
-$borderRadius: 4px !default;
-$borderColor:  $gray !default;
+$border-style: solid;
+$border-radius: 4px !default;
+$border-color:  $gray !default;
     
 // Animations
 $fade: .2s ease-out;

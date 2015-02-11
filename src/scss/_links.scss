@@ -1,24 +1,28 @@
+// Normalization
+// -----------------------------------------------------------------------------
 // Improve readability when focused and also mouse hovered in all browsers.
 a:active, a:hover { outline: 0; }
 
+// Base link styles
+// -----------------------------------------------------------------------------
 .link,
 .link:link,
 .link:visited {
-    color: $color-link;
+    color: $link-color;
     text-decoration: none;
     transition: color $fade;
 }
 
 .link:hover,
 .link:focus {
-    color: $color-linkHover;
+    color: $link-hover-color;
     text-decoration: underline;
 }
 
 .link:active {
-    color: $color-linkActive;
     background-image: none;
-    transition: color $fade;
+    color: $active-link-color;
     outline: 0;
+    transition: color $fade;
 }
 

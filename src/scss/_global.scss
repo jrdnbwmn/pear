@@ -1,19 +1,20 @@
-// 1. Ensure the page always fills at least the entire height of the viewport.
+// Base global styles
+// -----------------------------------------------------------------------------
 // 2. Set the default font stylings for the entire project.
 // 3. https://github.com/twbs/bootstrap/issues/3772#issuecomment-7566868
 // 4. paulirish.com/2012/box-sizing-border-box-ftw/
-//    css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+//   css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
 html {
-    min-height: 100%; // [1]
-    font-family: $fontFamily-base; // [2]
-    font-size: $fontSize-mobileBase; // [2]
-    font-weight: $fontWeight-base; // [2]
-    font-style: normal; // [2]
-    -webkit-tap-highlight-color: rgba(0,0,0,0); // [3]
     box-sizing: border-box; // [4]
+    font-family: $base-font-family; // [2]
+    font-size: $base-mobile-font-size; // [2]
+    font-style: normal; // [2]
+    font-weight: $base-font-weight; // [2]
+    min-height: 100%; // Ensure the page always fills at least the entire height of the viewport
+    -webkit-tap-highlight-color: rgba(0,0,0,0); // [3]
     
-    @media screen and (min-width: $breakpoint-sm) {
-        font-size: $fontSize-desktopBase;
+    @media screen and (min-width: $small-breakpoint) {
+        font-size: $base-desktop-font-size;
     }
 }
 
@@ -24,15 +25,15 @@ html {
 // 2. For now, this is `!important` because the `::selection` (below) affects 
 //    the background color in IE.
 body {
+    background-color: $white !important; // [2]
+    color: $text-color;
+    line-height: $base-line-height;
     padding: 0;
-    color: $color-text;
-    line-height: $lineHeight-base;
     -webkit-font-smoothing: antialiased; // [1]
     -moz-osx-font-smoothing: grayscale; // [1]
-    background-color: $white !important; // [2]
 }
 
-// It's often advantageous to remove all margins/paddings from certain elements.
+// It's often advantageous to remove all margins/paddings from certain elements
 blockquote,
 pre,
 ul,
@@ -51,18 +52,17 @@ hr {
     padding: 0;
 }
 
-
 // Remove text-shadow in selection highlight: h5bp.com/i
 // These selection rule sets have to be separate.
 ::-moz-selection {
+    background-color: $primary-brand-color;
     color: #fff;
     text-shadow: none;
-    background-color: $color-brandPrimary;
 }
 ::selection {
+    background-color: $primary-brand-color;
     color: #fff;
     text-shadow: none;
-    background-color: $color-brandPrimary;
 }
 img::selection { 
     background: transparent; 
@@ -72,10 +72,11 @@ img::-moz-selection {
 }
 
 // Browsehappy prompt
+// -----------------------------------------------------------------------------
 .browsehappy {
+    background: $light-gray;
+    color: $text-color;
     margin: 0.333rem 0;
     padding: 0.333rem 0;
-    color: $color-text;
-    background: $gray-light;
 }
 

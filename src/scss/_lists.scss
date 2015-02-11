@@ -1,6 +1,8 @@
+// Normalization
+// -----------------------------------------------------------------------------
 ul,
 ol {
-    margin-bottom: $bodyText-marginBottom;
+    margin-bottom: $body-text-bottom-margin;
     
     ul,
     ol {
@@ -14,24 +16,18 @@ dt { font-weight: bold; }
 // Undo browser default.
 dd { margin-left: 0; }
 
+// Base list styles
+// -----------------------------------------------------------------------------
+// Indented list
 .list { padding-left: $baseline*6; }
 
 // Remove bullets
-.list-reset { list-style: none; }
+.no-bullets { list-style: none; }
 
-// Inline list – usually use with `.list-reset`
-.list-inline {
+// Inline list – usually used with `.no-bullets`
+.inline-list {
     li {
         display: inline-block;
     }
 }
-
-.list-circle      { list-style-type: circle; }
-.list-square      { list-style-type: square; }
-.list-decimal     { list-style-type: decimal; }
-.list-leadingZero { list-style-type: decimal-leading-zero; }
-.list-lowerRoman  { list-style-type: lower-roman; }
-.list-upperRoman  { list-style-type: upper-roman; }
-.list-lowerAlpha  { list-style-type: lower-alpha; }
-.list-upperAlpha  { list-style-type: upper-alpha; }
 

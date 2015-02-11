@@ -1,121 +1,114 @@
-// Doesn't inherit in webkit
-button { -webkit-font-smoothing: antialiased; }
+// Normalization
+// -----------------------------------------------------------------------------
+button {
+    line-height: inherit; // Correct font properties not being inherited
+    vertical-align: middle; // Reset vertical align for relevant elements
+    -webkit-font-smoothing: antialiased; // Doesn't inherit in webkit
+}
 
-// 1. Line different size buttons up nicely.
-// 2. Allow us to better style box model properties.
-// 3. Stop buttons wrapping and looking broken.
-// 4. Reset unusual Firefox-on-Android default style: 
-//    https://github.com/necolas/normalize.css/issues/214.
-.btn,
-.btn:link,
-.btn:visited {
-    vertical-align: middle; // [1]
-    display: inline-block; // [2]
-    margin: 0;
-    text-align: center;
-    font-family: $fontFamily-ui;
-    text-decoration: none;
-    line-height: $lineHeight-base;
-    white-space: nowrap; // [3]
+// Base button styles
+// -----------------------------------------------------------------------------
+.button,
+.button:link,
+.button:visited {
+    background-image: none; // Reset unusual Firefox-on-Android default style: https://github.com/necolas/normalize.css/issues/214
+    border-radius: $border-radius;
     border-style: solid;
     border-width: 1px;
-    border-radius: $borderRadius;
-    background-image: none; // [4]
-    transition: background-color $fade, background $fade, color $fade, border $fade;
     cursor: pointer;
+    display: inline-block; // Allow us to better style box model properties
+    font-family: $ui-font-family;
+    line-height: $base-line-height;
+    margin-bottom: 0; // For input.button
+    text-align: center;
+    text-decoration: none;
+    transition: background-color $fade, background $fade, color $fade, border $fade;
+    vertical-align: middle; // Line different size buttons up nicely
+    white-space: nowrap; // Stop buttons wrapping and looking broken
     -webkit-appearance: none;
             appearance: none;
 }
     
-.btn:hover,
-.btn:focus {
-    text-decoration: none;
+.button:hover,
+.button:focus {
     outline: 0;
+    text-decoration: none;
 }
     
-.btn:active {
+.button:active {
     background-image: none;
     outline: 0;
     transition: background-color $fade, border-color $fade;
 }
     
-.btn.disabled,
-.btn[disabled],
-.btn[readonly],
-fieldset[disabled] .btn {
+.button.disabled,
+.button[disabled],
+.button[readonly],
+fieldset[disabled] .button {
     cursor: not-allowed !important;
-    pointer-events: none; // Future-proof disabling of clicks
     opacity: 1; // iOS fix for unreadable disabled content
+    pointer-events: none; // Future-proof disabling of clicks
 }
 
-// Required: Choose a size
-.btn-lg { font-size: $h3; padding: $padding-ui-lg; }
-.btn-md { padding: $padding-ui-md; }
-.btn-sm { font-size: $h6; padding: $padding-ui-sm; }
+// Button sizes
+// -----------------------------------------------------------------------------
+.large-button {
+    font-size: $h3;
+    padding: $large-ui-padding;
+}
 
-// Required: Choose a theme
-// Primary Button Theme
-.btn-primary,
-.btn-primary:link,
-.btn-primary:visited {
+.medium-button { padding:$medium-ui-padding; }
+
+.small-button {
+    font-size: $h6;
+    padding:$small-ui-padding;
+}
+
+// Button skins
+// -----------------------------------------------------------------------------
+// Primary button
+.primary-button,
+.primary-button:link,
+.primary-button:visited {
+    background-color: $primary-brand-color;
+    border-color: $primary-brand-color;
     color: $white;
-    background-color: $color-brandPrimary;
-    border-color: $color-brandPrimary;
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
-    background-color: darken($color-brandPrimary, 10%);
-    border-color: darken($color-brandPrimary, 10%);
+.primary-button:hover,
+.primary-button:focus {
+    background-color: darken($primary-brand-color, 10%);
+    border-color: darken($primary-brand-color, 10%);
 }
 
-.btn-primary:active {
-    background-color: darken($color-brandPrimary, 20%);
-    border-color: darken($color-brandPrimary, 20%);
+.primary-button:active {
+    background-color: darken($primary-brand-color, 20%);
+    border-color: darken($primary-brand-color, 20%);
 }
 
-// Secondary Button Theme
-.btn-secondary,
-.btn-secondary:link,
-.btn-secondary:visited {
+// Secondary button
+.secondary-button,
+.secondary-button:link,
+.secondary-button:visited {
+    background-color: $light-gray;
+    border-color: $light-gray;
     color: $white;
-    background-color: $gray-light;
-    border-color: $gray-light;
 }
 
-.btn-secondary:hover,
-.btn-secondary:focus {
-    background-color: darken($gray-light, 10%);
-    border-color: darken($gray-light, 10%);
+.secondary-button:hover,
+.secondary-button:focus {
+    background-color: darken($light-gray, 10%);
+    border-color: darken($light-gray, 10%);
 }
 
-.btn-secondary:active {
-    background-color: darken($gray-light, 20%);
-    border-color: darken($gray-light, 20%);
+.secondary-button:active {
+    background-color: darken($light-gray, 20%);
+    border-color: darken($light-gray, 20%);
 }
 
-// Outline Button Theme
-.btn-outline,
-.btn-outline:link,
-.btn-outline:visited {
-    color: $color-text;
-    border: 1px solid $gray-light;
-    background: transparent;
-}
-
-.btn-outline:hover,
-.btn-outline:focus {
-    color: #fff;
-    border: 1px solid $gray-light;
-    background: $gray-light;
-}
-
-.btn-outline:active {
-    border: 1px solid $gray;
-    background-color: $gray;
-}
-
-// Utilities
+// Button utilities
+// -----------------------------------------------------------------------------
+// Horizontally centers a button
 // Wrap the button in a `div` with this class
-.btn-center { text-align: center; }
+.centered-button { text-align: center; }
 

@@ -1,7 +1,5 @@
-// ---------------------------------------------------
-// NORMALIZATION
-// ---------------------------------------------------
-
+// Normalization
+// -----------------------------------------------------------------------------
 // 1. Normalize display.
 // 2. Prevent from breaking out of container cells.
 table {
@@ -12,42 +10,43 @@ table {
 // Normalize elements of a table.
 td,
 th {
+    line-height: $base-line-height;
     vertical-align: middle;
-    line-height: $lineHeight-base;
 }
 th { text-align: left; }
 
-
-// ---------------------------------------------------
-// PROJECT-SPECIFIC STYLES
-// ---------------------------------------------------
-
-.table {    
+// Base table styles
+// -----------------------------------------------------------------------------
+.table {
+    font-family: $ui-font-family;
+    
     th,
     td {
-        padding: $baseline*2 $baseline*3;
+        padding: $medium-ui-padding;
     }
 }
 
+// Table utilities
+// -----------------------------------------------------------------------------
 // Add borders to all table cells.
 // Add to `table` element.
-.table-cellBorder {
+.table-cell-borders {
     th,
     td {
-        border: 1px solid $color-border;
+        border: 1px solid $border-color;
     }
 }
 
 // Add borders only to the table's rows.
 // Add to `table` element.
-.table-rowBorder {
+.table-row-borders {
     > thead,
     > tbody,
     > tfoot {
         > tr {
             > th,
             > td {
-                border-top: 1px solid $color-border;
+                border-top: 1px solid $border-color;
             }
         }
     }
@@ -55,8 +54,8 @@ th { text-align: left; }
     > thead > tr {
         > th,
         > td {
-            border-top: none;
             border-bottom-width: 2px;
+            border-top: none;
         }
     }
 }
@@ -64,12 +63,12 @@ th { text-align: left; }
 // Enables horizontal scrolling on mobile devices. 
 // Wrap your table in a div with this class.
 // Source: Bootstrap, http://getbootstrap.com/css/#tables-responsive
-.table-responsive {
-    @media screen and (max-width: $breakpoint-sm) {
-        width: 100%;
-        overflow-y: hidden;
-        overflow-x: auto;
+.responsive-table {
+    @media screen and (max-width: $small-breakpoint) {
         border: 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: 100%;
         -ms-overflow-style: -ms-autohiding-scrollbar;
         -webkit-overflow-scrolling: touch;
 

@@ -1,31 +1,24 @@
-.block       { display: block; }
-.inlineBlock { display: inline-block; }
-.inline      { display: inline; }
+// Display utilities
+// -----------------------------------------------------------------------------
+.block        { display: block; }
+.inline-block { display: inline-block; }
+.inline       { display: inline; }
 
-// Wrap things like pre elements in a div with this class to create a
-// responsive element that scrolls at small sizes.
-.overflowContainer { overflow-y: scroll; }
-
-.overflow-hidden { overflow: hidden; }
-
-// Hide from both screenreaders and browsers: h5bp.com/u
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
+// Make the element a circle
+.circle { border-radius: 50%; }
 
 // Some mobile utilities
-// `mobile-show` displays the element only on mobile devices
+// `show-on-mobile` displays the element only on mobile devices
 // `mobile-block` makes the element go display block on mobile devices
-.mobile-show { display: none !important; }
+.show-on-mobile { display: none !important; }
 
-@media screen and (max-width: $breakpoint-sm) {
-    .mobile-show,
-    .mobile-block {
+@media screen and (max-width: $small-breakpoint) {
+    .show-on-mobile,
+    .block-on-mobile {
         display: block !important;
     }
     
-    .mobile-hide {
+    .hide-on-mobile {
         display: none !important;
     }
 }

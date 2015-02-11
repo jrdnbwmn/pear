@@ -6,6 +6,7 @@
     "private": true,
     "devDependencies": {
         "gulp": "*",
+        "gulp-file-include": "*",
         "gulp-htmlmin": "*",
         "gulp-sass": "*",
         "gulp-combine-media-queries": "*",

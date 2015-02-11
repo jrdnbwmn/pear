@@ -1,3 +1,5 @@
+// Normalization
+// -----------------------------------------------------------------------------
 // Address variances font weight/styles and line heights.
 b, strong { line-height: inherit; }
 
@@ -14,12 +16,13 @@ cite { font-style: normal; }
 u, ins { text-decoration: none; }
 
 // Normalize font size
-sub, sup { font-size: $fontSize-small; }
+sub, sup { font-size: $small-font-size; }
 
 // Give a help cursor to elements that give extra info on `:hover`.
 abbr[title], dfn[title] { cursor: help; }
 
-// Scale
+// Typographic scale
+// -----------------------------------------------------------------------------
 h1, .h1                { font-size: $h1; }
 h2, .h2                { font-size: $h2; }
 h3, .h3                { font-size: $h3; }
@@ -28,39 +31,43 @@ p, ul, ol, dl          { font-size: $h4; }
 h5, .h5                { font-size: $h5; }
 h6, .h6, small, .small { font-size: $h6; }
 
-// Finer control over responsive type scale, turned off by default
-@if ($responsiveType) {
-    @media screen and (min-width: $breakpoint-sm) {
-        h1, .h1                { font-size: $h1-desktop; }
-        h2, .h2                { font-size: $h2-desktop; }
-        h3, .h3                { font-size: $h3-desktop; }
+// Finer control over type scale after certain breakpoint (off by default)
+@if ($responsive-type) {
+    @media screen and (min-width: $small-breakpoint) {
+        h1, .h1                { font-size: $desktop-h1; }
+        h2, .h2                { font-size: $desktop-h2; }
+        h3, .h3                { font-size: $desktop-h3; }
         h4, .h4,
-        p, ul, ol, dl          { font-size: $h4-desktop; }
-        h5, .h5                { font-size: $h5-desktop; }
-        h6, .h6, small, .small { font-size: $h6-desktop; }
+        p, ul, ol, dl          { font-size: $desktop-h4; }
+        h5, .h5                { font-size: $desktop-h5; }
+        h6, .h6, small, .small { font-size: $desktop-h6; }
     }
 }
+
+// Base typography styles
+// -----------------------------------------------------------------------------
+// Fonts
+.heading-font  { font-family: $heading-font-family }
+.reading-font  { font-family: $reading-font-family }
+.ui-font       { font-family: $ui-font-family }
 
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 { 
+h6 {
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+    line-height: $heading-line-height;
     margin-top: 0;
-    margin-bottom: $headingText-marginBottom;
-    font-family: $fontFamily-headings;
-    font-weight: $fontWeight-headings;
-    line-height: $lineHeight-headings;
+    margin-bottom: $heading-text-bottom-margin;
     text-rendering: optimizeLegibility; // Enable ligatures and kerning
 }
 
 h6 { color: $gray; }
 
-.lh-copy  { line-height: $lineHeight-base; }
-.lh-title { line-height: $lineHeight-headings; }
-
-p { margin: 0 auto $bodyText-marginBottom auto; }
+p { margin: 0 auto $body-text-bottom-margin auto; }
 
 small,
 .small {
@@ -69,33 +76,35 @@ small,
 }
 
 // A better looking default horizontal rule
-.hr {
+hr {
+    border: 0;
+    border-top: 1px solid $border-color;
     display: block;
     height: 1px;
-    border: 0;
-    border-top: 1px solid $color-border;
 }
 
 .blockquote {
-    max-width: 100%; // Prevents it from breaking out of container
-    margin-bottom: $bodyText-marginBottom;
-    padding-left: $baseline*3;
-    font-size: $fontSize-large;
+    border-left: 4px solid $border-color;
+    font-size: $large-font-size;
     font-style: italic;
-    border-left: 4px solid $color-border;
+    max-width: 100%; // Prevents it from breaking out of container
+    margin-bottom: $body-text-bottom-margin;
+    padding-left: $baseline*3;
 }
 
-.blockquote:before,
-.blockquote:after {
-    content: "";
-}
+.blockquote:before, .blockquote:after { content: ""; }
 
+// Utilities
+// -----------------------------------------------------------------------------
 .bold    { font-weight: bold; }
 .regular { font-weight: normal; }
 .italic  { font-style: italic; }
 
-.txt-left      { text-align: left; }
-.txt-center    { text-align: center; }
-.txt-right     { text-align: right; }
-.txt-justified { text-align: justify; }
+.left-aligned-text    { text-align: left; }
+.centered-text        { text-align: center; }
+.right-aligned-text   { text-align: right; }
+.justified-text       { text-align: justify; }
+
+.base-line-height     { line-height: $base-line-height; }
+.heading-line-height  { line-height: $heading-line-height; }
 
