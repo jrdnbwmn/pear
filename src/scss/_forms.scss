@@ -52,6 +52,7 @@ fieldset[disabled] input {
     pointer-events: none; // Future-proof disabling of clicks
 }
 
+
 // Base form styles
 // -----------------------------------------------------------------------------
 .form { font-size: 1rem; }
@@ -112,6 +113,7 @@ fieldset[disabled] input {
     width: 100%;
 }
 
+
 // Form layouts
 // -----------------------------------------------------------------------------
 .stacked-form {
@@ -140,6 +142,7 @@ fieldset[disabled] input {
         vertical-align: middle;
     }
 }
+
 
 // Placeholder styling
 // -----------------------------------------------------------------------------

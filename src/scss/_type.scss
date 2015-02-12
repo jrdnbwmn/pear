@@ -21,6 +21,7 @@ sub, sup { font-size: $small-font-size; }
 // Give a help cursor to elements that give extra info on `:hover`.
 abbr[title], dfn[title] { cursor: help; }
 
+
 // Typographic scale
 // -----------------------------------------------------------------------------
 h1, .h1                { font-size: $h1; }
@@ -43,6 +44,7 @@ h6, .h6, small, .small { font-size: $h6; }
         h6, .h6, small, .small { font-size: $desktop-h6; }
     }
 }
+
 
 // Base typography styles
 // -----------------------------------------------------------------------------
@@ -93,6 +95,7 @@ hr {
 }
 
 .blockquote:before, .blockquote:after { content: ""; }
+
 
 // Utilities
 // -----------------------------------------------------------------------------

@@ -6,6 +6,7 @@ button {
     -webkit-font-smoothing: antialiased; // Doesn't inherit in webkit
 }
 
+
 // Base button styles
 // -----------------------------------------------------------------------------
 .button,
@@ -50,6 +51,7 @@ fieldset[disabled] .button {
     pointer-events: none; // Future-proof disabling of clicks
 }
 
+
 // Button sizes
 // -----------------------------------------------------------------------------
 .large-button {
@@ -63,6 +65,7 @@ fieldset[disabled] .button {
     font-size: $h6;
     padding:$small-ui-padding;
 }
+
 
 // Button skins
 // -----------------------------------------------------------------------------
@@ -105,6 +108,7 @@ fieldset[disabled] .button {
     background-color: darken($light-gray, 20%);
     border-color: darken($light-gray, 20%);
 }
+
 
 // Button utilities
 // -----------------------------------------------------------------------------
