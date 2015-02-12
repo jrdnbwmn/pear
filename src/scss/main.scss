@@ -1,14 +1,13 @@
 // Variables first
 @import "variables";
 
-// Initial Styling
-@import "global";
+// Reset and dependencies
 @import "normalize";
+@import "print";
 
-// Utilities
-@import "positions";
-@import "layout";
-@import "display";
+// Base
+@import "global";
+@import "utilities";
 
 // Components
 @import "container";
@@ -27,7 +26,4 @@
 @import "colors";
 @import "borders";
 @import "grid";
-
-// Misc
-@import "print";
 
