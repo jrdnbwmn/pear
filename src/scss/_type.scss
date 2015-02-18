@@ -87,6 +87,7 @@ hr {
 
 .blockquote {
     border-left: 4px solid $border-color;
+    font-family: $sans-serif;
     font-size: $large-font-size;
     font-style: italic;
     max-width: 100%; // Prevents it from breaking out of container

@@ -10,7 +10,7 @@ $medium-breakpoint: 50em;
 $large-breakpoint: 60em;
 
 // Max container width
-$max-container-width: $medium-breakpoint;
+$max-container-width: 45em;
 
 
 // Typography
@@ -109,14 +109,19 @@ $heading-text-bottom-margin: $body-text-bottom-margin;
 
 // Design elements
 // -----------------------------------------------------------------------------
-// UI padding
-$large-ui-padding: $baseline*3 $baseline*4;
-$medium-ui-padding: $baseline $baseline*3;
-$small-ui-padding: 0 $baseline*2;
+// Button padding
+$large-button-padding: $baseline*3 $baseline*4;
+$medium-button-padding: $baseline $baseline*3;
+$small-button-padding: 0 $baseline*2;
+
+// Form padding
+$large-ui-padding: $baseline*3 $baseline*3;
+$medium-ui-padding: $baseline $baseline;
+$small-ui-padding: 0 $baseline;
 
 // Borders
 $border-style: solid;
-$border-radius: 4px !default;
+$border-radius: 3px !default;
 $border-color:  $gray !default;
     
 // Animations

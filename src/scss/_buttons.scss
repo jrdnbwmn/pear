@@ -28,6 +28,11 @@ button {
     white-space: nowrap; // Stop buttons wrapping and looking broken
     -webkit-appearance: none;
             appearance: none;
+    
+    @media screen and (max-width: $small-breakpoint) {
+        display: block;
+        margin-bottom: $space-1;
+    }
 }
     
 .button:hover,
@@ -56,14 +61,14 @@ fieldset[disabled] .button {
 // -----------------------------------------------------------------------------
 .large-button {
     font-size: $h3;
-    padding: $large-ui-padding;
+    padding: $large-button-padding;
 }
 
-.medium-button { padding:$medium-ui-padding; }
+.medium-button { padding:$medium-button-padding; }
 
 .small-button {
     font-size: $h6;
-    padding:$small-ui-padding;
+    padding:$small-button-padding;
 }
 
 
@@ -93,20 +98,44 @@ fieldset[disabled] .button {
 .secondary-button,
 .secondary-button:link,
 .secondary-button:visited {
-    background-color: $light-gray;
+    background-color: transparent;
     border-color: $light-gray;
-    color: $white;
+    border-width: 2px;
+    color: $text-color;
 }
 
 .secondary-button:hover,
 .secondary-button:focus {
-    background-color: darken($light-gray, 10%);
-    border-color: darken($light-gray, 10%);
+    background-color: darken($lightest-gray, 10%);
+    border-color: darken($lightest-gray, 10%);
 }
 
 .secondary-button:active {
-    background-color: darken($light-gray, 20%);
-    border-color: darken($light-gray, 20%);
+    background-color: darken($lightest-gray, 20%);
+    border-color: darken($lightest-gray, 20%);
+}
+
+// Dark background button
+.dark-bg-button,
+.dark-bg-button:link,
+.dark-bg-button:visited {
+    background-color: transparent;
+    border-color: $white;
+    border-width: 2px;
+    color: $white;
+}
+
+.dark-bg-button:hover,
+.dark-bg-button:focus {
+    background-color: $white;
+    border-color: $white;
+    color: $text-color;
+}
+
+.dark-bg-button:active {
+    background-color: $lightest-gray;
+    border-color: $lightest-gray;
+    color: $text-color;
 }
 
 

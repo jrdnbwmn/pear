@@ -1,23 +1,49 @@
 @@include("partials/head.html")
+        
+        <div class="pt3 pb3 centered-text secondary-brand-color-background white-text">
+            <div class="container">
+                <h1>Pear</h1>
+                <p class="m0 h2 heading-line-height">A lightweight front-end launching kit</p>
+                <p>v2.4.3</p>
+                <div class="centered-button">
+                    <a class="button medium-button dark-bg-button" href="https://github.com/jrdnbwmn/Pear">View on Github →</a>
+                </div>
+            </div>
+        </div>
 
         <div class="container pt3 pb3">
+            
+            <!-- About 
+            <section class="pb4">
+                <div class="grid-row">
+                    <div class="grid-column span-4">
+                        <h4>Responsive</h4>
+                        <h4>Performant</h4>
+                    </div>
+                    <div class="grid-column span-8">
+                        <p class="m0">Comes with</p>
+                        <ul class="reading-list">
+                            <li>HTML boilerplate with simple pattern library</li>
+                            <li>Base Sass styles</li>
+                            <li>Advanced Gulp setup</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            -->
            
             <!-- Colors -->
             <section class="pb4">
                 <h2 class="light-text-color">Colors</h2>
                 <hr class="mb2">
-                <ul class="no-bullets inline-list" style="margin-bottom:1.6rem;height:100px;">
-                    <li class="primary-brand-color-background" style="width:100px;height:100px;"></li>
-                    <li class="secondarybrand-color-background" style="width:100px;height:100px;margin-left:20px;"></li>
-                    <li class="brand-accent-color-background" style="width:100px;height:100px;margin-left:20px;"></li>
-                </ul>
-                <ul class="no-bullets inline-list">
-                    <li class="lightest-gray-background" style="width:100px;height:100px;"></li>
-                    <li class="light-gray-background" style="width:100px;height:100px;margin-left:20px;"></li>
-                    <li class="gray-background" style="width:100px;height:100px;margin-left:20px;"></li>
-                    <li class="dark-gray-background" style="width:100px;height:100px;margin-left:20px;"></li>
-                    <li class="darkest-gray-background" style="width:100px;height:100px;margin-left:20px;"></li>
-                </ul>
+                <div class="pt1 pb1 white-text centered-text primary-brand-color-background">Primary brand color</div>
+                <div class="pt1 pb1 white-text centered-text secondary-brand-color-background">Secondary brand color</div>
+                <div class="pt1 pb1 white-text centered-text brand-accent-color-background">Brand accent color</div>
+                <div class="pt1 pb1 white-text centered-text darkest-gray-background">Darkest gray</div>
+                <div class="pt1 pb1 white-text centered-text dark-gray-background">Dark gray</div>
+                <div class="pt1 pb1 white-text centered-text gray-background">Gray</div>
+                <div class="pt1 pb1 white-text centered-text light-gray-background">Light gray</div>
+                <div class="pt1 pb1 centered-text lightest-gray-background">Lightest gray</div>
             </section>
             
             <!-- Type -->
@@ -42,7 +68,7 @@
                     <li>Vivamus vestibulum nulla nec ante.</li>
                 </ul>
                 <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
-                <ol class="reading-list">
+                <ol class="reading-list m0">
                     <li>Integer vitae libero ac risus egestas placerat.</li>
                     <li>Praesent placerat risus quis eros.</li>
                     <li>Ut aliquam sollicitudin leo.</li>
@@ -55,7 +81,7 @@
                 <h2 class="light-text-color">Code</h2>
                 <hr class="mb2">
                 <p>Phasellus ultrices nulla, gravida non <code class="inline-code rounded">some inline code</code> commodo a sodales sit amet nisi.</p>
-                <pre class="code-block rounded">&lt;p&gt;Block of code&lt;/p&gt;</pre>
+                <pre class="code-block rounded m0">&lt;p&gt;Block of code&lt;/p&gt;</pre>
             </section>
             
             <!-- Embeds --> 
@@ -75,7 +101,8 @@
                     <input class="form-control mb1" type="text" placeholder="Name">
                     <input class="form-control mb1" type="email" placeholder="Email Address">
                     <input class="form-control mb1" type="subject" placeholder="Subject">
-                    <textarea class="form-control" placeholder="Message"></textarea>
+                    <textarea class="form-control mb1" placeholder="Message"></textarea>
+                    <button class="button medium-button primary-button ">Submit</button>
                 </form>
             </section>
             
@@ -192,5 +219,11 @@
             </section>
                         
         </div> <!-- End container -->
+        
+        <footer class="top-border pt2 centered-text">
+            <div class="container">
+                <p>Made by <a class="link" href="http://www.jrdnbwmn.com">Jordan Bowman</a></p>
+            </div>
+        </footer>
 
 @@include("partials/foot.html")
