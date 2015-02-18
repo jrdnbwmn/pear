@@ -12,9 +12,11 @@ Pear is focused on:
 - Architecture/workflow
 
 ## Getting Started
+Options for starting with Pear:
+
 - Download directly from this repo on GitHub.
 - Clone the repo: `git clone https://github.com/jrdnbwmn/Pear.git`.
-- Install with [Bower](https://github.com/eatapear/about#new-to-bower): `bower install pear`.
+- Install with [Bower](http://bower.io/): `bower install pear`.
 
 ## What's Included
 
