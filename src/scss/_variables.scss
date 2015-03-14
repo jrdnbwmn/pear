@@ -28,21 +28,21 @@ $code-font-family: $monospace;
 
 // Type scale
 // Good tool: http://type-scale.com/
-$h1: 2.369rem !default;
-$h2: 1.777rem !default;
-$h3: 1.333rem !default;
-$h4: 1rem !default;
-$h5: .75rem !default;
-$h6: .75rem !default;
+$h1: 2.369rem;
+$h2: 1.777rem;
+$h3: 1.333rem;
+$h4: 1rem;
+$h5: .75rem;
+$h6: .75rem;
 
 // Finer control over type scale after certain breakpoint (off by default)
-$responsive-type: false !default;
-$desktop-h1: 2.369rem !default;
-$desktop-h2: 1.777rem !default;
-$desktop-h3: 1.333rem !default;
-$desktop-h4: 1rem !default;
-$desktop-h5: .75rem !default;
-$desktop-h6: .75rem !default;
+$responsive-type: false;
+$desktop-h1: 2.369rem;
+$desktop-h2: 1.777rem;
+$desktop-h3: 1.333rem;
+$desktop-h4: 1rem;
+$desktop-h5: .75rem;
+$desktop-h6: .75rem;
 
 // Text sizes
 $base-mobile-font-size: 14px;
@@ -51,12 +51,12 @@ $large-font-size: $h3;
 $small-font-size: $h5;
 
 // Weights
-$base-font-weight: 400 !default;
-$heading-font-weight: 700 !default;
+$base-font-weight: 400;
+$heading-font-weight: 700;
 
 // Line heights
-$base-line-height: $baseline*4 !default;
-$heading-line-height: 1 !default;
+$base-line-height: $baseline*4;
+$heading-line-height: 1;
 
 
 // Colors
@@ -64,11 +64,11 @@ $heading-line-height: 1 !default;
 // Color by name
 // Change these colors to something other than "darker"
 $white: #fff;
-$lightest-gray: #eee;
-$light-gray: #aaa;
-$gray: #777;
-$dark-gray: #4d4d4d;
-$darkest-gray: #222;
+$lightest-gray: #e7eaee;
+$light-gray: #a1adbc;
+$gray: #708299;
+$dark-gray: #4b5869;
+$darkest-gray: #2f3741;
 $blue: #428bca;
 $green: #6fbb57;
 $orange: #f0ad4e;
@@ -121,9 +121,8 @@ $small-ui-padding: 0 $baseline;
 
 // Borders
 $border-style: solid;
-$border-radius: 3px !default;
-$border-color:  $gray !default;
-    
+$border-radius: 3px;
+$border-color:  $gray;
+
 // Animations
 $fade: .2s ease-out;
-
