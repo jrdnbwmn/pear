@@ -3,34 +3,34 @@
 // ------------------------------------------------------------------
 
     // Include Gulp
-var gulp 					= require("gulp"),
+var gulp                    = require("gulp"),
 
     // HTML plugins
     fileinclude             = require("gulp-file-include"),
     htmlmin                 = require("gulp-htmlmin"),
 
     // CSS plugins
-    sass 					= require("gulp-sass"),
-    combineMediaQueries 	= require("gulp-combine-media-queries"),
-    autoprefixer 			= require("gulp-autoprefixer"),
-    cssmin 					= require("gulp-minify-css"),
+    sass                    = require("gulp-sass"),
+    combineMediaQueries     = require("gulp-combine-media-queries"),
+    autoprefixer            = require("gulp-autoprefixer"),
+    cssmin                  = require("gulp-minify-css"),
     uncss                   = require("gulp-uncss"),
     rename                  = require("gulp-rename"),
     globber                 = require('glob'),
 
     // JS plugins
-    concat 					= require("gulp-concat"),
-    uglify 					= require("gulp-uglify"),
+    concat                  = require("gulp-concat"),
+    uglify                  = require("gulp-uglify"),
 
     // Image plugin
-    imagemin 				= require("gulp-imagemin"),
+    imagemin                = require("gulp-imagemin"),
 
     // General plugins
     gutil                   = require("gulp-util"),
     plumber                 = require("gulp-plumber"),
     size                    = require("gulp-size"),
     watch                   = require("gulp-watch"),
-    browserSync 			= require("browser-sync"),
+    browserSync             = require("browser-sync"),
     reload                  = browserSync.reload;
 
 // ------------------------------------------------------------------
@@ -38,9 +38,9 @@ var gulp 					= require("gulp"),
 // ------------------------------------------------------------------
 
 // Start server
-// Note: Replace `localhost` in the browser URL with your system's 
-// internal IP (something like 192.168.32.20) and then you'll be able 
-// to go to that address on multiple devices and all reloading, 
+// Note: Replace `localhost` in the browser URL with your system's
+// internal IP (something like 192.168.32.20) and then you'll be able
+// to go to that address on multiple devices and all reloading,
 // scrolling, clicking, etc will be synced across everything.
 gulp.task("browser-sync", function() {
     browserSync({
@@ -117,7 +117,7 @@ gulp.task("unused-css", function() {
 			html: globber.sync("dist/**/*.html"),
             // Keep some JS dependent CSS from being deleted,
             // this is an example, configure as needed
-			ignore: [ 
+			ignore: [
 				".js"
 			]
 		}))
