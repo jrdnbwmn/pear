@@ -1,5 +1,5 @@
 // Normalization
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 // 1. Correct `inline-block` display not defined in IE 8/9.
 // 2. Remove the gap between images, videos, audio and canvas and the bottom of 
 //    their containers: h5bp.com/i/440
@@ -30,7 +30,7 @@ svg { max-height: 100%; }
 
 
 // Base embed styles
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 // Make stuff responsive
 img, canvas, iframe, video, svg { max-width: 100%; }
 

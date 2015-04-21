@@ -1,5 +1,5 @@
 // Settings
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 // Number of columns you want in your grid.
 $total-number-columns: 12;
 
@@ -12,7 +12,7 @@ $sink-breakpoint: $small-breakpoint;
 
 
 // Classes
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 // Use this class on a div wrapping a row of columns
 // This is to offset the padding on the first/last column via negative margin
 .grid-row {
@@ -111,7 +111,7 @@ $sink-breakpoint: $small-breakpoint;
 
 
 // Utilities
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 // Centers the column horizontally in the grid and clears the row of all 
 // other columns
 .centered-column {

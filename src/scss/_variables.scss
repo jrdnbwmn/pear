@@ -1,5 +1,5 @@
 // Global
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 // Baseline
 $baseline: .4rem;
 
@@ -14,7 +14,7 @@ $max-container-width: 45em;
 
 
 // Typography
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 // Font families
 $sans-serif: "Avenir Next", Avenir, Trebuchet, Verdana, sans-serif;
 $serif: Georgia, Times, serif;
@@ -60,7 +60,7 @@ $heading-line-height: 1;
 
 
 // Colors
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 // Color by name
 // Change these colors to something other than "darker"
 $white: #fff;
@@ -96,7 +96,7 @@ $code-background-color: $lightest-gray;
 
 
 // Spaces
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 $space-1: $baseline*2;
 $space-2: $baseline*5;
 $space-3: $baseline*8;
@@ -108,7 +108,7 @@ $heading-text-bottom-margin: $body-text-bottom-margin;
 
 
 // Design elements
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 // Button padding
 $large-button-padding: $baseline*3 $baseline*4;
 $medium-button-padding: $baseline $baseline*3;

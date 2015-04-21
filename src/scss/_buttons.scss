@@ -1,5 +1,5 @@
 // Normalization
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 button {
     line-height: inherit; // Correct font properties not being inherited
     vertical-align: middle; // Reset vertical align for relevant elements
@@ -8,7 +8,7 @@ button {
 
 
 // Base button styles
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 .button,
 .button:link,
 .button:visited {
@@ -58,7 +58,7 @@ fieldset[disabled] .button {
 
 
 // Button sizes
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 .large-button {
     font-size: $h3;
     padding: $large-button-padding;
@@ -73,7 +73,7 @@ fieldset[disabled] .button {
 
 
 // Button skins
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 // Primary button
 .primary-button,
 .primary-button:link,
@@ -140,7 +140,7 @@ fieldset[disabled] .button {
 
 
 // Button utilities
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 // Horizontally centers a button
 // Wrap the button in a `div` with this class
 .centered-button { text-align: center; }

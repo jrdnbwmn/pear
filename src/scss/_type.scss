@@ -1,5 +1,5 @@
 // Normalization
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 // Address variances font weight/styles and line heights.
 b, strong { line-height: inherit; }
 
@@ -23,7 +23,7 @@ abbr[title], dfn[title] { cursor: help; }
 
 
 // Typographic scale
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 h1, .h1                { font-size: $h1; }
 h2, .h2                { font-size: $h2; }
 h3, .h3                { font-size: $h3; }
@@ -47,7 +47,7 @@ h6, .h6, small, .small { font-size: $h6; }
 
 
 // Base typography styles
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 // Fonts
 .heading-font  { font-family: $heading-font-family }
 .reading-font  { font-family: $reading-font-family }
@@ -109,7 +109,7 @@ hr {
 
 
 // Utilities
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 .bold    { font-weight: bold; }
 .regular { font-weight: normal; }
 .italic  { font-style: italic; }

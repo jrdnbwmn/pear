@@ -1,5 +1,5 @@
 // Normalization
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 // Correct font properties not being inherited.
 input, optgroup, select, textarea { line-height: inherit; }
 
@@ -54,7 +54,7 @@ fieldset[disabled] input {
 
 
 // Base form styles
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 .form { font-size: 1rem; }
 
 // Apply `.form-control` to any of the following form controls:
@@ -115,7 +115,7 @@ fieldset[disabled] input {
 
 
 // Form layouts
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 .stacked-form {
     .input,
     .select,
@@ -145,7 +145,7 @@ fieldset[disabled] input {
 
 
 // Placeholder styling
-// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------
 ::-webkit-input-placeholder { 
     color: $light-gray;
     -webkit-font-smoothing: antialiased;
