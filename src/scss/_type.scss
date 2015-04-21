@@ -69,6 +69,16 @@ h6 {
 
 h6 { color: $gray; }
 
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 { 
+    line-height: $line-height--heading;
+    margin-bottom: $heading-text-bottom-margin;
+}
+
 p { margin: 0 auto $body-text-bottom-margin auto; }
 
 small,
