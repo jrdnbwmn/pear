@@ -70,14 +70,3 @@ img::selection {
 img::-moz-selection { 
     background: transparent; 
 }
-
-
-// Browsehappy prompt
-// -------------------------------------------------------------------
-.browsehappy {
-    background: $light-gray;
-    color: $text-color;
-    margin: 0.333rem 0;
-    padding: 0.333rem 0;
-}
-
