@@ -31,14 +31,14 @@
 .show-on-mobile { display: none !important; }
 
 @media screen and (max-width: $small-breakpoint) {
-    .show-on-mobile,
-    .block-on-mobile {
-        display: block !important;
-    }
-    
-    .hide-on-mobile {
-        display: none !important;
-    }
+  .show-on-mobile,
+  .block-on-mobile {
+    display: block !important;
+  }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
 }
 
 
@@ -53,16 +53,16 @@
 .fit-within { max-width: 100%; }
 
 .clearfix {
-	*zoom:1;
+  *zoom:1;
 
-	&:before,
-	&:after {
-	    content: "";
-	    display: table;
-	}
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
 
-	&:after {
-	    clear: both;
-	}
+  &:after {
+    clear: both;
+  }
 }
 

@@ -4,10 +4,10 @@ ul,
 ol {
     margin-bottom: $body-text-bottom-margin;
     
-    ul,
-    ol {
-        margin-bottom: 0; // Take off bottom margin from nested lists.
-    }
+  ul,
+  ol {
+    margin-bottom: 0; // Take off bottom margin from nested lists.
+  }
 }
 
 // Define styling for terms.
@@ -27,8 +27,8 @@ dd { margin-left: 0; }
 
 // Inline list – usually used with `.no-bullets`
 .inline-list {
-    li {
-        display: inline-block;
-    }
+  li {
+    display: inline-block;
+  }
 }
 

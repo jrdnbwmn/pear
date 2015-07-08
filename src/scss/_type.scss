@@ -5,8 +5,8 @@ b, strong { line-height: inherit; }
 
 em,
 i {
-    font-style: italic;
-    line-height: inherit;
+  font-style: italic;
+  line-height: inherit;
 }
 
 // Undo browser default styling.
@@ -34,15 +34,15 @@ h6, .h6, small, .small { font-size: $h6; }
 
 // Finer control over type scale after certain breakpoint (off by default)
 @if ($responsive-type) {
-    @media screen and (min-width: $small-breakpoint) {
-        h1, .h1                { font-size: $desktop-h1; }
-        h2, .h2                { font-size: $desktop-h2; }
-        h3, .h3                { font-size: $desktop-h3; }
-        h4, .h4,
-        p, ul, ol, dl          { font-size: $desktop-h4; }
-        h5, .h5                { font-size: $desktop-h5; }
-        h6, .h6, small, .small { font-size: $desktop-h6; }
-    }
+  @media screen and (min-width: $small-breakpoint) {
+    h1, .h1                { font-size: $desktop-h1; }
+    h2, .h2                { font-size: $desktop-h2; }
+    h3, .h3                { font-size: $desktop-h3; }
+    h4, .h4,
+    p, ul, ol, dl          { font-size: $desktop-h4; }
+    h5, .h5                { font-size: $desktop-h5; }
+    h6, .h6, small, .small { font-size: $desktop-h6; }
+  }
 }
 
 
@@ -59,12 +59,12 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $heading-font-family;
-    font-weight: $heading-font-weight;
-    line-height: $heading-line-height;
-    margin-top: 0;
-    margin-bottom: $heading-text-bottom-margin;
-    text-rendering: optimizeLegibility; // Enable ligatures and kerning
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+  margin-top: 0;
+  margin-bottom: $heading-text-bottom-margin;
+  text-rendering: optimizeLegibility; // Enable ligatures and kerning
 }
 
 h6 { color: $gray; }
@@ -75,34 +75,34 @@ h6 { color: $gray; }
 .h4,
 .h5,
 .h6 { 
-    line-height: $heading-line-height;
-    margin-bottom: $heading-text-bottom-margin;
+  line-height: $heading-line-height;
+  margin-bottom: $heading-text-bottom-margin;
 }
 
 p { margin: 0 auto $body-text-bottom-margin auto; }
 
 small,
 .small {
-    font-weight: normal;
-    line-height: 1;
+  font-weight: normal;
+  line-height: 1;
 }
 
 // A better looking default horizontal rule
 hr {
-    border: 0;
-    border-top: 1px solid $border-color;
-    display: block;
-    height: 1px;
+  border: 0;
+  border-top: 1px solid $border-color;
+  display: block;
+  height: 1px;
 }
 
 .blockquote {
-    border-left: 4px solid $border-color;
-    font-family: $sans-serif;
-    font-size: $large-font-size;
-    font-style: italic;
-    max-width: 100%; // Prevents it from breaking out of container
-    margin-bottom: $body-text-bottom-margin;
-    padding-left: $baseline*3;
+  border-left: 4px solid $border-color;
+  font-family: $sans-serif;
+  font-size: $large-font-size;
+  font-style: italic;
+  max-width: 100%; // Prevents it from breaking out of container
+  margin-bottom: $body-text-bottom-margin;
+  padding-left: $baseline*3;
 }
 
 .blockquote:before, .blockquote:after { content: ""; }

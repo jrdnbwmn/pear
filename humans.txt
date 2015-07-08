@@ -3,17 +3,17 @@
 
 # TEAM
 
-    <role>: <name>
-    <website>
-    <twitter>
-    <contact>
+  <role>: <name>
+  <website>
+  <twitter>
+  <contact>
 
 # THANKS
 
-    <name>
+  <name>
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3, Javascript
-    Normalize.css, jQuery, Sass, Pear
+  HTML5, CSS3, Javascript
+  Normalize.css, jQuery, Sass, Pear
     

@@ -7,18 +7,18 @@ embed,
 iframe,
 object,
 img {
-    display: inline-block; // [1]
-    vertical-align: middle; // [2]
+  display: inline-block; // [1]
+  vertical-align: middle; // [2]
 }
 
 // Prevent border around iframes.
 iframe { border: 0; }
 
 img {
-    border: 0; // Remove border when inside `a` element in IE 8/9/10
-    font-style: italic; // So that `alt` text is visually offset if images don’t load
-    height: auto; // Scale the height according to the width, otherwise you get stretching
-    -ms-interpolation-mode: bicubic; // http://css-tricks.com/ie-fix-bicubic-scaling-for-images/
+  border: 0; // Remove border when inside `a` element in IE 8/9/10
+  font-style: italic; // So that `alt` text is visually offset if images don’t load
+  height: auto; // Scale the height according to the width, otherwise you get stretching
+  -ms-interpolation-mode: bicubic; // http://css-tricks.com/ie-fix-bicubic-scaling-for-images/
 }
 
 // Better control over svg size

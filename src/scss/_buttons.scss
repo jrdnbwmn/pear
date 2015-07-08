@@ -1,9 +1,9 @@
 // Normalization
 // -------------------------------------------------------------------
 button {
-    line-height: inherit; // Correct font properties not being inherited
-    vertical-align: middle; // Reset vertical align for relevant elements
-    -webkit-font-smoothing: antialiased; // Doesn't inherit in webkit
+  line-height: inherit; // Correct font properties not being inherited
+  vertical-align: middle; // Reset vertical align for relevant elements
+  -webkit-font-smoothing: antialiased; // Doesn't inherit in webkit
 }
 
 
@@ -12,63 +12,63 @@ button {
 .button,
 .button:link,
 .button:visited {
-    background-image: none; // Reset unusual Firefox-on-Android default style: https://github.com/necolas/normalize.css/issues/214
-    border-radius: $border-radius;
-    border-style: solid;
-    border-width: 1px;
-    cursor: pointer;
-    display: inline-block; // Allow us to better style box model properties
-    font-family: $ui-font-family;
-    line-height: $base-line-height;
-    margin-bottom: 0; // For input.button
-    text-align: center;
-    text-decoration: none;
-    transition: background-color $fade, background $fade, color $fade, border $fade;
-    vertical-align: middle; // Line different size buttons up nicely
-    white-space: nowrap; // Stop buttons wrapping and looking broken
-    -webkit-appearance: none;
-            appearance: none;
-    
-    @media screen and (max-width: $small-breakpoint) {
-        display: block;
-        margin-bottom: $space-1;
-    }
+  background-image: none; // Reset unusual Firefox-on-Android default style: https://github.com/necolas/normalize.css/issues/214
+  border-radius: $border-radius;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: inline-block; // Allow us to better style box model properties
+  font-family: $ui-font-family;
+  line-height: $base-line-height;
+  margin-bottom: 0; // For input.button
+  text-align: center;
+  text-decoration: none;
+  transition: background-color $fade, background $fade, color $fade, border $fade;
+  vertical-align: middle; // Line different size buttons up nicely
+  white-space: nowrap; // Stop buttons wrapping and looking broken
+  -webkit-appearance: none;
+          appearance: none;
+
+  @media screen and (max-width: $small-breakpoint) {
+    display: block;
+    margin-bottom: $space-1;
+  }
 }
     
 .button:hover,
 .button:focus {
-    outline: 0;
-    text-decoration: none;
+  outline: 0;
+  text-decoration: none;
 }
     
 .button:active {
-    background-image: none;
-    outline: 0;
-    transition: background-color $fade, border-color $fade;
+  background-image: none;
+  outline: 0;
+  transition: background-color $fade, border-color $fade;
 }
     
 .button.disabled,
 .button[disabled],
 .button[readonly],
 fieldset[disabled] .button {
-    cursor: not-allowed !important;
-    opacity: 1; // iOS fix for unreadable disabled content
-    pointer-events: none; // Future-proof disabling of clicks
+  cursor: not-allowed !important;
+  opacity: 1; // iOS fix for unreadable disabled content
+  pointer-events: none; // Future-proof disabling of clicks
 }
 
 
 // Button sizes
 // -------------------------------------------------------------------
 .large-button {
-    font-size: $h3;
-    padding: $large-button-padding;
+  font-size: $h3;
+  padding: $large-button-padding;
 }
 
 .medium-button { padding:$medium-button-padding; }
 
 .small-button {
-    font-size: $h6;
-    padding:$small-button-padding;
+  font-size: $h6;
+  padding:$small-button-padding;
 }
 
 
@@ -78,64 +78,64 @@ fieldset[disabled] .button {
 .primary-button,
 .primary-button:link,
 .primary-button:visited {
-    background-color: $primary-brand-color;
-    border-color: $primary-brand-color;
-    color: $white;
+  background-color: $primary-brand-color;
+  border-color: $primary-brand-color;
+  color: $white;
 }
 
 .primary-button:hover,
 .primary-button:focus {
-    background-color: darken($primary-brand-color, 10%);
-    border-color: darken($primary-brand-color, 10%);
+  background-color: darken($primary-brand-color, 10%);
+  border-color: darken($primary-brand-color, 10%);
 }
 
 .primary-button:active {
-    background-color: darken($primary-brand-color, 20%);
-    border-color: darken($primary-brand-color, 20%);
+  background-color: darken($primary-brand-color, 20%);
+  border-color: darken($primary-brand-color, 20%);
 }
 
 // Secondary button
 .secondary-button,
 .secondary-button:link,
 .secondary-button:visited {
-    background-color: transparent;
-    border-color: $light-gray;
-    border-width: 2px;
-    color: $text-color;
+  background-color: transparent;
+  border-color: $light-gray;
+  border-width: 2px;
+  color: $text-color;
 }
 
 .secondary-button:hover,
 .secondary-button:focus {
-    background-color: darken($lightest-gray, 10%);
-    border-color: darken($lightest-gray, 10%);
+  background-color: darken($lightest-gray, 10%);
+  border-color: darken($lightest-gray, 10%);
 }
 
 .secondary-button:active {
-    background-color: darken($lightest-gray, 20%);
-    border-color: darken($lightest-gray, 20%);
+  background-color: darken($lightest-gray, 20%);
+  border-color: darken($lightest-gray, 20%);
 }
 
 // Dark background button
 .dark-bg-button,
 .dark-bg-button:link,
 .dark-bg-button:visited {
-    background-color: transparent;
-    border-color: $white;
-    border-width: 2px;
-    color: $white;
+  background-color: transparent;
+  border-color: $white;
+  border-width: 2px;
+  color: $white;
 }
 
 .dark-bg-button:hover,
 .dark-bg-button:focus {
-    background-color: $white;
-    border-color: $white;
-    color: $text-color;
+  background-color: $white;
+  border-color: $white;
+  color: $text-color;
 }
 
 .dark-bg-button:active {
-    background-color: $lightest-gray;
-    border-color: $lightest-gray;
-    color: $text-color;
+  background-color: $lightest-gray;
+  border-color: $lightest-gray;
+  color: $text-color;
 }
 
 

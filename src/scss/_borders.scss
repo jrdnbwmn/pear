@@ -1,33 +1,33 @@
 // Borders
 // -------------------------------------------------------------------
-.full-border {
-    border-color: $border-color;
-    border-style: $border-style;
-    border-width: 1px;
+.border--full {
+  border-color: $border-color;
+  border-style: $border-style;
+  border-width: 1px;
 }
 
-.top-border {
-    border-top-color: $border-color;
-    border-top-style: $border-style;
-    border-top-width: 1px;
+.border--top {
+  border-top-color: $border-color;
+  border-top-style: $border-style;
+  border-top-width: 1px;
 }
 
-.right-border {
-    border-right-color: $border-color;
-    border-right-style: $border-style;
-    border-right-width: 1px;
+.border--right {
+  border-right-color: $border-color;
+  border-right-style: $border-style;
+  border-right-width: 1px;
 }
 
-.bottom-border {
-    border-bottom-color: $border-color;
-    border-bottom-style: $border-style;
-    border-bottom-width: 1px;
+.border--bottom {
+  border-bottom-color: $border-color;
+  border-bottom-style: $border-style;
+  border-bottom-width: 1px;
 }
 
-.left-border {
-    border-left-color: $border-color;
-    border-left-style: $border-style;
-    border-left-width: 1px;
+.border--left {
+  border-left-color: $border-color;
+  border-left-style: $border-style;
+  border-left-width: 1px;
 }
 
 
