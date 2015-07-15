@@ -10,7 +10,7 @@ table {
 // Normalize elements of a table.
 td,
 th {
-  line-height: $base-line-height;
+  line-height: $line-height--base;
   vertical-align: middle;
 }
 th { text-align: left; }
@@ -19,11 +19,11 @@ th { text-align: left; }
 // Base table styles
 // -------------------------------------------------------------------
 .table {
-  font-family: $ui-font-family;
+  font-family: $font-family--ui;
 
   th,
   td {
-    padding: $medium-ui-padding;
+    padding: $table-padding;
   }
 }
 
@@ -66,7 +66,7 @@ th { text-align: left; }
 // Wrap your table in a div with this class.
 // Source: Bootstrap, http://getbootstrap.com/css/#tables-responsive
 .responsive-table {
-  @media screen and (max-width: $small-breakpoint) {
+  @media screen and (max-width: $breakpoint--sm) {
     border: 0;
     overflow-x: auto;
     overflow-y: hidden;

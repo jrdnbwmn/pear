@@ -16,10 +16,10 @@ button {
   border-width: 1px;
   cursor: pointer;
   display: inline-block; // Allow us to better style box model properties
-  font-family: $ui-font-family;
-  line-height: $base-line-height;
+  font-family: $font-family--ui;
+  line-height: $line-height--base;
   margin-bottom: 0; // For input.btn
-  padding: $medium-button-padding;
+  padding: $button-padding;
   text-align: center;
   text-decoration: none;
   touch-action: manipulation;
@@ -30,7 +30,7 @@ button {
   -webkit-appearance: none;
           appearance: none;
 
-  @media screen and (max-width: $small-breakpoint) {
+  @media screen and (max-width: $breakpoint--sm) {
     display: block;
     margin-bottom: $space-1;
   }
@@ -69,12 +69,12 @@ a.btn {
 // -------------------------------------------------------------------
 .btn--lg {
   font-size: $h3;
-  padding: $large-button-padding;
+  padding: $button-padding--lg;
 }
 
 .btn--sm {
   font-size: $h6;
-  padding:$small-button-padding;
+  padding:$button-padding--sm;
 }
 
 

@@ -28,7 +28,7 @@ select[multiple], select[size] { height: auto; }
 output {
   display: block;
   font-size: 1rem;
-  line-height: $base-line-height;
+  line-height: $line-height--base;
 }
 
 // 1. Chrome and Firefox set a `min-width: min-content;` on fieldsets,
@@ -81,11 +81,11 @@ fieldset[disabled] input {
   border-radius: $border-radius;
   color: $text-color;
   display: block;
-  font-family: $ui-font-family;
+  font-family: $font-family--ui;
   font-size: 1rem;
-  line-height: $base-line-height;
+  line-height: $line-height--base;
   max-width: 100%;
-  padding: $medium-ui-padding;
+  padding: $form-padding;
   width: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;

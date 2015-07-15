@@ -6,15 +6,15 @@
 //   css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
 html {
   box-sizing: border-box; // [4]
-  font-family: $base-font-family; // [2]
-  font-size: $base-mobile-font-size; // [2]
+  font-family: $font-family--base; // [2]
+  font-size: $font-size--mobile; // [2]
   font-style: normal; // [2]
-  font-weight: $base-font-weight; // [2]
+  font-weight: $font-weight--base; // [2]
   min-height: 100%; // Ensure the page always fills at least the entire height of the viewport
   -webkit-tap-highlight-color: rgba(0,0,0,0); // [3]
 
-  @media screen and (min-width: $small-breakpoint) {
-    font-size: $base-desktop-font-size;
+  @media screen and (min-width: $breakpoint--sm) {
+    font-size: $font-size--desktop;
   }
 }
 
@@ -27,7 +27,7 @@ html {
 body {
   background-color: $white !important; // [2]
   color: $text-color;
-  line-height: $base-line-height;
+  line-height: $line-height--base;
   padding: 0;
   -webkit-font-smoothing: antialiased; // [1]
   -moz-osx-font-smoothing: grayscale; // [1]

@@ -30,7 +30,7 @@
 // `mobile-block` makes the element go display block on mobile devices
 .show-on-mobile { display: none !important; }
 
-@media screen and (max-width: $small-breakpoint) {
+@media screen and (max-width: $breakpoint--sm) {
   .show-on-mobile,
   .block-on-mobile {
     display: block !important;

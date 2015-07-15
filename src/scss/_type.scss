@@ -16,7 +16,7 @@ cite { font-style: normal; }
 u, ins { text-decoration: none; }
 
 // Normalize font size
-sub, sup { font-size: $small-font-size; }
+sub, sup { font-size: $font-size--sm; }
 
 // Give a help cursor to elements that give extra info on `:hover`.
 abbr[title], dfn[title] { cursor: help; }
@@ -34,14 +34,14 @@ h6, .h6, small, .small { font-size: $h6; }
 
 // Finer control over type scale after certain breakpoint (off by default)
 @if ($responsive-type) {
-  @media screen and (min-width: $small-breakpoint) {
-    h1, .h1                { font-size: $desktop-h1; }
-    h2, .h2                { font-size: $desktop-h2; }
-    h3, .h3                { font-size: $desktop-h3; }
+  @media screen and (min-width: $breakpoint--sm) {
+    h1, .h1                { font-size: $h1--desktop; }
+    h2, .h2                { font-size: $h2--desktop; }
+    h3, .h3                { font-size: $h3--desktop; }
     h4, .h4,
-    p, ul, ol, dl          { font-size: $desktop-h4; }
-    h5, .h5                { font-size: $desktop-h5; }
-    h6, .h6, small, .small { font-size: $desktop-h6; }
+    p, ul, ol, dl          { font-size: $h4--desktop; }
+    h5, .h5                { font-size: $h5--desktop; }
+    h6, .h6, small, .small { font-size: $h6--desktop; }
   }
 }
 
@@ -49,9 +49,9 @@ h6, .h6, small, .small { font-size: $h6; }
 // Base typography styles
 // -------------------------------------------------------------------
 // Fonts
-.heading-font  { font-family: $heading-font-family }
-.reading-font  { font-family: $reading-font-family }
-.ui-font       { font-family: $ui-font-family }
+.heading-font  { font-family: $font-family--heading }
+.reading-font  { font-family: $font-family--reading }
+.ui-font       { font-family: $font-family--ui }
 
 h1,
 h2,
@@ -59,11 +59,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $heading-font-family;
-  font-weight: $heading-font-weight;
-  line-height: $heading-line-height;
+  font-family: $font-family--heading;
+  font-weight: $font-weight--heading;
+  line-height: $line-height--heading;
   margin-top: 0;
-  margin-bottom: $heading-text-bottom-margin;
+  margin-bottom: $heading-mb;
   text-rendering: optimizeLegibility; // Enable ligatures and kerning
 }
 
@@ -75,11 +75,11 @@ h6 { color: $gray; }
 .h4,
 .h5,
 .h6 { 
-  line-height: $heading-line-height;
-  margin-bottom: $heading-text-bottom-margin;
+  line-height: $line-height--heading;
+  margin-bottom: $heading-mb;
 }
 
-p { margin: 0 auto $body-text-bottom-margin auto; }
+p { margin: 0 auto $p-mb auto; }
 
 small,
 .small {
@@ -98,10 +98,10 @@ hr {
 .blockquote {
   border-left: 4px solid $border-color;
   font-family: $sans-serif;
-  font-size: $large-font-size;
+  font-size: $font-size--lg;
   font-style: italic;
   max-width: 100%; // Prevents it from breaking out of container
-  margin-bottom: $body-text-bottom-margin;
+  margin-bottom: $p-mb;
   padding-left: $baseline*3;
 }
 
@@ -119,6 +119,6 @@ hr {
 .right-aligned-text   { text-align: right; }
 .justified-text       { text-align: justify; }
 
-.base-line-height     { line-height: $base-line-height; }
-.heading-line-height  { line-height: $heading-line-height; }
+.base-line-height     { line-height: $line-height--base; }
+.heading-line-height  { line-height: $line-height--heading; }
 

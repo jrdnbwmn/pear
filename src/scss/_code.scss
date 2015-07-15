@@ -1,14 +1,14 @@
 // Normalization
 // -------------------------------------------------------------------
 // Make font family consistent
-code, kbd, pre, samp { font-family: $code-font-family; }
+code, kbd, pre, samp { font-family: $font-family--code; }
 
 
 // Base code styles
 // -------------------------------------------------------------------
 // Inline code
 code {
-  background-color: $code-background-color;
+  background-color: $code-bg-color;
   color: $code-color;
   max-width: 100%;
   padding: $baseline/2 $baseline;
@@ -17,14 +17,14 @@ code {
 
 // Code block
 pre {
-  background-color: $code-background-color;
+  background-color: $code-bg-color;
   color: $code-color;
   display: block;
-  line-height: $base-line-height;
-  margin-bottom: $body-text-bottom-margin;
+  line-height: $line-height--base;
+  margin-bottom: $p-mb;
   max-width: 100%;
   overflow-x: auto;
-  padding: $large-ui-padding;
+  padding: $code-padding;
   word-break: break-all;
   word-wrap: break-word;
   

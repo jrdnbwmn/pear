@@ -1,136 +1,149 @@
 // Colors
 // -------------------------------------------------------------------
 // Grayscale
-$gray-base:          #8494a6 !default;
-$darkest-gray:       darken($gray-base, 34%) !default;
-$dark-gray:          darken($gray-base, 17%) !default;
-$gray:               $gray-base !default;
-$light-gray:         lighten($gray-base, 17%) !default;
-$lightest-gray:      lighten($gray-base, 34%) !default;
+$gray-base:               #8494a6 !default;
+$darkest-gray:            darken($gray-base, 34%) !default;
+$dark-gray:               darken($gray-base, 17%) !default;
+$gray:                    $gray-base !default;
+$light-gray:              lighten($gray-base, 17%) !default;
+$lightest-gray:           lighten($gray-base, 34%) !default;
 
-$black:              #000 !default;
-$white:              #fff !default;
+$black:                   #000 !default;
+$white:                   #fff !default;
 
 // Hues
-$blue:               #428bca !default;
-$green:              #6fbb57 !default;
-$orange:             #f0ad4e !default;
+$blue:                    #428bca !default;
+$green:                   #6fbb57 !default;
+$orange:                  #f0ad4e !default;
 
 // Brand colors
-$primary-color:      $blue !default;
-$secondary-color:    $green !default;
-$tertiary-color:     $orange !default;
+$primary-color:           $blue !default;
+$secondary-color:         $green !default;
+$tertiary-color:          $orange !default;
 
 
 // Baseline
 // -------------------------------------------------------------------
-$baseline:           .4rem !default;
+$baseline:                .4rem !default;
 
 
 // Typography
 // -------------------------------------------------------------------
 // Font families
-$sans-serif:             "Avenir Next", Avenir, Trebuchet, Verdana, sans-serif !default;
-$serif:                  Georgia, Times, serif !default;
-$monospace:              Monaco, Menlo, Consolas, monospace !default;
+$sans-serif:              "Avenir Next", Avenir, Trebuchet, Verdana,
+                          sans-serif !default;
+$serif:                   Georgia, Times, serif !default;
+$monospace:               Monaco, Menlo, Consolas,
+                          monospace !default;
 
-$base-font-family:       $sans-serif !default;
-$heading-font-family:    $sans-serif !default;
-$reading-font-family:    $serif !default;
-$ui-font-family:         $sans-serif !default;
-$code-font-family:       $monospace !default;
+$font-family--base:       $sans-serif !default;
+$font-family--heading:    $sans-serif !default;
+$font-family--reading:    $serif !default;
+$font-family--ui:         $sans-serif !default;
+$font-family--code:       $monospace !default;
 
 // Type scale
 // Good tool: http://type-scale.com/
-$h1:         2.369rem !default;
-$h2:         1.777rem !default;
-$h3:         1.333rem !default;
-$h4:         1rem !default;
-$h5:         .75rem !default;
-$h6:         .75rem !default;
+$h1:                      2.369rem !default;
+$h2:                      1.777rem !default;
+$h3:                      1.333rem !default;
+$h4:                      1rem !default;
+$h5:                      .75rem !default;
+$h6:                      .75rem !default;
 
 // Finer control over type scale after certain breakpoint (off by default)
-$responsive-type:     false !default;
-$desktop-h1:          2.369rem !default;
-$desktop-h2:          1.777rem !default;
-$desktop-h3:          1.333rem !default;
-$desktop-h4:          1rem !default;
-$desktop-h5:          .75rem !default;
-$desktop-h6:          .75rem !default;
+$responsive-type:         false !default;
+$h1--desktop:             2.369rem !default;
+$h2--desktop:             1.777rem !default;
+$h3--desktop:             1.333rem !default;
+$h4--desktop:             1rem !default;
+$h5--desktop:             .75rem !default;
+$h6--desktop:             .75rem !default;
 
-// Text colors
-$text-color:          $dark-gray !default;
+// Text color
+$text-color:              $dark-gray !default;
 
 // Text sizes
-$base-mobile-font-size:        14px !default;
-$base-desktop-font-size:       18px !default;
-$large-font-size:              $h3 !default;
-$small-font-size:              $h5 !default;
+$font-size--mobile:       14px !default;
+$font-size--desktop:      18px !default;
+$font-size--lg:           $h3 !default;
+$font-size--sm:           $h5 !default;
 
 // Weights
-$base-font-weight:             400 !default;
-$heading-font-weight:          700 !default;
+$font-weight--base:       400 !default;
+$font-weight--heading:    700 !default;
 
 // Line heights
-$base-line-height:             $baseline*4 !default;
-$heading-line-height:          1 !default;
-
-// Link colors
-$link-color:                   $primary-color !default;
-$link-hover-color:             darken($primary-color, 10%) !default;
-$active-link-color:            darken($primary-color, 25%) !default;
-
-// Code colors
-$code-color:                   $dark-gray !default;
-$code-background-color:        $lightest-gray !default;
+$line-height--base:       $baseline*4 !default;
+$line-height--heading:    1 !default;
 
 
 // Layout
 // -------------------------------------------------------------------
 // Breakpoints
 // Mobile Safari has problems with rems being used in media queries
-$small-breakpoint:           40em !default;
-$medium-breakpoint:          50em !default;
-$large-breakpoint:           60em !default;
+$breakpoint--sm:          40em !default;
+$breakpoint--md:          50em !default;
+$breakpoint--lg:          60em !default;
 
 // Max container width
-$max-container-width:        45em !default;
+$max-container-width:     45em !default;
 
 
 // Spaces
 // -------------------------------------------------------------------
-$space-1:        $baseline*2 !default;
-$space-2:        $baseline*5 !default;
-$space-3:        $baseline*8 !default;
-$space-4:        $baseline*11 !default;
+$space-1:                 $baseline*2 !default;
+$space-2:                 $baseline*5 !default;
+$space-3:                 $baseline*8 !default;
+$space-4:                 $baseline*11 !default;
 
 // Specific margins
-$body-text-bottom-margin:         $space-2 !default;
-$heading-text-bottom-margin:      $body-text-bottom-margin !default;
+$p-mb:                    $space-2 !default;
+$heading-mb:              $p-mb !default;
+
+
+// Links
+// -------------------------------------------------------------------
+// Link colors
+$link-color:              $primary-color !default;
+$link-hover-color:        darken($primary-color, 10%) !default;
+$active-link-color:       darken($primary-color, 25%) !default;
+
+
+// Code
+// -------------------------------------------------------------------
+// Code colors
+$code-color:              $dark-gray !default;
+$code-bg-color:           $lightest-gray !default;
+$code-padding:            $baseline*2 $baseline*2 !default;
+
+
+// Tables
+// -------------------------------------------------------------------
+$table-padding:           $baseline*2 $baseline*2 !default;
 
 
 // Buttons
 // -------------------------------------------------------------------
-$large-button-padding:       $baseline*3 $baseline*4 !default;
-$medium-button-padding:      $baseline $baseline*3 !default;
-$small-button-padding:       0 $baseline*2 !default;
+$button-padding--lg:      $baseline*3 $baseline*4 !default;
+$button-padding:          $baseline $baseline*3 !default;
+$button-padding--sm:      0 $baseline*2 !default;
 
 
 // Forms
 // -------------------------------------------------------------------
-$large-ui-padding:           $baseline*3 $baseline*3 !default;
-$medium-ui-padding:          $baseline $baseline !default;
-$small-ui-padding:           0 $baseline !default;
+$form-padding:            $baseline $baseline !default;
 
 
 // Borders
 // -------------------------------------------------------------------
-$border-color:          $light-gray !default;
-$border-style:          solid !default;
-$border-radius:         3px !default;
-$border-width:          1px !default;
+$border-color:            $light-gray !default;
+$border-style:            solid !default;
+$border-radius:           3px !default;
+$border-width:            1px !default;
 
 
 // Animations
 // -------------------------------------------------------------------
-$fade:           .2s ease-out !default;
+$fade:                    .2s ease-out !default;
+
