@@ -1,127 +1,136 @@
-// Global
+// Colors
 // -------------------------------------------------------------------
+// Grayscale
+$gray-base:          #8494a6 !default;
+$darkest-gray:       darken($gray-base, 34%) !default;
+$dark-gray:          darken($gray-base, 17%) !default;
+$gray:               $gray-base !default;
+$light-gray:         lighten($gray-base, 17%) !default;
+$lightest-gray:      lighten($gray-base, 34%) !default;
+
+$black:              #000 !default;
+$white:              #fff !default;
+
+// Hues
+$blue:               #428bca !default;
+$green:              #6fbb57 !default;
+$orange:             #f0ad4e !default;
+
+// Brand colors
+$primary-color:      $blue !default;
+$secondary-color:    $green !default;
+$tertiary-color:     $orange !default;
+
+
 // Baseline
-$baseline: .4rem;
-
-// Breakpoints
-// Mobile Safari has problems with rems being used in media queries
-$small-breakpoint: 40em;
-$medium-breakpoint: 50em;
-$large-breakpoint: 60em;
-
-// Max container width
-$max-container-width: 45em;
+// -------------------------------------------------------------------
+$baseline:           .4rem !default;
 
 
 // Typography
 // -------------------------------------------------------------------
 // Font families
-$sans-serif: "Avenir Next", Avenir, Trebuchet, Verdana, sans-serif;
-$serif: Georgia, Times, serif;
-$monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
+$sans-serif:             "Avenir Next", Avenir, Trebuchet, Verdana, sans-serif !default;
+$serif:                  Georgia, Times, serif !default;
+$monospace:              Monaco, Menlo, Consolas, monospace !default;
 
-$base-font-family: $sans-serif;
-$heading-font-family: $sans-serif;
-$reading-font-family: $serif;
-$ui-font-family: $sans-serif;
-$code-font-family: $monospace;
+$base-font-family:       $sans-serif !default;
+$heading-font-family:    $sans-serif !default;
+$reading-font-family:    $serif !default;
+$ui-font-family:         $sans-serif !default;
+$code-font-family:       $monospace !default;
 
 // Type scale
 // Good tool: http://type-scale.com/
-$h1: 2.369rem;
-$h2: 1.777rem;
-$h3: 1.333rem;
-$h4: 1rem;
-$h5: .75rem;
-$h6: .75rem;
+$h1:         2.369rem !default;
+$h2:         1.777rem !default;
+$h3:         1.333rem !default;
+$h4:         1rem !default;
+$h5:         .75rem !default;
+$h6:         .75rem !default;
 
 // Finer control over type scale after certain breakpoint (off by default)
-$responsive-type: false;
-$desktop-h1: 2.369rem;
-$desktop-h2: 1.777rem;
-$desktop-h3: 1.333rem;
-$desktop-h4: 1rem;
-$desktop-h5: .75rem;
-$desktop-h6: .75rem;
-
-// Text sizes
-$base-mobile-font-size: 14px;
-$base-desktop-font-size: 18px;
-$large-font-size: $h3;
-$small-font-size: $h5;
-
-// Weights
-$base-font-weight: 400;
-$heading-font-weight: 700;
-
-// Line heights
-$base-line-height: $baseline*4;
-$heading-line-height: 1;
-
-
-// Colors
-// -------------------------------------------------------------------
-// Color by name
-// Change these colors to something other than "darker"
-$white: #fff;
-$lightest-gray: #e7eaee;
-$light-gray: #a1adbc;
-$gray: #708299;
-$dark-gray: #4b5869;
-$darkest-gray: #2f3741;
-$blue: #428bca;
-$green: #6fbb57;
-$orange: #f0ad4e;
-
-// Brand colors
-$primary-brand-color: $blue;
-$secondary-brand-color: $green;
-$brand-accent-color: $orange;
+$responsive-type:     false !default;
+$desktop-h1:          2.369rem !default;
+$desktop-h2:          1.777rem !default;
+$desktop-h3:          1.333rem !default;
+$desktop-h4:          1rem !default;
+$desktop-h5:          .75rem !default;
+$desktop-h6:          .75rem !default;
 
 // Text colors
-$text-color: $dark-gray;
-$light-text-color: $light-gray;
+$text-color:          $dark-gray !default;
+
+// Text sizes
+$base-mobile-font-size:        14px !default;
+$base-desktop-font-size:       18px !default;
+$large-font-size:              $h3 !default;
+$small-font-size:              $h5 !default;
+
+// Weights
+$base-font-weight:             400 !default;
+$heading-font-weight:          700 !default;
+
+// Line heights
+$base-line-height:             $baseline*4 !default;
+$heading-line-height:          1 !default;
 
 // Link colors
-$link-color: $primary-brand-color;
-$link-hover-color: darken($primary-brand-color, 10%);
-$active-link-color: darken($primary-brand-color, 25%);
-
-// Border colors
-$border-color: $light-gray;
+$link-color:                   $primary-color !default;
+$link-hover-color:             darken($primary-color, 10%) !default;
+$active-link-color:            darken($primary-color, 25%) !default;
 
 // Code colors
-$code-color: $dark-gray;
-$code-background-color: $lightest-gray;
+$code-color:                   $dark-gray !default;
+$code-background-color:        $lightest-gray !default;
+
+
+// Layout
+// -------------------------------------------------------------------
+// Breakpoints
+// Mobile Safari has problems with rems being used in media queries
+$small-breakpoint:           40em !default;
+$medium-breakpoint:          50em !default;
+$large-breakpoint:           60em !default;
+
+// Max container width
+$max-container-width:        45em !default;
 
 
 // Spaces
 // -------------------------------------------------------------------
-$space-1: $baseline*2;
-$space-2: $baseline*5;
-$space-3: $baseline*8;
-$space-4: $baseline*11;
+$space-1:        $baseline*2 !default;
+$space-2:        $baseline*5 !default;
+$space-3:        $baseline*8 !default;
+$space-4:        $baseline*11 !default;
 
 // Specific margins
-$body-text-bottom-margin: $space-2;
-$heading-text-bottom-margin: $body-text-bottom-margin;
+$body-text-bottom-margin:         $space-2 !default;
+$heading-text-bottom-margin:      $body-text-bottom-margin !default;
 
 
-// Design elements
+// Buttons
 // -------------------------------------------------------------------
-// Button padding
-$large-button-padding: $baseline*3 $baseline*4;
-$medium-button-padding: $baseline $baseline*3;
-$small-button-padding: 0 $baseline*2;
+$large-button-padding:       $baseline*3 $baseline*4 !default;
+$medium-button-padding:      $baseline $baseline*3 !default;
+$small-button-padding:       0 $baseline*2 !default;
 
-// Form padding
-$large-ui-padding: $baseline*3 $baseline*3;
-$medium-ui-padding: $baseline $baseline;
-$small-ui-padding: 0 $baseline;
+
+// Forms
+// -------------------------------------------------------------------
+$large-ui-padding:           $baseline*3 $baseline*3 !default;
+$medium-ui-padding:          $baseline $baseline !default;
+$small-ui-padding:           0 $baseline !default;
+
 
 // Borders
-$border-style: solid;
-$border-radius: 3px;
+// -------------------------------------------------------------------
+$border-color:          $light-gray !default;
+$border-style:          solid !default;
+$border-radius:         3px !default;
+$border-width:          1px !default;
+
 
 // Animations
-$fade: .2s ease-out;
+// -------------------------------------------------------------------
+$fade:           .2s ease-out !default;

@@ -6,22 +6,36 @@ code, kbd, pre, samp { font-family: $code-font-family; }
 
 // Base code styles
 // -------------------------------------------------------------------
-.inline-code {
+// Inline code
+code {
   background-color: $code-background-color;
   color: $code-color;
   max-width: 100%;
   padding: $baseline/2 $baseline;
+  white-space: pre;
 }
 
-.code-block {
+// Code block
+pre {
   background-color: $code-background-color;
   color: $code-color;
   display: block;
   line-height: $base-line-height;
   margin-bottom: $body-text-bottom-margin;
   max-width: 100%;
+  overflow-x: auto;
   padding: $large-ui-padding;
   word-break: break-all;
   word-wrap: break-word;
+  
+  // Account for some code outputs that place code tags in pre tags
+  code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0;
+  }
 }
 

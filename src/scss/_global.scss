@@ -55,12 +55,12 @@ hr {
 // Remove text-shadow in selection highlight: h5bp.com/i
 // These selection rule sets have to be separate.
 ::-moz-selection {
-  background-color: $primary-brand-color;
+  background-color: $primary-color;
   color: #fff;
   text-shadow: none;
 }
 ::selection {
-  background-color: $primary-brand-color;
+  background-color: $primary-color;
   color: #fff;
   text-shadow: none;
 }

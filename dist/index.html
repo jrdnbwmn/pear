@@ -1,286 +1,263 @@
 <!DOCTYPE html>
 <html lang="en-us">
     
-    <head>
-        
-        <!-- Meta -->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name="description" content="">
-        
-        <title>Pear HTML</title>
-        
-        <!-- Import web fonts using the link tag instead of CSS @import: http://stackoverflow.com/questions/12316501/including-google-web-fonts-link-or-import -->
-        <link rel="stylesheet" href="">
+  <head>
 
-        <!-- The compiled CSS file -->
-        <link rel="stylesheet" href="css/production.css">
-        
-        <!-- Favicon.ico and apple-touch-icon.png (according to Apple docs). A good tool is http://iconogen.com/. Place these in the root directory. -->
-        <link rel="shortcut icon" href="assets/ico/favicon.ico">
-        <link rel="apple-touch-icon" href="touch-icon-iphone.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
-        
-        <!-- Canonical -->
-        <link rel="canonical" href="">
-    
-        <!-- RSS -->
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss">
-        
-    </head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="">
 
-    <body>
+    <title>Pear HTML</title>
 
-        <!--[if lt IE 8]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <!-- The compiled CSS file -->
+    <link rel="stylesheet" href="css/production.css">
+
+    <!-- Import web fonts using the link tag instead of CSS @import: http://stackoverflow.com/questions/12316501/including-google-web-fonts-link-or-import -->
+    <link rel="stylesheet" href="">
+
+    <!-- Favicon.ico and apple-touch-icon.png (according to Apple docs). A good tool is http://iconogen.com/. Place these in the root directory. -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss">
+
+  </head>
+
+  <body>
+
         
-        <div class="pt3 pb3 centered-text secondary-brand-color-background white-text">
-            <div class="container">
-                <h1>Pear</h1>
-                <p class="m0 h2 heading-line-height">A lightweight front-end launching kit</p>
-                <p>v2.4.3</p>
-                <div class="centered-button">
-                    <a class="button medium-button dark-bg-button" href="https://github.com/jrdnbwmn/Pear">View on Github →</a>
-                </div>
+        <div class="pt3 pb3 centered-text bg--secondary-color text--white">
+          <div class="container">
+            <h1>Pear</h1>
+            <p class="m0 h2 heading-line-height">A lightweight front-end launching kit</p>
+            <p>v2.4.3</p>
+            <div class="centered-text">
+              <a class="btn btn--dark-bg" href="https://github.com/jrdnbwmn/Pear">View on Github →</a>
             </div>
+          </div>
         </div>
 
         <div class="container pt3 pb3">
-            
-            <!-- About 
-            <section class="pb4">
-                <div class="grid-row">
-                    <div class="grid-column span-4">
-                        <h4>Responsive</h4>
-                        <h4>Performant</h4>
-                    </div>
-                    <div class="grid-column span-8">
-                        <p class="m0">Comes with</p>
-                        <ul class="reading-list">
-                            <li>HTML boilerplate with simple pattern library</li>
-                            <li>Base Sass styles</li>
-                            <li>Advanced Gulp setup</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            -->
            
-            <!-- Colors -->
-            <section class="pb4">
-                <h2 class="light-text-color">Colors</h2>
-                <hr class="mb2">
-                <div class="pt1 pb1 white-text centered-text primary-brand-color-background">Primary brand color</div>
-                <div class="pt1 pb1 white-text centered-text secondary-brand-color-background">Secondary brand color</div>
-                <div class="pt1 pb1 white-text centered-text brand-accent-color-background">Brand accent color</div>
-                <div class="pt1 pb1 white-text centered-text darkest-gray-background">Darkest gray</div>
-                <div class="pt1 pb1 white-text centered-text dark-gray-background">Dark gray</div>
-                <div class="pt1 pb1 white-text centered-text gray-background">Gray</div>
-                <div class="pt1 pb1 white-text centered-text light-gray-background">Light gray</div>
-                <div class="pt1 pb1 centered-text lightest-gray-background">Lightest gray</div>
-            </section>
-            
-            <!-- Type -->
-            <section class="pb4 reading-font">
-                <h2 class="light-text-color">Type</h2>
-                <hr class="mb2">
-                <h1>Heading 1</h1>
-                <h2>Heading 2</h2>
-                <h3>Heading 3</h3>
-                <h4>Heading 4</h4>
-                <h5>Heading 5</h5>
-                <h6>Heading 6</h6>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, semper suscipit, posuere a, pede.</p>
-                <p>Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.</p>
-                <blockquote class="blockquote">This is a blockquote. Suspendisse commodo ullamcorper magna.</blockquote>
-                <p>Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <cite>cite</cite>. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Morbi imperdiet augue quis tellus. Suspendisse quam sem, <abbr title="Avenue">AVE</abbr> consequat at, commodo vitae, feugiat in nunc.</p>
-                <p>Morbi in sem quis dui <a class="link" href="#">placerat ornare</a>. Pellentesque odio nisi, euismod in <a class="link" href="#">pharetra</a> a, ultricies in, diam. Sed arcu. Cras consequat.</p>
-                <ul class="reading-list">
-                    <li>Aliquam tincidunt mauris eu risus.</li>
-                    <li>Vestibulum auctor dapibus neque.</li>
-                    <li>Nunc dignissim risus id metus.</li>
-                    <li>Vivamus vestibulum nulla nec ante.</li>
-                </ul>
-                <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
-                <ol class="reading-list m0">
-                    <li>Integer vitae libero ac risus egestas placerat.</li>
-                    <li>Praesent placerat risus quis eros.</li>
-                    <li>Ut aliquam sollicitudin leo.</li>
-                    <li>Donec quis dui at dolor tempor interdum.</li>
-                </ol>
-            </section>
-            
-            <!-- Code -->
-            <section class="pb4 reading-font">
-                <h2 class="light-text-color">Code</h2>
-                <hr class="mb2">
-                <p>Phasellus ultrices nulla, gravida non <code class="inline-code rounded">some inline code</code> commodo a sodales sit amet nisi.</p>
-                <pre class="code-block rounded m0">&lt;p&gt;Block of code&lt;/p&gt;</pre>
-            </section>
-            
-            <!-- Embeds --> 
-            <section class="pb4">
-                <h2 class="light-text-color">Embeds</h2>
-                <hr class="mb2">
-                <img class="mb2" src="img/imgh1.jpg" alt="Sample image">
-                <iframe class="mb2" src="//player.vimeo.com/video/85517984" width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d49091.78885703522!2d-104.97060187791772!3d39.73433127525863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1409806420933" width="1000" height="450" frameborder="0" style="border:0"></iframe>
-            </section>
-            
-            <!-- Forms -->
-            <section class="pb4">
-                <h2 class="light-text-color">Forms</h2>
-                <hr class="mb2">
-                <form class="form">
-                    <input class="form-control mb1" placeholder="Name">
-                    <input class="form-control mb1" type="email" placeholder="Email Address">
-                    <input class="form-control mb1" type="subject" placeholder="Subject">
-                    <textarea class="form-control mb1" placeholder="Message"></textarea>
-                    <button class="button medium-button primary-button">Submit</button>
-                </form>
-            </section>
-            
-            <!-- Buttons -->
-            <section class="pb4">
-                <h2 class="light-text-color">Buttons</h2>
-                <hr class="mb2">
-                <a class="button primary-button large-button" href="">Large Primary</a>
-                <a class="button secondary-button medium-button" href="">Medium Secondary</a>
-                <a class="button primary-button medium-button" href="">Medium Primary</a>
-                <a class="button secondary-button small-button" href="">Small Secondary</a>
-            </section>
-            
-            <!-- Tables --> 
-            <section class="pb4">
-                <h2 class="light-text-color">Tables</h2>
-                <hr class="mb2">
-                <div class="responsive-table">
-                    <table class="table table-row-borders">
-                        <thead>
-                            <tr>
-                                <th>Tournament</th>
-                                <th>Place</th>
-                                <th>Winnings</th>
-                                <th>Points</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Sony Open</td>
-                                <td>2nd</td>
-                                <td>$752,000</td>
-                                <td>75</td>
-                            </tr>
-                            <tr>
-                                <td>Arnold Palmer Invitational</td>
-                                <td>6th</td>
-                                <td>$320,000</td>
-                                <td>50</td>
-                            </tr>
-                            <tr>
-                                <td>Tavistock Cup</td>
-                                <td>12th</td>
-                                <td>$92,000</td>
-                                <td>19</td>
-                            </tr>
-                            <tr>
-                                <td>Zurich Classic</td>
-                                <td>5th</td>
-                                <td>$310,000</td>
-                                <td>53</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td colspan="2"><em>Totals</em></td>
-                                <td>$1,474,000</td>
-                                <td>197</td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-            </section>
-                       
-            <!-- Grid -->      
-            <section class="ui-font">
-                <h2 class="light-text-color">Grid</h2>
-                <hr class="mb2">
-                <div class="grid-row">
-                    <div class="grid-column span-half" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">.span-half</article></div>
-                    <div class="grid-column span-one-fourth" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">.span-one-fourth</article></div>
-                    <div class="grid-column span-one-fourth" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">.span-one-fourth</article></div>
-                </div>
+          <!-- Colors -->
+          <section class="pb4">
+            <h2 class="text--gray pb1 border--bottom">Colors</h2>
+            <hr class="mb2">
+            <div class="pt1 pb1 text--white centered-text bg--primary-color">Primary brand color</div>
+            <div class="pt1 pb1 text--white centered-text bg--secondary-color">Secondary brand color</div>
+            <div class="pt1 pb1 text--white centered-text bg--tertiary-color">Brand accent color</div>
+            <div class="pt1 pb1 text--white centered-text bg--darkest-gray">Darkest gray</div>
+            <div class="pt1 pb1 text--white centered-text bg--dark-gray">Dark gray</div>
+            <div class="pt1 pb1 text--white centered-text bg--gray">Gray</div>
+            <div class="pt1 pb1 text--white centered-text bg--light-gray">Light gray</div>
+            <div class="pt1 pb1 centered-text bg--lightest-gray">Lightest gray</div>
+          </section>
 
-                <div class="grid-row">
-                    <div class="grid-column span-whole" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">.span-whole</article></div>
-                </div>
+          <!-- Type -->
+          <section class="pb4 reading-font">
+            <h2 class="text--gray pb1 border--bottom">Type</h2>
+            <hr class="mb2">
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, semper suscipit, posuere a, pede.</p>
+            <p>Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.</p>
+            <blockquote class="blockquote">This is a blockquote. Suspendisse commodo ullamcorper magna.</blockquote>
+            <p>Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <cite>cite</cite>. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Morbi imperdiet augue quis tellus. Suspendisse quam sem, <abbr title="Avenue">AVE</abbr> consequat at, commodo vitae, feugiat in nunc.</p>
+            <p>Morbi in sem quis dui <a class="link" href="#">placerat ornare</a>. Pellentesque odio nisi, euismod in <a class="link" href="#">pharetra</a> a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+            <ul class="reading-list">
+              <li>Aliquam tincidunt mauris eu risus.</li>
+              <li>Vestibulum auctor dapibus neque.</li>
+              <li>Nunc dignissim risus id metus.</li>
+              <li>Vivamus vestibulum nulla nec ante.</li>
+            </ul>
+            <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+            <ol class="reading-list m0">
+              <li>Integer vitae libero ac risus egestas placerat.</li>
+              <li>Praesent placerat risus quis eros.</li>
+              <li>Ut aliquam sollicitudin leo.</li>
+              <li>Donec quis dui at dolor tempor interdum.</li>
+            </ol>
+          </section>
 
-                <div class="grid-row">
-                    <div class="grid-column span-one-third" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">.span-one-third</article></div>
-                    <div class="grid-column span-one-third" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">.span-one-third</article></div>
-                    <div class="grid-column span-one-third" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">.span-one-third</article></div>
-                </div>
+          <!-- Code -->
+          <section class="pb4 reading-font">
+            <h2 class="text--gray pb1 border--bottom">Code</h2>
+            <hr class="mb2">
+            <p>Phasellus ultrices nulla, gravida non <code class="inline-code rounded">some inline code</code> commodo a sodales sit amet nisi.</p>
+            <pre class="code-block rounded m0">&lt;p&gt;Block of code&lt;/p&gt;</pre>
+          </section>
 
-                <div class="grid-row">
-                    <div class="grid-column span-3" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">.span-3</article></div>
-                    <div class="grid-column span-3" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">.span-3</article></div>
-                    <div class="grid-column span-6" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">.span-6</article></div>
-                </div>
+          <!-- Embeds --> 
+          <section class="pb4">
+            <h2 class="text--gray pb1 border--bottom">Embeds</h2>
+            <hr class="mb2">
+            <img class="mb2" src="img/imgh1.jpg" alt="Sample image">
+            <iframe class="mb2" src="//player.vimeo.com/video/85517984" width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d49091.78885703522!2d-104.97060187791772!3d39.73433127525863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1409806420933" width="1000" height="450" frameborder="0" style="border:0"></iframe>
+          </section>
 
-                <div class="grid-row">
-                    <div class="grid-column span-12" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">.span-12</article></div>
-                </div>
+          <!-- Forms -->
+          <section class="pb4">
+            <h2 class="text--gray pb1 border--bottom">Forms</h2>
+            <hr class="mb2">
+            <form class="form">
+              <input class="form-control mb1" placeholder="Name">
+              <input class="form-control mb1" type="email" placeholder="Email Address">
+              <input class="form-control mb1" type="subject" placeholder="Subject">
+              <textarea class="form-control mb1" placeholder="Message"></textarea>
+              <button class="btn btn--default">Submit</button>
+            </form>
+          </section>
 
-                <div class="grid-row">
-                    <div class="grid-column span-4" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</article></div>
-                    <div class="grid-column span-4" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">top (default)</article></div>
-                    <div class="grid-column span-4 vertical-bottom" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">bottom</article></div>
-                </div>
+          <!-- Buttons -->
+          <section class="pb4">
+            <h2 class="text--gray pb1 border--bottom">Buttons</h2>
+            <hr class="mb2">
+            <a class="btn btn--default btn--lg" href="">Large Primary</a>
+            <a class="btn btn--outline" href="">Medium Secondary</a>
+            <a class="btn btn--default medium-btn" href="">Medium Primary</a>
+            <a class="btn btn--outline btn--sm" href="">Small Secondary</a>
+          </section>
 
-                <div class="grid-row">
-                    <div class="grid-column span-8" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">.span-8</article></div>
-                    <div class="grid-column span-4" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">.span-4</article></div>
-                </div>
+          <!-- Tables --> 
+          <section class="pb4">
+            <h2 class="text--gray pb1 border--bottom">Tables</h2>
+            <hr class="mb2">
+            <div class="responsive-table">
+              <table class="table table-row-borders">
+                <thead>
+                  <tr>
+                    <th>Tournament</th>
+                    <th>Place</th>
+                    <th>Winnings</th>
+                    <th>Points</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Sony Open</td>
+                    <td>2nd</td>
+                    <td>$752,000</td>
+                    <td>75</td>
+                  </tr>
+                  <tr>
+                    <td>Arnold Palmer Invitational</td>
+                    <td>6th</td>
+                    <td>$320,000</td>
+                    <td>50</td>
+                  </tr>
+                  <tr>
+                    <td>Tavistock Cup</td>
+                    <td>12th</td>
+                    <td>$92,000</td>
+                    <td>19</td>
+                  </tr>
+                  <tr>
+                    <td>Zurich Classic</td>
+                    <td>5th</td>
+                    <td>$310,000</td>
+                    <td>53</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="2"><em>Totals</em></td>
+                    <td>$1,474,000</td>
+                    <td>197</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </section>
 
-                <div class="grid-row">
-                    <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">.span-2</article></div>
-                    <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">.span-2</article></div>
-                    <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">.span-2</article></div>
-                    <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">.span-2</article></div>
-                    <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">.span-2</article></div>
-                    <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="lightest-gray-background p1">.span-2</article></div>
-                </div>
-            </section>
+          <!-- Grid -->      
+          <section class="ui-font">
+            <h2 class="text--gray pb1 border--bottom">Grid</h2>
+            <div class="grid-row">
+              <div class="grid-column span-half" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-half</article></div>
+              <div class="grid-column span-one-fourth" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-one-fourth</article></div>
+              <div class="grid-column span-one-fourth" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-one-fourth</article></div>
+            </div>
+
+            <div class="grid-row">
+              <div class="grid-column span-whole" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-whole</article></div>
+            </div>
+
+            <div class="grid-row">
+              <div class="grid-column span-one-third" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-one-third</article></div>
+              <div class="grid-column span-one-third" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-one-third</article></div>
+              <div class="grid-column span-one-third" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-one-third</article></div>
+            </div>
+
+            <div class="grid-row">
+              <div class="grid-column span-3" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-3</article></div>
+              <div class="grid-column span-3" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-3</article></div>
+              <div class="grid-column span-6" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-6</article></div>
+            </div>
+
+            <div class="grid-row">
+              <div class="grid-column span-12" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-12</article></div>
+            </div>
+
+            <div class="grid-row">
+              <div class="grid-column span-4" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</article></div>
+              <div class="grid-column span-4" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">top (default)</article></div>
+              <div class="grid-column span-4 vertical-bottom" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">bottom</article></div>
+            </div>
+
+            <div class="grid-row">
+              <div class="grid-column span-8" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-8</article></div>
+              <div class="grid-column span-4" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-4</article></div>
+            </div>
+
+            <div class="grid-row">
+              <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-2</article></div>
+              <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-2</article></div>
+              <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-2</article></div>
+              <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-2</article></div>
+              <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-2</article></div>
+              <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-2</article></div>
+            </div>
+          </section>
                         
         </div> <!-- End container -->
         
-        <footer class="top-border pt2 centered-text">
-            <div class="container">
-                <p>Made by <a class="link" href="http://www.jrdnbwmn.com">Jordan Bowman</a> | <a class="link" href="http://www.twitter.com/jrdnbwmn">@jrdnbwmn</a> | <a class="link" href="http://opensource.org/licenses/MIT">MIT License</a></p>
-            </div>
+        <footer class="border--top pt2 centered-text">
+          <div class="container">
+            <p>Made by <a class="link" href="http://www.jrdnbwmn.com">Jordan Bowman</a> | <a class="link" href="http://www.twitter.com/jrdnbwmn">@jrdnbwmn</a> | <a class="link" href="http://opensource.org/licenses/MIT">MIT License</a></p>
+          </div>
         </footer>
 
-        <!-- Reference latest jQuery, with a local fallback -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
-        
-        <!-- The compiled Javascript file -->
-        <script src="js/production.js"></script>
+    <!-- Reference latest jQuery, with a local fallback -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to your site's ID -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-        
-    </body>
+    <!-- The compiled Javascript file -->
+    <script src="js/production.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to your site's ID -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+
+  </body>
 
 </html>

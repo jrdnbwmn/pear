@@ -9,9 +9,7 @@ button {
 
 // Base button styles
 // -------------------------------------------------------------------
-.button,
-.button:link,
-.button:visited {
+.btn {
   background-image: none; // Reset unusual Firefox-on-Android default style: https://github.com/necolas/normalize.css/issues/214
   border-radius: $border-radius;
   border-style: solid;
@@ -20,10 +18,13 @@ button {
   display: inline-block; // Allow us to better style box model properties
   font-family: $ui-font-family;
   line-height: $base-line-height;
-  margin-bottom: 0; // For input.button
+  margin-bottom: 0; // For input.btn
+  padding: $medium-button-padding;
   text-align: center;
   text-decoration: none;
+  touch-action: manipulation;
   transition: background-color $fade, background $fade, color $fade, border $fade;
+  user-select: none;
   vertical-align: middle; // Line different size buttons up nicely
   white-space: nowrap; // Stop buttons wrapping and looking broken
   -webkit-appearance: none;
@@ -33,40 +34,45 @@ button {
     display: block;
     margin-bottom: $space-1;
   }
-}
     
-.button:hover,
-.button:focus {
-  outline: 0;
-  text-decoration: none;
+  &:hover,
+  &:focus {
+    outline: 0;
+    text-decoration: none;
+  }
+
+  &:active {
+    background-image: none;
+    outline: 0;
+    transition: background-color $fade, border-color $fade;
+  }
+
+  &.disabled,
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    cursor: not-allowed !important;
+    opacity: 1; // iOS fix for unreadable disabled content
+    pointer-events: none; // Future-proof disabling of clicks
+  }
 }
-    
-.button:active {
-  background-image: none;
-  outline: 0;
-  transition: background-color $fade, border-color $fade;
-}
-    
-.button.disabled,
-.button[disabled],
-.button[readonly],
-fieldset[disabled] .button {
-  cursor: not-allowed !important;
-  opacity: 1; // iOS fix for unreadable disabled content
-  pointer-events: none; // Future-proof disabling of clicks
+
+a.btn {
+  &.disabled,
+  fieldset[disabled] & {
+    pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+  }
 }
 
 
 // Button sizes
 // -------------------------------------------------------------------
-.large-button {
+.btn--lg {
   font-size: $h3;
   padding: $large-button-padding;
 }
 
-.medium-button { padding:$medium-button-padding; }
-
-.small-button {
+.btn--sm {
   font-size: $h6;
   padding:$small-button-padding;
 }
@@ -74,74 +80,61 @@ fieldset[disabled] .button {
 
 // Button skins
 // -------------------------------------------------------------------
-// Primary button
-.primary-button,
-.primary-button:link,
-.primary-button:visited {
-  background-color: $primary-brand-color;
-  border-color: $primary-brand-color;
+// Default button
+.btn--default {
+  background-color: $primary-color;
+  border-color: $primary-color;
   color: $white;
+
+  &:hover,
+  &:focus {
+    background-color: darken($primary-color, 10%);
+    border-color: darken($primary-color, 10%);
+  }
+
+  &:active {
+    background-color: darken($primary-color, 20%);
+    border-color: darken($primary-color, 20%);
+  }
 }
 
-.primary-button:hover,
-.primary-button:focus {
-  background-color: darken($primary-brand-color, 10%);
-  border-color: darken($primary-brand-color, 10%);
-}
-
-.primary-button:active {
-  background-color: darken($primary-brand-color, 20%);
-  border-color: darken($primary-brand-color, 20%);
-}
-
-// Secondary button
-.secondary-button,
-.secondary-button:link,
-.secondary-button:visited {
+// Outline button
+.btn--outline {
   background-color: transparent;
   border-color: $light-gray;
   border-width: 2px;
   color: $text-color;
-}
 
-.secondary-button:hover,
-.secondary-button:focus {
-  background-color: darken($lightest-gray, 10%);
-  border-color: darken($lightest-gray, 10%);
-}
+  &:hover,
+  &:focus {
+    background-color: darken($lightest-gray, 10%);
+    border-color: darken($lightest-gray, 10%);
+  }
 
-.secondary-button:active {
-  background-color: darken($lightest-gray, 20%);
-  border-color: darken($lightest-gray, 20%);
+  &:active {
+    background-color: darken($lightest-gray, 20%);
+    border-color: darken($lightest-gray, 20%);
+  }
 }
 
 // Dark background button
-.dark-bg-button,
-.dark-bg-button:link,
-.dark-bg-button:visited {
+.btn--dark-bg {
   background-color: transparent;
   border-color: $white;
   border-width: 2px;
   color: $white;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    border-color: $white;
+    color: $text-color;
+  }
+
+  &:active {
+    background-color: $lightest-gray;
+    border-color: $lightest-gray;
+    color: $text-color;
+  }
 }
-
-.dark-bg-button:hover,
-.dark-bg-button:focus {
-  background-color: $white;
-  border-color: $white;
-  color: $text-color;
-}
-
-.dark-bg-button:active {
-  background-color: $lightest-gray;
-  border-color: $lightest-gray;
-  color: $text-color;
-}
-
-
-// Button utilities
-// -------------------------------------------------------------------
-// Horizontally centers a button
-// Wrap the button in a `div` with this class
-.centered-button { text-align: center; }
 
