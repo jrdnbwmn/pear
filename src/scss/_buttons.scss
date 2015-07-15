@@ -44,7 +44,6 @@ button {
   &:active {
     background-image: none;
     outline: 0;
-    transition: background-color $fade, border-color $fade;
   }
 
   &.disabled,
