@@ -18,7 +18,7 @@ th { text-align: left; }
 
 // Base table styles
 // -------------------------------------------------------------------
-.table {
+table {
   font-family: $font-family--ui;
 
   th,
@@ -65,7 +65,7 @@ th { text-align: left; }
 // Enables horizontal scrolling on mobile devices. 
 // Wrap your table in a div with this class.
 // Source: Bootstrap, http://getbootstrap.com/css/#tables-responsive
-.responsive-table {
+.table--responsive {
   @media screen and (max-width: $breakpoint--sm) {
     border: 0;
     overflow-x: auto;

@@ -52,11 +52,11 @@ fieldset[disabled] input {
   pointer-events: none; // Future-proof disabling of clicks
 }
 
+form { font-size: 1rem; }
+
 
 // Base form styles
 // -------------------------------------------------------------------
-.form { font-size: 1rem; }
-
 // Apply `.form-control` to any of the following form controls:
 //
 // select
@@ -116,7 +116,7 @@ fieldset[disabled] input {
 
 // Form layouts
 // -------------------------------------------------------------------
-.stacked-form {
+.form--stacked {
   .input,
   .select,
   .radio,
@@ -128,7 +128,7 @@ fieldset[disabled] input {
   }
 }
 
-.inline-form {
+.form--inline {
   .form-control {
     display: inline-block;
     vertical-align: middle;

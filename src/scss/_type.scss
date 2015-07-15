@@ -49,9 +49,9 @@ h6, .h6, small, .small { font-size: $h6; }
 // Base typography styles
 // -------------------------------------------------------------------
 // Fonts
-.heading-font  { font-family: $font-family--heading }
-.reading-font  { font-family: $font-family--reading }
-.ui-font       { font-family: $font-family--ui }
+.font--heading  { font-family: $font-family--heading }
+.font--reading  { font-family: $font-family--reading }
+.font--ui       { font-family: $font-family--ui }
 
 h1,
 h2,
@@ -114,11 +114,11 @@ hr {
 .regular { font-weight: normal; }
 .italic  { font-style: italic; }
 
-.left-aligned-text    { text-align: left; }
-.centered-text        { text-align: center; }
-.right-aligned-text   { text-align: right; }
-.justified-text       { text-align: justify; }
+.left-align    { text-align: left; }
+.center        { text-align: center; }
+.right-align   { text-align: right; }
+.justify       { text-align: justify; }
 
-.base-line-height     { line-height: $line-height--base; }
-.heading-line-height  { line-height: $line-height--heading; }
+.line-height--base     { line-height: $line-height--base; }
+.line-height--heading  { line-height: $line-height--heading; }
 
