@@ -58,23 +58,9 @@ form { font-size: 1rem; }
 // Base form styles
 // -------------------------------------------------------------------
 // Apply `.form-control` to any of the following form controls:
-//
 // select
 // textarea
-// input[type="text"]
-// input[type="password"]
-// input[type="datetime"]
-// input[type="datetime-local"]
-// input[type="date"]
-// input[type="month"]
-// input[type="time"]
-// input[type="week"]
-// input[type="number"]
-// input[type="email"]
-// input[type="url"]
-// input[type="search"]
-// input[type="tel"]
-// input[type="color"]
+// input (of any type)
 .form-control {
   background-image: none; // Reset unusual Firefox-on-Android default style
   border: 1px solid $border-color;
@@ -133,7 +119,7 @@ form { font-size: 1rem; }
     display: inline-block;
     vertical-align: middle;
     width: auto; // Prevent labels from stacking above inputs
-                   // in `.form-group`
+                 // in `.form-group`
   }
 
   .radio,
