@@ -19,14 +19,14 @@ dd { margin-left: 0; }
 
 // Base list styles
 // -------------------------------------------------------------------
-// Indented list
-.reading-list { padding-left: $baseline*6; }
-
 // Remove bullets
 .no-bullets { list-style: none; }
 
+// Indented list
+.list--indented { padding-left: $baseline*6; }
+
 // Inline list – usually used with `.no-bullets`
-.inline-list {
+.list--inline {
   li {
     display: inline-block;
   }

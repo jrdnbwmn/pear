@@ -7,7 +7,7 @@ code, kbd, pre, samp { font-family: $font-family--code; }
 // Base code styles
 // -------------------------------------------------------------------
 // Inline code
-code {
+.code {
   background-color: $code-bg-color;
   color: $code-color;
   max-width: 100%;
@@ -16,7 +16,7 @@ code {
 }
 
 // Code block
-pre {
+.pre {
   background-color: $code-bg-color;
   color: $code-color;
   display: block;
@@ -29,7 +29,7 @@ pre {
   word-wrap: break-word;
   
   // Account for some code outputs that place code tags in pre tags
-  code {
+  .code {
     padding: 0;
     font-size: inherit;
     color: inherit;
