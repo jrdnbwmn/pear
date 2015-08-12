@@ -1,31 +1,33 @@
-// Variables first
+// Variables
 @import "variables";
 
-// Reset and dependencies
+// Normalize
 @import "normalize";
-@import "print";
 
-// Base
+// Global
 @import "global";
 
 // Components
+@import "buttons";
+@import "code";
 @import "container";
-@import "type";
+@import "embeds";
+@import "forms";
+@import "grid";
 @import "links";
 @import "lists";
-@import "buttons";
-@import "forms";
-@import "embeds";
-@import "code";
 @import "tables";
-@import "grid";
+@import "type";
 
 // Abstractions
+@import "borders";
+@import "colors";
 @import "margins";
 @import "padding";
-@import "colors";
-@import "borders";
 
 // Utilities
 @import "utilities";
+
+// Print
+@import "print";
 
