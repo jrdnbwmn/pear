@@ -15,8 +15,10 @@ Pear is focused on:
 Options for starting with Pear:
 
 - Download directly from the [GitHub repo](https://github.com/jrdnbwmn/pear).
-- Clone the repo: `git clone https://github.com/jrdnbwmn/Pear.git`.
+- Clone the repo: `git clone https://github.com/jrdnbwmn/pear.git`.
 - Install with [Bower](http://bower.io/): `bower install pear`.
+
+Run `npm install` and then `gulp` to get BrowserSync going along with all the Gulp tasks.
 
 ## What's Included
 
