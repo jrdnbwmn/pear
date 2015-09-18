@@ -3,7 +3,7 @@
 // 2. Set the default font stylings for the entire project.
 // 3. https://github.com/twbs/bootstrap/issues/3772#issuecomment-7566868
 // 4. paulirish.com/2012/box-sizing-border-box-ftw/
-//   css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+// css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
 html {
   box-sizing: border-box; // [4]
   font-family: $font-family--base; // [2]
@@ -20,9 +20,9 @@ html {
 
 *, *:before, *:after { box-sizing: inherit; } // [4]
 
-// 1. Fix for webkit rendering. Fonts on OSX will look more consistent with 
+// 1. Fix for webkit rendering. Fonts on OSX will look more consistent with
 //    other systems that do not render text using sub-pixel anti-aliasing.
-// 2. For now, this is `!important` because the `::selection` (below) affects 
+// 2. For now, this is `!important` because the `::selection` (below) affects
 //    the background color in IE.
 body {
   background-color: $white !important; // [2]
@@ -64,9 +64,9 @@ hr {
   color: #fff;
   text-shadow: none;
 }
-img::selection { 
-  background: transparent; 
+img::selection {
+  background: transparent;
 }
-img::-moz-selection { 
-  background: transparent; 
+img::-moz-selection {
+  background: transparent;
 }

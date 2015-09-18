@@ -13,7 +13,7 @@ input[type=file] {
   width: 100%;
 }
 
-textarea { 
+textarea {
   height: auto; // Reset height for textareas
   resize: vertical; // Allow only vertical resizing of textareas
 }
@@ -132,15 +132,14 @@ form { font-size: 1rem; }
 
 // Placeholder styling
 // -------------------------------------------------------------------
-::-webkit-input-placeholder { 
+::-webkit-input-placeholder {
   color: $light-gray;
   -webkit-font-smoothing: antialiased;
 }
-::-moz-placeholder { 
+::-moz-placeholder {
   color: $light-gray;
   -moz-osx-font-smoothing: grayscale;
 }
-:-ms-input-placeholder { 
+:-ms-input-placeholder {
   color: $light-gray;
 }
-

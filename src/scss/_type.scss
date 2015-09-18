@@ -74,7 +74,7 @@ h6 { color: $gray; }
 .h3,
 .h4,
 .h5,
-.h6 { 
+.h6 {
   line-height: $line-height--heading;
   margin-bottom: $heading-mb;
 }
@@ -121,4 +121,3 @@ hr {
 
 .line-height--base     { line-height: $line-height--base; }
 .line-height--heading  { line-height: $line-height--heading; }
-

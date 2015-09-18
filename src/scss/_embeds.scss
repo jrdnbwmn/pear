@@ -1,7 +1,7 @@
 // Normalization
 // -------------------------------------------------------------------
 // 1. Correct `inline-block` display not defined in IE 8/9.
-// 2. Remove the gap between images, videos, audio and canvas and the bottom of 
+// 2. Remove the gap between images, videos, audio and canvas and the bottom of
 //    their containers: h5bp.com/i/440
 embed,
 iframe,
@@ -24,7 +24,7 @@ img {
 // Better control over svg size
 svg { max-height: 100%; }
 
-// Google Maps breaks if `max-width: 100%` acts upon it; use their selector 
+// Google Maps breaks if `max-width: 100%` acts upon it; use their selector
 // to remove the effects.
 .gm-style img { max-width: none; }
 
@@ -33,4 +33,3 @@ svg { max-height: 100%; }
 // -------------------------------------------------------------------
 // Make stuff responsive
 img, canvas, iframe, video, svg { max-width: 100%; }
-

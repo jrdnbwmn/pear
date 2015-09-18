@@ -112,11 +112,10 @@ $grid-breakpoint: $breakpoint--sm;
 
 // Utilities
 // -------------------------------------------------------------------
-// Centers the column horizontally in the grid and clears the row of all 
+// Centers the column horizontally in the grid and clears the row of all
 // other columns
 .centered-column {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-

@@ -3,7 +3,7 @@
 ul,
 ol {
     margin-bottom: $p-mb;
-    
+
   ul,
   ol {
     margin-bottom: 0; // Take off bottom margin from nested lists.
@@ -31,4 +31,3 @@ dd { margin-left: 0; }
     display: inline-block;
   }
 }
-
