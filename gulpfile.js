@@ -9,9 +9,9 @@ var gulp                    = require("gulp"),
 
     // CSS plugins
     sass                    = require("gulp-sass"),
-    combineMediaQueries     = require("gulp-combine-media-queries"),
+    combineMediaQueries     = require("gulp-combine-mq"),
     autoprefixer            = require("gulp-autoprefixer"),
-    cssmin                  = require("gulp-minify-css"),
+    cssmin                  = require("gulp-clean-css"),
     uncss                   = require("gulp-uncss"),
     rename                  = require("gulp-rename"),
     globber                 = require('glob'),
@@ -89,8 +89,7 @@ gulp.task("css", function() {
         .pipe(combineMediaQueries())
         // parse CSS and add vendor-prefixed CSS properties
         .pipe(autoprefixer({
-            browsers: ["> 5%", "last 2 versions", "Firefox ESR"],
-            cascade: false
+            browsers: ["last 2 versions"]
         }))
         // Minify CSS
         .pipe(cssmin())
@@ -103,6 +102,8 @@ gulp.task("css", function() {
 });
 
 // Unused CSS task
+// This task is not part of the regular gulp task
+// Run it individually to get rid of unused CSS
 gulp.task("unused-css", function() {
     return gulp.src("dist/css/*.css")
         // Prevent gulp.watch from crashing
