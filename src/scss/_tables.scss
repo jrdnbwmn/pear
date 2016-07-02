@@ -3,15 +3,15 @@
 // 1. Normalize display.
 // 2. Prevent from breaking out of container cells.
 table {
-  display: table; // [1]
-  max-width: 100%; // [2]
+    display: table; // [1]
+    max-width: 100%; // [2]
 }
 
 // Normalize elements of a table.
 td,
 th {
-  line-height: $line-height--base;
-  vertical-align: middle;
+    line-height: $line-height--base;
+    vertical-align: middle;
 }
 th { text-align: left; }
 
@@ -19,12 +19,12 @@ th { text-align: left; }
 // Base table styles
 // -------------------------------------------------------------------
 .table {
-  font-family: $font-family--ui;
+    font-family: $font-family--ui;
 
-  th,
-  td {
-    padding: $table-padding;
-  }
+    th,
+    td {
+        padding: $table-padding;
+    }
 }
 
 
@@ -33,59 +33,59 @@ th { text-align: left; }
 // Add borders to all table cells.
 // Add to `table` element.
 .table-cell-borders {
-  th,
-  td {
-    border: 1px solid $border-color;
-  }
+    th,
+    td {
+        border: 1px solid $border-color;
+    }
 }
 
 // Add borders only to the table's rows.
 // Add to `table` element.
 .table-row-borders {
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr {
-      > th,
-      > td {
-        border-top: 1px solid $border-color;
-      }
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th,
+            > td {
+                border-top: 1px solid $border-color;
+            }
+        }
     }
-  }
 
-  > thead > tr {
-    > th,
-    > td {
-      border-bottom-width: 2px;
-      border-top: none;
+    > thead > tr {
+        > th,
+        > td {
+            border-bottom-width: 2px;
+            border-top: none;
+        }
     }
-  }
 }
 
 // Enables horizontal scrolling on mobile devices.
 // Wrap your table in a div with this class.
 // Source: Bootstrap, http://getbootstrap.com/css/#tables-responsive
 .table--responsive {
-  @media screen and (max-width: $breakpoint--sm) {
-    border: 0;
-    overflow-x: auto;
-    overflow-y: hidden;
-    width: 100%;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    -webkit-overflow-scrolling: touch;
+    @media screen and (max-width: $breakpoint--sm) {
+        border: 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: 100%;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        -webkit-overflow-scrolling: touch;
 
-    > .table {
-      // Ensure the content doesn't wrap
-      > thead,
-      > tbody,
-      > tfoot {
-        > tr {
-          > th,
-          > td {
-            white-space: nowrap;
-          }
+        > .table {
+            // Ensure the content doesn't wrap
+            > thead,
+            > tbody,
+            > tfoot {
+                > tr {
+                    > th,
+                    > td {
+                        white-space: nowrap;
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }

@@ -16,32 +16,32 @@ $grid-breakpoint: $breakpoint--sm;
 // Use this class on a div wrapping a row of columns
 // This is to offset the padding on the first/last column via negative margin
 .grid-row {
-  font-size: 0; // Part of getting rid of the inline-block ghost space
-  margin: 0 (-$column-padding);
+    font-size: 0; // Part of getting rid of the inline-block ghost space
+    margin: 0 (-$column-padding);
 
-  @media screen and (max-width: $grid-breakpoint) {
-  margin: 0 auto;
-  }
+    @media screen and (max-width: $grid-breakpoint) {
+        margin: 0 auto;
+    }
 }
 
 // Apply this class to all grid units
 .grid-column {
-  display: inline-block;
-  font-size: 1rem; // Part of getting rid of the inline-block ghost space
-  overflow: hidden;
-  padding: 0 $column-padding;
-  vertical-align: top;
+    display: inline-block;
+    font-size: 1rem; // Part of getting rid of the inline-block ghost space
+    overflow: hidden;
+    padding: 0 $column-padding;
+    vertical-align: top;
 //  Set border-box box-sizing (if you don't already universally)
 //  -webkit-box-sizing: border-box;
 //     -moz-box-sizing: border-box;
 //          box-sizing: border-box;
 
-  @media screen and (max-width: $grid-breakpoint) {
-    display: block;
-    padding-left: 0;
-    padding-right: 0;
-    width: auto;
-  }
+    @media screen and (max-width: $grid-breakpoint) {
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+        width: auto;
+    }
 }
 
 // Set up the placeholders
@@ -64,33 +64,33 @@ $grid-breakpoint: $breakpoint--sm;
 // This will pump out classes like `span-3` which will make the unit
 // span 3 columns.
 @for $n from 1 through $total-number-columns {
-  .span-#{$n} {
-    @if percentage($n/$total-number-columns) == percentage(1/1) {
-      @extend %whole;
-    } @else if percentage($n/$total-number-columns) == percentage(1/2) {
-      @extend %half;
-    } @else if percentage($n/$total-number-columns) == percentage(1/3) {
-      @extend %one-third;
-    } @else if percentage($n/$total-number-columns) == percentage(2/3) {
-      @extend %two-thirds;
-    } @else if percentage($n/$total-number-columns) == percentage(1/4) {
-      @extend %one-fourth;
-    } @else if percentage($n/$total-number-columns) == percentage(2/4) {
-      @extend %two-fourths;
-    } @else if percentage($n/$total-number-columns) == percentage(3/4) {
-      @extend %three-fourths;
-    } @else if percentage($n/$total-number-columns) == percentage(1/5) {
-      @extend %one-fifth;
-    } @else if percentage($n/$total-number-columns) == percentage(2/5) {
-      @extend %two-fifths;
-    } @else if percentage($n/$total-number-columns) == percentage(3/5) {
-      @extend %three-fifths;
-    } @else if percentage($n/$total-number-columns) == percentage(4/5) {
-      @extend %four-fifths;
-    } @else {
-      width: percentage($n/$total-number-columns);
+    .span-#{$n} {
+        @if percentage($n/$total-number-columns) == percentage(1/1) {
+            @extend %whole;
+        } @else if percentage($n/$total-number-columns) == percentage(1/2) {
+            @extend %half;
+        } @else if percentage($n/$total-number-columns) == percentage(1/3) {
+            @extend %one-third;
+        } @else if percentage($n/$total-number-columns) == percentage(2/3) {
+            @extend %two-thirds;
+        } @else if percentage($n/$total-number-columns) == percentage(1/4) {
+            @extend %one-fourth;
+        } @else if percentage($n/$total-number-columns) == percentage(2/4) {
+            @extend %two-fourths;
+        } @else if percentage($n/$total-number-columns) == percentage(3/4) {
+            @extend %three-fourths;
+        } @else if percentage($n/$total-number-columns) == percentage(1/5) {
+            @extend %one-fifth;
+        } @else if percentage($n/$total-number-columns) == percentage(2/5) {
+            @extend %two-fifths;
+        } @else if percentage($n/$total-number-columns) == percentage(3/5) {
+            @extend %three-fifths;
+        } @else if percentage($n/$total-number-columns) == percentage(4/5) {
+            @extend %four-fifths;
+        } @else {
+            width: percentage($n/$total-number-columns);
+        }
     }
-  }
 }
 
 // Fractional classes
@@ -115,7 +115,7 @@ $grid-breakpoint: $breakpoint--sm;
 // Centers the column horizontally in the grid and clears the row of all
 // other columns
 .centered-column {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

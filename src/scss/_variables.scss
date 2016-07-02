@@ -2,13 +2,13 @@
 // -------------------------------------------------------------------
 // Grayscale
 $gray-base:               #8494a6 !default;
+
+$black:                   #000 !default;
 $darkest-gray:            darken($gray-base, 34%) !default;
 $dark-gray:               darken($gray-base, 17%) !default;
 $gray:                    $gray-base !default;
 $light-gray:              lighten($gray-base, 17%) !default;
 $lightest-gray:           lighten($gray-base, 34%) !default;
-
-$black:                   #000 !default;
 $white:                   #fff !default;
 
 // Hues

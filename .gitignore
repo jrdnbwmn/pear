@@ -1,5 +1,4 @@
-# Compiled source #
-###################
+# Compiled source
 *.com
 *.class
 *.dll
@@ -7,8 +6,7 @@
 *.o
 *.so
 
-# Packages #
-############
+# Packages
 # it's better to unpack these files and commit the raw source
 # git has its own built in compression methods
 *.7z
@@ -20,14 +18,12 @@
 *.tar
 *.zip
 
-# Logs and databases #
-######################
+# Logs and databases
 *.log
 *.sql
 *.sqlite
 
-# OS or Editor files #
-######################
+# OS or Editor files
 .DS_Store
 .DS_Store?
 ._*
@@ -45,10 +41,8 @@ nbproject
 *.sublime-workspace
 .idea
 
-# Sass #
-########
+# Sass
 .sass-cache
 
-# Gulp/Node #
-#############
+# Gulp/Node
 node_modules

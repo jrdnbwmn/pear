@@ -9,13 +9,13 @@ input, select, label, { vertical-align: middle; }
 // Set the height file controls to match text inputs
 // Normalize file input width
 input[type=file] {
-  display: block;
-  width: 100%;
+    display: block;
+    width: 100%;
 }
 
 textarea {
-  height: auto; // Reset height for textareas
-  resize: vertical; // Allow only vertical resizing of textareas
+    height: auto; // Reset height for textareas
+    resize: vertical; // Allow only vertical resizing of textareas
 }
 
 // Remove outline on certain elements.
@@ -26,30 +26,30 @@ select[multiple], select[size] { height: auto; }
 
 // Normalize output element
 output {
-  display: block;
-  font-size: 1rem;
-  line-height: $line-height--base;
+    display: block;
+    font-size: 1rem;
+    line-height: $line-height--base;
 }
 
 // 1. Chrome and Firefox set a `min-width: min-content;` on fieldsets,
 //    so we reset that to ensure it behaves more like a standard block element.
 //    See https://github.com/twbs/bootstrap/issues/12359.
 fieldset {
-  border: 0; // Remove default fieldset styles
-  min-width: 0; // [1]
+    border: 0; // Remove default fieldset styles
+    min-width: 0; // [1]
 }
 
 legend {
-  line-height: inherit; // Normalize line height
-  margin: 0; // Reset margins
+    line-height: inherit; // Normalize line height
+    margin: 0; // Reset margins
 }
 
 input[disabled],
 input[readonly],
 fieldset[disabled] input {
-  cursor: not-allowed;
-  opacity: 1; // iOS fix for unreadable disabled content
-  pointer-events: none; // Future-proof disabling of clicks
+    cursor: not-allowed;
+    opacity: 1; // iOS fix for unreadable disabled content
+    pointer-events: none; // Future-proof disabling of clicks
 }
 
 form { font-size: 1rem; }
@@ -62,84 +62,84 @@ form { font-size: 1rem; }
 // textarea
 // input (of any type)
 .form-control {
-  background-image: none; // Reset unusual Firefox-on-Android default style
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-  color: $text-color;
-  display: block;
-  font-family: $font-family--ui;
-  font-size: 1rem;
-  line-height: $line-height--base;
-  max-width: 100%;
-  padding: $form-padding;
-  width: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+    background-image: none; // Reset unusual Firefox-on-Android default style
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    color: $text-color;
+    display: block;
+    font-family: $font-family--ui;
+    font-size: 1rem;
+    line-height: $line-height--base;
+    max-width: 100%;
+    padding: $form-padding;
+    width: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
 .select {
-  background-color: $lightest-gray;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-  color: $text-color;
-  cursor: pointer;
-  max-width: 100%;
-  min-width: 25%;
+    background-color: $lightest-gray;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    color: $text-color;
+    cursor: pointer;
+    max-width: 100%;
+    min-width: 25%;
 }
 
 .label {
-  cursor: default;
-  display: inline-block;
-  max-width: 100%; // Force IE8 to wrap long content
+    cursor: default;
+    display: inline-block;
+    max-width: 100%; // Force IE8 to wrap long content
 }
 
 .legend {
-  display: block;
-  white-space: normal;
-  width: 100%;
+    display: block;
+    white-space: normal;
+    width: 100%;
 }
 
 
 // Form layouts
 // -------------------------------------------------------------------
 .form--stacked {
-  .input,
-  .select,
-  .radio,
-  .checkbox,
-  .textarea,
-  .label {
-    display: block;
-    width: 100%;
-  }
+    .input,
+    .select,
+    .radio,
+    .checkbox,
+    .textarea,
+    .label {
+        display: block;
+        width: 100%;
+    }
 }
 
 .form--inline {
-  .form-control {
-    display: inline-block;
-    vertical-align: middle;
-    width: auto; // Prevent labels from stacking above inputs
-                 // in `.form-group`
-  }
+    .form-control {
+        display: inline-block;
+        vertical-align: middle;
+        width: auto; // Prevent labels from stacking above inputs
+                     // in `.form-group`
+    }
 
-  .radio,
-  .checkbox {
-    display: inline-block;
-    vertical-align: middle;
-  }
+    .radio,
+    .checkbox {
+        display: inline-block;
+        vertical-align: middle;
+    }
 }
 
 
 // Placeholder styling
 // -------------------------------------------------------------------
 ::-webkit-input-placeholder {
-  color: $light-gray;
-  -webkit-font-smoothing: antialiased;
+    color: $light-gray;
+    -webkit-font-smoothing: antialiased;
 }
 ::-moz-placeholder {
-  color: $light-gray;
-  -moz-osx-font-smoothing: grayscale;
+    color: $light-gray;
+    -moz-osx-font-smoothing: grayscale;
 }
 :-ms-input-placeholder {
-  color: $light-gray;
+    color: $light-gray;
 }

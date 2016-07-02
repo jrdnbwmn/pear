@@ -13,23 +13,23 @@ a:active, a:hover { outline: 0; }
 .link,
 .link:link,
 .link:visited {
-  color: $link-color;
-  text-decoration: none;
-  transition: color $fade;
+    color: $link-color;
+    text-decoration: none;
+    transition: color $fade;
 }
 
 .default-links a:hover,
 .default-links a:focus,
 .link:hover,
 .link:focus {
-  color: $link-hover-color;
-  text-decoration: underline;
+    color: $link-hover-color;
+    text-decoration: underline;
 }
 
 .default-links a:active,
 .link:active {
-  background-image: none;
-  color: $active-link-color;
-  outline: 0;
-  transition: color $fade;
+    background-image: none;
+    color: $active-link-color;
+    outline: 0;
+    transition: color $fade;
 }

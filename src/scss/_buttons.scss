@@ -1,79 +1,79 @@
 // Normalization
 // -------------------------------------------------------------------
 button {
-  line-height: inherit; // Correct font properties not being inherited
-  vertical-align: middle; // Reset vertical align for relevant elements
-  -webkit-font-smoothing: antialiased; // Doesn't inherit in webkit
+    line-height: inherit; // Correct font properties not being inherited
+    vertical-align: middle; // Reset vertical align for relevant elements
+    -webkit-font-smoothing: antialiased; // Doesn't inherit in webkit
 }
 
 
 // Base button styles
 // -------------------------------------------------------------------
 .btn {
-  background-image: none; // Reset unusual Firefox-on-Android default style: https://github.com/necolas/normalize.css/issues/214
-  border-radius: $border-radius;
-  border-style: solid;
-  border-width: 1px;
-  cursor: pointer;
-  display: inline-block; // Allow us to better style box model properties
-  font-family: $font-family--ui;
-  line-height: $line-height--base;
-  margin-bottom: 0; // For input.btn
-  padding: $button-padding;
-  text-align: center;
-  text-decoration: none;
-  touch-action: manipulation;
-  transition: background-color $fade, background $fade, color $fade, border $fade;
-  user-select: none;
-  vertical-align: middle; // Line different size buttons up nicely
-  white-space: nowrap; // Stop buttons wrapping and looking broken
-  -webkit-appearance: none;
-          appearance: none;
-
-  @media screen and (max-width: $breakpoint--sm) {
-    display: block;
-    margin-bottom: $space-1;
-  }
-
-  &:hover,
-  &:focus {
-    outline: 0;
+    background-image: none; // Reset unusual Firefox-on-Android default style: https://github.com/necolas/normalize.css/issues/214
+    border-radius: $border-radius;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block; // Allow us to better style box model properties
+    font-family: $font-family--ui;
+    line-height: $line-height--base;
+    margin-bottom: 0; // For input.btn
+    padding: $button-padding;
+    text-align: center;
     text-decoration: none;
-  }
+    touch-action: manipulation;
+    transition: background-color $fade, background $fade, color $fade, border $fade;
+    user-select: none;
+    vertical-align: middle; // Line different size buttons up nicely
+    white-space: nowrap; // Stop buttons wrapping and looking broken
+    -webkit-appearance: none;
+            appearance: none;
 
-  &:active {
-    background-image: none;
-    outline: 0;
-  }
+    @media screen and (max-width: $breakpoint--sm) {
+        display: block;
+        margin-bottom: $space-1;
+    }
 
-  &.disabled,
-  &[disabled],
-  &[readonly],
-  fieldset[disabled] & {
-    cursor: not-allowed !important;
-    opacity: 1; // iOS fix for unreadable disabled content
-    pointer-events: none; // Future-proof disabling of clicks
-  }
+    &:hover,
+    &:focus {
+        outline: 0;
+        text-decoration: none;
+    }
+
+    &:active {
+        background-image: none;
+        outline: 0;
+    }
+
+    &.disabled,
+    &[disabled],
+    &[readonly],
+    fieldset[disabled] & {
+        cursor: not-allowed !important;
+        opacity: 1; // iOS fix for unreadable disabled content
+        pointer-events: none; // Future-proof disabling of clicks
+    }
 }
 
 a.btn {
-  &.disabled,
-  fieldset[disabled] & {
-    pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
-  }
+    &.disabled,
+    fieldset[disabled] & {
+        pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+    }
 }
 
 
 // Button sizes
 // -------------------------------------------------------------------
 .btn--lg {
-  font-size: $h3;
-  padding: $button-padding--lg;
+    font-size: $h3;
+    padding: $button-padding--lg;
 }
 
 .btn--sm {
-  font-size: $h6;
-  padding:$button-padding--sm;
+    font-size: $h6;
+    padding:$button-padding--sm;
 }
 
 
@@ -81,58 +81,58 @@ a.btn {
 // -------------------------------------------------------------------
 // Default button
 .btn--default {
-  background-color: $primary-color;
-  border-color: $primary-color;
-  color: $white;
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: $white;
 
-  &:hover,
-  &:focus {
-    background-color: darken($primary-color, 10%);
-    border-color: darken($primary-color, 10%);
-  }
+    &:hover,
+    &:focus {
+        background-color: darken($primary-color, 10%);
+        border-color: darken($primary-color, 10%);
+    }
 
-  &:active {
-    background-color: darken($primary-color, 20%);
-    border-color: darken($primary-color, 20%);
-  }
+    &:active {
+        background-color: darken($primary-color, 20%);
+        border-color: darken($primary-color, 20%);
+    }
 }
 
 // Outline button
 .btn--outline {
-  background-color: transparent;
-  border-color: $light-gray;
-  border-width: 2px;
-  color: $text-color;
+    background-color: transparent;
+    border-color: $light-gray;
+    border-width: 2px;
+    color: $text-color;
 
-  &:hover,
-  &:focus {
-    background-color: darken($lightest-gray, 10%);
-    border-color: darken($lightest-gray, 10%);
-  }
+    &:hover,
+    &:focus {
+        background-color: darken($lightest-gray, 10%);
+        border-color: darken($lightest-gray, 10%);
+    }
 
-  &:active {
-    background-color: darken($lightest-gray, 20%);
-    border-color: darken($lightest-gray, 20%);
-  }
+    &:active {
+        background-color: darken($lightest-gray, 20%);
+        border-color: darken($lightest-gray, 20%);
+    }
 }
 
 // Dark background button
 .btn--dark-bg {
-  background-color: transparent;
-  border-color: $white;
-  border-width: 2px;
-  color: $white;
-
-  &:hover,
-  &:focus {
-    background-color: $white;
+    background-color: transparent;
     border-color: $white;
-    color: $text-color;
-  }
+    border-width: 2px;
+    color: $white;
 
-  &:active {
-    background-color: $lightest-gray;
-    border-color: $lightest-gray;
-    color: $text-color;
-  }
+    &:hover,
+    &:focus {
+        background-color: $white;
+        border-color: $white;
+        color: $text-color;
+    }
+
+    &:active {
+        background-color: $lightest-gray;
+        border-color: $lightest-gray;
+        color: $text-color;
+    }
 }
