@@ -1,6 +1,6 @@
 # Pear
 
-A lightweight front-end launching kit – a starting point for front-end projects.
+A lightweight front-end launching kit – a starting point for HTML5/Sass projects.
 
 The minified, *un*compressed CSS file comes in at 13kb.
 
@@ -11,20 +11,20 @@ Pear is focused on:
 - Maintainability
 - Architecture/workflow
 
+## What's Included
+
+- HTML boilerplate with a simple pattern library (demonstrated on the website).
+- Base Sass styles
+- Advanced Gulp setup for a local server, CSS compliation & minification, etc
+
 ## Getting Started
-Options for starting with Pear:
+There's a few options:
 
 - Download directly from the [GitHub repo](https://github.com/jrdnbwmn/pear).
 - Clone the repo: `git clone https://github.com/jrdnbwmn/pear.git`.
 - Install with [Bower](http://bower.io/): `bower install pear`.
 
 Run `npm install` and then `gulp` to get BrowserSync going along with all the Gulp tasks.
-
-## What's Included
-
-- HTML boilerplate with a simple pattern library (demonstrated on the website).
-- Base Sass styles
-- Advanced Gulp setup
 
 ## License
 Released under the [MIT License](http://opensource.org/licenses/MIT).
