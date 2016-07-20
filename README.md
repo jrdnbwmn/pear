@@ -2,6 +2,8 @@
 
 A lightweight front-end launching kit – a starting point for HTML5/Sass projects.
 
+See it at http://eatapear.com.
+
 The minified, *un*compressed CSS file comes in at 13kb.
 
 Pear is focused on:
