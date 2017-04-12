@@ -1,6 +1,6 @@
 # Pear
 
-A lightweight front-end launching kit – a starting point for HTML5/Sass projects.
+A lightweight front-end launching kit – a boilerplate for HTML/Sass projects.
 
 See it at http://eatapear.com.
 
