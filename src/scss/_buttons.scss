@@ -17,6 +17,7 @@ button {
     cursor: pointer;
     display: inline-block; // Allow us to better style box model properties
     font-family: $font-family--ui;
+    font-size: 1rem;
     line-height: $line-height--base;
     margin-bottom: 0; // For input.btn
     padding: $button-padding;

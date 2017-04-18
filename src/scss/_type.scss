@@ -115,10 +115,10 @@ hr {
 .italic                  { font-style: italic; }
 
 // Text align
-.left-align              { text-align: left; }
-.center                  { text-align: center; }
-.right-align             { text-align: right; }
-.justify                 { text-align: justify; }
+.align--left             { text-align: left; }
+.align--center           { text-align: center; }
+.align--right            { text-align: right; }
+.align--justify          { text-align: justify; }
 
 // Line height
 .line-height--base       { line-height: $line-height--base; }
