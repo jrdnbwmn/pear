@@ -1,34 +1,3 @@
-// Normalization
-// -------------------------------------------------------------------
-// 1. Correct `inline-block` display not defined in IE 8/9.
-// 2. Remove the gap between images, videos, audio and canvas and the bottom of
-//    their containers: h5bp.com/i/440
-embed,
-iframe,
-object,
-img {
-    display: inline-block; // [1]
-    vertical-align: middle; // [2]
-}
-
-// Prevent border around iframes.
-iframe { border: 0; }
-
-img {
-    border: 0; // Remove border when inside `a` element in IE 8/9/10
-    font-style: italic; // So that `alt` text is visually offset if images don’t load
-    height: auto; // Scale the height according to the width, otherwise you get stretching
-    -ms-interpolation-mode: bicubic; // http://css-tricks.com/ie-fix-bicubic-scaling-for-images/
-}
-
-// Better control over svg size
-svg { max-height: 100%; }
-
-// Google Maps breaks if `max-width: 100%` acts upon it; use their selector
-// to remove the effects.
-.gm-style img { max-width: none; }
-
-
 // Base embed styles
 // -------------------------------------------------------------------
 // Make stuff responsive

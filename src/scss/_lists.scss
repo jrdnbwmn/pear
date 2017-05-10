@@ -1,22 +1,3 @@
-// Normalization
-// -------------------------------------------------------------------
-ul,
-ol {
-    margin-bottom: $p-mb;
-
-    ul,
-    ol {
-        margin-bottom: 0; // Take off bottom margin from nested lists.
-    }
-}
-
-// Define styling for terms.
-dt { font-weight: bold; }
-
-// Undo browser default.
-dd { margin-left: 0; }
-
-
 // Base list styles
 // -------------------------------------------------------------------
 // Remove bullets

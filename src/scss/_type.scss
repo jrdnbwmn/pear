@@ -1,27 +1,3 @@
-// Normalization
-// -------------------------------------------------------------------
-// Address variances font weight/styles and line heights.
-b, strong { line-height: inherit; }
-
-em,
-i {
-    font-style: italic;
-    line-height: inherit;
-}
-
-// Undo browser default styling.
-cite { font-style: normal; }
-
-// Remove underlines from potentially troublesome elements.
-u, ins { text-decoration: none; }
-
-// Normalize font size
-sub, sup { font-size: $font-size--sm; }
-
-// Give a help cursor to elements that give extra info on `:hover`.
-abbr[title], dfn[title] { cursor: help; }
-
-
 // Typographic scale
 // -------------------------------------------------------------------
 h1, .h1                 { font-size: $h1; }

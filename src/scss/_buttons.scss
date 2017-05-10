@@ -1,12 +1,3 @@
-// Normalization
-// -------------------------------------------------------------------
-button {
-    line-height: inherit; // Correct font properties not being inherited
-    vertical-align: middle; // Reset vertical align for relevant elements
-    -webkit-font-smoothing: antialiased; // Doesn't inherit in webkit
-}
-
-
 // Base button styles
 // -------------------------------------------------------------------
 .btn {
