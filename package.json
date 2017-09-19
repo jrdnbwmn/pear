@@ -1,8 +1,8 @@
 {
     "name": "pear-gulp",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "author": "Jordan Bowman",
-    "description": "This is a Gulp boilerplate that is part of the Pear front-end kit",
+    "description": "This is a Gulp boilerplate that is part of the Pear HTML/Sass boilerplate",
     "private": true,
     "devDependencies": {
         "browser-sync": "*",
@@ -20,7 +20,6 @@
         "gulp-sass": "*",
         "gulp-size": "*",
         "gulp-uglify": "*",
-        "gulp-uncss": "*",
         "gulp-util": "*",
         "gulp-watch": "*"
     }

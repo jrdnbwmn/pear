@@ -12,7 +12,6 @@ var gulp                    = require("gulp"),
     combineMediaQueries     = require("gulp-combine-mq"),
     autoprefixer            = require("gulp-autoprefixer"),
     cssmin                  = require("gulp-clean-css"),
-    uncss                   = require("gulp-uncss"),
     rename                  = require("gulp-rename"),
     globber                 = require('glob'),
 
@@ -34,10 +33,6 @@ var gulp                    = require("gulp"),
 // Tasks
 // -------------------------------------------------------------------
 // Start server
-// Note: Replace `localhost` in the browser URL with your system's
-// internal IP (something like 192.168.32.20) and then you'll be able
-// to go to that address on multiple devices and all reloading,
-// scrolling, clicking, etc will be synced across everything.
 gulp.task("browser-sync", function() {
     browserSync({
         server: {
@@ -95,31 +90,6 @@ gulp.task("css", function() {
         .pipe(cssmin())
         // Rename the file
         .pipe(rename("production.css"))
-        // Show sizes of minified CSS files
-        .pipe(size({ showFiles: true }))
-        // Where to store the finalized CSS
-        .pipe(gulp.dest("dist/css"));
-});
-
-// Unused CSS task
-// This task is not part of the regular gulp task
-// Run it individually to get rid of unused CSS
-gulp.task("unused-css", function() {
-    return gulp.src("dist/css/*.css")
-        // Prevent gulp.watch from crashing
-        .pipe(plumber(onError))
-        // Remove any CSS that isn't being used
-        .pipe(uncss({
-        // Target all the HTML files in the dist directory
-        html: globber.sync("dist/**/*.html"),
-        // Keep some JS dependent CSS from being deleted,
-        // this is an example, configure as needed
-        ignore: [
-            ".js"
-        ]
-        }))
-        // Minify CSS
-        .pipe(cssmin())
         // Show sizes of minified CSS files
         .pipe(size({ showFiles: true }))
         // Where to store the finalized CSS
