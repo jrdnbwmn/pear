@@ -22,11 +22,6 @@
     -webkit-appearance: none;
             appearance: none;
 
-    @media screen and (max-width: $breakpoint--sm) {
-        display: block;
-        margin-bottom: $space-1;
-    }
-
     &:hover,
     &:focus {
         outline: 0;
@@ -34,8 +29,8 @@
     }
 
     &:active {
-        background-image: none;
         outline: 0;
+        background-image: none;
     }
 
     &.disabled,
@@ -45,6 +40,11 @@
         cursor: not-allowed !important;
         opacity: 1; // iOS fix for unreadable disabled content
         pointer-events: none; // Future-proof disabling of clicks
+    }
+
+    @media screen and (max-width: $breakpoint--sm) {
+        display: block;
+        margin-bottom: $space-1;
     }
 }
 
@@ -58,11 +58,6 @@ a.btn {
 
 // Button sizes
 // -------------------------------------------------------------------
-.btn--lg {
-    font-size: $h3;
-    padding: $button-padding--lg;
-}
-
 .btn--sm {
     font-size: $h6;
     padding:$button-padding--sm;
@@ -90,21 +85,22 @@ a.btn {
 }
 
 // Outline button
-.btn--outline {
+.btn--outline,
+.btn--outline:visited {
     background-color: transparent;
-    border-color: $light-gray;
-    border-width: 2px;
+    border-color: $border-color;
+    border-width: 1px;
     color: $text-color;
 
     &:hover,
     &:focus {
-        background-color: darken($lightest-gray, 10%);
-        border-color: darken($lightest-gray, 10%);
+        background-color: transparent;
+        border-color: $dark-gray;
     }
 
     &:active {
-        background-color: darken($lightest-gray, 20%);
-        border-color: darken($lightest-gray, 20%);
+        background-color: transparent;
+        border-color: $light-gray;
     }
 }
 

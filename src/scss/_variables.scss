@@ -1,14 +1,14 @@
 // Colors
 // -------------------------------------------------------------------
 // Grayscale
-$gray-base:               #8494a6 !default;
+$gray-base:               #87919d !default;
 
 $black:                   #000 !default;
-$darkest-gray:            darken($gray-base, 34%) !default;
-$dark-gray:               darken($gray-base, 17%) !default;
+$darkest-gray:            darken($gray-base, 36%) !default;
+$dark-gray:               darken($gray-base, 18%) !default;
 $gray:                    $gray-base !default;
-$light-gray:              lighten($gray-base, 17%) !default;
-$lightest-gray:           lighten($gray-base, 34%) !default;
+$light-gray:              lighten($gray-base, 18%) !default;
+$lightest-gray:           lighten($gray-base, 36%) !default;
 $white:                   #fff !default;
 
 // Hues
@@ -30,7 +30,7 @@ $baseline:                .4rem !default;
 // Typography
 // -------------------------------------------------------------------
 // Font families
-$sans-serif:              "Avenir Next", Avenir, Trebuchet, Verdana,
+$sans-serif:              "Gotham", Avenir, Trebuchet, Verdana,
                           sans-serif !default;
 $serif:                   Georgia, Times, serif !default;
 $monospace:               Monaco, Menlo, Consolas,
@@ -65,7 +65,7 @@ $text-color:              $dark-gray !default;
 
 // Text sizes
 $font-size--mobile:       14px !default;
-$font-size--desktop:      18px !default;
+$font-size--desktop:      15px !default;
 $font-size--lg:           $h3 !default;
 $font-size--sm:           $h5 !default;
 
@@ -125,21 +125,20 @@ $table-padding:           $baseline*2 $baseline*2 !default;
 
 // Buttons
 // -------------------------------------------------------------------
-$button-padding--lg:      $baseline*3 $baseline*4 !default;
-$button-padding:          $baseline $baseline*3 !default;
-$button-padding--sm:      0 $baseline*2 !default;
+$button-padding:          .35rem .9rem .25rem !default;
+$button-padding--sm:      .1rem .6rem 0 !default;
 
 
 // Forms
 // -------------------------------------------------------------------
-$form-padding:            $baseline $baseline !default;
+$form-padding:            .35rem .7rem .25rem !default;
 
 
 // Borders
 // -------------------------------------------------------------------
 $border-color:            $light-gray !default;
 $border-style:            solid !default;
-$border-radius:           4px !default;
+$border-radius:           3px !default;
 $border-width:            1px !default;
 
 

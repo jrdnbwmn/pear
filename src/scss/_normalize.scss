@@ -85,8 +85,17 @@ textarea {
 // Remove outline on certain elements.
 select:focus, input:focus, textarea:focus { outline: 0; }
 
+// Undo the Firefox inner focus ring
+.select select:focus:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
 // Make multiple select elements height not fixed
 select[multiple], select[size] { height: auto; }
+
+.select--list:after { content: none!important; }
+select::-ms-expand { display: none; }
 
 // Normalize output element
 output {
@@ -147,7 +156,7 @@ svg { max-height: 100%; }
 .gm-style img { max-width: none; }
 
 
-/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
@@ -166,6 +175,14 @@ html {
 
 /* Sections
    ========================================================================== */
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+
+body {
+  margin: 0;
+}
 
 /**
  * Add the correct display in IE 9-.
@@ -374,7 +391,8 @@ svg:not(:root) {
    ========================================================================== */
 
 /**
- * Remove the margin in Firefox and Safari.
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
  */
 
 button,
@@ -382,7 +400,10 @@ input,
 optgroup,
 select,
 textarea {
-  margin: 0;
+  font-family: sans-serif; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -439,6 +460,14 @@ button:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
 }
 
 /**
