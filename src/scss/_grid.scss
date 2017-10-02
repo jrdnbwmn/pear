@@ -17,6 +17,7 @@ $grid-breakpoint: $breakpoint--sm;
 // This is to offset the padding on the first/last column via negative margin
 .grid-row {
     display: flex;
+    flex: 0 1 auto;
     flex-direction: row;
     flex-wrap: wrap;
     // For gutters
@@ -29,10 +30,18 @@ $grid-breakpoint: $breakpoint--sm;
 
 // // Apply this class to all grid units
 .grid-column {
-    flex: 1;
+    flex: 1 0 0%;
 
     // Gutters
     padding: 0 $column-padding;
+
+    @media screen and (max-width: $grid-breakpoint) {
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+        padding: 0;
+        margin-left: 0;
+    }
 }
 
 
@@ -53,20 +62,20 @@ $grid-breakpoint: $breakpoint--sm;
 // Widths
 // -------------------------------------------------------------------
 // Set up width the placeholders
-%whole                        { flex: 0 0 percentage(1/1); width: percentage(1/1); }
-%half                         { flex: 0 0 percentage(1/2); width: percentage(1/2); }
+%whole                        { flex-basis: percentage(1/1); max-width: percentage(1/1); }
+%half                         { flex-basis: percentage(1/2); max-width: percentage(1/2); }
 
-%one-third                    { flex: 0 0 percentage(1/3); width: percentage(1/3); }
-%two-thirds                   { flex: 0 0 percentage(2/3); width: percentage(2/3); }
+%one-third                    { flex-basis: percentage(1/3); max-width: percentage(1/3); }
+%two-thirds                   { flex-basis: percentage(2/3); max-width: percentage(2/3); }
 
-%one-fourth                   { flex: 0 0 percentage(1/4); width: percentage(1/4); }
-%two-fourths                  { flex: 0 0 percentage(2/4); width: percentage(2/4); }
-%three-fourths                { flex: 0 0 percentage(3/4); width: percentage(3/4); }
+%one-fourth                   { flex-basis: percentage(1/4); max-width: percentage(1/4); }
+%two-fourths                  { flex-basis: percentage(2/4); max-width: percentage(2/4); }
+%three-fourths                { flex-basis: percentage(3/4); max-width: percentage(3/4); }
 
-%one-fifth                    { flex: 0 0 percentage(1/5); width: percentage(1/5); }
-%two-fifths                   { flex: 0 0 percentage(2/5); width: percentage(2/5); }
-%three-fifths                 { flex: 0 0 percentage(3/5); width: percentage(3/5); }
-%four-fifths                  { flex: 0 0 percentage(4/5); width: percentage(4/5); }
+%one-fifth                    { flex-basis: percentage(1/5); max-width: percentage(1/5); }
+%two-fifths                   { flex-basis: percentage(2/5); max-width: percentage(2/5); }
+%three-fifths                 { flex-basis: percentage(3/5); max-width: percentage(3/5); }
+%four-fifths                  { flex-basis: percentage(4/5); max-width: percentage(4/5); }
 
 // Configure classes based on chosen number of columns
 // This will pump out classes like `span-3` which will make the unit
@@ -96,8 +105,8 @@ $grid-breakpoint: $breakpoint--sm;
         } @else if percentage($n/$total-number-columns) == percentage(4/5) {
           @extend %four-fifths;
         } @else {
-          flex: 0 0 percentage($n/$total-number-columns);
-          width: percentage($n/$total-number-columns);
+          flex-basis: percentage($n/$total-number-columns);
+          max-width: percentage($n/$total-number-columns);
         }
     }
 }
@@ -117,15 +126,6 @@ $grid-breakpoint: $breakpoint--sm;
 .span-two-fifths              { @extend %two-fifths; }
 .span-three-fifths            { @extend %three-fifths; }
 .span-four-fifths             { @extend %four-fifths; }
-
-// Mobile
-.grid-column {
-    @media screen and (max-width: $grid-breakpoint) {
-        flex: 0 0 100%;
-        padding: 0;
-        margin-left: 0;
-    }
-}
 
 
 // Offsets
@@ -191,8 +191,3 @@ $grid-breakpoint: $breakpoint--sm;
 .offset-two-fifths            { @extend %m-two-fifths; }
 .offset-three-fifths          { @extend %m-three-fifths; }
 .offset-four-fifths           { @extend %m-four-fifths; }
-
-/* IE 10+ hack */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .grid-column { padding: 0; }
-}
