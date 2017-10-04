@@ -19,6 +19,16 @@ hr {
     padding: 0;
 }
 
+// Fix some font rendering
+body,
+input,
+textarea,
+button,
+select {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+}
+
 // Address variances font weight/styles and line heights.
 b, strong { line-height: inherit; }
 
@@ -43,6 +53,17 @@ abbr[title], dfn[title] { cursor: help; }
 // Improve readability when focused and also mouse hovered in all browsers.
 a:active, a:hover { outline: 0; }
 
+// Enable no-delay taps (FastClick-esque) on supporting browsers
+a,
+button,
+[role="button"],
+input,
+label,
+select,
+textarea {
+    touch-action: manipulation;
+}
+
 ul,
 ol {
     margin-bottom: $p-mb;
@@ -62,7 +83,6 @@ dd { margin-left: 0; }
 button {
     line-height: inherit; // Correct font properties not being inherited
     vertical-align: middle; // Reset vertical align for relevant elements
-    -webkit-font-smoothing: antialiased; // Doesn't inherit in webkit
 }
 
 // Make font family consistent
@@ -89,11 +109,22 @@ input, optgroup, select, textarea { line-height: inherit; }
 // Reset vertical align for relevant elements.
 input, select, label, { vertical-align: middle; }
 
+// Force option color (affects IE only)
+option {
+    color: $text-color;
+    background-color: $white;
+}
+
 // Set the height file controls to match text inputs
 // Normalize file input width
 input[type=file] {
     display: block;
     width: 100%;
+}
+
+// Prevent zoom on touch devices in active inputs
+@media screen and (max-width: $breakpoint--md) {
+    input, textarea, select { font-size: 16px; }
 }
 
 textarea {
@@ -103,6 +134,9 @@ textarea {
 
 // Remove outline on certain elements.
 select:focus, input:focus, textarea:focus { outline: 0; }
+
+// hide outline on focus for elements which are given focus by JS
+[tabindex='-1']:focus { outline: none; }
 
 // Undo the Firefox inner focus ring
 .select select:focus:-moz-focusring {
