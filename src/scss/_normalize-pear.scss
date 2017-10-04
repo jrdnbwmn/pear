@@ -1,5 +1,24 @@
 // Pear's normalizations
 // -------------------------------------------------------------------
+// It's often advantageous to remove all margins/paddings from certain elements
+blockquote,
+pre,
+ul,
+ol,
+dl,
+dd,
+form,
+fieldset,
+figure,
+table,
+th,
+td,
+caption,
+hr {
+    margin: 0;
+    padding: 0;
+}
+
 // Address variances font weight/styles and line heights.
 b, strong { line-height: inherit; }
 
