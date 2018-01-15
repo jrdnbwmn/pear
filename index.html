@@ -7,28 +7,19 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name="description" content="Pear is a lightweight front-end launching kit">
 
         <title>Pear HTML</title>
+        <meta name="description" content="Pear is a lightweight front-end launching kit">
 
         <!-- The compiled CSS file -->
         <link rel="stylesheet" href="css/production.css">
 
-        <!-- Import web fonts using the link tag instead of CSS @import: http://stackoverflow.com/questions/12316501/including-google-web-fonts-link-or-import
-        <link rel="stylesheet" href=""> -->
+        <!-- Web fonts -->
+        <link rel="stylesheet" href="">
 
-        <!-- Favicon.ico and apple-touch-icon.png (according to Apple docs). A good tool is http://iconogen.com/. Place these in the root directory. -->
-        <link rel="shortcut icon" href="assets/ico/favicon.ico">
-        <link rel="apple-touch-icon" href="touch-icon-iphone.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
-
-        <!-- Canonical -->
-        <link rel="canonical" href="">
-
-        <!-- RSS -->
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss">
+        <!-- favicon.ico and apple-touch-icon. A good tool is http://iconogen.com/. Place these in the root directory. -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="apple-touch-icon" href="icon.png">
 
     </head>
 
@@ -39,7 +30,7 @@
             <div class="container">
                 <h1>Pear</h1>
                 <p class="m0 h2 heading-line-height">A lightweight front-end boilerplate</p>
-                <p>v2.7.0</p>
+                <p>v2.8.0</p>
                 <div>
                     <a class="btn btn--dark-bg" href="https://github.com/jrdnbwmn/Pear">View on Github →</a>
                 </div>
@@ -112,68 +103,25 @@
                 <input class="form-control mb1" placeholder="Name">
                 <input class="form-control mb1" type="email" placeholder="Email Address">
                 <input class="form-control mb1" type="subject" placeholder="Subject">
+                <div class="select mb1">
+                    <select>
+                        <option selected="selected">Open this select</option>
+                        <option>One</option>
+                        <option>Two</option>
+                        <option>Three</option>
+                    </select>
+                </div>
                 <textarea class="form-control mb1" placeholder="Message"></textarea>
-                <button class="btn btn--default">Submit</button>
+                <button class="btn btn--default">Default</button>
             </form>
         </section>
 
         <!-- Buttons -->
         <section class="pb4">
             <h2 class="text--gray pb1 border--bottom">Buttons</h2>
-            <a class="btn btn--default btn--lg" href="">Large Default</a>
-            <a class="btn btn--outline" href="">Medium Outline</a>
             <a class="btn btn--default" href="">Medium Default</a>
-            <a class="btn btn--outline btn--sm" href="">Small Outline</a>
-        </section>
-
-        <!-- Tables -->
-        <section class="pb4">
-            <h2 class="text--gray pb1 border--bottom">Tables</h2>
-            <div class="table--responsive">
-                <table class="table table-row-borders">
-                    <thead>
-                        <tr>
-                            <th>Tournament</th>
-                            <th>Place</th>
-                            <th>Winnings</th>
-                            <th>Points</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Sony Open</td>
-                            <td>2nd</td>
-                            <td>$752,000</td>
-                            <td>75</td>
-                        </tr>
-                        <tr>
-                            <td>Arnold Palmer Invitational</td>
-                            <td>6th</td>
-                            <td>$320,000</td>
-                            <td>50</td>
-                        </tr>
-                        <tr>
-                            <td>Tavistock Cup</td>
-                            <td>12th</td>
-                            <td>$92,000</td>
-                            <td>19</td>
-                        </tr>
-                        <tr>
-                            <td>Zurich Classic</td>
-                            <td>5th</td>
-                            <td>$310,000</td>
-                            <td>53</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="2"><em>Totals</em></td>
-                            <td>$1,474,000</td>
-                            <td>197</td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
+            <a class="btn btn--outline" href="">Medium Outline</a>
+            <a class="btn btn--default btn--sm" href="">Small Default</a>
         </section>
 
         <!-- Grid -->
@@ -234,20 +182,16 @@
             </div>
         </footer>
 
-        <!-- Reference latest jQuery, with a local fallback -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-
-        <!-- Your compiled Javascript file -->
+        <!-- The compiled JavaScript file -->
         <script src="js/production.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to your site's ID -->
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-46498321-1','auto');ga('send','pageview')
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
         </script>
         <script src="https://www.google-analytics.com/analytics.js" async defer="defer"></script>
 
     </body>
-
 </html>
+
