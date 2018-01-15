@@ -1,4 +1,4 @@
-// Pear's normalizations
+// General
 // -------------------------------------------------------------------
 // It's often advantageous to remove all margins/paddings from certain elements
 blockquote,
@@ -19,6 +19,12 @@ hr {
     padding: 0;
 }
 
+// Hide outline on focus for elements which are given focus by JS
+[tabindex='-1']:focus { outline: none; }
+
+
+// Type
+// -------------------------------------------------------------------
 // Fix some font rendering
 body,
 input,
@@ -28,27 +34,6 @@ select {
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
 }
-
-// Address variances font weight/styles and line heights.
-b, strong { line-height: inherit; }
-
-em,
-i {
-    font-style: italic;
-    line-height: inherit;
-}
-
-// Undo browser default styling.
-cite { font-style: normal; }
-
-// Remove underlines from potentially troublesome elements.
-u, ins { text-decoration: none; }
-
-// Normalize font size
-sub, sup { font-size: $font-size--sm; }
-
-// Give a help cursor to elements that give extra info on `:hover`.
-abbr[title], dfn[title] { cursor: help; }
 
 // Improve readability when focused and also mouse hovered in all browsers.
 a:active, a:hover { outline: 0; }
@@ -74,25 +59,24 @@ ol {
     }
 }
 
-// Define styling for terms.
-dt { font-weight: bold; }
-
-// Undo browser default.
-dd { margin-left: 0; }
-
-button {
-    line-height: inherit; // Correct font properties not being inherited
-    vertical-align: middle; // Reset vertical align for relevant elements
-}
-
 // Make font family consistent
 code, kbd, pre, samp { font-family: $font-family--code; }
 
-// 1. Normalize display.
-// 2. Prevent from breaking out of container cells.
+// Address variances font weight/styles and line heights.
+b, strong { line-height: inherit; }
+
+em,
+i {
+    font-style: italic;
+    line-height: inherit;
+}
+
+
+// Tables
+// -------------------------------------------------------------------
 table {
-    display: table; // [1]
-    max-width: 100%; // [2]
+    display: table; // Normalize display
+    max-width: 100%; // Prevent from breaking out of container cells
 }
 
 // Normalize elements of a table.
@@ -103,59 +87,10 @@ th {
 }
 th { text-align: left; }
 
-// Correct font properties not being inherited.
-input, optgroup, select, textarea { line-height: inherit; }
 
-// Reset vertical align for relevant elements.
-input, select, label, { vertical-align: middle; }
-
-// Force option color (affects IE only)
-option {
-    color: $text-color;
-    background-color: $white;
-}
-
-// Set the height file controls to match text inputs
-// Normalize file input width
-input[type=file] {
-    display: block;
-    width: 100%;
-}
-
-// Prevent zoom on touch devices in active inputs
-@media screen and (max-width: $breakpoint--md) {
-    input, textarea, select { font-size: 16px; }
-}
-
-textarea {
-    height: auto; // Reset height for textareas
-    resize: vertical; // Allow only vertical resizing of textareas
-}
-
-// Remove outline on certain elements.
-select:focus, input:focus, textarea:focus { outline: 0; }
-
-// hide outline on focus for elements which are given focus by JS
-[tabindex='-1']:focus { outline: none; }
-
-// Undo the Firefox inner focus ring
-.select select:focus:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 #000;
-}
-
-// Make multiple select elements height not fixed
-select[multiple], select[size] { height: auto; }
-
-.select--list:after { content: none!important; }
-select::-ms-expand { display: none; }
-
-// Normalize output element
-output {
-    display: block;
-    font-size: 1rem;
-    line-height: $line-height--base;
-}
+// Forms
+// -------------------------------------------------------------------
+form { font-size: 1rem; }
 
 // 1. Chrome and Firefox set a `min-width: min-content;` on fieldsets,
 //    so we reset that to ensure it behaves more like a standard block element.
@@ -170,6 +105,45 @@ legend {
     margin: 0; // Reset margins
 }
 
+// Correct font properties not being inherited.
+input, optgroup, select, textarea { line-height: inherit; }
+
+// Reset vertical align for relevant elements.
+input, select, label, { vertical-align: middle; }
+
+// Set the height file controls to match text inputs
+// Normalize file input width
+input[type=file] {
+    display: block;
+    width: 100%;
+}
+
+textarea {
+    height: auto; // Reset height for textareas
+    resize: vertical; // Allow only vertical resizing of textareas
+}
+
+// Remove outline on certain elements.
+select:focus, input:focus, textarea:focus { outline: 0; }
+
+// Undo the Firefox inner focus ring
+.select select:focus:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+// Make multiple select elements height not fixed
+select[multiple], select[size] { height: auto; }
+
+.select--list:after { content: none!important; }
+select::-ms-expand { display: none; }
+
+// Force option color (affects IE only)
+option {
+    color: $text-color;
+    background-color: $white;
+}
+
 input[disabled],
 input[readonly],
 fieldset[disabled] input {
@@ -178,8 +152,19 @@ fieldset[disabled] input {
     pointer-events: none; // Future-proof disabling of clicks
 }
 
-form { font-size: 1rem; }
+button {
+    line-height: inherit; // Correct font properties not being inherited
+    vertical-align: middle; // Reset vertical align for relevant elements
+}
 
+// Prevent zoom on touch devices in active inputs
+@media screen and (max-width: $breakpoint--md) {
+    input, textarea, select { font-size: 16px; }
+}
+
+
+// Embeds
+// -------------------------------------------------------------------
 // 1. Correct `inline-block` display not defined in IE 8/9.
 // 2. Remove the gap between images, videos, audio and canvas and the bottom of
 //    their containers: h5bp.com/i/440
