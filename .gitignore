@@ -19,7 +19,9 @@
 *.zip
 
 # Logs and databases
+logs
 *.log
+npm-debug.log*
 *.sql
 *.sqlite
 
@@ -42,7 +44,11 @@ nbproject
 .idea
 
 # Sass
-.sass-cache
+.sass-cache/
+*.css.map
 
 # Gulp/Node
-node_modules
+node_modules/
+
+# Other
+archive
