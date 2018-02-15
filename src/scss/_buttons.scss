@@ -4,7 +4,7 @@
     background-image: none; // Reset unusual Firefox-on-Android default style: https://github.com/necolas/normalize.css/issues/214
     border-radius: $border-radius;
     border-style: solid;
-    border-width: 1px;
+    border-width: $border-width;
     cursor: pointer;
     display: inline-block; // Allow us to better style box model properties
     font-family: $font-family--ui;
@@ -89,7 +89,7 @@ a.btn {
 .btn--outline:visited {
     background-color: transparent;
     border-color: $border-color;
-    border-width: 1px;
+    border-width: $border-width;
     color: $text-color;
 
     &:hover,
@@ -108,7 +108,7 @@ a.btn {
 .btn--dark-bg {
     background-color: transparent;
     border-color: $white;
-    border-width: 1px;
+    border-width: $border-width;
     color: $white;
 
     &:hover,

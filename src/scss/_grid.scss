@@ -35,9 +35,10 @@ $grid-breakpoint: $breakpoint--sm;
     // Gutters
     padding: 0 $column-padding;
 
+    // Breakpoint
     @media screen and (max-width: $grid-breakpoint) {
         flex-grow: 1;
-        flex-basis: 0;
+        flex-basis: 100%;
         max-width: 100%;
         padding: 0;
         margin-left: 0;

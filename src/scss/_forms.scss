@@ -6,7 +6,7 @@
 // input (of any type)
 .form-control {
     background-image: none; // Reset unusual Firefox-on-Android default style
-    border: 1px solid $border-color;
+    border: $border-width solid $border-color;
     border-radius: $border-radius;
     color: $text-color;
     display: block;
@@ -72,7 +72,7 @@
 
 .select select {
     background-color: $white;
-    border: 1px solid $border-color;
+    border: $border-width solid $border-color;
     border-radius: $border-radius;
     color: $text-color;
     cursor: pointer;
