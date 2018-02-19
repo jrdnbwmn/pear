@@ -42,8 +42,7 @@ $font-family--reading:    $serif !default;
 $font-family--ui:         $sans-serif !default;
 $font-family--code:       $monospace !default;
 
-// Type scale
-// Good tool: http://type-scale.com/
+// Type scale - good tool: http://type-scale.com/
 $h1:                      2.369rem !default;
 $h2:                      1.777rem !default;
 $h3:                      1.333rem !default;
@@ -104,7 +103,6 @@ $heading-mb:              $p-mb !default;
 
 // Links
 // -------------------------------------------------------------------
-// Link colors
 $link-color:              $primary-color !default;
 $link-hover-color:        darken($primary-color, 10%) !default;
 $active-link-color:       darken($primary-color, 25%) !default;
@@ -112,7 +110,6 @@ $active-link-color:       darken($primary-color, 25%) !default;
 
 // Code
 // -------------------------------------------------------------------
-// Code colors
 $code-color:              $dark-gray !default;
 $code-bg-color:           $lightest-gray !default;
 $code-padding:            $baseline*2 $baseline*2 !default;
