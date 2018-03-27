@@ -6,7 +6,6 @@
     "private": true,
     "devDependencies": {
         "browser-sync": "*",
-        "glob": "*",
         "gulp": "*",
         "gulp-autoprefixer": "*",
         "gulp-clean-css": "*",

@@ -30,7 +30,7 @@ $baseline:                .4rem !default;
 // Typography
 // -------------------------------------------------------------------
 // Font families
-$sans-serif:              Avenir, "Avenir Next", Trebuchet, Verdana,
+$sans-serif:              "Work Sans", Avenir, "Avenir Next", Trebuchet, Verdana,
                           sans-serif !default;
 $serif:                   Georgia, Times, serif !default;
 $monospace:               Monaco, Menlo, Consolas,
@@ -63,8 +63,8 @@ $h6--desktop:             .75rem !default;
 $text-color:              $dark-gray !default;
 
 // Text sizes
-$font-size--mobile:       14px !default;
-$font-size--desktop:      15px !default;
+$font-size--mobile:       15px !default;
+$font-size--desktop:      16px !default;
 $font-size--lg:           $h3 !default;
 $font-size--sm:           $h5 !default;
 

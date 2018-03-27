@@ -1,6 +1,6 @@
 // Get things set up
 // -------------------------------------------------------------------
-// Include Gulp
+    // Include Gulp
 var gulp                    = require("gulp"),
 
     // HTML plugins
@@ -13,7 +13,6 @@ var gulp                    = require("gulp"),
     autoprefixer            = require("gulp-autoprefixer"),
     cssmin                  = require("gulp-clean-css"),
     rename                  = require("gulp-rename"),
-    globber                 = require('glob'),
 
     // JS plugins
     concat                  = require("gulp-concat"),
