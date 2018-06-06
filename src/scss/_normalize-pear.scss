@@ -159,7 +159,7 @@ button {
 
 // Prevent zoom on touch devices in active inputs
 @media screen and (max-width: $breakpoint--md) {
-    input, textarea, select { font-size: 16px; }
+    input, textarea, select { font-size: $font-size--desktop; }
 }
 
 
