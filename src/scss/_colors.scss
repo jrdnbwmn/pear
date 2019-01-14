@@ -2,11 +2,12 @@
 // -------------------------------------------------------------------
 // Grayscale
 .text--white               { color: $white; }
-.text--lightest-gray       { color: $lightest-gray; }
-.text--light-gray          { color: $light-gray; }
-.text--gray                { color: $gray; }
-.text--dark-gray           { color: $dark-gray; }
-.text--darkest-gray        { color: $darkest-gray; }
+.text--gray-1              { color: $gray-1; }
+.text--gray-2              { color: $gray-2; }
+.text--gray-3              { color: $gray-3; }
+.text--gray-4              { color: $gray-4; }
+.text--gray-5              { color: $gray-5; }
+.text--gray-6              { color: $gray-6; }
 
 // Color scheme
 .text--primary-color       { color: $primary-color; }
@@ -18,13 +19,25 @@
 // -------------------------------------------------------------------
 // Grayscale
 .bg--white                 { background-color: $white; }
-.bg--lightest-gray         { background-color: $lightest-gray; }
-.bg--light-gray            { background-color: $light-gray; }
-.bg--gray                  { background-color: $gray; }
-.bg--dark-gray             { background-color: $dark-gray; }
-.bg--darkest-gray          { background-color: $darkest-gray; }
+.bg--gray-1                { background-color: $gray-1; }
+.bg--gray-2                { background-color: $gray-2; }
+.bg--gray-3                { background-color: $gray-3; }
+.bg--gray-4                { background-color: $gray-4; }
+.bg--gray-5                { background-color: $gray-5; }
+.bg--gray-6                { background-color: $gray-6; }
 
 // Color scheme
 .bg--primary-color         { background-color: $primary-color; }
 .bg--secondary-color       { background-color: $secondary-color; }
 .bg--tertiary-color        { background-color: $tertiary-color; }
+
+// Hues
+.bg--blue                  { background-color: $blue; }
+.bg--turquoise             { background-color: $turquoise; }
+.bg--green                 { background-color: $green; }
+.bg--yellow                { background-color: $yellow; }
+.bg--orange                { background-color: $orange; }
+.bg--red                   { background-color: $red; }
+.bg--pink                  { background-color: $pink; }
+.bg--purple                { background-color: $purple; }
+.bg--brown                 { background-color: $brown; }

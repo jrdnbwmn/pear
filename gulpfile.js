@@ -9,7 +9,6 @@ var gulp                    = require("gulp"),
 
     // CSS plugins
     sass                    = require("gulp-sass"),
-    combineMediaQueries     = require("gulp-combine-mq"),
     autoprefixer            = require("gulp-autoprefixer"),
     cssmin                  = require("gulp-clean-css"),
     rename                  = require("gulp-rename"),
@@ -79,8 +78,6 @@ gulp.task("css", function() {
         .pipe(plumber(onError))
         // Compile Sass
         .pipe(sass({ style: "compressed", noCache: true }))
-        // Combine media queries
-        .pipe(combineMediaQueries())
         // parse CSS and add vendor-prefixed CSS properties
         .pipe(autoprefixer({
             browsers: ["last 2 versions"]

@@ -95,12 +95,12 @@ a.btn {
     &:hover,
     &:focus {
         background-color: transparent;
-        border-color: $dark-gray;
+        border-color: $gray-5;
     }
 
     &:active {
         background-color: transparent;
-        border-color: $light-gray;
+        border-color: $gray-2;
     }
 }
 
@@ -119,8 +119,8 @@ a.btn {
     }
 
     &:active {
-        background-color: $lightest-gray;
-        border-color: $lightest-gray;
+        background-color: $gray-1;
+        border-color: $gray-1;
         color: $text-color;
     }
 }

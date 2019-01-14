@@ -38,8 +38,8 @@ $grid-breakpoint: $breakpoint--sm;
     // Breakpoint
     @media screen and (max-width: $grid-breakpoint) {
         flex-grow: 1;
-        flex-basis: 100%;
-        max-width: 100%;
+        flex-basis: 100% !important;
+        max-width: 100% !important;
         padding: 0;
         margin-left: 0;
     }

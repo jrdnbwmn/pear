@@ -1,25 +1,29 @@
 // Colors
 // -------------------------------------------------------------------
 // Grayscale
-$gray-base:               #87919d !default;
-
-$black:                   #000 !default;
-$darkest-gray:            darken($gray-base, 36%) !default;
-$dark-gray:               darken($gray-base, 18%) !default;
-$gray:                    $gray-base !default;
-$light-gray:              lighten($gray-base, 18%) !default;
-$lightest-gray:           lighten($gray-base, 36%) !default;
-$white:                   #fff !default;
+$white:                   #ffffff !default;
+$gray-1:                  #eeeeee !default;
+$gray-2:                  #dddddd !default;
+$gray-3:                  #b2b2b2 !default;
+$gray-4:                  #909090 !default;
+$gray-5:                  #6e6e6e !default;
+$gray-6:                  #4c4c4c !default;
 
 // Hues
-$blue:                    #428bca !default;
-$green:                   #6fbb57 !default;
-$orange:                  #f0ad4e !default;
+$blue:                    #16a0e5 !default;
+$turquoise:               #18c9a5 !default;
+$green:                   #72c111 !default;
+$yellow:                  #f9b520 !default;
+$orange:                  #f98320 !default;
+$red:                     #d82d2d !default;
+$pink:                    #db4aa6 !default;
+$purple:                  #8647bc !default;
+$brown:                   #9e6025 !default;
 
 // Color scheme
 $primary-color:           $blue !default;
 $secondary-color:         $green !default;
-$tertiary-color:          $orange !default;
+$tertiary-color:          $yellow !default;
 
 
 // Baseline
@@ -30,7 +34,7 @@ $baseline:                .4rem !default;
 // Typography
 // -------------------------------------------------------------------
 // Font families
-$sans-serif:              "Work Sans", Avenir, "Avenir Next", Trebuchet, Verdana,
+$sans-serif:              "Open Sans", Avenir, "Avenir Next", Trebuchet, Verdana,
                           sans-serif !default;
 $serif:                   Georgia, Times, serif !default;
 $monospace:               Monaco, Menlo, Consolas,
@@ -60,7 +64,7 @@ $h5--desktop:             .75rem !default;
 $h6--desktop:             .75rem !default;
 
 // Text color
-$text-color:              $dark-gray !default;
+$text-color:              $gray-6 !default;
 
 // Text sizes
 $font-size--mobile:       15px !default;
@@ -110,8 +114,8 @@ $active-link-color:       darken($primary-color, 25%) !default;
 
 // Code
 // -------------------------------------------------------------------
-$code-color:              $dark-gray !default;
-$code-bg-color:           $lightest-gray !default;
+$code-color:              $gray-6 !default;
+$code-bg-color:           $gray-1 !default;
 $code-padding:            $baseline*2 $baseline*2 !default;
 
 
@@ -128,7 +132,7 @@ $form-padding:            .45rem .8rem .35rem !default;
 
 // Borders
 // -------------------------------------------------------------------
-$border-color:            $light-gray !default;
+$border-color:            $gray-3 !default;
 $border-style:            solid !default;
 $border-radius:           3px !default;
 $border-width:            1px !default;
