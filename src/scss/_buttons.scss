@@ -153,3 +153,102 @@ a.btn {
         color: $text-color;
     }
 }
+
+
+// Dropdowns
+// ----------------------------------------------------------------
+// Parent element that contains both toggle and dropdown itself
+.dropdown-parent {
+    position: relative;
+
+    // Style the icon in the dropdown button
+    i {
+        line-height: 1.5rem;
+        margin-right: -3px;
+    }
+}
+
+// Base styles for dropdown, left-aligned by default
+// Note: Set specific widths of individual dropdowns as needed
+.dropdown {
+    background-color: $white;
+    box-shadow: $full-shadow;
+    display: none; // none be default, `block` on open
+    float: left;
+    left: 0;
+    margin-top: 0;
+    min-width: 5rem;
+    position: absolute;
+    top: 100%;
+    z-index: 6;
+    width: 15rem;
+
+    // Set max height with scroll
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 16rem;
+
+    // Some styling for list dropdowns
+    li {
+        cursor: pointer;
+        border-bottom: 1px solid $border-color;
+
+        a,
+        span,
+        p,
+        div {
+            padding: $space-1;
+            display: block;
+        }
+
+        .link {
+            text-decoration: none;
+            color: $text-color;
+        }
+
+        a:hover {
+            background-color: $gray-1;
+        }
+
+        a:active {
+            background-image: none;
+            color: $text-color;
+            outline: 0;
+        }
+    }
+
+    li:hover { background-color: $gray-1; }
+
+    li:last-child { border-bottom: none; }
+
+    // Some styling for dd-option
+    div.dd-option {
+        cursor: pointer;
+        padding: 0.5rem;
+
+        &:hover {
+            background: $gray-1;
+        }
+
+        &.hover {
+            background: $gray-1;
+        }
+    }
+
+    // Responsive
+    // @media screen and (max-width: $breakpoint--sm) {
+    //     width: 100% !important;
+    //     max-width: 100% !important;
+    // }
+}
+
+// Dropdown alignments
+.dropdown--top {
+    bottom: 100%;
+    top: auto;
+}
+
+.dropdown--right {
+    left: auto; // Override default from `.dropdown`
+    right: 0;
+}
