@@ -38,9 +38,9 @@
             </div>
         </section>
 
-        <!-- Type -->
+        <!-- Typography -->
         <section class="pb4 reading-font">
-            <h2 class="pb1 border--bottom">Type</h2>
+            <h2 class="pb1 border--bottom">Typography</h2>
             <h1>I watched the storm.</h1>
             <h2>We had left the ground.</h2>
             <h3>My two natures had memory in common.</h3>
@@ -111,45 +111,105 @@
         <!-- Grid -->
         <section class="ui-font">
             <h2 class="pb1 border--bottom">Grid</h2>
+
+            <!-- Outside the grid (for reference) -->
+            <div class="p1 rounded mb1" style="background: hsla(31,15%,50%,.2);">Outside the grid</div>
+
+            <!-- Basic grid examples -->
             <div class="grid-row">
-                <div class="grid-column span-half" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-half</article></div>
-                <div class="grid-column span-one-fourth" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-one-fourth</article></div>
-                <div class="grid-column span-one-fourth" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-one-fourth</article></div>
+                <div class="grid-column mb1 span-6"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">span-6</div></div>
+                <div class="grid-column mb1 span-6"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">span-6</div></div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-column mb1 span-one-third"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">span-one-third</div></div>
+                <div class="grid-column mb1 span-one-third"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">span-one-third</div></div>
+                <div class="grid-column mb1 span-one-third"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">span-one-third</div></div>
             </div>
 
-            <div class="grid-row">
-                <div class="grid-column span-whole" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-whole</article></div>
+            <!-- Same height siblings -->
+            <div class="grid-row grid-row--flex-cells">
+                <div class="grid-column mb1 span-3"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">This row's siblings are the same height, despite having different content.</div></div>
+                <div class="grid-column mb1 span-one-fourth"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">span-one-fourth</div></div>
+                <div class="grid-column mb1 span-3"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">span-3</div></div>
+                <div class="grid-column mb1 span-one-fourth"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">span-one-fourth</div></div>
             </div>
 
-            <div class="grid-row">
-                <div class="grid-column span-one-third" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-one-third</article></div>
-                <div class="grid-column span-one-third" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-one-third</article></div>
-                <div class="grid-column span-one-third" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-one-third</article></div>
+            <!-- Top-aligned -->
+            <div class="grid-row grid-row--top">
+                <div class="grid-column mb1 span-one-third"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">This cell should be top-aligned.</div></div>
+                <div class="grid-column mb1 span-one-third"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">Pellentesque sagittis vel erat ac laoreet. Phasellus ac aliquet enim, eu aliquet sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar porta leo, eu ultricies nunc sollicitudin vitae.</div></div>
+                <div class="grid-column mb1 span-one-third"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">This cell should be top-aligned.</div></div>
             </div>
 
-            <div class="grid-row">
-                <div class="grid-column span-3" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-3</article></div>
-                <div class="grid-column span-3" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-3</article></div>
-                <div class="grid-column span-6" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-6</article></div>
+            <!-- Centered -->
+            <div class="grid-row grid-row--center">
+                <div class="grid-column mb1 span-one-third"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">This cell should be center-aligned.</div></div>
+                <div class="grid-column mb1 span-one-third"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">Pellentesque sagittis vel erat ac laoreet. Phasellus ac aliquet enim, eu aliquet sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar porta leo, eu ultricies nunc sollicitudin vitae.</div></div>
+                <div class="grid-column mb1 span-one-third"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">This cell should be center-aligned.</div></div>
             </div>
 
-            <div class="grid-row">
-                <div class="grid-column span-12" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-12</article></div>
+            <!-- Bottom-aligned -->
+            <div class="grid-row grid-row--bottom">
+                <div class="grid-column mb1 span-one-third"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">This cell should be bottom-aligned.</div></div>
+                <div class="grid-column mb1 span-one-third"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">Pellentesque sagittis vel erat ac laoreet. Phasellus ac aliquet enim, eu aliquet sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar porta leo, eu ultricies nunc sollicitudin vitae.</div></div>
+                <div class="grid-column mb1 span-one-third"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">This cell should be bottom-aligned.</div></div>
             </div>
 
+            <!-- Mixed vertical alignment -->
             <div class="grid-row">
-                <div class="grid-column span-8" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-8</article></div>
-                <div class="grid-column span-4" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-4</article></div>
+                <div class="grid-column mb1 span-3"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">Pellentesque sagittis vel erat ac laoreet. Phasellus ac aliquet enim, eu aliquet sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div></div>
+                <div class="grid-column mb1 column--top span-one-fourth"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">Top</div></div>
+                <div class="grid-column mb1 column--center span-3"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">Center</div></div>
+                <div class="grid-column mb1 column--bottom span-one-fourth"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">Bottom</div></div>
             </div>
 
+            <!-- Auto sizing -->
             <div class="grid-row">
-                <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-2</article></div>
-                <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-2</article></div>
-                <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-2</article></div>
-                <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-2</article></div>
-                <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-2</article></div>
-                <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-2</article></div>
+                <div class="grid-column mb1 span-6"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">span-12</div></div>
+                <div class="grid-column mb1"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">auto</div></div>
             </div>
+            <div class="grid-row">
+                <div class="grid-column mb1 span-one-third"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">span-one-third</div></div>
+                <div class="grid-column mb1"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">auto</div></div>
+                <div class="grid-column mb1 span-one-third"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">span-one-third</div></div>
+            </div>
+
+            <!-- Nested -->
+            <div class="grid-row">
+                <div class="grid-column mb1">
+                    <div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">
+                        <div class="grid-row">
+                            <div class="grid-column mb1 span-one-third">
+                                <div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">1/3</div>
+                            </div>
+                            <div class="grid-column">
+                                <div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">
+                                    <div class="grid-row">
+                                        <div class="grid-column span-half">
+                                            <div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">1/2</div>
+                                        </div>
+                                        <div class="grid-column span-half">
+                                            <div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">1/2</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-column mb1 span-one-third">
+                    <div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">1/3</div>
+                </div>
+            </div>
+
+            <!-- Offsets -->
+            <div class="grid-row">
+                <div class="grid-column offset-2 mb1"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">offset-4</div></div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-column offset-one-third mb1"><div class="p1 rounded" style="background: hsla(31,15%,50%,.2);">offset-one-third</div></div>
+            </div>
+
         </section>
 
         </div> <!-- End container -->

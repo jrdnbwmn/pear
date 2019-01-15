@@ -5,7 +5,7 @@ $total-number-columns: 12;
 
 // Padding you want on both sides of a column. This number * 2 = your gutter.
 // Sink uses fixed–width gutters, so no %.
-$column-padding: $baseline*2;
+$column-padding: $baseline;
 
 // Set the breakpoint at which columns will go to full width.
 $grid-breakpoint: $breakpoint--sm;
@@ -49,6 +49,7 @@ $grid-breakpoint: $breakpoint--sm;
 // Utilities
 // -------------------------------------------------------------------
 .grid-row--flex-cells > .grid-column { display: flex; }
+.grid-row--flex-cells > .grid-column > div { width: 100%; }
 
 // Vertical alignment
 .grid-row--top                { align-items: flex-start; }
