@@ -110,6 +110,76 @@
 }
 
 
+// Checkboxes & radios
+// -------------------------------------------------------------------
+.control {
+    color: $text-color;
+    cursor: pointer;
+    display: block;
+    padding-left: 1.6rem;
+    position: relative;
+}
+
+.control input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1; // Put the input behind the label so it doesn't overlay text
+}
+
+.control-indicator {
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    border: 2px solid $gray-3;
+    color: $text-color;
+    display: block;
+    font-size: 65%;
+    height: 19px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: .1rem;
+    width:  19px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.control input:hover ~ .control-indicator { border-color: $gray-5; }
+
+// Checked state
+.control input:checked ~ .control-indicator {
+    background-color: $primary-color;
+    color: $white;
+    transition: $fade;
+    border: 2px solid $primary-color;
+}
+
+// Active
+.control input:active ~ .control-indicator {
+    background-color: $primary-color;
+    color: $white;
+    transition: $fade;
+    border: 2px solid $primary-color;
+}
+
+// Checkbox modifiers
+.checkbox .control-indicator { border-radius: $border-radius; }
+.checkbox input:checked ~ .control-indicator {
+    background-image: url(../img/check.svg);
+    transition: $fade;
+}
+
+// Radio modifiers
+.radio .control-indicator { border-radius: 50%; }
+.radio input:checked ~ .control-indicator {
+    background-image: url(../img/radio.svg);
+    transition: $fade;
+}
+
+
 // Placeholder styling
 // -------------------------------------------------------------------
 ::-webkit-input-placeholder {
