@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="css/production.css">
 
         <!-- Web fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"> 
 
         <!-- favicon.ico and apple-touch-icon. A good tool is http://iconogen.com/. Place these in the root directory. -->
         <link rel="shortcut icon" href="favicon.ico">
@@ -26,13 +26,13 @@
     <body>
 
 
-        <div class="pt3 pb3 align--center bg--secondary-color text--white">
+        <div class="pt3 pb3 align--center bg--gray-2">
             <div class="container">
                 <h1>Pear</h1>
                 <p class="m0 h2 heading-line-height">A lightweight front-end boilerplate</p>
-                <p>v2.8.1</p>
+                <p>v2.9.0</p>
                 <div>
-                    <a class="btn btn--dark-bg" href="https://github.com/jrdnbwmn/Pear">View on Github →</a>
+                    <a class="btn btn--outline" href="https://github.com/jrdnbwmn/Pear">View on Github →</a>
                 </div>
             </div>
         </div>
@@ -40,21 +40,33 @@
         <div class="container pt3 pb3">
 
         <!-- Colors -->
-        <section class="pb4 align--center">
-            <h2 class="text--gray pb1 border--bottom">Colors</h2>
-            <div class="pt1 pb1 text--white bg--primary-color">Primary brand color</div>
-            <div class="pt1 pb1 text--white bg--secondary-color">Secondary brand color</div>
-            <div class="pt1 pb1 text--white bg--tertiary-color">Brand accent color</div>
-            <div class="pt1 pb1 text--white bg--darkest-gray">Darkest gray</div>
-            <div class="pt1 pb1 text--white bg--dark-gray">Dark gray</div>
-            <div class="pt1 pb1 text--white bg--gray">Gray</div>
-            <div class="pt1 pb1 text--white bg--light-gray">Light gray</div>
-            <div class="pt1 pb1 bg--lightest-gray">Lightest gray</div>
+        <section class="pb4">
+            <h2 class="pb1 border--bottom">Colors</h2>
+            <div class="align--center mb3">
+                <div class="pt1 pb1 text--white bg--blue">Blue</div>
+                <div class="pt1 pb1 text--white bg--turquoise">Turquoise</div>
+                <div class="pt1 pb1 text--white bg--green">Green</div>
+                <div class="pt1 pb1 text--white bg--yellow">Yellow</div>
+                <div class="pt1 pb1 text--white bg--orange">Orange</div>
+                <div class="pt1 pb1 text--white bg--red">Red</div>
+                <div class="pt1 pb1 text--white bg--pink">Pink</div>
+                <div class="pt1 pb1 text--white bg--purple">Purple</div>
+                <div class="pt1 pb1 text--white bg--brown">Brown</div>
+            </div>
+                
+            <div class="align--center">
+                <div class="pt1 pb1 bg--gray-1">Gray 1</div>
+                <div class="pt1 pb1 bg--gray-2">Gray 2</div>
+                <div class="pt1 pb1 text--white bg--gray-3">Gray 3</div>
+                <div class="pt1 pb1 text--white bg--gray-4">Gray 4</div>
+                <div class="pt1 pb1 text--white bg--gray-5">Gray 5</div>
+                <div class="pt1 pb1 text--white bg--gray-6">Gray 6</div>
+            </div>
         </section>
 
         <!-- Type -->
         <section class="pb4 reading-font">
-            <h2 class="text--gray pb1 border--bottom">Type</h2>
+            <h2 class="pb1 border--bottom">Type</h2>
             <h1>I watched the storm.</h1>
             <h2>We had left the ground.</h2>
             <h3>My two natures had memory in common.</h3>
@@ -81,14 +93,14 @@
 
         <!-- Code -->
         <section class="pb4 reading-font">
-            <h2 class="text--gray pb1 border--bottom">Code</h2>
+            <h2 class="pb1 border--bottom">Code</h2>
             <p>Phasellus ultrices nulla, gravida non <code class="code rounded">some inline code</code> commodo a sodales sit amet nisi.</p>
             <pre class="pre rounded m0">&lt;p&gt;Block of code&lt;/p&gt;</pre>
         </section>
 
         <!-- Embeds -->
         <section class="pb4">
-            <h2 class="text--gray pb1 border--bottom">Embeds</h2>
+            <h2 class="pb1 border--bottom">Embeds</h2>
             <img class="mb2" src="img/imgh1.jpg" alt="Sample image">
             <iframe class="mb2" src="//player.vimeo.com/video/85517984" width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d49091.78885703522!2d-104.97060187791772!3d39.73433127525863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1409806420933" width="1000" height="450" frameborder="0" style="border:0"></iframe>
@@ -96,7 +108,7 @@
 
         <!-- Forms -->
         <section class="pb4">
-            <h2 class="text--gray pb1 border--bottom">Forms</h2>
+            <h2 class="pb1 border--bottom">Forms</h2>
             <form class="form">
                 <input class="form-control mb1" placeholder="Name">
                 <input class="form-control mb1" type="email" placeholder="Email Address">
@@ -116,7 +128,7 @@
 
         <!-- Buttons -->
         <section class="pb4">
-            <h2 class="text--gray pb1 border--bottom">Buttons</h2>
+            <h2 class="pb1 border--bottom">Buttons</h2>
             <a class="btn btn--default" href="">Medium Default</a>
             <a class="btn btn--outline" href="">Medium Outline</a>
             <a class="btn btn--default btn--sm" href="">Small Default</a>
@@ -124,51 +136,45 @@
 
         <!-- Grid -->
         <section class="ui-font">
-            <h2 class="text--gray pb1 border--bottom">Grid</h2>
+            <h2 class="pb1 border--bottom">Grid</h2>
             <div class="grid-row">
-                <div class="grid-column span-half" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-half</article></div>
-                <div class="grid-column span-one-fourth" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-one-fourth</article></div>
-                <div class="grid-column span-one-fourth" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-one-fourth</article></div>
+                <div class="grid-column span-half" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-half</article></div>
+                <div class="grid-column span-one-fourth" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-one-fourth</article></div>
+                <div class="grid-column span-one-fourth" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-one-fourth</article></div>
             </div>
 
             <div class="grid-row">
-                <div class="grid-column span-whole" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-whole</article></div>
+                <div class="grid-column span-whole" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-whole</article></div>
             </div>
 
             <div class="grid-row">
-                <div class="grid-column span-one-third" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-one-third</article></div>
-                <div class="grid-column span-one-third" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-one-third</article></div>
-                <div class="grid-column span-one-third" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-one-third</article></div>
+                <div class="grid-column span-one-third" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-one-third</article></div>
+                <div class="grid-column span-one-third" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-one-third</article></div>
+                <div class="grid-column span-one-third" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-one-third</article></div>
             </div>
 
             <div class="grid-row">
-                <div class="grid-column span-3" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-3</article></div>
-                <div class="grid-column span-3" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-3</article></div>
-                <div class="grid-column span-6" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-6</article></div>
+                <div class="grid-column span-3" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-3</article></div>
+                <div class="grid-column span-3" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-3</article></div>
+                <div class="grid-column span-6" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-6</article></div>
             </div>
 
             <div class="grid-row">
-                <div class="grid-column span-12" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-12</article></div>
+                <div class="grid-column span-12" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-12</article></div>
             </div>
 
             <div class="grid-row">
-                <div class="grid-column span-4" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</article></div>
-                <div class="grid-column span-4" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">top (default)</article></div>
-                <div class="grid-column span-4 vertical-bottom" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">bottom</article></div>
+                <div class="grid-column span-8" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-8</article></div>
+                <div class="grid-column span-4" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-4</article></div>
             </div>
 
             <div class="grid-row">
-                <div class="grid-column span-8" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-8</article></div>
-                <div class="grid-column span-4" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-4</article></div>
-            </div>
-
-            <div class="grid-row">
-                <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-2</article></div>
-                <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-2</article></div>
-                <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-2</article></div>
-                <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-2</article></div>
-                <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-2</article></div>
-                <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--lightest-gray p1">.span-2</article></div>
+                <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-2</article></div>
+                <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-2</article></div>
+                <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-2</article></div>
+                <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-2</article></div>
+                <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-2</article></div>
+                <div class="grid-column span-2" style="margin-bottom:1.6rem"><article class="bg--gray-2 p1">.span-2</article></div>
             </div>
         </section>
 
@@ -186,7 +192,7 @@
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-46498321-1','auto');ga('send','pageview')
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
         </script>
         <script src="https://www.google-analytics.com/analytics.js" async defer="defer"></script>
 

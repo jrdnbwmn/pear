@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <role>: <name>
+    <website>
+    <twitter>
+    <contact>
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, Javascript
+    Normalize.css, Sass, Pear
