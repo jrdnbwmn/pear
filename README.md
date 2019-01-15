@@ -1,10 +1,8 @@
 # Pear
 
-A lightweight front-end launching kit – a boilerplate for HTML/Sass projects.
+A boilerplate for static site projects. Personally, I often use this for quick HTML prototyping.
 
 See it at http://eatapear.com.
-
-The minified, *un*compressed CSS file comes in at 13kb.
 
 Pear is focused on:
 
@@ -17,6 +15,7 @@ Pear is focused on:
 
 - HTML boilerplate with a simple pattern library (demonstrated on the website).
 - Base Sass styles
+- Icon font family
 - Advanced Gulp setup for a local server, CSS compliation & minification, etc
 
 ## Getting Started
