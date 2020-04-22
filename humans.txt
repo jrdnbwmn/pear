@@ -3,10 +3,10 @@
 
 # TEAM
 
-    <role>: <name>
-    <website>
-    <twitter>
-    <contact>
+    Designer/Developer: Jordan Bowman
+    https://www.jrdnbwmn.com
+    @jrdnbwmn
+    desk@jrdnbwmn.com
 
 # THANKS
 
